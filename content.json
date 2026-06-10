@@ -18,11 +18,11 @@
   },
   "images": {
     "crest": "img/crest.png",
-    "heroPhoto": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/2025/07/IMG_0057.jpeg?w=1400&ssl=1",
+    "heroPhoto": "img/matty-hero.jpg",
     "mattyPhoto": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/brizy/imgs/IMG_0719-757x505x126x0x505x505x1752453233.jpeg?w=1400&ssl=1",
     "ebookCover": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/2026/02/Luxury-Leases-Real-Profits-Book-Image.png?w=1400&ssl=1",
     "playbookCover": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/2026/02/The-Luxury-Leasing-Playbook-Book-Image.png?w=1400&ssl=1",
-    "footerLogo": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/brizy/imgs/Logo-Light-Text-Transparent-172x172x0x0x172x172x1752458947.png?w=1400&ssl=1"
+    "footerLogo": "img/badge-footer.png"
   },
   "pricing": {
     "clubMonthly": "$250",

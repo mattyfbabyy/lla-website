@@ -15,7 +15,7 @@ function nav() {
   const mob = L.map(([h, t]) => `<a href="${h}">${t}</a>`).join('');
   return `<nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="index.html"><img src="${C.images.crest}" alt="${C.brand.name} crest"><span class="nav-wordmark">${C.brand.name}</span></a>
+    <a class="nav-logo" href="index.html"><img src="${C.images.crest}" alt="${C.brand.name}"></a>
     <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="nav-links">${desk}<a href="${C.brand.portalUrl}" class="nav-login">${C.nav.login}</a><a href="club.html" class="btn btn-gold">${C.nav.joinButton}</a></div>
   </div>
@@ -25,12 +25,12 @@ function nav() {
 
 const FOOTER = `<footer>
   <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <div class="foot-logo"><img src="${C.images.footerLogo}" alt="${C.brand.name}"></div>
-        <div class="foot-tag">${C.brand.tagline}</div>
-        <div style="color:var(--gold-bright);font-weight:600;font-size:13px">${C.brand.hashtag}</div>
-      </div>
+    <div class="foot-brand">
+      <div class="foot-logo-big"><img src="${C.images.footerLogo}" alt="${C.brand.name}"></div>
+      <div class="foot-tag-center">${C.brand.tagline}</div>
+      <div class="foot-hash">${C.brand.hashtag}</div>
+    </div>
+    <div class="foot-grid foot-grid-3">
       <div><h4>Learn</h4><a href="courses.html">${C.nav.courses}</a><a href="club.html">${C.nav.club}</a><a href="ebook.html">${C.nav.ebook}</a><a href="thanks.html">The Playbook</a></div>
       <div><h4>About</h4><a href="meet-matty.html">${C.nav.matty}</a><a href="ebook.html">The Lease Up</a><a href="mailto:${C.brand.contactEmail}">Contact</a></div>
       <div><h4>Students</h4><a href="${C.brand.portalUrl}">${C.nav.login}</a><a href="#">Terms</a><a href="#">Privacy</a></div>
@@ -55,6 +55,8 @@ function page(title, body, css) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
 <title>${title}</title>
 ${FONTS}
 <style>${css || CSS_SHARED}</style>
@@ -81,7 +83,7 @@ function buildHome() {
   const h = C.home;
   const testis = C.testimonials.map(t => `<div class="card rv"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"${t.quote}"</p><div class="who-sig" style="margin-top:20px;font-weight:700;font-size:14.5px">${t.name} <span style="display:block;font-weight:500;color:var(--haze);font-size:13px;margin-top:2px">${t.location}</span></div></div>`).join('');
   const body = `<header class="hero" style="padding:88px 0 70px;position:relative;overflow:hidden">
-  <div class="wrap" style="display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center" id="herogrid">
+  <div class="wrap home-hero-grid" id="herogrid">
     <div class="rv in">
       <div class="eyebrow">${h.eyebrow}</div>
       <h1 style="font-size:clamp(40px,5.2vw,64px);margin-bottom:24px">${highlight(h.heroHeadline, h.heroHighlight)}</h1>
@@ -104,8 +106,8 @@ function buildHome() {
 <hr class="horizon">
 <section class="band">
   <div class="glow"></div>
-  <div class="wrap" style="display:grid;grid-template-columns:auto 1fr;gap:64px;align-items:center;position:relative">
-    <div class="rv" style="font-family:'Fraunces',serif;font-size:clamp(90px,12vw,160px);color:var(--gold-bright);line-height:.95;font-weight:600">${h.problemBig}</div>
+  <div class="wrap home-band-grid">
+    <div class="rv home-band-big">${h.problemBig}</div>
     <div class="rv">
       <h2>${h.problemHeadline}</h2>
       <p>${h.problemBody}</p>
@@ -127,9 +129,9 @@ function buildHome() {
   <div class="wrap">
     <div class="section-head rv"><div class="eyebrow">The Path</div><h2>Your path to $100K+ with luxury rentals</h2></div>
     <div class="cards3">
-      <div class="card rv" style="padding:0;overflow:hidden"><div style="height:200px;background:var(--cream);display:flex;align-items:center;justify-content:center;padding:24px"><img src="${C.images.ebookCover}" alt="E-book" style="max-height:100%"></div><div style="padding:28px 30px 32px"><div style="font-family:'Fraunces',serif;color:var(--gold);font-size:15px;letter-spacing:.18em;font-weight:600;margin-bottom:10px">STEP 01</div><h3 style="font-size:23px;margin-bottom:10px">Start free</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Download the e-book and learn the 9 secrets top earners use to build six-figure rental businesses.</p><a href="ebook.html" style="color:var(--gold);font-weight:600;font-size:15px">Get the Free E-Book &rarr;</a></div></div>
-      <div class="card rv" style="padding:0;overflow:hidden"><div style="height:200px;background:var(--cream);display:flex;align-items:center;justify-content:center;padding:24px"><img src="img/c1-mockup.png" alt="Courses" style="max-height:100%"></div><div style="padding:28px 30px 32px"><div style="font-family:'Fraunces',serif;color:var(--gold);font-size:15px;letter-spacing:.18em;font-weight:600;margin-bottom:10px">STEP 02</div><h3 style="font-size:23px;margin-bottom:10px">Learn the system</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Nine courses covering everything from your first lease to scaling a rental empire. In order, step by step.</p><a href="courses.html" style="color:var(--gold);font-weight:600;font-size:15px">Browse the Courses &rarr;</a></div></div>
-      <div class="card rv" style="padding:0;overflow:hidden"><div style="height:200px;background:var(--cream);display:flex;align-items:center;justify-content:center;padding:24px"><img src="https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/brizy/imgs/Club-Website-Image-270x270x0x0x270x270x1752690028.png?w=1400&ssl=1" alt="Club" style="max-height:100%"></div><div style="padding:28px 30px 32px"><div style="font-family:'Fraunces',serif;color:var(--gold);font-size:15px;letter-spacing:.18em;font-weight:600;margin-bottom:10px">STEP 03</div><h3 style="font-size:23px;margin-bottom:10px">Go all in</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">The Elite Leasing Club: every course, weekly live coaching, and a community of agents actually closing deals.</p><a href="club.html" style="color:var(--gold);font-weight:600;font-size:15px">Join the Club &rarr;</a></div></div>
+      <div class="card rv step-card"><div class="step-card-img"><img src="${C.images.ebookCover}" alt="E-book" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 01</div><h3 style="font-size:23px;margin-bottom:10px">Start free</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Download the e-book and learn the 9 secrets top earners use to build six-figure rental businesses.</p><a href="ebook.html" style="color:var(--gold);font-weight:600;font-size:15px">Get the Free E-Book &rarr;</a></div></div>
+      <div class="card rv step-card"><div class="step-card-img"><img src="img/c1-mockup.png" alt="Courses" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 02</div><h3 style="font-size:23px;margin-bottom:10px">Learn the system</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Nine courses covering everything from your first lease to scaling a rental empire. In order, step by step.</p><a href="courses.html" style="color:var(--gold);font-weight:600;font-size:15px">Browse the Courses &rarr;</a></div></div>
+      <div class="card rv step-card"><div class="step-card-img"><img src="https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/brizy/imgs/Club-Website-Image-270x270x0x0x270x270x1752690028.png?w=1400&ssl=1" alt="Club" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 03</div><h3 style="font-size:23px;margin-bottom:10px">Go all in</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">The Elite Leasing Club: every course, weekly live coaching, and a community of agents actually closing deals.</p><a href="club.html" style="color:var(--gold);font-weight:600;font-size:15px">Join the Club &rarr;</a></div></div>
     </div>
   </div>
 </section>
