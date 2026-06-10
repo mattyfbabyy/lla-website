@@ -1,0 +1,87 @@
+{
+  "_README": "This is the ONLY file you edit to change site content. Change the text after the colons. Keep the quotes. Keep the commas. Do not touch build.js or the templates folder. After editing, commit and the site rebuilds itself.",
+  "brand": {
+    "name": "Luxury Leasing Academy",
+    "tagline": "Treat rentals like a real business, not a side hustle.",
+    "hashtag": "#BetterAgentsWin",
+    "contactEmail": "matty@luxuryleasingacademy.com",
+    "portalUrl": "https://portal.luxuryleasingacademy.com",
+    "city": "Chicago, IL"
+  },
+  "nav": {
+    "courses": "Courses",
+    "club": "Elite Club",
+    "ebook": "Free E-Book",
+    "matty": "Meet Matty",
+    "login": "Student Login",
+    "joinButton": "Join the Club"
+  },
+  "images": {
+    "crest": "img/crest.png",
+    "heroPhoto": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/2025/07/IMG_0057.jpeg?w=1400&ssl=1",
+    "mattyPhoto": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/brizy/imgs/IMG_0719-757x505x126x0x505x505x1752453233.jpeg?w=1400&ssl=1",
+    "ebookCover": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/2026/02/Luxury-Leases-Real-Profits-Book-Image.png?w=1400&ssl=1",
+    "playbookCover": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/2026/02/The-Luxury-Leasing-Playbook-Book-Image.png?w=1400&ssl=1",
+    "footerLogo": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/brizy/imgs/Logo-Light-Text-Transparent-172x172x0x0x172x172x1752458947.png?w=1400&ssl=1"
+  },
+  "pricing": {
+    "clubMonthly": "$PRICE",
+    "courseDefault": "$PRICE",
+    "totalValue": "$TOTAL",
+    "commissionLow": "$X,XXX",
+    "commissionHigh": "$X,XXX",
+    "playbook": "$20"
+  },
+  "home": {
+    "eyebrow": "Luxury Leasing Academy",
+    "heroHeadline": "Build a six-figure business renting luxury apartments",
+    "heroHighlight": "luxury apartments",
+    "heroSub": "No cold-calling for sales listings. No waiting months for a closing. Learn the system that turned leasing into $2.5M+ in commissions, and a career most agents don't know exists.",
+    "stat1Num": "10+",
+    "stat1Label": "Years in Luxury Rentals",
+    "stat2Num": "1,000+",
+    "stat2Label": "Leases Closed",
+    "stat3Num": "$2.5M+",
+    "stat3Label": "In Commissions",
+    "problemBig": "90%",
+    "problemHeadline": "of new agents quit within their first year.",
+    "problemBody": "The ones who make it aren't smarter. They have a system, and they picked a market where the odds aren't stacked against them. While everyone fights over the same sales listings, luxury rentals sit there: high volume, high demand, almost zero competition.",
+    "finalHeadline": "Ready to build something real?",
+    "finalSub": "Every course. Weekly coaching. A community that closes."
+  },
+  "club": {
+    "eyebrow": "The Elite Leasing Club",
+    "heroHeadline": "Everything you need to build a six-figure rental business. All in one place.",
+    "heroHighlight": "All in one place.",
+    "heroSub": "All 9 courses. Weekly live coaching. A private community of agents who are actually putting in the work. This is the complete system, not another course you finish and forget.",
+    "finalHeadline": "Better agents win. Become one."
+  },
+  "ebook": {
+    "heroHeadline": "9 secrets to earning big with luxury rentals, without selling a home",
+    "heroHighlight": "without selling a home",
+    "heroSub": "Most agents spend a year figuring out what's in this book. You can read it in 30 minutes.",
+    "formButton": "Send Me the Free E-Book"
+  },
+  "matty": {
+    "heroHeadline": "From behind the bar to 1,000+ luxury leases",
+    "heroSub": "Founder of Luxury Leasing Academy. Chicago born and built.",
+    "finalHeadline": "I built the roadmap I wish I had. It's yours now."
+  },
+  "testimonials": [
+    {
+      "quote": "Testimonial copy drops in here. Specific result, specific timeframe.",
+      "name": "First L.",
+      "location": "Agent, City"
+    },
+    {
+      "quote": "Testimonial copy drops in here. The before and after is what sells.",
+      "name": "First L.",
+      "location": "Agent, City"
+    },
+    {
+      "quote": "Testimonial copy drops in here. Names and cities make it real.",
+      "name": "First L.",
+      "location": "Agent, City"
+    }
+  ]
+}
