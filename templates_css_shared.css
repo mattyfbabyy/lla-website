@@ -35,7 +35,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(250,246,238,.92);backdrop-f
 .mobile-menu .mm-login{color:var(--haze)}
 .mobile-menu .btn{margin-top:16px;text-align:center;border-bottom:none}
 .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.price-ph{display:inline-block;background:rgba(201,111,35,.12);border:1px dashed var(--amber);border-radius:8px;padding:0 8px;color:var(--amber);font-weight:700;font-size:.9em}
+.price-ph{color:inherit;font-weight:700}
 .section{padding:92px 0}
 .section-head{max-width:720px;margin-bottom:54px}
 .section-head h2{font-size:clamp(30px,3.6vw,44px);margin-bottom:16px}

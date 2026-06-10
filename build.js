@@ -242,7 +242,7 @@ function buildClub() {
 
 // ---------- COURSES CATALOG ----------
 function buildCourses() {
-  const ccard = c => `<div class="ccard rv"><div class="ccard-img"><img src="img/c${c.n}-mockup.png" alt="${c.title}" loading="lazy"></div><div class="ccard-body"><div class="ccard-meta"><b>Course ${c.n}</b> &middot; ${c.level} &middot; ${c.lessons} lessons</div><h3>${c.title}</h3><p>${c.promise}</p><div class="ccard-foot">${PRICE(C.pricing.courseDefault)}<a href="${c.slug}.html">Learn More &rarr;</a></div></div></div>`;
+  const ccard = c => `<div class="ccard rv"><div class="ccard-img"><img src="img/c${c.n}-mockup.png" alt="${c.title}" loading="lazy"></div><div class="ccard-body"><div class="ccard-meta"><b>Course ${c.n}</b> &middot; ${c.level} &middot; ${c.lessons} lessons</div><h3>${c.title}</h3><p>${c.promise}</p><div class="ccard-foot">${PRICE(c.price)}<a href="${c.slug}.html">Learn More &rarr;</a></div></div></div>`;
   let tiers = '';
   for (const [label, level, idxs] of TIERS) {
     const cards = idxs.map(i => ccard(COURSES[i])).join('');
@@ -285,7 +285,7 @@ function buildCourseDetail(c) {
       <div class="cmeta"><span class="badge">Course ${c.n}</span><span class="badge">${c.level}</span><span class="badge">${c.lessons} lessons</span></div>
       <h1>${c.title}</h1>
       <p class="promise">${c.promise}</p>
-      <div class="cprice"><a href="#" class="btn btn-gold" style="font-size:16.5px;padding:15px 34px">Enroll Now &middot;&nbsp;${PRICE(C.pricing.courseDefault)}</a><span class="alt">Or get all 9 courses in <a href="club.html">the Club</a> for ${PRICE(C.pricing.clubMonthly)}/mo</span></div>
+      <div class="cprice"><a href="#" class="btn btn-gold" style="font-size:16.5px;padding:15px 34px">Enroll Now &middot;&nbsp;${PRICE(c.price)}</a><span class="alt">Or get all 9 courses in <a href="club.html">the Club</a> for ${PRICE(C.pricing.clubMonthly)}/mo</span></div>
     </div>
   </div>
 </header>
@@ -297,7 +297,7 @@ function buildCourseDetail(c) {
   <div class="glow"></div>
   <div class="wrap">
     <h2 class="rv">Take this course. Or take everything.</h2>
-    <p class="rv">This course: ${PRICE(C.pricing.courseDefault)} one-time. Every course plus weekly coaching: ${PRICE(C.pricing.clubMonthly)}/month.</p>
+    <p class="rv">This course: ${PRICE(c.price)} one-time. Every course plus weekly coaching: ${PRICE(C.pricing.clubMonthly)}/month.</p>
     <a href="#" class="btn btn-gold rv" style="margin-right:12px">Enroll in ${c.title}</a>
     <a href="club.html" class="btn btn-ghost rv" style="border-color:var(--gold-bright);color:var(--gold-bright)">Join the Club</a>
   </div>

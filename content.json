@@ -25,12 +25,13 @@
     "footerLogo": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/brizy/imgs/Logo-Light-Text-Transparent-172x172x0x0x172x172x1752458947.png?w=1400&ssl=1"
   },
   "pricing": {
-    "clubMonthly": "$PRICE",
-    "courseDefault": "$PRICE",
-    "totalValue": "$TOTAL",
-    "commissionLow": "$X,XXX",
-    "commissionHigh": "$X,XXX",
-    "playbook": "$20"
+    "clubMonthly": "$250",
+    "courseDefault": "$697",
+    "totalValue": "$6,500",
+    "commissionLow": "$3,000",
+    "commissionHigh": "$6,000",
+    "playbook": "$20",
+    "clubAnnual": "$2,500"
   },
   "home": {
     "eyebrow": "Luxury Leasing Academy",
