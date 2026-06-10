@@ -10,7 +10,7 @@
   },
   "nav": {
     "courses": "Courses",
-    "club": "The ELC",
+    "club": "Elite Club",
     "ebook": "Free E-Book",
     "matty": "Meet Matty",
     "login": "Student Login",
@@ -25,13 +25,13 @@
     "footerLogo": "img/badge-footer.png"
   },
   "pricing": {
-    "clubMonthly": "$250",
+    "clubMonthly": "$297",
     "courseDefault": "$697",
     "totalValue": "$6,500",
     "commissionLow": "$3,000",
     "commissionHigh": "$6,000",
     "playbook": "$20",
-    "clubAnnual": "$2,500"
+    "clubAnnual": "$2,970"
   },
   "home": {
     "eyebrow": "Luxury Leasing Academy",
