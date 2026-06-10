@@ -19,7 +19,7 @@
   "images": {
     "crest": "img/crest.png",
     "heroPhoto": "img/matty-hero.jpg",
-    "mattyPhoto": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/brizy/imgs/IMG_0719-757x505x126x0x505x505x1752453233.jpeg?w=1400&ssl=1",
+    "mattyPhoto": "img/matty-bar.jpg",
     "ebookCover": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/2026/02/Luxury-Leases-Real-Profits-Book-Image.png?w=1400&ssl=1",
     "playbookCover": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/2026/02/The-Luxury-Leasing-Playbook-Book-Image.png?w=1400&ssl=1",
     "footerLogo": "img/badge-footer.png"
@@ -68,7 +68,7 @@
   "matty": {
     "heroHeadline": "From behind the bar to 1,000+ luxury leases",
     "heroSub": "Founder of Luxury Leasing Academy. Chicago born and built.",
-    "finalHeadline": "I built the roadmap I wish I had. It's yours now."
+    "finalHeadline": "I built the roadmap I wish I had.<br>It's yours now."
   },
   "testimonials": [
     {

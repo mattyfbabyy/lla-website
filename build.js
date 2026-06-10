@@ -363,7 +363,7 @@ function buildMatty() {
   const body = `<header class="mhero">
   <div class="wrap mhero-grid">
     <div class="rv in"><div class="eyebrow">Meet Matty</div><h1>${m.heroHeadline}</h1><p class="sub">${m.heroSub}</p></div>
-    <div class="rv in"><div class="arch"><img src="${C.images.heroPhoto}" alt="Matty"></div></div>
+    <div class="rv in"><div class="matty-photo"><img src="${C.images.mattyPhoto}" alt="Matty"></div></div>
   </div>
 </header>
 <hr class="horizon">
@@ -374,7 +374,7 @@ function buildMatty() {
   <p class="rv">Somewhere in those thousand leases I realized something: it was never talent. It was a <strong>system</strong>. Repeatable, teachable, and nobody was teaching it. Agents were quitting in their first year while a six-figure market sat right in front of them, overlooked.</p>
   <p class="rv">So I built ${C.brand.name}: the roadmap I wish someone had handed me. Every course, every script, every tracker inside comes from the field, not from theory that sounds nice on a slide.</p>
 </div></section>
-<section class="band"><div class="glow"></div><div class="wrap" style="position:relative"><div class="stats">
+<section class="band"><div class="glow"></div><div class="wrap" style="position:relative"><div class="stats stats-centered">
   <div class="stat rv"><div class="num">${C.home.stat1Num}</div><div class="lbl" style="color:#A4937D">${C.home.stat1Label}</div></div>
   <div class="stat rv"><div class="num">${C.home.stat2Num}</div><div class="lbl" style="color:#A4937D">${C.home.stat2Label}</div></div>
   <div class="stat rv"><div class="num">${C.home.stat3Num}</div><div class="lbl" style="color:#A4937D">${C.home.stat3Label}</div></div>
