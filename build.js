@@ -246,7 +246,7 @@ function buildClub() {
   <div class="wrap">
     <h2 class="rv">${cl.finalHeadline}</h2>
     <p class="rv">Every course. Weekly coaching. A community that closes.</p>
-    <a href="#" class="btn btn-gold rv" style="font-size:17px;padding:16px 38px">Join the Elite Leasing Club &middot;&nbsp;${PRICE(C.pricing.clubMonthly)}/month</a>
+    <a href="${C.links.clubCheckout}" class="btn btn-gold rv" style="font-size:17px;padding:16px 38px">Join the Elite Leasing Club &middot;&nbsp;${PRICE(C.pricing.clubMonthly)}/month</a>
     <div class="micro rv">Not ready yet? <a href="ebook.html">Start with the free e-book.</a></div>
   </div>
 </section>`;
@@ -298,7 +298,7 @@ function buildCourseDetail(c) {
       <div class="cmeta"><span class="badge">Course ${c.n}</span><span class="badge">${c.level}</span><span class="badge">${c.lessons} lessons</span></div>
       <h1>${c.title}</h1>
       <p class="promise">${c.promise}</p>
-      <div class="cprice"><a href="#" class="btn btn-gold" style="font-size:16.5px;padding:15px 34px">Enroll Now &middot;&nbsp;${PRICE(c.price)}</a><span class="alt">Or get all 9 courses in <a href="club.html">the Club</a> for ${PRICE(C.pricing.clubMonthly)}/mo</span></div>
+      <div class="cprice"><a href="${C.links.courseCheckout['c'+c.n]}" class="btn btn-gold" style="font-size:16.5px;padding:15px 34px">Enroll Now &middot;&nbsp;${PRICE(c.price)}</a><span class="alt">Or get all 9 courses in <a href="club.html">the Club</a> for ${PRICE(C.pricing.clubMonthly)}/mo</span></div>
     </div>
   </div>
 </header>
@@ -311,7 +311,7 @@ function buildCourseDetail(c) {
   <div class="wrap">
     <h2 class="rv">Take this course. Or take everything.</h2>
     <p class="rv">This course: ${PRICE(c.price)} one-time. Every course plus weekly coaching: ${PRICE(C.pricing.clubMonthly)}/month.</p>
-    <a href="#" class="btn btn-gold rv" style="margin-right:12px">Enroll in ${c.title}</a>
+    <a href="${C.links.courseCheckout['c'+c.n]}" class="btn btn-gold rv" style="margin-right:12px">Enroll in ${c.title}</a>
     <a href="club.html" class="btn btn-ghost rv" style="border-color:var(--gold-bright);color:var(--gold-bright)">Join the Club</a>
   </div>
 </section>`;

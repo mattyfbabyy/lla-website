@@ -5,7 +5,7 @@
     "tagline": "Treat rentals like a real business, not a side hustle.",
     "hashtag": "#BetterAgentsWin",
     "contactEmail": "matty@luxuryleasingacademy.com",
-    "portalUrl": "https://portal.luxuryleasingacademy.com",
+    "portalUrl": "https://luxuryleasingacademy.com/student-portal/",
     "city": "Chicago, IL"
   },
   "nav": {
@@ -86,5 +86,19 @@
       "name": "First L.",
       "location": "Agent, City"
     }
-  ]
+  ],
+  "links": {
+    "clubCheckout": "https://luxuryleasingacademy.com/purchase/?plan=317",
+    "courseCheckout": {
+      "c1": "https://luxuryleasingacademy.com/purchase/?plan=139",
+      "c2": "https://luxuryleasingacademy.com/purchase/?plan=176",
+      "c3": "https://luxuryleasingacademy.com/purchase/?plan=212",
+      "c4": "https://luxuryleasingacademy.com/purchase/?plan=249",
+      "c5": "https://luxuryleasingacademy.com/purchase/?plan=344",
+      "c6": "https://luxuryleasingacademy.com/purchase/?plan=390",
+      "c7": "https://luxuryleasingacademy.com/purchase/?plan=439",
+      "c8": "https://luxuryleasingacademy.com/purchase/?plan=478",
+      "c9": "https://luxuryleasingacademy.com/purchase/?plan=505"
+    }
+  }
 }
