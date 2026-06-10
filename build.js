@@ -173,12 +173,13 @@ function buildClub() {
   <div class="wrap">
     <div class="section-head rv"><div class="eyebrow">The Value Stack</div><h2>What you get the moment you join</h2></div>
     <div class="stack">
-      <div class="stack-item rv"><div class="stack-no">1</div><div><h3>All 9 courses, full access <span>${C.pricing.totalValue} if bought separately</span></h3><p>The complete curriculum, in order, from your first lease to a scaled rental business. 300+ lessons.</p><div class="course-pills">${pills}</div></div></div>
+      <div class="stack-item rv"><div class="stack-no">1</div><div><h3>All 9 courses, full access <span>${C.pricing.coursesValue} value</span></h3><p>The complete curriculum, in order, from your first lease to a scaled rental business. 300+ lessons.</p><div class="course-pills">${pills}</div></div></div>
       <div class="stack-item rv"><div class="stack-no">2</div><div><h3>Weekly live strategy sessions</h3><p>Real coaching on what's working right now. Bring your deals, your objections, your stuck points. Leave with answers.</p></div></div>
       <div class="stack-item rv"><div class="stack-no">3</div><div><h3>The private community</h3><p>Agents who close, sharing scripts, wins, and market intel. No spectators.</p></div></div>
-      <div class="stack-item rv"><div class="stack-no">4</div><div><h3>The complete deliverables vault <span>70+ tools</span></h3><p>Done-for-you tools that replace years of trial and error: the 30-Day Action Plan, the Building Bible, the Objection Handling Playbook, the Follow-Up Script Vault, the Content Repurposing Flowchart, the Income Tracker &amp; Commission Forecast, and dozens more.</p></div></div>
+      <div class="stack-item rv"><div class="stack-no">4</div><div><h3>The complete deliverables vault <span>$1,500 value</span></h3><p>Done-for-you tools that replace years of trial and error: the 30-Day Action Plan, the Building Bible, the Objection Handling Playbook, the Follow-Up Script Vault, the Content Repurposing Flowchart, the Income Tracker &amp; Commission Forecast, and dozens more.</p></div></div>
       <div class="stack-item rv"><div class="stack-no">5</div><div><h3>The Lease Up, every Saturday</h3><p>Weekly strategies and market insights in your inbox. Stay sharp between sessions.</p></div></div>
     </div>
+    <div class="stack-total rv">Total value if bought separately: <span class="strike-val">over ${C.pricing.totalValue}</span>.<br>Yours inside the Club for <strong>${PRICE(C.pricing.clubMonthly)}/month</strong>.</div>
   </div>
 </section>
 <section class="section who">
@@ -189,11 +190,21 @@ function buildClub() {
 </section>
 <section class="band">
   <div class="glow"></div>
-  <div class="wrap band-inner" style="position:relative;max-width:760px">
+  <div class="wrap math-inner" style="position:relative">
     <div class="eyebrow rv" style="color:var(--gold-bright)">The Math</div>
-    <h2 class="rv">One lease pays for your membership. <em style="font-style:italic;color:var(--gold-bright)">Many times over.</em></h2>
-    <p class="rv">A single luxury lease commission typically runs <strong>${PRICE(C.pricing.commissionLow+'&ndash;'+C.pricing.commissionHigh)}</strong>. The Club costs <strong>${PRICE(C.pricing.clubMonthly)}/month</strong>.</p>
-    <p class="rv">If the system gets you <strong>one extra lease a year</strong>, it has already paid for itself. The agents inside aren't closing one extra lease a year.</p>
+    <h2 class="rv math-head">One lease pays for your membership. <em style="font-style:italic;color:var(--gold-bright)">Many times over.</em></h2>
+    <div class="math-compare rv">
+      <div class="math-fig">
+        <div class="math-num">${PRICE(C.pricing.commissionLow)}</div>
+        <div class="math-lbl">Typical luxury lease commission</div>
+      </div>
+      <div class="math-vs">vs</div>
+      <div class="math-fig">
+        <div class="math-num">${PRICE(C.pricing.clubMonthly)}</div>
+        <div class="math-lbl">Per month in the Club</div>
+      </div>
+    </div>
+    <p class="rv math-close">Land just <strong>one extra lease a year</strong> and the membership has already paid for itself. The agents inside are closing far more than that.</p>
   </div>
 </section>
 <section class="section">
@@ -202,11 +213,11 @@ function buildClub() {
     <div class="compare rv"><table>
       <thead><tr><th></th><th>Figure it out alone</th><th>Buy courses one by one</th><th>Elite Leasing Club</th></tr></thead>
       <tbody>
-        <tr><td>All 9 courses</td><td><span class="no">&#10005;</span></td><td>${PRICE(C.pricing.totalValue)} one-time</td><td><span class="yes">&#10003; Included</span></td></tr>
+        <tr><td>All 9 courses</td><td><span class="no">&#10005;</span></td><td>${PRICE(C.pricing.coursesValue)}</td><td><span class="yes">&#10003; Included</span></td></tr>
         <tr><td>Weekly live coaching</td><td><span class="no">&#10005;</span></td><td><span class="no">&#10005;</span></td><td><span class="yes">&#10003;</span></td></tr>
         <tr><td>Private community</td><td><span class="no">&#10005;</span></td><td><span class="no">&#10005;</span></td><td><span class="yes">&#10003;</span></td></tr>
         <tr><td>Deliverables vault</td><td><span class="no">&#10005;</span></td><td>Per course only</td><td><span class="yes">&#10003; All 70+</span></td></tr>
-        <tr><td>Cost</td><td>Years of lost commissions</td><td>${PRICE(C.pricing.totalValue)}</td><td>${PRICE(C.pricing.clubMonthly)}/mo</td></tr>
+        <tr><td>Cost</td><td>Years of lost commissions</td><td>Over ${PRICE(C.pricing.totalValue)}</td><td>${PRICE(C.pricing.clubMonthly)}/mo</td></tr>
       </tbody>
     </table></div>
   </div>

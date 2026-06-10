@@ -209,3 +209,77 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
   .home-hero-grid{gap:32px}
   .home-band-big{font-size:84px}
 }
+
+
+/* --- Club page component styling (restored) --- */
+.stack{display:flex;flex-direction:column;gap:22px}
+.stack-item{display:grid;grid-template-columns:72px 1fr;gap:26px;background:var(--white);border:1px solid rgba(185,137,47,.18);border-radius:18px;padding:34px 36px;transition:transform .3s,box-shadow .3s}
+.stack-item:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(42,32,24,.1)}
+.stack-no{font-family:'Fraunces',serif;font-size:44px;color:var(--gold);font-weight:600;line-height:1}
+.stack-item h3{font-size:23px;margin-bottom:8px}
+.stack-item h3 span{font-size:15px;color:var(--amber);font-weight:600;font-family:'Figtree',sans-serif;margin-left:10px;white-space:nowrap}
+.stack-item p{color:var(--espresso-soft);font-size:16px}
+.course-pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.pill{font-size:13.5px;font-weight:600;border:1px solid rgba(185,137,47,.4);color:var(--espresso-soft);border-radius:999px;padding:6px 14px;background:var(--ivory)}
+.pill b{color:var(--gold);font-weight:700;margin-right:5px}
+/* who for */
+.who{background:var(--cream)}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.who-col{background:var(--white);border-radius:18px;padding:38px 36px;border:1px solid rgba(185,137,47,.18)}
+.who-col.not{background:var(--espresso);color:var(--ivory);border:none}
+.who-col h3{font-size:24px;margin-bottom:22px}
+.who-col.not h3{color:var(--gold-bright)}
+.who-col ul{list-style:none}
+.who-col li{padding:10px 0 10px 34px;position:relative;font-size:16.5px;color:var(--espresso-soft);border-bottom:1px solid rgba(185,137,47,.12)}
+.who-col li:last-child{border-bottom:none}
+.who-col.not li{color:#CBBFAE;border-color:rgba(212,169,78,.15)}
+.who-col li::before{content:"\2713";position:absolute;left:0;color:var(--gold);font-weight:700}
+.who-col.not li::before{content:"\2715";color:var(--amber)}
+.band-inner{position:relative;max-width:760px}
+/* compare table */
+.compare{overflow-x:auto}
+.who-sig{margin-top:20px;font-weight:700;font-size:14.5px}
+.who-sig span{display:block;font-weight:500;color:var(--haze);font-size:13px;margin-top:2px}
+/* FAQ */
+.faq{max-width:780px;margin:0 auto}
+.stack-item{grid-template-columns:1fr;gap:10px;padding:28px 24px}
+.stack-no{font-size:34px}
+.who-col{padding:30px 24px}
+@media (max-width:600px){
+  .stack-item{grid-template-columns:1fr;gap:10px;padding:28px 24px}
+  .stack-no{font-size:34px}
+  .who-col{padding:30px 24px}
+}
+/* --- Club compare table + FAQ styling (restored, scoped) --- */
+.compare table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid rgba(185,137,47,.2);border-radius:18px;overflow:hidden;min-width:640px}
+.compare th, .compare td{padding:18px 22px;text-align:left;font-size:15.5px;border-bottom:1px solid rgba(185,137,47,.12)}
+.compare thead th{font-family:'Fraunces',serif;font-size:17px;background:var(--cream)}
+.compare thead th:last-child{background:var(--espresso);color:var(--gold-bright)}
+.compare tbody td:last-child{background:rgba(212,169,78,.1);font-weight:600}
+.compare tbody tr:last-child td{border-bottom:none;font-weight:700}
+.compare td .yes{color:var(--gold);font-weight:700}
+.compare td .no{color:var(--haze)}
+.faq details{background:var(--white);border:1px solid rgba(185,137,47,.18);border-radius:14px;margin-bottom:14px;overflow:hidden}
+.faq summary{cursor:pointer;padding:22px 26px;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:'Fraunces',serif;font-size:26px;color:var(--gold);transition:transform .3s;flex-shrink:0}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 26px 24px;color:var(--espresso-soft);font-size:16px}
+
+.stack-total{text-align:center;margin-top:34px;font-size:18px;font-family:'Fraunces',serif;color:var(--espresso)}
+.stack-total .strike-val{color:var(--gold);font-weight:600}
+
+/* --- Math section (clean redesign) --- */
+.math-inner{max-width:860px;text-align:center;margin:0 auto}
+.math-head{margin-bottom:48px}
+.math-compare{display:flex;align-items:center;justify-content:center;gap:48px;margin:0 auto 40px}
+.math-fig{flex:0 1 280px;min-width:0}
+.math-num{font-family:'Fraunces',serif;font-size:clamp(36px,4.4vw,54px);font-weight:600;color:var(--gold-bright);line-height:1.05}
+.math-lbl{margin-top:12px;font-size:14px;letter-spacing:.05em;color:#C9B89A;text-transform:uppercase;line-height:1.4}
+.math-vs{font-family:'Fraunces',serif;font-style:italic;font-size:22px;color:#9A8A6E;flex:0 0 auto;padding:0 4px}
+.math-close{max-width:600px;margin:0 auto;font-size:18px;line-height:1.65;color:var(--ivory)}
+@media (max-width:640px){
+  .math-compare{flex-direction:column;gap:28px}
+  .math-vs{padding:0}
+  .math-fig{flex:0 1 auto}
+}

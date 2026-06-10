@@ -10,7 +10,7 @@
   },
   "nav": {
     "courses": "Courses",
-    "club": "Elite Club",
+    "club": "The ELC",
     "ebook": "Free E-Book",
     "matty": "Meet Matty",
     "login": "Student Login",
@@ -27,11 +27,13 @@
   "pricing": {
     "clubMonthly": "$297",
     "courseDefault": "$697",
-    "totalValue": "$6,500",
-    "commissionLow": "$3,000",
+    "totalValue": "$7,000",
+    "commissionLow": "$3,000+",
     "commissionHigh": "$6,000",
     "playbook": "$20",
-    "clubAnnual": "$2,970"
+    "clubAnnual": "$2,970",
+    "coursesValue": "$7,000+",
+    "deliverablesValue": "$1,500"
   },
   "home": {
     "eyebrow": "Luxury Leasing Academy",
@@ -52,7 +54,7 @@
   },
   "club": {
     "eyebrow": "The Elite Leasing Club",
-    "heroHeadline": "Everything you need to build a six-figure rental business. All in one place.",
+    "heroHeadline": "Everything you need to build a six-figure rental business.<br>All in one place.",
     "heroHighlight": "All in one place.",
     "heroSub": "All 9 courses. Weekly live coaching. A private community of agents who are actually putting in the work. This is the complete system, not another course you finish and forget.",
     "finalHeadline": "Better agents win. Become one."
