@@ -1,0 +1,29 @@
+LLA WEBSITE UPDATE - June 11, 2026
+
+WHAT TO DO:
+1. Open your cloned lla-website repo folder
+2. Drag these 4 files into the repo root, replacing the old ones:
+   build.js, build-data.js, templates_css_shared.css, templates_css_home.css
+3. Open the img folder in this package and drag all 12 files into your repo's img folder
+   (nothing gets replaced, these are all new files)
+4. GitHub Desktop: commit with "site update - images, footer, course content" then Push
+5. Wait for Vercel to show Ready
+
+DO NOT touch content.json, vercel.json, or anything else. They are unchanged.
+
+The old c1-mockup.png through c9-mockup.png in your img folder are no longer used.
+You can delete them whenever, or leave them. Nothing breaks either way.
+
+WHAT'S IN THIS UPDATE:
+- All course box images replaced with the new versions, backgrounds removed, web optimized
+- Bigger images on home steps and courses page, desktop and mobile
+- Footer: Learn / About / Students as three thin horizontal rows
+- Footer Terms and Privacy now link to your live WordPress pages
+- "Or skip the math" button on the courses page is clickable (fixed everywhere)
+- ELC page hero now shows the 9-course stack next to the headline
+- All internal links are clean (no .html)
+- Site icon: black logo badge
+- Link previews when you text the site: gold badge card (img/og-card.png,
+  replace that file anytime with your own 1200x630 image and recommit)
+- Course curriculum and deliverables updated to match your current Drive content,
+  including the full C9 vault
