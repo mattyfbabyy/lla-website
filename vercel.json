@@ -2,25 +2,102 @@
   "buildCommand": "node build.js",
   "outputDirectory": "public",
   "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
-    { "source": "/purchase", "destination": "https://portal.luxuryleasingacademy.com/purchase/", "permanent": false },
-    { "source": "/purchase/:path*", "destination": "https://portal.luxuryleasingacademy.com/purchase/:path*", "permanent": false },
-    { "source": "/student-portal", "destination": "https://portal.luxuryleasingacademy.com/student-portal/", "permanent": false },
-    { "source": "/student-portal/:path*", "destination": "https://portal.luxuryleasingacademy.com/student-portal/:path*", "permanent": false },
-    { "source": "/memberships/:path*", "destination": "https://portal.luxuryleasingacademy.com/memberships/:path*", "permanent": false },
-    { "source": "/wp-content/:path*", "destination": "https://portal.luxuryleasingacademy.com/wp-content/:path*", "permanent": false },
-    { "source": "/wp-admin/:path*", "destination": "https://portal.luxuryleasingacademy.com/wp-admin/:path*", "permanent": false },
-    { "source": "/wp-login.php", "destination": "https://portal.luxuryleasingacademy.com/wp-login.php", "permanent": false },
-    { "source": "/wp-json/:path*", "destination": "https://portal.luxuryleasingacademy.com/wp-json/:path*", "permanent": false },
-    { "source": "/blog", "destination": "https://portal.luxuryleasingacademy.com/blog/", "permanent": false },
-    { "source": "/blog/:path*", "destination": "https://portal.luxuryleasingacademy.com/blog/:path*", "permanent": false },
-    { "source": "/links", "destination": "https://portal.luxuryleasingacademy.com/links/", "permanent": false },
-    { "source": "/contact", "destination": "https://portal.luxuryleasingacademy.com/contact/", "permanent": false },
-    { "source": "/terms", "destination": "https://portal.luxuryleasingacademy.com/terms/", "permanent": false },
-    { "source": "/privacy-policy", "destination": "https://portal.luxuryleasingacademy.com/privacy-policy/", "permanent": false },
-    { "source": "/the-playbook", "destination": "https://portal.luxuryleasingacademy.com/the-playbook/", "permanent": false },
-    { "source": "/the-lease-up", "destination": "/ebook", "permanent": false },
-    { "source": "/about", "destination": "/meet-matty", "permanent": false },
-    { "source": "/e-book", "destination": "/ebook", "permanent": false }
+    {
+      "source": "/purchase",
+      "destination": "https://portal.luxuryleasingacademy.com/purchase/",
+      "permanent": false
+    },
+    {
+      "source": "/purchase/:path*",
+      "destination": "https://portal.luxuryleasingacademy.com/purchase/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/student-portal",
+      "destination": "https://portal.luxuryleasingacademy.com/student-portal/",
+      "permanent": false
+    },
+    {
+      "source": "/student-portal/:path*",
+      "destination": "https://portal.luxuryleasingacademy.com/student-portal/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/memberships/:path*",
+      "destination": "https://portal.luxuryleasingacademy.com/memberships/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/wp-content/:path*",
+      "destination": "https://portal.luxuryleasingacademy.com/wp-content/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "https://portal.luxuryleasingacademy.com/wp-admin/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/wp-login.php",
+      "destination": "https://portal.luxuryleasingacademy.com/wp-login.php",
+      "permanent": false
+    },
+    {
+      "source": "/wp-json/:path*",
+      "destination": "https://portal.luxuryleasingacademy.com/wp-json/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/blog",
+      "destination": "https://portal.luxuryleasingacademy.com/blog/",
+      "permanent": false
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "https://portal.luxuryleasingacademy.com/blog/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/links",
+      "destination": "https://portal.luxuryleasingacademy.com/links/",
+      "permanent": false
+    },
+    {
+      "source": "/contact",
+      "destination": "https://portal.luxuryleasingacademy.com/contact/",
+      "permanent": false
+    },
+    {
+      "source": "/terms",
+      "destination": "https://portal.luxuryleasingacademy.com/terms/",
+      "permanent": false
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "https://portal.luxuryleasingacademy.com/privacy-policy/",
+      "permanent": false
+    },
+    {
+      "source": "/the-playbook",
+      "destination": "https://portal.luxuryleasingacademy.com/the-playbook/",
+      "permanent": false
+    },
+    {
+      "source": "/the-lease-up",
+      "destination": "/ebook",
+      "permanent": false
+    },
+    {
+      "source": "/about",
+      "destination": "/meet-matty",
+      "permanent": false
+    },
+    {
+      "source": "/e-book",
+      "destination": "/ebook",
+      "permanent": false
+    }
   ]
 }
