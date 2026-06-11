@@ -310,9 +310,12 @@ function buildCourseDetail(c) {
   <div class="glow"></div>
   <div class="wrap">
     <h2 class="rv">Take this course. Or take everything.</h2>
-    <p class="rv">This course: ${PRICE(c.price)} one-time. Every course plus weekly coaching: ${PRICE(C.pricing.clubMonthly)}/month.</p>
-    <a href="${C.links.courseCheckout['c'+c.n]}" class="btn btn-gold rv" style="margin-right:12px">Enroll in ${c.title}</a>
-    <a href="club.html" class="btn btn-ghost rv" style="border-color:var(--gold-bright);color:var(--gold-bright)">Join the Club</a>
+    <p class="rv preline">This course on its own: ${PRICE(c.price)}, one time.</p>
+    <p class="rv clubline">Or join the Club: all nine courses, over ${C.pricing.totalValue} of training, plus weekly live coaching for ${PRICE(C.pricing.clubMonthly)}/month.</p>
+    <div class="btn-row rv">
+      <a href="${C.links.courseCheckout['c'+c.n]}" class="btn btn-gold">Enroll in ${c.title}</a>
+      <a href="club.html" class="btn btn-ghost" style="border-color:var(--gold-bright);color:var(--gold-bright)">Join the Club</a>
+    </div>
   </div>
 </section>`;
   write(`${c.slug}.html`, page(`${c.title} | ${C.brand.name}`, body, CSS_SHARED));
@@ -384,7 +387,7 @@ function buildMatty() {
   <div class="card rv"><div class="tick">2</div><h3 style="font-size:22px;margin-bottom:12px">Real skills = real money</h3><p style="color:var(--espresso-soft);font-size:16px">Everything we teach works in the real world.</p></div>
   <div class="card rv"><div class="tick">3</div><h3 style="font-size:22px;margin-bottom:12px">Ownership mindset</h3><p style="color:var(--espresso-soft);font-size:16px">We train agents to think like entrepreneurs, not employees.</p></div>
 </div></div></section>
-<section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">${m.finalHeadline}</h2><p class="rv">${C.brand.hashtag}</p><a href="club.html" class="btn btn-gold rv" style="margin-right:12px">Join the Elite Leasing Club</a><a href="ebook.html" class="btn btn-ghost rv" style="border-color:var(--gold-bright);color:var(--gold-bright)">Start with the Free E-Book</a></div></section>`;
+<section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">${m.finalHeadline}</h2><p class="rv">${C.brand.hashtag}</p><div class="btn-row rv"><a href="club.html" class="btn btn-gold">Join the Elite Leasing Club</a><a href="ebook.html" class="btn btn-ghost" style="border-color:var(--gold-bright);color:var(--gold-bright)">Start with the Free E-Book</a></div></div></section>`;
   write('meet-matty.html', page(`Meet Matty | ${C.brand.name}`, body, CSS_SHARED));
 }
 

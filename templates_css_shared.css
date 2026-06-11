@@ -59,6 +59,12 @@ nav{position:sticky;top:0;z-index:50;background:rgba(250,246,238,.92);backdrop-f
 .final p{color:#CBBFAE;font-size:19px;margin-bottom:38px;position:relative}
 .final .micro{font-size:14.5px;margin-top:22px;color:#A4937D}
 .final .micro a{color:var(--gold-bright);text-decoration:underline}
+
+/* --- CTA button rows (final sections) --- */
+.btn-row{display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap;position:relative}
+.final .preline{margin-bottom:10px}
+.final .clubline{margin-bottom:34px}
+
 footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
 .foot-grid h4{color:var(--ivory);font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
@@ -248,7 +254,10 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 @media (max-width:600px){
   .stack-item{grid-template-columns:1fr;gap:10px;padding:28px 24px}
   .stack-no{font-size:34px}
+  .who-grid{grid-template-columns:1fr}
   .who-col{padding:30px 24px}
+  .btn-row{flex-direction:column;align-items:center;gap:16px}
+  .btn-row .btn{width:100%;max-width:340px;text-align:center;margin:0}
 }
 /* --- Club compare table + FAQ styling (restored, scoped) --- */
 .compare table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid rgba(185,137,47,.2);border-radius:18px;overflow:hidden;min-width:640px}
