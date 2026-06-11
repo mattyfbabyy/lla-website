@@ -1,20 +1,15 @@
-LLA FIX - June 11, 2026 (logos, photos, footer columns)
+LLA FIX v2 - June 11, 2026 (use this one, it replaces LLA-Fix-Logos-Footer)
 
-3 files. All go in the repo ROOT, replacing the old ones:
-  build.js
-  content.json
-  templates_css_home.css
+1. These 3 files go in the repo ROOT, replacing the old ones:
+   build.js, content.json, templates_css_home.css
+2. matty-hero.jpg (in the img folder of this zip) goes INTO your repo's img folder
 
-Nothing goes in the img folder this time. Do not touch anything else.
+Commit and push. That's it.
 
-Commit: fix logos, photos, footer columns - then Push. Wait for Ready.
+INCLUDED:
+- Your IMG_1011 rooftop photo as the homepage hero (web compressed)
+- Nav + footer logos served from your WordPress media library
+- Meet Matty photo served from your WordPress media library
+- Footer: Learn / About / Students as 3 side-by-side columns, desktop and mobile
 
-WHAT THIS DOES:
-- Nav logo, footer logo, and your two photos now load directly from your
-  WordPress media library (same as the ebook covers always have).
-  They can never disappear from the repo again, because they are not in it.
-- Footer: Learn / About / Students are 3 side-by-side columns on desktop
-  AND mobile (smaller text on phones so all 3 fit).
-
-Course box images untouched. New cuts coming once you send the white
-background versions.
+If you already pushed the earlier fix zip, push this anyway. It only updates the hero.
