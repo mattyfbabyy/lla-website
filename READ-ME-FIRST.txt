@@ -1,0 +1,20 @@
+LLA FIX - June 11, 2026 (logos, photos, footer columns)
+
+3 files. All go in the repo ROOT, replacing the old ones:
+  build.js
+  content.json
+  templates_css_home.css
+
+Nothing goes in the img folder this time. Do not touch anything else.
+
+Commit: fix logos, photos, footer columns - then Push. Wait for Ready.
+
+WHAT THIS DOES:
+- Nav logo, footer logo, and your two photos now load directly from your
+  WordPress media library (same as the ebook covers always have).
+  They can never disappear from the repo again, because they are not in it.
+- Footer: Learn / About / Students are 3 side-by-side columns on desktop
+  AND mobile (smaller text on phones so all 3 fit).
+
+Course box images untouched. New cuts coming once you send the white
+background versions.

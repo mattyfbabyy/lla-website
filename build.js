@@ -30,10 +30,10 @@ const FOOTER = `<footer>
       <div class="foot-tag-center">${C.brand.tagline}</div>
       <div class="foot-hash">${C.brand.hashtag}</div>
     </div>
-    <div class="foot-rows">
-      <div class="foot-row"><h4>Learn</h4><a href="/courses">${C.nav.courses}</a><a href="/club">${C.nav.club}</a><a href="/ebook">${C.nav.ebook}</a><a href="/thanks">The Playbook</a></div>
-      <div class="foot-row"><h4>About</h4><a href="/meet-matty">${C.nav.matty}</a><a href="/ebook">The Lease Up</a><a href="mailto:${C.brand.contactEmail}">Contact</a></div>
-      <div class="foot-row"><h4>Students</h4><a href="${C.brand.portalUrl}">${C.nav.login}</a><a href="https://portal.luxuryleasingacademy.com/terms/">Terms</a><a href="https://portal.luxuryleasingacademy.com/privacy-policy/">Privacy</a></div>
+    <div class="foot-grid foot-grid-3">
+      <div class="foot-col"><h4>Learn</h4><a href="/courses">${C.nav.courses}</a><a href="/club">${C.nav.club}</a><a href="/ebook">${C.nav.ebook}</a><a href="/thanks">The Playbook</a></div>
+      <div class="foot-col"><h4>About</h4><a href="/meet-matty">${C.nav.matty}</a><a href="/ebook">The Lease Up</a><a href="mailto:${C.brand.contactEmail}">Contact</a></div>
+      <div class="foot-col"><h4>Students</h4><a href="${C.brand.portalUrl}">${C.nav.login}</a><a href="https://portal.luxuryleasingacademy.com/terms/">Terms</a><a href="https://portal.luxuryleasingacademy.com/privacy-policy/">Privacy</a></div>
     </div>
     <div class="foot-bottom"><div>&copy; 2026 ${C.brand.name}, LLC</div><div>${C.brand.city}</div></div>
   </div>

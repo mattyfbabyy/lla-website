@@ -17,12 +17,12 @@
     "joinButton": "Join the Club"
   },
   "images": {
-    "crest": "img/crest.png",
-    "heroPhoto": "img/matty-hero.jpg",
-    "mattyPhoto": "img/matty-bar.jpg",
+    "crest": "https://i0.wp.com/portal.luxuryleasingacademy.com/wp-content/uploads/2025/07/Logo-Dark-Text-Transparent-1.png?fit=300%2C300&ssl=1",
+    "heroPhoto": "https://i0.wp.com/portal.luxuryleasingacademy.com/wp-content/uploads/2025/07/Matty.png?fit=1086%2C1536&ssl=1",
+    "mattyPhoto": "https://i0.wp.com/portal.luxuryleasingacademy.com/wp-content/uploads/2025/07/Matty-Image.png?fit=1024%2C576&ssl=1",
     "ebookCover": "https://i0.wp.com/portal.luxuryleasingacademy.com/wp-content/uploads/2026/02/Luxury-Leases-Real-Profits-Book-Image.png?w=1400&ssl=1",
     "playbookCover": "https://i0.wp.com/portal.luxuryleasingacademy.com/wp-content/uploads/2026/02/The-Luxury-Leasing-Playbook-Book-Image.png?w=1400&ssl=1",
-    "footerLogo": "img/badge-footer.png"
+    "footerLogo": "https://i0.wp.com/portal.luxuryleasingacademy.com/wp-content/uploads/2025/07/Logo-Light-Text-Transparent.png?fit=300%2C300&ssl=1"
   },
   "pricing": {
     "clubMonthly": "$297",
