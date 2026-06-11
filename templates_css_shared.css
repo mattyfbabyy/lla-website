@@ -194,7 +194,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 .foot-tag-center{font-family:'Fraunces',serif;font-style:italic;color:var(--ivory);font-size:22px;line-height:1.4;max-width:520px;margin:0 auto 10px}
 .foot-hash{color:var(--gold-bright);font-weight:600;font-size:14px;letter-spacing:.04em}
 .foot-grid-3{grid-template-columns:1fr 1fr 1fr;max-width:720px;margin:0 auto 44px;text-align:center}
-@media (max-width:600px){.foot-logo-big img{height:76px}.foot-tag-center{font-size:19px}.foot-grid-3{grid-template-columns:1fr;gap:28px}}
+@media (max-width:600px){.foot-logo-big img{height:76px}.foot-tag-center{font-size:19px}}
 
 .foot-brandname{font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:var(--ivory);margin-bottom:14px;letter-spacing:.02em}
 @media (max-width:600px){.foot-brandname{font-size:18px}}
@@ -302,12 +302,13 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 }
 
 /* --- Footer: thin horizontal link rows --- */
-.foot-rows{max-width:880px;margin:0 auto 40px}
-.foot-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 26px;padding:12px 0;border-bottom:1px solid rgba(185,137,47,.12)}
-.foot-row:last-child{border-bottom:none}
-.foot-row h4{color:var(--ivory);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;margin:0 6px 0 0}
-.foot-row a{display:inline-block;margin:0;font-size:14px}
-@media (max-width:600px){.foot-row{gap:4px 18px;padding:12px 0}}
+/* footer: 3 columns on every screen size */
+.foot-grid-3{gap:24px}
+@media (max-width:600px){
+  .foot-grid-3{grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:none}
+  .foot-grid-3 h4{font-size:11px;letter-spacing:.12em;margin-bottom:12px}
+  .foot-grid-3 a{font-size:13px;margin-bottom:9px}
+}
 
 /* --- Club hero image --- */
 .club-hero{padding:76px 0 70px}

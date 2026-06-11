@@ -1,15 +1,10 @@
-LLA FIX v2 - June 11, 2026 (use this one, it replaces LLA-Fix-Logos-Footer)
+LLA FINAL DESIGN FIX - June 11, 2026
 
-1. These 3 files go in the repo ROOT, replacing the old ones:
-   build.js, content.json, templates_css_home.css
-2. matty-hero.jpg (in the img folder of this zip) goes INTO your repo's img folder
+1. content.json and templates_css_shared.css go in the repo ROOT, replacing the old ones
+2. matty-bar.jpg (in the img folder of this zip) goes INTO your repo's img folder
 
-Commit and push. That's it.
+Commit and push.
 
 INCLUDED:
-- Your IMG_1011 rooftop photo as the homepage hero (web compressed)
-- Nav + footer logos served from your WordPress media library
-- Meet Matty photo served from your WordPress media library
-- Footer: Learn / About / Students as 3 side-by-side columns, desktop and mobile
-
-If you already pushed the earlier fix zip, push this anyway. It only updates the hero.
+- Your suit photo as the Meet Matty page hero (web compressed)
+- The 3-column footer now renders identically on every page, mobile included
