@@ -31,7 +31,7 @@ const FOOTER = `<footer>
       <div class="foot-hash">${C.brand.hashtag}</div>
     </div>
     <div class="foot-grid foot-grid-3">
-      <div class="foot-col"><h4>Learn</h4><a href="/courses">${C.nav.courses}</a><a href="/club">${C.nav.club}</a><a href="/ebook">${C.nav.ebook}</a><a href="/thanks">The Playbook</a></div>
+      <div class="foot-col"><h4>Learn</h4><a href="/courses">${C.nav.courses}</a><a href="/club">${C.nav.club}</a><a href="/ebook">${C.nav.ebook}</a><a href="https://portal.luxuryleasingacademy.com/the-playbook/">The Playbook</a></div>
       <div class="foot-col"><h4>About</h4><a href="/meet-matty">${C.nav.matty}</a><a href="/ebook">The Lease Up</a><a href="mailto:${C.brand.contactEmail}">Contact</a></div>
       <div class="foot-col"><h4>Students</h4><a href="${C.brand.portalUrl}">${C.nav.login}</a><a href="https://portal.luxuryleasingacademy.com/terms/">Terms</a><a href="https://portal.luxuryleasingacademy.com/privacy-policy/">Privacy</a></div>
     </div>
@@ -45,7 +45,16 @@ if(burger){burger.addEventListener('click',()=>{const o=mm.classList.toggle('ope
 mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mm.classList.remove('open');burger.classList.remove('open')}));}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-document.querySelectorAll('form[data-optin],.optin form').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();window.location.href='/thanks'}));
+const AC_URL='https://luxuryleasingacademy.activehosted.com/proc.php';
+const AC_FORMS={ebook:{u:'6A2B6E5AC5DDC',f:'3',or:'e725c668-d7a7-491a-9a4c-c4fb6b4bf189'},news:{u:'6A2B6EF985697',f:'5',or:'0e277ddd-6bb5-4852-b022-c0a82ffb291d'}};
+document.querySelectorAll('form[data-optin],.optin form').forEach(f=>f.addEventListener('submit',e=>{
+e.preventDefault();
+const em=f.querySelector('input[type="email"]');if(!em||!em.value)return;
+const cfg=AC_FORMS[f.dataset.optin==='news'?'news':'ebook'];
+const d=new FormData();d.append('u',cfg.u);d.append('f',cfg.f);d.append('s','');d.append('c','0');d.append('m','0');d.append('act','sub');d.append('v','2');d.append('or',cfg.or);d.append('email',em.value);
+const btn=f.querySelector('button[type="submit"]');if(btn){btn.disabled=true;btn.textContent='Sending...'}
+fetch(AC_URL,{method:'POST',body:d,mode:'no-cors'}).catch(()=>{}).finally(()=>{window.location.href='/thanks'});
+}));
 const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,end=parseFloat(el.dataset.count||0);}),{threshold:.6});
 </script>`;
 
