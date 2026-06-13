@@ -70,23 +70,7 @@
     "heroSub": "Founder of Luxury Leasing Academy. Chicago born and built.",
     "finalHeadline": "I built the roadmap I wish I had.<br>It's yours now."
   },
-  "testimonials": [
-    {
-      "quote": "Testimonial copy drops in here. Specific result, specific timeframe.",
-      "name": "First L.",
-      "location": "Agent, City"
-    },
-    {
-      "quote": "Testimonial copy drops in here. The before and after is what sells.",
-      "name": "First L.",
-      "location": "Agent, City"
-    },
-    {
-      "quote": "Testimonial copy drops in here. Names and cities make it real.",
-      "name": "First L.",
-      "location": "Agent, City"
-    }
-  ],
+  "testimonials": [],
   "links": {
     "clubCheckout": "https://portal.luxuryleasingacademy.com/purchase/?plan=317",
     "courseCheckout": {

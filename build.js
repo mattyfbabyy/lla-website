@@ -103,6 +103,13 @@ const write = (name, html) => { fs.writeFileSync(path.join(OUT, name), html); co
 function buildHome() {
   const h = C.home;
   const testis = C.testimonials.map(t => `<div class="card rv"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"${t.quote}"</p><div class="who-sig" style="margin-top:20px;font-weight:700;font-size:14.5px">${t.name} <span style="display:block;font-weight:500;color:var(--haze);font-size:13px;margin-top:2px">${t.location}</span></div></div>`).join('');
+  const testiSection = C.testimonials.length ? `<hr class="horizon">
+<section class="section" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="section-head rv"><div class="eyebrow">Beta Students</div><h2>Agents who stopped guessing</h2></div>
+    <div class="cards3">${testis}</div>
+  </div>
+</section>` : '';
   const body = `<header class="hero" style="padding:88px 0 70px;position:relative;overflow:hidden">
   <div class="wrap home-hero-grid" id="herogrid">
     <div class="rv in">
@@ -156,13 +163,7 @@ function buildHome() {
     </div>
   </div>
 </section>
-<hr class="horizon">
-<section class="section" style="background:var(--cream)">
-  <div class="wrap">
-    <div class="section-head rv"><div class="eyebrow">Beta Students</div><h2>Agents who stopped guessing</h2></div>
-    <div class="cards3">${testis}</div>
-  </div>
-</section>
+${testiSection}
 <section class="final">
   <div class="glow"></div>
   <div class="wrap">
@@ -180,6 +181,13 @@ function buildClub() {
   const cl = C.club;
   const pills = COURSES.map(c => `<span class="pill"><b>C${c.n}</b>${c.title}</span>`).join('');
   const testis = C.testimonials.map(t => `<div class="card rv"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"${t.quote}"</p><div class="who-sig">${t.name} <span>${t.location}</span></div></div>`).join('');
+  const testiSection = C.testimonials.length ? `<hr class="horizon">
+<section class="section" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="section-head rv"><div class="eyebrow">Member Results</div><h2>Agents who stopped guessing</h2></div>
+    <div class="cards3">${testis}</div>
+  </div>
+</section>` : '';
   const body = `<header class="hero-split club-hero">
   <div class="wrap hs-grid">
     <div class="rv in">
@@ -246,13 +254,7 @@ function buildClub() {
     </table></div>
   </div>
 </section>
-<hr class="horizon">
-<section class="section" style="background:var(--cream)">
-  <div class="wrap">
-    <div class="section-head rv"><div class="eyebrow">Member Results</div><h2>Agents who stopped guessing</h2></div>
-    <div class="cards3">${testis}</div>
-  </div>
-</section>
+${testiSection}
 <section class="section">
   <div class="wrap">
     <div class="section-head rv"><div class="eyebrow">Questions</div><h2>Everything you're wondering</h2></div>
