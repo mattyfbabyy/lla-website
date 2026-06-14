@@ -33,7 +33,7 @@ const FOOTER = `<footer>
     <div class="foot-grid foot-grid-3">
       <div><h4>Learn</h4><a href="courses.html">${C.nav.courses}</a><a href="club.html">${C.nav.club}</a><a href="ebook.html">${C.nav.ebook}</a><a href="playbook.html">The Playbook</a></div>
       <div><h4>About</h4><a href="meet-matty.html">${C.nav.matty}</a><a href="the-lease-up.html">The Lease Up</a><a href="mailto:${C.brand.contactEmail}">Contact</a></div>
-      <div><h4>Students</h4><a href="${C.brand.portalUrl}">${C.nav.login}</a><a href="#">Terms</a><a href="#">Privacy</a></div>
+      <div><h4>Students</h4><a href="${C.brand.portalUrl}">${C.nav.login}</a><a href="${C.links.termsUrl}">Terms</a><a href="${C.links.privacyUrl}">Privacy</a></div>
     </div>
     <div class="foot-bottom"><div>&copy; 2026 ${C.brand.name}, LLC</div><div>${C.brand.city}</div></div>
   </div>
@@ -58,6 +58,9 @@ function page(title, body, css) {
 <meta name="color-scheme" content="light only">
 <meta name="supported-color-schemes" content="light">
 <title>${title}</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 ${FONTS}
 <style>${css || CSS_SHARED}</style>
 </head>
@@ -295,8 +298,7 @@ function buildCourseDetail(c) {
   <div class="wrap">
     <h2 class="rv">Take this course. Or take everything.</h2>
     <p class="rv">This course: ${PRICE(c.price)} one-time. Every course plus weekly coaching: ${PRICE(C.pricing.clubMonthly)}/month.</p>
-    <a href="${C.links.courseCheckout['c'+c.n]}" class="btn btn-gold rv" style="margin-right:12px">Enroll in ${c.title}</a>
-    <a href="club.html" class="btn btn-ghost rv" style="border-color:var(--gold-bright);color:var(--gold-bright)">Join the Club</a>
+    <div class="final-btns rv"><a href="${C.links.courseCheckout['c'+c.n]}" class="btn btn-gold">Enroll in ${c.title}</a><a href="club.html" class="btn btn-ghost" style="border-color:var(--gold-bright);color:var(--gold-bright)">Join the Club</a></div>
   </div>
 </section>`;
   write(`${c.slug}.html`, page(`${c.title} | ${C.brand.name}`, body, CSS_SHARED));
@@ -431,7 +433,7 @@ function buildMatty() {
   <div class="card rv"><div class="tick">2</div><h3 style="font-size:22px;margin-bottom:12px">Real skills = real money</h3><p style="color:var(--espresso-soft);font-size:16px">Everything we teach works in the real world.</p></div>
   <div class="card rv"><div class="tick">3</div><h3 style="font-size:22px;margin-bottom:12px">Ownership mindset</h3><p style="color:var(--espresso-soft);font-size:16px">We train agents to think like entrepreneurs, not employees.</p></div>
 </div></div></section>
-<section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">${m.finalHeadline}</h2><p class="rv">${C.brand.hashtag}</p><a href="club.html" class="btn btn-gold rv" style="margin-right:12px">Join the Elite Leasing Club</a><a href="ebook.html" class="btn btn-ghost rv" style="border-color:var(--gold-bright);color:var(--gold-bright)">Start with the Free E-Book</a></div></section>`;
+<section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">${m.finalHeadline}</h2><p class="rv">${C.brand.hashtag}</p><div class="final-btns rv"><a href="club.html" class="btn btn-gold">Join the Elite Leasing Club</a><a href="ebook.html" class="btn btn-ghost" style="border-color:var(--gold-bright);color:var(--gold-bright)">Start with the Free E-Book</a></div></div></section>`;
   write('meet-matty.html', page(`Meet Matty | ${C.brand.name}`, body, CSS_SHARED));
 }
 
