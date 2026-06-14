@@ -32,7 +32,7 @@ const FOOTER = `<footer>
     </div>
     <div class="foot-grid foot-grid-3">
       <div><h4>Learn</h4><a href="courses.html">${C.nav.courses}</a><a href="club.html">${C.nav.club}</a><a href="ebook.html">${C.nav.ebook}</a><a href="playbook.html">The Playbook</a></div>
-      <div><h4>About</h4><a href="meet-matty.html">${C.nav.matty}</a><a href="ebook.html">The Lease Up</a><a href="mailto:${C.brand.contactEmail}">Contact</a></div>
+      <div><h4>About</h4><a href="meet-matty.html">${C.nav.matty}</a><a href="the-lease-up.html">The Lease Up</a><a href="mailto:${C.brand.contactEmail}">Contact</a></div>
       <div><h4>Students</h4><a href="${C.brand.portalUrl}">${C.nav.login}</a><a href="#">Terms</a><a href="#">Privacy</a></div>
     </div>
     <div class="foot-bottom"><div>&copy; 2026 ${C.brand.name}, LLC</div><div>${C.brand.city}</div></div>
@@ -362,6 +362,47 @@ function buildPlaybook() {
   write('playbook.html', page(`The Luxury Leasing Playbook | ${C.brand.name}`, body, CSS_SHARED));
 }
 
+
+// ---------- THE LEASE UP (newsletter, posts to ActiveCampaign) ----------
+function buildLeaseUp() {
+  const l = C.leaseup;
+  const ac = C.links;
+  const body = `<header class="hero-split">
+  <div class="wrap hs-grid">
+    <div class="rv in">
+      <div class="eyebrow">${l.eyebrow}</div>
+      <h1>${highlight(l.heroHeadline, l.heroHighlight)}</h1>
+      <p class="sub">${l.heroSub}</p>
+      <form class="optform" method="POST" action="${ac.activeCampaignAction}">
+        <input type="hidden" name="u" value="${ac.acUserId}" />
+        <input type="hidden" name="f" value="${ac.acFormId}" />
+        <input type="hidden" name="s" />
+        <input type="hidden" name="c" value="0" />
+        <input type="hidden" name="m" value="0" />
+        <input type="hidden" name="act" value="sub" />
+        <input type="hidden" name="v" value="2" />
+        <input type="email" name="email" placeholder="Your best email" required>
+        <button class="btn btn-gold" type="submit">${l.formButton}</button>
+      </form>
+      <div class="form-micro">Every Saturday. No spam, unsubscribe anytime.</div>
+    </div>
+    <div class="leaseup-art rv in">
+      <div class="leaseup-card">
+        <div class="leaseup-card-tag">SATURDAYS</div>
+        <div class="leaseup-card-title">The Lease Up</div>
+        <div class="leaseup-card-line"></div>
+        <p class="leaseup-card-sub">One idea. Five minutes. Real leasing strategy from the field.</p>
+      </div>
+    </div>
+  </div>
+</header>
+<hr class="horizon">
+<section class="section"><div class="wrap"><div class="section-head rv"><div class="eyebrow">What You'll Get</div><h2>Every issue, something you can use Monday</h2></div><ul class="bullets rv" style="max-width:740px"><li>The lead gen move that's working <strong>right now</strong>, not last year</li><li>Scripts and templates you can copy straight into your next conversation</li><li>How top agents are positioning their brand to attract clients</li><li>Market shifts and what they mean for your commissions</li></ul></div></section>
+<section class="band"><div class="glow"></div><div class="wrap" style="position:relative;max-width:760px"><h2 class="rv">${l.bandLine1}</h2><p class="rv">${l.bandLine2}</p></div></section>
+<section class="section center"><div class="wrap"><div class="section-head rv"><div class="eyebrow">Join Free</div><h2>Get The Lease Up this Saturday</h2></div><form class="optform rv" method="POST" action="${ac.activeCampaignAction}"><input type="hidden" name="u" value="${ac.acUserId}" /><input type="hidden" name="f" value="${ac.acFormId}" /><input type="hidden" name="s" /><input type="hidden" name="c" value="0" /><input type="hidden" name="m" value="0" /><input type="hidden" name="act" value="sub" /><input type="hidden" name="v" value="2" /><input type="email" name="email" placeholder="Your best email" required><button class="btn btn-gold" type="submit">${l.formButton}</button></form><div class="form-micro rv">Every Saturday. No spam, unsubscribe anytime.</div></div></section>`;
+  write('the-lease-up.html', page(`The Lease Up | ${C.brand.name}`, body, CSS_SHARED));
+}
+
 // ---------- THANKS ----------
 function buildThanks() {
   const body = `<header class="confirm"><div class="wrap"><div class="eyebrow rv in">You're In</div><h1 class="rv in">Done! Check your inbox. Your e-book is on the way.</h1><p class="rv in">Give it 2 to 3 minutes. If it's not there, check spam and drag it to your inbox so you never miss The Lease Up.</p></div></header>
@@ -428,6 +469,7 @@ buildCourses();
 COURSES.forEach(buildCourseDetail);
 buildEbook();
 buildPlaybook();
+buildLeaseUp();
 buildThanks();
 buildMatty();
 console.log('Done. Site is in /public');

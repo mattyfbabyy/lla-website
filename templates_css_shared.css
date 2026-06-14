@@ -296,3 +296,12 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 .buy-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:8px}
 .buy-row-center{justify-content:center}
 .buy-note{font-size:14px;color:var(--haze)}
+
+/* --- The Lease Up newsletter art --- */
+.leaseup-art{display:flex;align-items:center;justify-content:center}
+.leaseup-card{background:linear-gradient(160deg,var(--espresso),#3a2c20);border:1px solid rgba(185,137,47,.35);border-radius:18px;padding:48px 40px;text-align:center;max-width:380px;width:100%;box-shadow:0 24px 60px rgba(42,32,24,.25)}
+.leaseup-card-tag{font-family:'Figtree',sans-serif;font-size:13px;letter-spacing:.22em;color:var(--gold-bright);font-weight:600;margin-bottom:14px}
+.leaseup-card-title{font-family:'Fraunces',serif;font-size:38px;color:var(--ivory);font-weight:600;line-height:1.1}
+.leaseup-card-line{width:54px;height:2px;background:var(--gold);margin:22px auto}
+.leaseup-card-sub{color:#C9B89A;font-size:15.5px;line-height:1.6;margin:0}
+@media (max-width:900px){.leaseup-card{max-width:100%;padding:40px 32px}}

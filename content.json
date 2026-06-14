@@ -100,7 +100,10 @@
       "c8": "https://luxuryleasingacademy.com/purchase/?plan=478",
       "c9": "https://luxuryleasingacademy.com/purchase/?plan=505"
     },
-    "playbookCheckout": "https://portal.luxuryleasingacademy.com/purchase/?plan=4437"
+    "playbookCheckout": "https://portal.luxuryleasingacademy.com/purchase/?plan=4437",
+    "activeCampaignAction": "https://luxuryleasingacademy.activehosted.com/proc.php",
+    "acFormId": "5",
+    "acUserId": "5"
   },
   "playbook": {
     "eyebrow": "The Paid Playbook",
@@ -111,5 +114,14 @@
     "bandLine1": "Most agents spend their first month guessing.",
     "bandLine2": "You'll spend yours executing a plan that works.",
     "finalHeadline": "30 days. One clear plan. Twenty dollars."
+  },
+  "leaseup": {
+    "eyebrow": "The Lease Up",
+    "heroHeadline": "Weekly leasing strategy, straight to your inbox",
+    "heroHighlight": "straight to your inbox",
+    "heroSub": "Every Saturday: one sharp idea to help you close more leases, build your brand, and run rentals like a real business. No fluff, no spam.",
+    "formButton": "Subscribe Free",
+    "bandLine1": "The agents who win read between the deals.",
+    "bandLine2": "The Lease Up is where that edge gets built, one Saturday at a time."
   }
 }
