@@ -88,17 +88,17 @@
     }
   ],
   "links": {
-    "clubCheckout": "https://luxuryleasingacademy.com/purchase/?plan=317",
+    "clubCheckout": "https://portal.luxuryleasingacademy.com/purchase/?plan=317",
     "courseCheckout": {
-      "c1": "https://luxuryleasingacademy.com/purchase/?plan=139",
-      "c2": "https://luxuryleasingacademy.com/purchase/?plan=176",
-      "c3": "https://luxuryleasingacademy.com/purchase/?plan=212",
-      "c4": "https://luxuryleasingacademy.com/purchase/?plan=249",
-      "c5": "https://luxuryleasingacademy.com/purchase/?plan=344",
-      "c6": "https://luxuryleasingacademy.com/purchase/?plan=390",
-      "c7": "https://luxuryleasingacademy.com/purchase/?plan=439",
-      "c8": "https://luxuryleasingacademy.com/purchase/?plan=478",
-      "c9": "https://luxuryleasingacademy.com/purchase/?plan=505"
+      "c1": "https://portal.luxuryleasingacademy.com/purchase/?plan=139",
+      "c2": "https://portal.luxuryleasingacademy.com/purchase/?plan=176",
+      "c3": "https://portal.luxuryleasingacademy.com/purchase/?plan=212",
+      "c4": "https://portal.luxuryleasingacademy.com/purchase/?plan=249",
+      "c5": "https://portal.luxuryleasingacademy.com/purchase/?plan=344",
+      "c6": "https://portal.luxuryleasingacademy.com/purchase/?plan=390",
+      "c7": "https://portal.luxuryleasingacademy.com/purchase/?plan=439",
+      "c8": "https://portal.luxuryleasingacademy.com/purchase/?plan=478",
+      "c9": "https://portal.luxuryleasingacademy.com/purchase/?plan=505"
     },
     "playbookCheckout": "https://portal.luxuryleasingacademy.com/purchase/?plan=4437",
     "activeCampaignAction": "https://luxuryleasingacademy.activehosted.com/proc.php",
