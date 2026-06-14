@@ -48,23 +48,17 @@ nav{position:sticky;top:0;z-index:50;background:rgba(250,246,238,.92);backdrop-f
 .card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(42,32,24,.12)}
 .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
 .band{background:var(--espresso);color:var(--ivory);padding:96px 0;position:relative;overflow:hidden}
-.band .glow{pointer-events:none;position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(201,111,35,.25),transparent 65%);top:-200px;right:-120px}
+.band .glow{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(201,111,35,.25),transparent 65%);top:-200px;right:-120px}
 .band h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:18px}
 .band h2 em{font-style:italic;color:var(--gold-bright)}
 .band p{color:#CBBFAE;font-size:18px}
 .band p strong{color:var(--gold-bright)}
 .final{background:var(--espresso);color:var(--ivory);padding:110px 0;text-align:center;position:relative;overflow:hidden}
-.final .glow{pointer-events:none;position:absolute;width:700px;height:380px;left:50%;transform:translateX(-50%);bottom:-220px;background:radial-gradient(ellipse,rgba(212,169,78,.3),transparent 65%)}
+.final .glow{position:absolute;width:700px;height:380px;left:50%;transform:translateX(-50%);bottom:-220px;background:radial-gradient(ellipse,rgba(212,169,78,.3),transparent 65%)}
 .final h2{font-size:clamp(34px,4.4vw,54px);margin-bottom:18px;position:relative}
 .final p{color:#CBBFAE;font-size:19px;margin-bottom:38px;position:relative}
 .final .micro{font-size:14.5px;margin-top:22px;color:#A4937D}
 .final .micro a{color:var(--gold-bright);text-decoration:underline}
-
-/* --- CTA button rows (final sections) --- */
-.btn-row{display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap;position:relative}
-.final .preline{margin-bottom:10px}
-.final .clubline{margin-bottom:34px}
-
 footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
 .foot-grid h4{color:var(--ivory);font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
@@ -88,8 +82,8 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 .course-grid.two{grid-template-columns:repeat(2,1fr)}
 .ccard{background:var(--white);border:1px solid rgba(185,137,47,.18);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
 .ccard:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(42,32,24,.12)}
-.ccard-img{background:var(--cream);padding:18px;display:flex;justify-content:center}
-.ccard-img img{height:300px;width:auto;max-width:100%;object-fit:contain}
+.ccard-img{background:var(--cream);padding:26px;display:flex;justify-content:center}
+.ccard-img img{height:215px;width:auto}
 .ccard-body{padding:26px 28px 30px;display:flex;flex-direction:column;flex:1}
 .ccard-meta{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--haze);margin-bottom:10px}
 .ccard-meta b{color:var(--gold)}
@@ -186,7 +180,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
   .foot-grid{grid-template-columns:1fr;gap:28px}
   .foot-bottom{flex-direction:column;gap:6px}
   .club-banner{padding:22px 22px}
-  .ccard-img img{height:255px}
+  .ccard-img img{height:180px}
 }
 
 .foot-brand{text-align:center;padding-bottom:44px;margin-bottom:44px;border-bottom:1px solid rgba(185,137,47,.2)}
@@ -194,7 +188,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 .foot-tag-center{font-family:'Fraunces',serif;font-style:italic;color:var(--ivory);font-size:22px;line-height:1.4;max-width:520px;margin:0 auto 10px}
 .foot-hash{color:var(--gold-bright);font-weight:600;font-size:14px;letter-spacing:.04em}
 .foot-grid-3{grid-template-columns:1fr 1fr 1fr;max-width:720px;margin:0 auto 44px;text-align:center}
-@media (max-width:600px){.foot-logo-big img{height:76px}.foot-tag-center{font-size:19px}}
+@media (max-width:600px){.foot-logo-big img{height:76px}.foot-tag-center{font-size:19px}.foot-grid-3{grid-template-columns:1fr;gap:28px}}
 
 .foot-brandname{font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:var(--ivory);margin-bottom:14px;letter-spacing:.02em}
 @media (max-width:600px){.foot-brandname{font-size:18px}}
@@ -254,10 +248,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 @media (max-width:600px){
   .stack-item{grid-template-columns:1fr;gap:10px;padding:28px 24px}
   .stack-no{font-size:34px}
-  .who-grid{grid-template-columns:1fr}
   .who-col{padding:30px 24px}
-  .btn-row{flex-direction:column;align-items:center;gap:16px}
-  .btn-row .btn{width:100%;max-width:340px;text-align:center;margin:0}
 }
 /* --- Club compare table + FAQ styling (restored, scoped) --- */
 .compare table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid rgba(185,137,47,.2);border-radius:18px;overflow:hidden;min-width:640px}
@@ -301,17 +292,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
   .matty-photo img{aspect-ratio:4/3}
 }
 
-/* --- Footer: thin horizontal link rows --- */
-/* footer: 3 columns on every screen size */
-.foot-grid-3{gap:24px}
-@media (max-width:600px){
-  .foot-grid-3{grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:none}
-  .foot-grid-3 h4{font-size:11px;letter-spacing:.12em;margin-bottom:12px}
-  .foot-grid-3 a{font-size:13px;margin-bottom:9px}
-}
-
-/* --- Club hero image --- */
-.club-hero{padding:76px 0 70px}
-.club-shot{display:flex;justify-content:center;align-items:center}
-.club-shot img{max-height:460px;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 26px 44px rgba(42,32,24,.22))}
-@media (max-width:900px){.club-shot{order:-1}.club-shot img{max-height:340px}}
+/* --- Playbook buy row --- */
+.buy-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:8px}
+.buy-row-center{justify-content:center}
+.buy-note{font-size:14px;color:var(--haze)}

@@ -5,7 +5,7 @@
     "tagline": "Treat rentals like a real business, not a side hustle.",
     "hashtag": "#BetterAgentsWin",
     "contactEmail": "matty@luxuryleasingacademy.com",
-    "portalUrl": "https://portal.luxuryleasingacademy.com/student-portal/",
+    "portalUrl": "https://luxuryleasingacademy.com/student-portal/",
     "city": "Chicago, IL"
   },
   "nav": {
@@ -17,12 +17,12 @@
     "joinButton": "Join the Club"
   },
   "images": {
-    "crest": "https://i0.wp.com/portal.luxuryleasingacademy.com/wp-content/uploads/2025/07/Logo-Dark-Text-Transparent-1.png?fit=300%2C300&ssl=1",
+    "crest": "img/crest.png",
     "heroPhoto": "img/matty-hero.jpg",
     "mattyPhoto": "img/matty-bar.jpg",
-    "ebookCover": "https://i0.wp.com/portal.luxuryleasingacademy.com/wp-content/uploads/2026/02/Luxury-Leases-Real-Profits-Book-Image.png?w=1400&ssl=1",
-    "playbookCover": "https://i0.wp.com/portal.luxuryleasingacademy.com/wp-content/uploads/2026/02/The-Luxury-Leasing-Playbook-Book-Image.png?w=1400&ssl=1",
-    "footerLogo": "https://i0.wp.com/portal.luxuryleasingacademy.com/wp-content/uploads/2025/07/Logo-Light-Text-Transparent.png?fit=300%2C300&ssl=1"
+    "ebookCover": "https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/2026/02/Luxury-Leases-Real-Profits-Book-Image.png?w=1400&ssl=1",
+    "playbookCover": "img/playbook-cover.png",
+    "footerLogo": "img/badge-footer.png"
   },
   "pricing": {
     "clubMonthly": "$297",
@@ -70,19 +70,46 @@
     "heroSub": "Founder of Luxury Leasing Academy. Chicago born and built.",
     "finalHeadline": "I built the roadmap I wish I had.<br>It's yours now."
   },
-  "testimonials": [],
-  "links": {
-    "clubCheckout": "https://portal.luxuryleasingacademy.com/purchase/?plan=317",
-    "courseCheckout": {
-      "c1": "https://portal.luxuryleasingacademy.com/purchase/?plan=139",
-      "c2": "https://portal.luxuryleasingacademy.com/purchase/?plan=176",
-      "c3": "https://portal.luxuryleasingacademy.com/purchase/?plan=212",
-      "c4": "https://portal.luxuryleasingacademy.com/purchase/?plan=249",
-      "c5": "https://portal.luxuryleasingacademy.com/purchase/?plan=344",
-      "c6": "https://portal.luxuryleasingacademy.com/purchase/?plan=390",
-      "c7": "https://portal.luxuryleasingacademy.com/purchase/?plan=439",
-      "c8": "https://portal.luxuryleasingacademy.com/purchase/?plan=478",
-      "c9": "https://portal.luxuryleasingacademy.com/purchase/?plan=505"
+  "testimonials": [
+    {
+      "quote": "Testimonial copy drops in here. Specific result, specific timeframe.",
+      "name": "First L.",
+      "location": "Agent, City"
+    },
+    {
+      "quote": "Testimonial copy drops in here. The before and after is what sells.",
+      "name": "First L.",
+      "location": "Agent, City"
+    },
+    {
+      "quote": "Testimonial copy drops in here. Names and cities make it real.",
+      "name": "First L.",
+      "location": "Agent, City"
     }
+  ],
+  "links": {
+    "clubCheckout": "https://luxuryleasingacademy.com/purchase/?plan=317",
+    "courseCheckout": {
+      "c1": "https://luxuryleasingacademy.com/purchase/?plan=139",
+      "c2": "https://luxuryleasingacademy.com/purchase/?plan=176",
+      "c3": "https://luxuryleasingacademy.com/purchase/?plan=212",
+      "c4": "https://luxuryleasingacademy.com/purchase/?plan=249",
+      "c5": "https://luxuryleasingacademy.com/purchase/?plan=344",
+      "c6": "https://luxuryleasingacademy.com/purchase/?plan=390",
+      "c7": "https://luxuryleasingacademy.com/purchase/?plan=439",
+      "c8": "https://luxuryleasingacademy.com/purchase/?plan=478",
+      "c9": "https://luxuryleasingacademy.com/purchase/?plan=505"
+    },
+    "playbookCheckout": "https://portal.luxuryleasingacademy.com/purchase/?plan=4437"
+  },
+  "playbook": {
+    "eyebrow": "The Paid Playbook",
+    "heroHeadline": "Your first 30 days as a luxury leasing agent, mapped out day by day",
+    "heroHighlight": "day by day",
+    "heroSub": "The free e-book shows you what's possible. The Playbook shows you exactly what to do, every morning, for your first 30 days.",
+    "buyButton": "Get the Playbook for $20",
+    "bandLine1": "Most agents spend their first month guessing.",
+    "bandLine2": "You'll spend yours executing a plan that works.",
+    "finalHeadline": "30 days. One clear plan. Twenty dollars."
   }
 }

@@ -10,16 +10,16 @@ const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">`;
 
 function nav() {
-  const L = [['/courses', C.nav.courses], ['/club', C.nav.club], ['/ebook', C.nav.ebook], ['/meet-matty', C.nav.matty]];
+  const L = [['courses.html', C.nav.courses], ['club.html', C.nav.club], ['ebook.html', C.nav.ebook], ['meet-matty.html', C.nav.matty]];
   const desk = L.map(([h, t]) => `<a href="${h}">${t}</a>`).join('');
   const mob = L.map(([h, t]) => `<a href="${h}">${t}</a>`).join('');
   return `<nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="/"><img src="${C.images.crest}" alt="${C.brand.name}"></a>
+    <a class="nav-logo" href="index.html"><img src="${C.images.crest}" alt="${C.brand.name}"></a>
     <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <div class="nav-links">${desk}<a href="${C.brand.portalUrl}" class="nav-login">${C.nav.login}</a><a href="/club" class="btn btn-gold">${C.nav.joinButton}</a></div>
+    <div class="nav-links">${desk}<a href="${C.brand.portalUrl}" class="nav-login">${C.nav.login}</a><a href="club.html" class="btn btn-gold">${C.nav.joinButton}</a></div>
   </div>
-  <div class="mobile-menu" id="mobileMenu">${mob}<a href="${C.brand.portalUrl}" class="mm-login">${C.nav.login}</a><a href="/club" class="btn btn-gold">${C.nav.joinButton}</a></div>
+  <div class="mobile-menu" id="mobileMenu">${mob}<a href="${C.brand.portalUrl}" class="mm-login">${C.nav.login}</a><a href="club.html" class="btn btn-gold">${C.nav.joinButton}</a></div>
 </nav>`;
 }
 
@@ -31,9 +31,9 @@ const FOOTER = `<footer>
       <div class="foot-hash">${C.brand.hashtag}</div>
     </div>
     <div class="foot-grid foot-grid-3">
-      <div class="foot-col"><h4>Learn</h4><a href="/courses">${C.nav.courses}</a><a href="/club">${C.nav.club}</a><a href="/ebook">${C.nav.ebook}</a><a href="https://portal.luxuryleasingacademy.com/the-playbook/">The Playbook</a></div>
-      <div class="foot-col"><h4>About</h4><a href="/meet-matty">${C.nav.matty}</a><a href="/ebook">The Lease Up</a><a href="mailto:${C.brand.contactEmail}">Contact</a></div>
-      <div class="foot-col"><h4>Students</h4><a href="${C.brand.portalUrl}">${C.nav.login}</a><a href="https://portal.luxuryleasingacademy.com/terms/">Terms</a><a href="https://portal.luxuryleasingacademy.com/privacy-policy/">Privacy</a></div>
+      <div><h4>Learn</h4><a href="courses.html">${C.nav.courses}</a><a href="club.html">${C.nav.club}</a><a href="ebook.html">${C.nav.ebook}</a><a href="playbook.html">The Playbook</a></div>
+      <div><h4>About</h4><a href="meet-matty.html">${C.nav.matty}</a><a href="ebook.html">The Lease Up</a><a href="mailto:${C.brand.contactEmail}">Contact</a></div>
+      <div><h4>Students</h4><a href="${C.brand.portalUrl}">${C.nav.login}</a><a href="#">Terms</a><a href="#">Privacy</a></div>
     </div>
     <div class="foot-bottom"><div>&copy; 2026 ${C.brand.name}, LLC</div><div>${C.brand.city}</div></div>
   </div>
@@ -45,20 +45,11 @@ if(burger){burger.addEventListener('click',()=>{const o=mm.classList.toggle('ope
 mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mm.classList.remove('open');burger.classList.remove('open')}));}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-const AC_URL='https://luxuryleasingacademy.activehosted.com/proc.php';
-const AC_FORMS={ebook:{u:'6A2B6E5AC5DDC',f:'3',or:'e725c668-d7a7-491a-9a4c-c4fb6b4bf189'},news:{u:'6A2B6EF985697',f:'5',or:'0e277ddd-6bb5-4852-b022-c0a82ffb291d'}};
-document.querySelectorAll('form[data-optin],.optin form').forEach(f=>f.addEventListener('submit',e=>{
-e.preventDefault();
-const em=f.querySelector('input[type="email"]');if(!em||!em.value)return;
-const cfg=AC_FORMS[f.dataset.optin==='news'?'news':'ebook'];
-const d=new FormData();d.append('u',cfg.u);d.append('f',cfg.f);d.append('s','');d.append('c','0');d.append('m','0');d.append('act','sub');d.append('v','2');d.append('or',cfg.or);d.append('email',em.value);
-const btn=f.querySelector('button[type="submit"]');if(btn){btn.disabled=true;btn.textContent='Sending...'}
-fetch(AC_URL,{method:'POST',body:d,mode:'no-cors'}).catch(()=>{}).finally(()=>{window.location.href='/thanks'});
-}));
+document.querySelectorAll('form[data-optin],.optin form').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();window.location.href='thanks.html'}));
 const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,end=parseFloat(el.dataset.count||0);}),{threshold:.6});
 </script>`;
 
-function page(title, body, css, desc) {
+function page(title, body, css) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,18 +58,6 @@ function page(title, body, css, desc) {
 <meta name="color-scheme" content="light only">
 <meta name="supported-color-schemes" content="light">
 <title>${title}</title>
-<meta name="description" content="${desc || C.brand.tagline}">
-<link rel="icon" type="image/png" href="/img/favicon.png">
-<link rel="apple-touch-icon" href="/img/favicon.png">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="${C.brand.name}">
-<meta property="og:title" content="${title}">
-<meta property="og:description" content="${desc || C.brand.tagline}">
-<meta property="og:image" content="https://luxuryleasingacademy.com/img/og-card.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://luxuryleasingacademy.com/img/og-card.png">
 ${FONTS}
 <style>${css || CSS_SHARED}</style>
 </head>
@@ -103,13 +82,6 @@ const write = (name, html) => { fs.writeFileSync(path.join(OUT, name), html); co
 function buildHome() {
   const h = C.home;
   const testis = C.testimonials.map(t => `<div class="card rv"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"${t.quote}"</p><div class="who-sig" style="margin-top:20px;font-weight:700;font-size:14.5px">${t.name} <span style="display:block;font-weight:500;color:var(--haze);font-size:13px;margin-top:2px">${t.location}</span></div></div>`).join('');
-  const testiSection = C.testimonials.length ? `<hr class="horizon">
-<section class="section" style="background:var(--cream)">
-  <div class="wrap">
-    <div class="section-head rv"><div class="eyebrow">Beta Students</div><h2>Agents who stopped guessing</h2></div>
-    <div class="cards3">${testis}</div>
-  </div>
-</section>` : '';
   const body = `<header class="hero" style="padding:88px 0 70px;position:relative;overflow:hidden">
   <div class="wrap home-hero-grid" id="herogrid">
     <div class="rv in">
@@ -117,8 +89,8 @@ function buildHome() {
       <h1 style="font-size:clamp(40px,5.2vw,64px);margin-bottom:24px">${highlight(h.heroHeadline, h.heroHighlight)}</h1>
       <p style="font-size:19px;color:var(--espresso-soft);max-width:560px;margin-bottom:34px">${h.heroSub}</p>
       <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:52px">
-        <a href="/club" class="btn btn-gold">Join the Elite Leasing Club</a>
-        <a href="/ebook" class="btn btn-ghost">Get the Free E-Book</a>
+        <a href="club.html" class="btn btn-gold">Join the Elite Leasing Club</a>
+        <a href="ebook.html" class="btn btn-ghost">Get the Free E-Book</a>
       </div>
       <div class="stats">
         <div class="stat"><div class="num">${h.stat1Num}</div><div class="lbl">${h.stat1Label}</div></div>
@@ -157,20 +129,26 @@ function buildHome() {
   <div class="wrap">
     <div class="section-head rv"><div class="eyebrow">The Path</div><h2>Your path to $100K+ with luxury rentals</h2></div>
     <div class="cards3">
-      <div class="card rv step-card"><div class="step-card-img"><img src="${C.images.ebookCover}" alt="E-book" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 01</div><h3 style="font-size:23px;margin-bottom:10px">Start free</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Download the e-book and learn the 9 secrets top earners use to build six-figure rental businesses.</p><a href="/ebook" style="color:var(--gold);font-weight:600;font-size:15px">Get the Free E-Book &rarr;</a></div></div>
-      <div class="card rv step-card"><div class="step-card-img"><img src="img/c1-mockup.webp" alt="Courses" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 02</div><h3 style="font-size:23px;margin-bottom:10px">Learn the system</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Nine courses covering everything from your first lease to scaling a rental empire. In order, step by step.</p><a href="/courses" style="color:var(--gold);font-weight:600;font-size:15px">Browse the Courses &rarr;</a></div></div>
-      <div class="card rv step-card"><div class="step-card-img"><img src="img/elc-mockup.webp" alt="The Elite Leasing Club" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 03</div><h3 style="font-size:23px;margin-bottom:10px">Go all in</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">The Elite Leasing Club: every course, weekly live coaching, and a community of agents actually closing deals.</p><a href="/club" style="color:var(--gold);font-weight:600;font-size:15px">Join the Club &rarr;</a></div></div>
+      <div class="card rv step-card"><div class="step-card-img"><img src="${C.images.ebookCover}" alt="E-book" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 01</div><h3 style="font-size:23px;margin-bottom:10px">Start free</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Download the e-book and learn the 9 secrets top earners use to build six-figure rental businesses.</p><a href="ebook.html" style="color:var(--gold);font-weight:600;font-size:15px">Get the Free E-Book &rarr;</a></div></div>
+      <div class="card rv step-card"><div class="step-card-img"><img src="img/c1-mockup.png" alt="Courses" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 02</div><h3 style="font-size:23px;margin-bottom:10px">Learn the system</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Nine courses covering everything from your first lease to scaling a rental empire. In order, step by step.</p><a href="courses.html" style="color:var(--gold);font-weight:600;font-size:15px">Browse the Courses &rarr;</a></div></div>
+      <div class="card rv step-card"><div class="step-card-img"><img src="https://i0.wp.com/luxuryleasingacademy.com/wp-content/uploads/brizy/imgs/Club-Website-Image-270x270x0x0x270x270x1752690028.png?w=1400&ssl=1" alt="Club" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 03</div><h3 style="font-size:23px;margin-bottom:10px">Go all in</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">The Elite Leasing Club: every course, weekly live coaching, and a community of agents actually closing deals.</p><a href="club.html" style="color:var(--gold);font-weight:600;font-size:15px">Join the Club &rarr;</a></div></div>
     </div>
   </div>
 </section>
-${testiSection}
+<hr class="horizon">
+<section class="section" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="section-head rv"><div class="eyebrow">Beta Students</div><h2>Agents who stopped guessing</h2></div>
+    <div class="cards3">${testis}</div>
+  </div>
+</section>
 <section class="final">
   <div class="glow"></div>
   <div class="wrap">
     <h2 class="rv">${h.finalHeadline}</h2>
     <p class="rv">${h.finalSub}</p>
-    <a href="/club" class="btn btn-gold rv" style="font-size:17px;padding:16px 38px">Join the Elite Leasing Club</a>
-    <div class="micro rv">Not ready yet? <a href="/ebook">Start with the free e-book.</a></div>
+    <a href="club.html" class="btn btn-gold rv" style="font-size:17px;padding:16px 38px">Join the Elite Leasing Club</a>
+    <div class="micro rv">Not ready yet? <a href="ebook.html">Start with the free e-book.</a></div>
   </div>
 </section>`;
   write('index.html', page(`${C.brand.name} | Build a Six-Figure Rental Business`, body, CSS_HOME));
@@ -181,23 +159,13 @@ function buildClub() {
   const cl = C.club;
   const pills = COURSES.map(c => `<span class="pill"><b>C${c.n}</b>${c.title}</span>`).join('');
   const testis = C.testimonials.map(t => `<div class="card rv"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"${t.quote}"</p><div class="who-sig">${t.name} <span>${t.location}</span></div></div>`).join('');
-  const testiSection = C.testimonials.length ? `<hr class="horizon">
-<section class="section" style="background:var(--cream)">
+  const body = `<header class="hero" style="padding:84px 0 72px;text-align:center">
   <div class="wrap">
-    <div class="section-head rv"><div class="eyebrow">Member Results</div><h2>Agents who stopped guessing</h2></div>
-    <div class="cards3">${testis}</div>
-  </div>
-</section>` : '';
-  const body = `<header class="hero-split club-hero">
-  <div class="wrap hs-grid">
-    <div class="rv in">
-      <div class="eyebrow">${cl.eyebrow}</div>
-      <h1 style="font-size:clamp(36px,4.6vw,54px);margin-bottom:22px">${highlight(cl.heroHeadline, cl.heroHighlight)}</h1>
-      <p class="sub">${cl.heroSub}</p>
-      <a href="#join" class="btn btn-gold" style="font-size:17px;padding:16px 38px">Join the Club &middot;&nbsp;${PRICE(C.pricing.clubMonthly)}/month</a>
-      <div class="micro" style="font-size:14px;color:var(--haze);margin-top:16px">Cancel anytime. No contracts.</div>
-    </div>
-    <div class="club-shot rv in"><img src="img/elc-mockup.webp" alt="All nine Luxury Leasing Academy courses"></div>
+    <div class="eyebrow rv in">${cl.eyebrow}</div>
+    <h1 class="rv in" style="font-size:clamp(36px,4.8vw,58px);max-width:860px;margin:0 auto 24px">${highlight(cl.heroHeadline, cl.heroHighlight)}</h1>
+    <p class="rv in" style="font-size:19px;color:var(--espresso-soft);max-width:640px;margin:0 auto 36px">${cl.heroSub}</p>
+    <a href="${C.links.clubCheckout}" class="btn btn-gold rv in" style="font-size:17px;padding:16px 38px">Join the Club &middot;&nbsp;${PRICE(C.pricing.clubMonthly)}/month</a>
+    <div class="micro rv in" style="font-size:14px;color:var(--haze);margin-top:16px">Cancel anytime. No contracts.</div>
   </div>
 </header>
 <hr class="horizon">
@@ -208,7 +176,7 @@ function buildClub() {
       <div class="stack-item rv"><div class="stack-no">1</div><div><h3>All 9 courses, full access <span>${C.pricing.coursesValue} value</span></h3><p>The complete curriculum, in order, from your first lease to a scaled rental business. 300+ lessons.</p><div class="course-pills">${pills}</div></div></div>
       <div class="stack-item rv"><div class="stack-no">2</div><div><h3>Weekly live strategy sessions</h3><p>Real coaching on what's working right now. Bring your deals, your objections, your stuck points. Leave with answers.</p></div></div>
       <div class="stack-item rv"><div class="stack-no">3</div><div><h3>The private community</h3><p>Agents who close, sharing scripts, wins, and market intel. No spectators.</p></div></div>
-      <div class="stack-item rv"><div class="stack-no">4</div><div><h3>The complete deliverables vault <span>$1,500 value</span></h3><p>Done-for-you tools that replace years of trial and error: the Building Bible, the Objection Handling Playbook, the Follow-Up Script Vault, the Market Expansion Playbook, day-by-day action plans for every course, and dozens more.</p></div></div>
+      <div class="stack-item rv"><div class="stack-no">4</div><div><h3>The complete deliverables vault <span>$1,500 value</span></h3><p>Done-for-you tools that replace years of trial and error: the 30-Day Action Plan, the Building Bible, the Objection Handling Playbook, the Follow-Up Script Vault, the Content Repurposing Flowchart, the Income Tracker &amp; Commission Forecast, and dozens more.</p></div></div>
       <div class="stack-item rv"><div class="stack-no">5</div><div><h3>The Lease Up, every Saturday</h3><p>Weekly strategies and market insights in your inbox. Stay sharp between sessions.</p></div></div>
     </div>
     <div class="stack-total rv">Total value if bought separately: <span class="strike-val">over ${C.pricing.totalValue}</span>.<br>Yours inside the Club for <strong>${PRICE(C.pricing.clubMonthly)}/month</strong>.</div>
@@ -254,7 +222,13 @@ function buildClub() {
     </table></div>
   </div>
 </section>
-${testiSection}
+<hr class="horizon">
+<section class="section" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="section-head rv"><div class="eyebrow">Member Results</div><h2>Agents who stopped guessing</h2></div>
+    <div class="cards3">${testis}</div>
+  </div>
+</section>
 <section class="section">
   <div class="wrap">
     <div class="section-head rv"><div class="eyebrow">Questions</div><h2>Everything you're wondering</h2></div>
@@ -273,7 +247,7 @@ ${testiSection}
     <h2 class="rv">${cl.finalHeadline}</h2>
     <p class="rv">Every course. Weekly coaching. A community that closes.</p>
     <a href="${C.links.clubCheckout}" class="btn btn-gold rv" style="font-size:17px;padding:16px 38px">Join the Elite Leasing Club &middot;&nbsp;${PRICE(C.pricing.clubMonthly)}/month</a>
-    <div class="micro rv">Not ready yet? <a href="/ebook">Start with the free e-book.</a></div>
+    <div class="micro rv">Not ready yet? <a href="ebook.html">Start with the free e-book.</a></div>
   </div>
 </section>`;
   write('club.html', page(`The Elite Leasing Club | ${C.brand.name}`, body, CSS_SHARED));
@@ -281,7 +255,7 @@ ${testiSection}
 
 // ---------- COURSES CATALOG ----------
 function buildCourses() {
-  const ccard = c => `<div class="ccard rv"><div class="ccard-img"><img src="img/c${c.n}-mockup.webp" alt="${c.title}" loading="lazy"></div><div class="ccard-body"><div class="ccard-meta"><b>Course ${c.n}</b> &middot; ${c.level} &middot; ${c.lessons} lessons</div><h3>${c.title}</h3><p>${c.promise}</p><div class="ccard-foot">${PRICE(c.price)}<a href="/${c.slug}">Learn More &rarr;</a></div></div></div>`;
+  const ccard = c => `<div class="ccard rv"><div class="ccard-img"><img src="img/c${c.n}-mockup.png" alt="${c.title}" loading="lazy"></div><div class="ccard-body"><div class="ccard-meta"><b>Course ${c.n}</b> &middot; ${c.level} &middot; ${c.lessons} lessons</div><h3>${c.title}</h3><p>${c.promise}</p><div class="ccard-foot">${PRICE(c.price)}<a href="${c.slug}.html">Learn More &rarr;</a></div></div></div>`;
   let tiers = '';
   for (const [label, level, idxs] of TIERS) {
     const cards = idxs.map(i => ccard(COURSES[i])).join('');
@@ -296,7 +270,7 @@ function buildCourses() {
 </header>
 <section class="section" style="padding-top:30px">
   <div class="wrap">
-    <div class="club-banner rv"><div><strong>Want all nine?</strong><p>Club members get every course, weekly coaching, and the full deliverables vault for ${PRICE(C.pricing.clubMonthly)}/month.</p></div><a href="/club" class="btn btn-gold">See the Club &rarr;</a></div>
+    <div class="club-banner rv"><div><strong>Want all nine?</strong><p>Club members get every course, weekly coaching, and the full deliverables vault for ${PRICE(C.pricing.clubMonthly)}/month.</p></div><a href="club.html" class="btn btn-gold">See the Club &rarr;</a></div>
     ${tiers}
   </div>
 </section>
@@ -305,7 +279,7 @@ function buildCourses() {
   <div class="wrap">
     <h2 class="rv">Or skip the math. Get everything.</h2>
     <p class="rv">The Club includes all nine courses plus weekly live coaching.</p>
-    <a href="/club" class="btn btn-gold rv" style="font-size:17px;padding:16px 38px">Join the Elite Leasing Club</a>
+    <a href="club.html" class="btn btn-gold rv" style="font-size:17px;padding:16px 38px">Join the Elite Leasing Club</a>
   </div>
 </section>`;
   write('courses.html', page(`Courses | ${C.brand.name}`, body, CSS_SHARED));
@@ -319,12 +293,12 @@ function buildCourseDetail(c) {
   const dcount = c.deliverables.length ? `${c.deliverables.length} done-for-you tools included` : "Toolkit in production";
   const body = `<header class="chero">
   <div class="wrap chero-grid">
-    <div class="chero-img rv in"><img src="img/c${c.n}-mockup.webp" alt="${c.title} course box"></div>
+    <div class="chero-img rv in"><img src="img/c${c.n}-mockup.png" alt="${c.title} course box"></div>
     <div class="rv in">
       <div class="cmeta"><span class="badge">Course ${c.n}</span><span class="badge">${c.level}</span><span class="badge">${c.lessons} lessons</span></div>
       <h1>${c.title}</h1>
       <p class="promise">${c.promise}</p>
-      <div class="cprice"><a href="${C.links.courseCheckout['c'+c.n]}" class="btn btn-gold" style="font-size:16.5px;padding:15px 34px">Enroll Now &middot;&nbsp;${PRICE(c.price)}</a><span class="alt">Or get all 9 courses in <a href="/club">the Club</a> for ${PRICE(C.pricing.clubMonthly)}/mo</span></div>
+      <div class="cprice"><a href="${C.links.courseCheckout['c'+c.n]}" class="btn btn-gold" style="font-size:16.5px;padding:15px 34px">Enroll Now &middot;&nbsp;${PRICE(c.price)}</a><span class="alt">Or get all 9 courses in <a href="club.html">the Club</a> for ${PRICE(C.pricing.clubMonthly)}/mo</span></div>
     </div>
   </div>
 </header>
@@ -336,12 +310,9 @@ function buildCourseDetail(c) {
   <div class="glow"></div>
   <div class="wrap">
     <h2 class="rv">Take this course. Or take everything.</h2>
-    <p class="rv preline">This course on its own: ${PRICE(c.price)}, one time.</p>
-    <p class="rv clubline">Or join the Club: all nine courses, over ${C.pricing.totalValue} of training, plus weekly live coaching for ${PRICE(C.pricing.clubMonthly)}/month.</p>
-    <div class="btn-row rv">
-      <a href="${C.links.courseCheckout['c'+c.n]}" class="btn btn-gold">Enroll in ${c.title}</a>
-      <a href="/club" class="btn btn-ghost" style="border-color:var(--gold-bright);color:var(--gold-bright)">Join the Club</a>
-    </div>
+    <p class="rv">This course: ${PRICE(c.price)} one-time. Every course plus weekly coaching: ${PRICE(C.pricing.clubMonthly)}/month.</p>
+    <a href="${C.links.courseCheckout['c'+c.n]}" class="btn btn-gold rv" style="margin-right:12px">Enroll in ${c.title}</a>
+    <a href="club.html" class="btn btn-ghost rv" style="border-color:var(--gold-bright);color:var(--gold-bright)">Join the Club</a>
   </div>
 </section>`;
   write(`${c.slug}.html`, page(`${c.title} | ${C.brand.name}`, body, CSS_SHARED));
@@ -369,6 +340,28 @@ function buildEbook() {
   write('ebook.html', page(`Free E-Book | ${C.brand.name}`, body, CSS_SHARED));
 }
 
+
+// ---------- PLAYBOOK (paid e-book) ----------
+function buildPlaybook() {
+  const p = C.playbook;
+  const body = `<header class="hero-split">
+  <div class="wrap hs-grid">
+    <div class="rv in">
+      <div class="eyebrow">${p.eyebrow}</div>
+      <h1>${highlight(p.heroHeadline, p.heroHighlight)}</h1>
+      <p class="sub">${p.heroSub}</p>
+      <div class="buy-row"><a href="${C.links.playbookCheckout}" class="btn btn-gold">${p.buyButton}</a><span class="buy-note">Instant access. Yours to keep.</span></div>
+    </div>
+    <div class="book-shot rv in"><img src="${C.images.playbookCover}" alt="The Luxury Leasing Playbook"></div>
+  </div>
+</header>
+<hr class="horizon">
+<section class="section"><div class="wrap"><div class="section-head rv"><div class="eyebrow">Inside The Playbook</div><h2>What's inside</h2></div><ul class="bullets rv" style="max-width:740px"><li>A <strong>day-by-day action plan</strong> for your entire first 30 days, so you always know your next move</li><li>Copy-paste <strong>email templates and phone scripts</strong> that get responses</li><li>The <strong>Power 25</strong> strategy for building a referral network fast</li><li>Real <strong>showing walkthroughs</strong> that turn tours into signed leases</li><li>A printable <strong>progress scorecard</strong> to track your momentum week by week</li></ul></div></section>
+<section class="band"><div class="glow"></div><div class="wrap" style="position:relative;max-width:760px"><h2 class="rv">${p.bandLine1}</h2><p class="rv">${p.bandLine2}</p></div></section>
+<section class="section center"><div class="wrap"><div class="section-head rv"><div class="eyebrow">Get Started</div><h2>${p.finalHeadline}</h2></div><div class="buy-row buy-row-center rv"><a href="${C.links.playbookCheckout}" class="btn btn-gold" style="font-size:17px;padding:16px 38px">${p.buyButton}</a></div><div class="form-micro rv">Instant access. Yours to keep. No subscription.</div></div></section>`;
+  write('playbook.html', page(`The Luxury Leasing Playbook | ${C.brand.name}`, body, CSS_SHARED));
+}
+
 // ---------- THANKS ----------
 function buildThanks() {
   const body = `<header class="confirm"><div class="wrap"><div class="eyebrow rv in">You're In</div><h1 class="rv in">Done! Check your inbox. Your e-book is on the way.</h1><p class="rv in">Give it 2 to 3 minutes. If it's not there, check spam and drag it to your inbox so you never miss The Lease Up.</p></div></header>
@@ -379,10 +372,10 @@ function buildThanks() {
     <h2 style="font-size:clamp(28px,3.4vw,40px);margin-bottom:18px">The e-book tells you the 9 secrets. The Playbook tells you what to do every single day for your first 30 days.</h2>
     <p style="color:var(--espresso-soft);font-size:17px;margin-bottom:8px"><em>The Luxury Leasing Playbook: Your First 30 Days as a Luxury Leasing Agent</em> gives you a daily action plan, copy-paste email templates and phone scripts, the Power 25 strategy, real showing walkthroughs, and a printable progress scorecard.</p>
     <div class="anchor-line">One lease commission: <span class="strike">${PRICE(C.pricing.commissionLow)}</span> &nbsp;&middot;&nbsp; This playbook: <span class="pop">${C.pricing.playbook}</span></div>
-    <a href="#" class="btn btn-gold" style="font-size:16.5px;padding:15px 34px">Get the Playbook for ${C.pricing.playbook}</a>
+    <a href="playbook.html" class="btn btn-gold" style="font-size:16.5px;padding:15px 34px">Get the Playbook for ${C.pricing.playbook}</a>
   </div>
 </div></section>
-<section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">While you wait for your e-book</h2><p class="rv">See what the complete system looks like.</p><a href="/club" class="btn btn-gold rv">Explore the Elite Leasing Club</a></div></section>`;
+<section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">While you wait for your e-book</h2><p class="rv">See what the complete system looks like.</p><a href="club.html" class="btn btn-gold rv">Explore the Elite Leasing Club</a></div></section>`;
   write('thanks.html', page(`Your E-Book Is On The Way | ${C.brand.name}`, body, CSS_SHARED));
 }
 
@@ -413,7 +406,7 @@ function buildMatty() {
   <div class="card rv"><div class="tick">2</div><h3 style="font-size:22px;margin-bottom:12px">Real skills = real money</h3><p style="color:var(--espresso-soft);font-size:16px">Everything we teach works in the real world.</p></div>
   <div class="card rv"><div class="tick">3</div><h3 style="font-size:22px;margin-bottom:12px">Ownership mindset</h3><p style="color:var(--espresso-soft);font-size:16px">We train agents to think like entrepreneurs, not employees.</p></div>
 </div></div></section>
-<section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">${m.finalHeadline}</h2><p class="rv">${C.brand.hashtag}</p><div class="btn-row rv"><a href="/club" class="btn btn-gold">Join the Elite Leasing Club</a><a href="/ebook" class="btn btn-ghost" style="border-color:var(--gold-bright);color:var(--gold-bright)">Start with the Free E-Book</a></div></div></section>`;
+<section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">${m.finalHeadline}</h2><p class="rv">${C.brand.hashtag}</p><a href="club.html" class="btn btn-gold rv" style="margin-right:12px">Join the Elite Leasing Club</a><a href="ebook.html" class="btn btn-ghost rv" style="border-color:var(--gold-bright);color:var(--gold-bright)">Start with the Free E-Book</a></div></section>`;
   write('meet-matty.html', page(`Meet Matty | ${C.brand.name}`, body, CSS_SHARED));
 }
 
@@ -434,6 +427,7 @@ buildClub();
 buildCourses();
 COURSES.forEach(buildCourseDetail);
 buildEbook();
+buildPlaybook();
 buildThanks();
 buildMatty();
 console.log('Done. Site is in /public');
