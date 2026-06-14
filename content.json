@@ -101,8 +101,8 @@
       "c9": "https://portal.luxuryleasingacademy.com/purchase/?plan=505"
     },
     "playbookCheckout": "https://portal.luxuryleasingacademy.com/purchase/?plan=4437",
-    "termsUrl": "https://www.portal.luxuryleasingacademy.com/terms",
-    "privacyUrl": "https://www.portal.luxuryleasingacademy.com/privacy-policy",
+    "termsUrl": "https://portal.luxuryleasingacademy.com/terms",
+    "privacyUrl": "https://portal.luxuryleasingacademy.com/privacy-policy",
     "activeCampaignAction": "https://luxuryleasingacademy.activehosted.com/proc.php",
     "acFormId": "5",
     "acUserId": "5"
