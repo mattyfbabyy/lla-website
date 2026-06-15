@@ -81,6 +81,43 @@ function highlight(text, phrase, cls='em-gold'){
 
 const write = (name, html) => { fs.writeFileSync(path.join(OUT, name), html); console.log('  built', name); };
 
+const THANKS_CSS = `
+.ty-wrap{max-width:660px;margin:0 auto;padding:0 28px}
+.ty-card{background:var(--white);border:1px solid rgba(185,137,47,.18);border-radius:18px;padding:34px 32px;text-align:left;box-shadow:0 20px 50px rgba(42,32,24,.07)}
+.ty-card h2{font-size:23px;margin-bottom:2px}
+.ty-sender{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;background:var(--cream);border-radius:12px;padding:13px 18px;margin:16px 0 22px;font-size:15px;color:var(--espresso-soft)}
+.ty-sender b{color:var(--espresso)}
+.ty-sender .lbl{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--haze)}
+.ty-steps{list-style:none;counter-reset:tystep}
+.ty-steps li{position:relative;padding:15px 0 15px 48px;border-top:1px solid rgba(185,137,47,.14);font-size:16px;color:var(--espresso-soft);line-height:1.55}
+.ty-steps li:first-child{border-top:none}
+.ty-steps li strong{color:var(--espresso);font-weight:600}
+.ty-steps li::before{counter-increment:tystep;content:counter(tystep);position:absolute;left:0;top:14px;width:31px;height:31px;border-radius:50%;background:linear-gradient(120deg,var(--gold),var(--gold-bright));color:#fff;font-family:'Fraunces',serif;font-weight:600;font-size:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 13px rgba(185,137,47,.3)}
+.ty-cta{text-align:center;margin-top:28px}
+.ty-note{font-size:14.5px;color:var(--haze);margin:20px auto 0;text-align:center;max-width:560px;line-height:1.55}
+.ty-note a{color:var(--gold);font-weight:600;text-decoration:underline}
+@media(max-width:600px){.ty-card{padding:26px 22px}.ty-wrap{padding:0 20px}}
+`;
+
+function tyShell(o){
+  const sender = `<div class="ty-sender"><span class="lbl">Look for</span><b>${C.brand.name}</b><span>&middot;</span><span>${C.brand.contactEmail}</span></div>`;
+  const stepsHtml = o.steps.map(s => `<li>${s}</li>`).join('');
+  const ctaHtml = o.cta ? `<div class="ty-cta"><a href="${o.cta.href}" class="btn btn-gold" style="font-size:16px;padding:14px 32px">${o.cta.label}</a></div>` : '';
+  const noteHtml = o.note ? `<div class="ty-note">${o.note}</div>` : '';
+  return `<header class="confirm"><div class="wrap"><div class="eyebrow rv in">${o.eyebrow}</div><h1 class="rv in">${o.h1}</h1><p class="rv in">${o.intro}</p></div></header>
+<section class="section" style="padding-top:14px"><div class="ty-wrap rv">
+  <div class="ty-card">
+    <h2>${o.inboxTitle}</h2>
+    ${sender}
+    <ol class="ty-steps">${stepsHtml}</ol>
+    ${ctaHtml}
+  </div>
+  ${noteHtml}
+</div></section>
+${o.secondary || ''}`;
+}
+
+
 // ---------- HOME ----------
 function buildHome() {
   const h = C.home;
@@ -391,19 +428,67 @@ function buildLeaseUp() {
 
 // ---------- THANKS ----------
 function buildThanks() {
-  const body = `<header class="confirm"><div class="wrap"><div class="eyebrow rv in">You're In</div><h1 class="rv in">Done! Check your inbox. Your e-book is on the way.</h1><p class="rv in">Give it 2 to 3 minutes. If it's not there, check spam and drag it to your inbox so you never miss The Lease Up.</p></div></header>
-<section class="section tripwire"><div class="wrap tw-grid">
-  <div class="book-shot rv"><img src="${C.images.playbookCover}" alt="The Luxury Leasing Playbook"></div>
-  <div class="rv">
-    <div class="eyebrow">Wait, one thing before you go</div>
-    <h2 style="font-size:clamp(28px,3.4vw,40px);margin-bottom:18px">The e-book tells you the 9 secrets. The Playbook tells you what to do every single day for your first 30 days.</h2>
-    <p style="color:var(--espresso-soft);font-size:17px;margin-bottom:8px"><em>The Luxury Leasing Playbook: Your First 30 Days as a Luxury Leasing Agent</em> gives you a daily action plan, copy-paste email templates and phone scripts, the Power 25 strategy, real showing walkthroughs, and a printable progress scorecard.</p>
-    <div class="anchor-line">One lease commission: <span class="strike">${PRICE(C.pricing.commissionLow)}</span> &nbsp;&middot;&nbsp; This playbook: <span class="pop">${C.pricing.playbook}</span></div>
-    <a href="playbook.html" class="btn btn-gold" style="font-size:16.5px;padding:15px 34px">Get the Playbook for ${C.pricing.playbook}</a>
-  </div>
-</div></section>
-<section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">While you wait for your e-book</h2><p class="rv">See what the complete system looks like.</p><a href="club.html" class="btn btn-gold rv">Explore the Elite Leasing Club</a></div></section>`;
-  write('thanks.html', page(`Your E-Book Is On The Way | ${C.brand.name}`, body, CSS_SHARED));
+  const steps = [
+    `<strong>Give it a couple of minutes.</strong> Your first email is on its way and usually arrives within five minutes.`,
+    `<strong>Don't see it?</strong> Check your spam or junk folder, and if you use Gmail, look under the Promotions tab.`,
+    `<strong>Never miss the next one.</strong> Drag the email into your main inbox and add ${C.brand.contactEmail} to your contacts.`
+  ];
+  const secondary = `<section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">While you're here</h2><p class="rv">See the full system top agents use to build a six-figure rental business.</p><a href="https://luxuryleasingacademy.com/club" class="btn btn-gold rv">Explore the Elite Leasing Club</a></div></section>`;
+  const body = tyShell({
+    eyebrow: "You're In",
+    h1: "You're on the list. Now check your inbox.",
+    intro: "Thanks for signing up. Your first email from Luxury Leasing Academy is on its way right now.",
+    inboxTitle: "One quick step so it reaches you",
+    steps,
+    note: `Grabbed the free e-book? Your download link is inside that first email. Joined The Lease Up? Your first issue lands this Saturday. Questions anytime: <a href="mailto:${C.brand.contactEmail}">${C.brand.contactEmail}</a>.`,
+    secondary
+  });
+  write('thanks.html', page(`You're In | ${C.brand.name}`, body, CSS_SHARED + THANKS_CSS));
+}
+
+// ---------- PURCHASE THANK YOU PAGES ----------
+function buildPurchaseThanks() {
+  write('thank-you-course.html', page(`Welcome to Your Course | ${C.brand.name}`, tyShell({
+    eyebrow: "Purchase Confirmed",
+    h1: "You're in. Your course is ready.",
+    intro: "Thank you for enrolling. Your receipt and access details are on their way to your inbox.",
+    inboxTitle: "How to get started",
+    steps: [
+      `<strong>Check your email for your receipt and login details.</strong> It usually arrives within a few minutes.`,
+      `<strong>Log in to start your course.</strong> Use the Student Login with the same email you purchased with.`,
+      `<strong>Can't find the email?</strong> Check spam, junk, and Gmail's Promotions tab, then add ${C.brand.contactEmail} to your contacts.`
+    ],
+    cta: { href: C.brand.portalUrl, label: "Go to Student Login" },
+    note: `Still nothing after ten minutes? Email <a href="mailto:${C.brand.contactEmail}">${C.brand.contactEmail}</a> and we'll get you in right away.`
+  }), CSS_SHARED + THANKS_CSS));
+
+  write('thank-you-club.html', page(`Welcome to the Elite Leasing Club | ${C.brand.name}`, tyShell({
+    eyebrow: "Welcome to the Club",
+    h1: "Welcome to the Elite Leasing Club.",
+    intro: "Your membership is active. Your receipt and access details are heading to your inbox now.",
+    inboxTitle: "How to get started",
+    steps: [
+      `<strong>Check your email for your receipt and login details.</strong> Give it a few minutes to arrive.`,
+      `<strong>Log in to unlock everything.</strong> All nine courses, weekly coaching, and the community are waiting behind the Student Login.`,
+      `<strong>Don't see the email?</strong> Check spam, junk, and Gmail's Promotions tab, then add ${C.brand.contactEmail} to your contacts.`
+    ],
+    cta: { href: C.brand.portalUrl, label: "Enter the Club" },
+    note: `Need a hand getting in? Email <a href="mailto:${C.brand.contactEmail}">${C.brand.contactEmail}</a> anytime.`
+  }), CSS_SHARED + THANKS_CSS));
+
+  write('thank-you-playbook.html', page(`Your Playbook Is On The Way | ${C.brand.name}`, tyShell({
+    eyebrow: "Purchase Confirmed",
+    h1: "Got it. Your Playbook is on its way.",
+    intro: "Thank you for your purchase. Your receipt and download are heading to your inbox right now.",
+    inboxTitle: "How to get your download",
+    steps: [
+      `<strong>Check your email for your receipt and download link.</strong> It usually lands within a few minutes.`,
+      `<strong>Don't see it?</strong> Check your spam or junk folder, and your Gmail Promotions tab.`,
+      `<strong>Keep it handy.</strong> Add ${C.brand.contactEmail} to your contacts so your receipt and any updates always reach you.`
+    ],
+    cta: { href: "https://luxuryleasingacademy.com/club", label: "See the full system in the Club" },
+    note: `Trouble with your download? Email <a href="mailto:${C.brand.contactEmail}">${C.brand.contactEmail}</a> and we'll send it straight over.`
+  }), CSS_SHARED + THANKS_CSS));
 }
 
 // ---------- MEET MATTY ----------
@@ -626,6 +711,7 @@ buildEbook();
 buildPlaybook();
 buildLeaseUp();
 buildThanks();
+buildPurchaseThanks();
 buildMatty();
 buildLegal();
 console.log('Done. Site is in /public');
