@@ -437,6 +437,175 @@ function buildMatty() {
   write('meet-matty.html', page(`Meet Matty | ${C.brand.name}`, body, CSS_SHARED));
 }
 
+// ---------- LEGAL (Terms + Privacy) ----------
+function buildLegal() {
+  const LEGAL_CSS = `
+.legal-hero{padding:74px 0 26px}
+.legal-hero h1{font-size:clamp(34px,4.6vw,54px);margin:6px 0 14px}
+.legal-meta{color:var(--haze);font-weight:600;font-size:14.5px;letter-spacing:.02em}
+.legal-body{max-width:820px}
+.legal-body h2{font-size:25px;margin:42px 0 14px;color:var(--espresso)}
+.legal-body h3{font-size:18.5px;margin:28px 0 10px;color:var(--espresso)}
+.legal-body p{color:var(--espresso-soft);font-size:16.5px;line-height:1.75;margin-bottom:14px}
+.legal-body ul{padding-left:22px;margin:0 0 16px}
+.legal-body li{color:var(--espresso-soft);font-size:16.5px;line-height:1.7;margin-bottom:7px}
+.legal-body a{color:var(--gold);font-weight:600}
+.legal-body a:hover{text-decoration:underline}
+.legal-body strong{color:var(--espresso)}
+.legal-disclaimer{margin-top:36px;padding:20px 24px;background:var(--cream);border:1px solid rgba(185,137,47,.18);border-radius:14px;font-size:14.5px;color:var(--haze);line-height:1.6}
+`;
+
+  const shell = (h1, meta, inner) => `<header class="hero legal-hero"><div class="wrap"><div class="eyebrow">Legal</div><h1>${h1}</h1><p class="legal-meta">${meta}</p></div></header>
+<hr class="horizon">
+<section class="section" style="padding-top:42px"><div class="wrap legal-body">${inner}</div></section>`;
+
+  // ---- Terms of Service ----
+  const termsInner = `<h2>1. Agreement to Terms</h2>
+<p>By accessing or using the Luxury Leasing Academy website (luxuryleasingacademy.com), purchasing any products, enrolling in courses, or subscribing to any membership, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our site or services.</p>
+<h2>2. Services Offered</h2>
+<p>Luxury Leasing Academy LLC provides online educational courses, digital products (including e-books), membership programs, live webinars, community access, and related tools and resources for real estate professionals. All services are delivered digitally through our website.</p>
+<h2>3. Account Registration</h2>
+<p>To access courses, memberships, or certain features, you may be required to create an account. You are responsible for maintaining the confidentiality of your login credentials and for all activity that occurs under your account. You agree to provide accurate and current information during registration.</p>
+<h2>4. Purchases and Payments</h2>
+<p>All purchases are processed securely through Stripe. Prices for courses, e-books, and memberships are listed on the website and are subject to change at any time. By completing a purchase, you authorize Luxury Leasing Academy LLC to charge the payment method provided.</p>
+<h2>5. Memberships and Subscriptions</h2>
+<p>The Elite Leasing Club is a recurring monthly subscription. By subscribing, you authorize automatic monthly charges to your payment method until you cancel. You may cancel your membership at any time. Upon cancellation, you will retain access through the end of your current billing period. No prorated refunds will be issued for partial months.</p>
+<h2>6. Refund Policy</h2>
+<p>All sales of digital courses, e-books, and membership subscriptions are considered final. Due to the nature of digital products and immediate access to course content upon purchase, refunds are generally not offered. If you believe there are exceptional circumstances, you may contact us at the email address listed below and your request will be reviewed on a case-by-case basis at the sole discretion of Luxury Leasing Academy LLC.</p>
+<h2>7. Intellectual Property</h2>
+<p>All content provided through Luxury Leasing Academy, including but not limited to course materials, videos, e-books, templates, tools, graphics, and written content, is the property of Luxury Leasing Academy LLC and is protected by copyright law. You may not reproduce, distribute, modify, resell, or share any content without prior written permission. Your purchase grants you a personal, non-transferable license to access and use the materials for your own professional development.</p>
+<h2>8. User Conduct</h2>
+<p>You agree not to:</p>
+<ul>
+<li>Share your account credentials with others</li>
+<li>Distribute or resell any course content or materials</li>
+<li>Use the platform for any unlawful purpose</li>
+<li>Disrupt or interfere with the operation of the website</li>
+<li>Post harmful, abusive, or inappropriate content in any community spaces</li>
+</ul>
+<p>Violation of these terms may result in immediate termination of your account and access without refund.</p>
+<h2>9. Community Guidelines</h2>
+<p>Participation in any Luxury Leasing Academy community (including private groups, forums, and live sessions) is a privilege. You agree to engage respectfully with other members and staff. Luxury Leasing Academy LLC reserves the right to remove any member from community spaces whose behavior is disruptive, harmful, or inconsistent with the professional environment we maintain.</p>
+<h2>10. Disclaimer</h2>
+<p>The content provided by Luxury Leasing Academy is for educational and informational purposes only. Results will vary based on individual effort, market conditions, and other factors. Luxury Leasing Academy LLC does not guarantee any specific income, results, or outcomes from the use of our materials or participation in our programs. Any earnings or results referenced are not typical and should not be interpreted as a promise of similar performance.</p>
+<h2>11. Limitation of Liability</h2>
+<p>To the fullest extent permitted by law, Luxury Leasing Academy LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use our website, courses, products, or services. Our total liability for any claim related to our services shall not exceed the amount you paid for the specific product or service in question.</p>
+<h2>12. Third-Party Links and Services</h2>
+<p>Our website may contain links to third-party websites or services. Luxury Leasing Academy LLC is not responsible for the content, privacy practices, or availability of any third-party sites. Use of external services is at your own risk.</p>
+<h2>13. Modifications to Terms</h2>
+<p>Luxury Leasing Academy LLC reserves the right to update or modify these Terms of Service at any time. When material changes are made, we will update the effective date at the top of this page. Continued use of our website and services after changes are posted constitutes acceptance of the revised terms.</p>
+<h2>14. Governing Law</h2>
+<p>These Terms of Service shall be governed by and construed in accordance with the laws of the State of Illinois, without regard to conflict of law principles. Any disputes arising from these terms shall be resolved in the courts of Cook County, Illinois.</p>
+<h2>15. Contact Us</h2>
+<p>If you have questions about these Terms of Service, please contact us at:</p>
+<p><strong>Luxury Leasing Academy LLC</strong><br>Email: <a href="mailto:matty@luxuryleasingacademy.com">matty@luxuryleasingacademy.com</a><br>Website: luxuryleasingacademy.com</p>`;
+  write('terms.html', page(`Terms of Service | ${C.brand.name}`, shell('Terms of Service', 'Luxury Leasing Academy LLC &middot; Effective February 16, 2026', termsInner), CSS_SHARED + LEGAL_CSS));
+
+  // ---- Privacy Policy ----
+  const privacyInner = `<p>Luxury Leasing Academy LLC ("we," "our," or "us") operates the website luxuryleasingacademy.com (the "Site"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our Site, purchase our products, subscribe to our newsletter, enroll in our courses, or interact with us in any way.</p>
+<p>By accessing or using our Site, you agree to the terms of this Privacy Policy. If you do not agree, please discontinue use of our Site immediately.</p>
+<h2>1. Information We Collect</h2>
+<h3>1.1 Personal Information You Provide</h3>
+<p>We may collect personally identifiable information that you voluntarily provide when you:</p>
+<ul>
+<li>Create an account or enroll in a course</li>
+<li>Subscribe to The Lease Up newsletter</li>
+<li>Purchase a product or membership (e.g., The Luxury Leasing Playbook, Elite Leasing Club)</li>
+<li>Fill out a contact form or survey</li>
+<li>Participate in a webinar or live event</li>
+<li>Communicate with us via email or social media</li>
+</ul>
+<p>This information may include:</p>
+<ul>
+<li>Full name</li>
+<li>Email address</li>
+<li>Phone number</li>
+<li>Billing address</li>
+<li>Payment information (processed securely through Stripe; we do not store credit card numbers)</li>
+<li>Professional information (e.g., brokerage, license number, market area)</li>
+</ul>
+<h3>1.2 Information Collected Automatically</h3>
+<p>When you visit our Site, we may automatically collect certain information, including:</p>
+<ul>
+<li>IP address</li>
+<li>Browser type and version</li>
+<li>Operating system</li>
+<li>Pages viewed, links clicked, and time spent on our Site</li>
+<li>Referring URL</li>
+<li>Device identifiers</li>
+</ul>
+<h3>1.3 Cookies and Tracking Technologies</h3>
+<p>We use cookies, pixel tags, and similar tracking technologies to enhance your experience, analyze Site traffic, and serve targeted advertisements. These may include:</p>
+<ul>
+<li>Essential cookies required for Site functionality</li>
+<li>Analytics cookies (e.g., Google Analytics) to understand usage patterns</li>
+<li>Advertising cookies (e.g., Facebook Pixel) to deliver relevant ads and measure campaign effectiveness</li>
+</ul>
+<p>You can manage cookie preferences through your browser settings. Disabling certain cookies may affect Site functionality.</p>
+<h2>2. How We Use Your Information</h2>
+<p>We use the information we collect to:</p>
+<ul>
+<li>Process transactions and deliver purchased products, courses, and memberships</li>
+<li>Send you The Lease Up newsletter and other marketing communications</li>
+<li>Manage your account and provide customer support</li>
+<li>Personalize your experience on our Site</li>
+<li>Analyze Site usage to improve our content, products, and services</li>
+<li>Run targeted advertising campaigns on platforms such as Facebook and Instagram</li>
+<li>Send administrative communications (e.g., order confirmations, policy updates)</li>
+<li>Comply with legal obligations and protect our rights</li>
+</ul>
+<h2>3. How We Share Your Information</h2>
+<p>We do not sell your personal information. We may share your data with the following categories of third parties:</p>
+<h3>3.1 Service Providers</h3>
+<p>We work with trusted third-party providers who assist in operating our business, including:</p>
+<ul>
+<li>Stripe: payment processing</li>
+<li>ActiveCampaign: email marketing and automation</li>
+<li>Zapier: workflow automation</li>
+<li>LifterLMS / WordPress: course delivery and website hosting</li>
+<li>Google Analytics: website analytics</li>
+<li>Meta (Facebook/Instagram): advertising and retargeting</li>
+</ul>
+<p>These providers only access your data as necessary to perform their services and are contractually obligated to protect it.</p>
+<h3>3.2 Legal Requirements</h3>
+<p>We may disclose your information if required by law, regulation, legal process, or governmental request, or to protect our rights, property, or safety.</p>
+<h3>3.3 Business Transfers</h3>
+<p>In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction. We will notify you of any such change.</p>
+<h2>4. Data Security</h2>
+<p>We implement reasonable administrative, technical, and physical safeguards to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, no method of electronic transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+<h2>5. Data Retention</h2>
+<p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, comply with legal obligations, resolve disputes, and enforce our agreements. When data is no longer needed, we will securely delete or anonymize it.</p>
+<h2>6. Your Rights and Choices</h2>
+<h3>6.1 Email Communications</h3>
+<p>You may opt out of marketing emails at any time by clicking the "unsubscribe" link at the bottom of any email. Please note that you may still receive transactional emails related to your account or purchases.</p>
+<h3>6.2 Cookies</h3>
+<p>You can control cookies through your browser settings. Most browsers allow you to refuse or delete cookies.</p>
+<h3>6.3 Access and Deletion</h3>
+<p>You may request access to, correction of, or deletion of your personal information by contacting us at the email address listed below. We will respond to your request within a reasonable timeframe and in accordance with applicable law.</p>
+<h3>6.4 California Residents (CCPA)</h3>
+<p>If you are a California resident, you have the right to:</p>
+<ul>
+<li>Know what personal information we collect and how it is used</li>
+<li>Request deletion of your personal information</li>
+<li>Opt out of the sale of personal information (we do not sell personal data)</li>
+<li>Not be discriminated against for exercising your privacy rights</li>
+</ul>
+<p>To exercise these rights, contact us using the information provided below.</p>
+<h3>6.5 Illinois Residents</h3>
+<p>If you are an Illinois resident, you may have additional rights under state privacy laws. We are committed to complying with all applicable state and federal regulations. Contact us for more information about your specific rights.</p>
+<h2>7. Third-Party Links</h2>
+<p>Our Site may contain links to third-party websites, services, or platforms. We are not responsible for the privacy practices of these external sites. We encourage you to review their privacy policies before providing any personal information.</p>
+<h2>8. Children's Privacy</h2>
+<p>Our Site and services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that a child has provided us with personal data, we will take steps to delete such information promptly.</p>
+<h2>9. Changes to This Privacy Policy</h2>
+<p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make material changes, we will update the "Effective Date" at the top of this page and, where appropriate, notify you via email or a prominent notice on our Site.</p>
+<h2>10. Contact Us</h2>
+<p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
+<p><strong>Luxury Leasing Academy LLC</strong><br>Email: <a href="mailto:matty@luxuryleasingacademy.com">matty@luxuryleasingacademy.com</a><br>Website: luxuryleasingacademy.com</p>
+<div class="legal-disclaimer">This Privacy Policy is provided for informational purposes and does not constitute legal advice. We recommend consulting with a qualified attorney to ensure compliance with all applicable privacy laws and regulations.</div>`;
+  write('privacy.html', page(`Privacy Policy | ${C.brand.name}`, shell('Privacy Policy', 'Luxury Leasing Academy LLC &middot; Effective February 13, 2026', privacyInner), CSS_SHARED + LEGAL_CSS));
+}
+
 // ---------- RUN ----------
 function copyDir(src, dest) {
   fs.mkdirSync(dest, { recursive: true });
@@ -458,4 +627,5 @@ buildPlaybook();
 buildLeaseUp();
 buildThanks();
 buildMatty();
+buildLegal();
 console.log('Done. Site is in /public');
