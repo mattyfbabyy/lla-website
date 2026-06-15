@@ -45,7 +45,7 @@ if(burger){burger.addEventListener('click',()=>{const o=mm.classList.toggle('ope
 mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mm.classList.remove('open');burger.classList.remove('open')}));}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-document.querySelectorAll('form[data-optin],.optin form').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();window.location.href='thanks.html'}));
+document.querySelectorAll('form[data-optin],.optin form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('input[type=email]');var body=new URLSearchParams({u:'5',f:'3',s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:''});fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});
 const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,end=parseFloat(el.dataset.count||0);}),{threshold:.6});
 </script>`;
 
