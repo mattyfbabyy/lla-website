@@ -136,12 +136,12 @@
     "group1Label": "Go Deeper",
     "group2Label": "More From Matty",
     "social": {
-      "youtube": "",
-      "instagram": "",
-      "tiktok": "",
-      "facebook": "",
-      "linkedin": "",
-      "x": ""
+      "youtube": "https://www.youtube.com/@LuxuryLeasingAcademy",
+      "instagram": "https://www.instagram.com/luxuryleasingacademy",
+      "tiktok": "https://www.tiktok.com/@luxuryleasingacademy",
+      "facebook": "https://www.facebook.com/LuxuryLeasingAcademy/",
+      "linkedin": "https://www.linkedin.com/company/luxuryleasingacademy/",
+      "x": "https://x.com/Leasing_Academy"
     }
   }
 }

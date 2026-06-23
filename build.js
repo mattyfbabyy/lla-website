@@ -844,7 +844,7 @@ ${body}
 ${HUB_JS}
 </body>
 </html>`;
-  write('start.html', html);
+  write('hub.html', html);
 }
 
 // ---------- RUN ----------
