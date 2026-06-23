@@ -711,10 +711,9 @@ function buildHub() {
   const HUB_CSS = `
 body{background:var(--ivory)}
 .hub{max-width:480px;margin:0 auto;padding:40px 22px 54px;text-align:center}
-.hub-crest{height:76px;width:auto;margin:0 auto 14px}
-.hub-brand{font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:var(--espresso);letter-spacing:.01em}
-.hub-lede{font-family:'Fraunces',serif;color:var(--espresso);font-size:16.5px;line-height:1.3;margin:11px auto 0;max-width:340px}
-.hub-hero{background:var(--white);border:1px solid rgba(185,137,47,.22);border-top:3px solid var(--gold);border-radius:20px;padding:22px 22px 20px;margin:30px 0 32px;box-shadow:0 22px 50px rgba(42,32,24,.11);text-align:left}
+.hub-crest{height:92px;width:auto;margin:0 auto 16px}
+.hub-brand{font-family:'Fraunces',serif;font-weight:600;font-size:25px;color:var(--espresso);letter-spacing:.01em}
+.hub-hero{background:var(--white);border:1px solid rgba(185,137,47,.22);border-top:3px solid var(--gold);border-radius:20px;padding:22px 22px 20px;margin:28px 0 32px;box-shadow:0 22px 50px rgba(42,32,24,.11);text-align:left}
 .hub-hero-row{display:flex;gap:16px;align-items:center;margin-bottom:14px}
 .hub-hero-cover{width:82px;height:auto;border-radius:8px;box-shadow:0 8px 20px rgba(42,32,24,.2);flex:0 0 auto}
 .hub-tag{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
@@ -748,7 +747,7 @@ body{background:var(--ivory)}
 .hub-foot-links a{color:var(--espresso-soft);transition:color .2s}
 .hub-foot-links a:hover{color:var(--gold)}
 .hub-copy{font-size:12px;color:var(--haze);margin-top:12px}
-@media(max-width:380px){.hub-hero-cover{width:68px}.hub-hero-title{font-size:18px}.hub-lede{font-size:15.5px}}
+@media(max-width:380px){.hub-hero-cover{width:68px}.hub-hero-title{font-size:18px}.hub-brand{font-size:23px}}
 `;
 
   const HUB_JS = `<script>
@@ -759,7 +758,6 @@ document.querySelectorAll('form[data-optin]').forEach(function(f){f.addEventList
   <div class="hub-top">
     <a href="index.html"><img class="hub-crest" src="${C.images.crest}" alt="${C.brand.name}"></a>
     <div class="hub-brand">${C.brand.name}</div>
-    <div class="hub-lede">${hub.lede}</div>
   </div>
 
   <div class="hub-hero">
