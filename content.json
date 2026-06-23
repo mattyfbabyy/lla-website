@@ -68,7 +68,15 @@
   "matty": {
     "heroHeadline": "From behind the bar to 1,000+ luxury leases",
     "heroSub": "Founder of Luxury Leasing Academy. Chicago born and built.",
-    "finalHeadline": "I built the roadmap I wish I had.<br>It's yours now."
+    "finalHeadline": "I built the roadmap I wish I had.<br>It's yours now.",
+    "social": {
+      "instagram": "https://www.instagram.com/mattyfbabyy",
+      "tiktok": "https://www.tiktok.com/@mattyfbabyy",
+      "youtube": "https://www.youtube.com/@mattyfbabyyy",
+      "facebook": "https://www.facebook.com/mattyfbabyy/",
+      "linkedin": "https://www.linkedin.com/in/mattyfbabyy/",
+      "x": "https://x.com/mattyfbabyy"
+    }
   },
   "testimonials": [
     {
