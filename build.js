@@ -713,12 +713,8 @@ body{background:var(--ivory)}
 .hub{max-width:480px;margin:0 auto;padding:40px 22px 54px;text-align:center}
 .hub-crest{height:76px;width:auto;margin:0 auto 14px}
 .hub-brand{font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:var(--espresso);letter-spacing:.01em}
-.hub-tagline{font-family:'Fraunces',serif;font-style:italic;color:var(--espresso-soft);font-size:15px;margin:7px auto 0;max-width:330px;line-height:1.4}
-.hub-intro{margin:26px 0 8px}
-.hub-intro .eyebrow{margin-bottom:10px}
-.hub-intro h1{font-size:24px;color:var(--espresso);margin-bottom:8px}
-.hub-intro p{font-size:14.5px;color:var(--espresso-soft);max-width:380px;margin:0 auto;line-height:1.5}
-.hub-hero{background:var(--white);border:1px solid rgba(185,137,47,.22);border-top:3px solid var(--gold);border-radius:20px;padding:22px 22px 20px;margin:20px 0 32px;box-shadow:0 22px 50px rgba(42,32,24,.11);text-align:left}
+.hub-lede{font-family:'Fraunces',serif;color:var(--espresso);font-size:19px;line-height:1.28;margin:11px auto 0;max-width:330px}
+.hub-hero{background:var(--white);border:1px solid rgba(185,137,47,.22);border-top:3px solid var(--gold);border-radius:20px;padding:22px 22px 20px;margin:30px 0 32px;box-shadow:0 22px 50px rgba(42,32,24,.11);text-align:left}
 .hub-hero-row{display:flex;gap:16px;align-items:center;margin-bottom:14px}
 .hub-hero-cover{width:82px;height:auto;border-radius:8px;box-shadow:0 8px 20px rgba(42,32,24,.2);flex:0 0 auto}
 .hub-tag{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
@@ -752,7 +748,7 @@ body{background:var(--ivory)}
 .hub-foot-links a{color:var(--espresso-soft);transition:color .2s}
 .hub-foot-links a:hover{color:var(--gold)}
 .hub-copy{font-size:12px;color:var(--haze);margin-top:12px}
-@media(max-width:380px){.hub-hero-cover{width:68px}.hub-hero-title{font-size:18px}.hub-intro h1{font-size:22px}}
+@media(max-width:380px){.hub-hero-cover{width:68px}.hub-hero-title{font-size:18px}.hub-lede{font-size:17px}}
 `;
 
   const HUB_JS = `<script>
@@ -763,13 +759,7 @@ document.querySelectorAll('form[data-optin]').forEach(function(f){f.addEventList
   <div class="hub-top">
     <a href="index.html"><img class="hub-crest" src="${C.images.crest}" alt="${C.brand.name}"></a>
     <div class="hub-brand">${C.brand.name}</div>
-    <div class="hub-tagline">${C.brand.tagline}</div>
-  </div>
-
-  <div class="hub-intro">
-    <div class="eyebrow">${hub.eyebrow}</div>
-    <h1>${hub.headline}</h1>
-    <p>${hub.sub}</p>
+    <div class="hub-lede">${hub.lede}</div>
   </div>
 
   <div class="hub-hero">
