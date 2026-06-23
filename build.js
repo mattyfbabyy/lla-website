@@ -49,6 +49,21 @@ document.querySelectorAll('form[data-optin],.optin form').forEach(function(f){f.
 const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,end=parseFloat(el.dataset.count||0);}),{threshold:.6});
 </script>`;
 
+const SOCIAL_ICONS = {
+  youtube:'<svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg>',
+  instagram:'<svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.2.05 1.8.25 2.2.42.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.17.4.37 1 .42 2.2.07 1.2.07 1.6.07 4.8s0 3.6-.07 4.8c-.05 1.2-.25 1.8-.42 2.2a3.8 3.8 0 0 1-.9 1.4 3.8 3.8 0 0 1-1.4.9c-.4.17-1 .37-2.2.42-1.2.07-1.6.07-4.8.07s-3.6 0-4.8-.07c-1.2-.05-1.8-.25-2.2-.42a3.8 3.8 0 0 1-1.4-.9 3.8 3.8 0 0 1-.9-1.4c-.17-.4-.37-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.8c.05-1.2.25-1.8.42-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.17 1-.37 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 3.05A6.75 6.75 0 1 0 18.75 12 6.75 6.75 0 0 0 12 5.25zm0 11.13A4.38 4.38 0 1 1 16.38 12 4.38 4.38 0 0 1 12 16.38zm6.97-11.4a1.58 1.58 0 1 1-1.57-1.58 1.58 1.58 0 0 1 1.57 1.58z"/></svg>',
+  tiktok:'<svg viewBox="0 0 24 24"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.3v13.2a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V8.5a5.7 5.7 0 0 0-.7 0 5.7 5.7 0 1 0 5.7 5.7V8.6a7.5 7.5 0 0 0 4.4 1.4V6.7a4.3 4.3 0 0 1-3.4-.9z"/></svg>',
+  facebook:'<svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.7.23 2.7.23v2.9h-1.5c-1.5 0-2 .93-2 1.9V12h3.3l-.53 3.5h-2.8v8.4A12 12 0 0 0 24 12z"/></svg>',
+  linkedin:'<svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.53C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.73C24 .78 23.2 0 22.22 0z"/></svg>',
+  x:'<svg viewBox="0 0 24 24"><path d="M18.9 1.5h3.68l-8.04 9.19L24 22.5h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.5h7.6l5.24 6.93zm-1.29 18.8h2.04L6.49 3.6H4.3z"/></svg>'
+};
+function socialIconLinks(obj){
+  obj = obj || {};
+  return ['youtube','instagram','tiktok','facebook','linkedin','x']
+    .filter(k => obj[k] && obj[k].trim())
+    .map(k => `<a href="${obj[k]}" target="_blank" rel="noopener" aria-label="${k}">${SOCIAL_ICONS[k]}</a>`).join('');
+}
+
 function page(title, body, css) {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -494,6 +509,23 @@ function buildPurchaseThanks() {
 // ---------- MEET MATTY ----------
 function buildMatty() {
   const m = C.matty;
+  const mattySocial = socialIconLinks(m.social);
+  const follow = mattySocial ? `<section class="matty-follow"><div class="wrap">
+  <div class="eyebrow">Follow Along</div>
+  <h2>Follow my journey</h2>
+  <p>Most of what I share day to day lives on my personal pages. Come say hi.</p>
+  <div class="matty-social">${mattySocial}</div>
+</div></section>` : '';
+  const MATTY_CSS = `
+.matty-follow{text-align:center;padding:4px 0 80px}
+.matty-follow .eyebrow{margin-bottom:12px}
+.matty-follow h2{font-size:clamp(24px,3.2vw,34px);margin-bottom:10px;color:var(--espresso)}
+.matty-follow p{color:var(--espresso-soft);font-size:16.5px;max-width:460px;margin:0 auto 26px;line-height:1.55}
+.matty-social{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.matty-social a{width:50px;height:50px;border-radius:50%;border:1px solid rgba(185,137,47,.3);display:flex;align-items:center;justify-content:center;color:var(--espresso-soft);transition:color .2s,border-color .2s,transform .2s}
+.matty-social a:hover{color:var(--gold);border-color:var(--gold);transform:translateY(-3px)}
+.matty-social svg{width:21px;height:21px;fill:currentColor}
+`;
   const body = `<header class="mhero">
   <div class="wrap mhero-grid">
     <div class="rv in"><div class="eyebrow">Meet Matty</div><h1>${m.heroHeadline}</h1><p class="sub">${m.heroSub}</p></div>
@@ -508,6 +540,7 @@ function buildMatty() {
   <p class="rv">Somewhere in those thousand leases I realized something: it was never talent. It was a <strong>system</strong>. Repeatable, teachable, and nobody was teaching it. Agents were quitting in their first year while a six-figure market sat right in front of them, overlooked.</p>
   <p class="rv">So I built ${C.brand.name}: the roadmap I wish someone had handed me. Every course, every script, every tracker inside comes from the field, not from theory that sounds nice on a slide.</p>
 </div></section>
+${follow}
 <section class="band"><div class="glow"></div><div class="wrap" style="position:relative"><div class="stats stats-centered">
   <div class="stat rv"><div class="num">${C.home.stat1Num}</div><div class="lbl" style="color:#A4937D">${C.home.stat1Label}</div></div>
   <div class="stat rv"><div class="num">${C.home.stat2Num}</div><div class="lbl" style="color:#A4937D">${C.home.stat2Label}</div></div>
@@ -519,7 +552,7 @@ function buildMatty() {
   <div class="card rv"><div class="tick">3</div><h3 style="font-size:22px;margin-bottom:12px">Ownership mindset</h3><p style="color:var(--espresso-soft);font-size:16px">We train agents to think like entrepreneurs, not employees.</p></div>
 </div></div></section>
 <section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">${m.finalHeadline}</h2><p class="rv">${C.brand.hashtag}</p><div class="final-btns rv"><a href="club.html" class="btn btn-gold">Join the Elite Leasing Club</a><a href="ebook.html" class="btn btn-ghost" style="border-color:var(--gold-bright);color:var(--gold-bright)">Start with the Free E-Book</a></div></div></section>`;
-  write('meet-matty.html', page(`Meet Matty | ${C.brand.name}`, body, CSS_SHARED));
+  write('meet-matty.html', page(`Meet Matty | ${C.brand.name}`, body, CSS_SHARED + MATTY_CSS));
 }
 
 // ---------- LEGAL (Terms + Privacy) ----------
@@ -694,18 +727,7 @@ function buildLegal() {
 // ---------- HUB (link-in-bio) ----------
 function buildHub() {
   const hub = C.hub;
-  const S = hub.social || {};
-  const ICONS = {
-    youtube:'<svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg>',
-    instagram:'<svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.2.05 1.8.25 2.2.42.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.17.4.37 1 .42 2.2.07 1.2.07 1.6.07 4.8s0 3.6-.07 4.8c-.05 1.2-.25 1.8-.42 2.2a3.8 3.8 0 0 1-.9 1.4 3.8 3.8 0 0 1-1.4.9c-.4.17-1 .37-2.2.42-1.2.07-1.6.07-4.8.07s-3.6 0-4.8-.07c-1.2-.05-1.8-.25-2.2-.42a3.8 3.8 0 0 1-1.4-.9 3.8 3.8 0 0 1-.9-1.4c-.17-.4-.37-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.8c.05-1.2.25-1.8.42-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.17 1-.37 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 3.05A6.75 6.75 0 1 0 18.75 12 6.75 6.75 0 0 0 12 5.25zm0 11.13A4.38 4.38 0 1 1 16.38 12 4.38 4.38 0 0 1 12 16.38zm6.97-11.4a1.58 1.58 0 1 1-1.57-1.58 1.58 1.58 0 0 1 1.57 1.58z"/></svg>',
-    tiktok:'<svg viewBox="0 0 24 24"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.3v13.2a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V8.5a5.7 5.7 0 0 0-.7 0 5.7 5.7 0 1 0 5.7 5.7V8.6a7.5 7.5 0 0 0 4.4 1.4V6.7a4.3 4.3 0 0 1-3.4-.9z"/></svg>',
-    facebook:'<svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.7.23 2.7.23v2.9h-1.5c-1.5 0-2 .93-2 1.9V12h3.3l-.53 3.5h-2.8v8.4A12 12 0 0 0 24 12z"/></svg>',
-    linkedin:'<svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.53C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.73C24 .78 23.2 0 22.22 0z"/></svg>',
-    x:'<svg viewBox="0 0 24 24"><path d="M18.9 1.5h3.68l-8.04 9.19L24 22.5h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.5h7.6l5.24 6.93zm-1.29 18.8h2.04L6.49 3.6H4.3z"/></svg>'
-  };
-  const socialItems = ['youtube','instagram','tiktok','facebook','linkedin','x']
-    .filter(k => S[k] && S[k].trim())
-    .map(k => `<a href="${S[k]}" target="_blank" rel="noopener" aria-label="${k}">${ICONS[k]}</a>`).join('');
+  const socialItems = socialIconLinks(hub.social);
   const socialHtml = socialItems ? `<div class="hub-social">${socialItems}</div>` : '';
 
   const HUB_CSS = `
