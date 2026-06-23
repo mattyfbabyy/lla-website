@@ -713,7 +713,7 @@ body{background:var(--ivory)}
 .hub{max-width:480px;margin:0 auto;padding:40px 22px 54px;text-align:center}
 .hub-crest{height:76px;width:auto;margin:0 auto 14px}
 .hub-brand{font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:var(--espresso);letter-spacing:.01em}
-.hub-lede{font-family:'Fraunces',serif;color:var(--espresso);font-size:19px;line-height:1.28;margin:11px auto 0;max-width:330px}
+.hub-lede{font-family:'Fraunces',serif;color:var(--espresso);font-size:16.5px;line-height:1.3;margin:11px auto 0;max-width:340px}
 .hub-hero{background:var(--white);border:1px solid rgba(185,137,47,.22);border-top:3px solid var(--gold);border-radius:20px;padding:22px 22px 20px;margin:30px 0 32px;box-shadow:0 22px 50px rgba(42,32,24,.11);text-align:left}
 .hub-hero-row{display:flex;gap:16px;align-items:center;margin-bottom:14px}
 .hub-hero-cover{width:82px;height:auto;border-radius:8px;box-shadow:0 8px 20px rgba(42,32,24,.2);flex:0 0 auto}
@@ -748,7 +748,7 @@ body{background:var(--ivory)}
 .hub-foot-links a{color:var(--espresso-soft);transition:color .2s}
 .hub-foot-links a:hover{color:var(--gold)}
 .hub-copy{font-size:12px;color:var(--haze);margin-top:12px}
-@media(max-width:380px){.hub-hero-cover{width:68px}.hub-hero-title{font-size:18px}.hub-lede{font-size:17px}}
+@media(max-width:380px){.hub-hero-cover{width:68px}.hub-hero-title{font-size:18px}.hub-lede{font-size:15.5px}}
 `;
 
   const HUB_JS = `<script>
@@ -784,7 +784,7 @@ document.querySelectorAll('form[data-optin]').forEach(function(f){f.addEventList
       <span class="hub-link-main"><span class="hub-link-title">The Elite Leasing Club</span><span class="hub-link-note">All 9 courses, weekly coaching, the community</span></span>
       <span class="hub-arrow">&rarr;</span>
     </a>
-    <a class="hub-link" href="${C.links.playbookCheckout}">
+    <a class="hub-link" href="playbook.html">
       <span class="hub-link-main"><span class="hub-link-title">The Luxury Leasing Playbook</span><span class="hub-link-note">Your first 30 days, mapped day by day</span></span>
       <span class="hub-price">${C.pricing.playbook}</span>
     </a>
