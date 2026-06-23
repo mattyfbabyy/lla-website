@@ -125,5 +125,23 @@
     "formButton": "Subscribe Free",
     "bandLine1": "The agents who win read between the deals.",
     "bandLine2": "The Lease Up is where that edge gets built, one Saturday at a time."
+  },
+  "hub": {
+    "eyebrow": "Start Here",
+    "headline": "Where do you want to start?",
+    "sub": "The free e-book is the fastest way in. Everything else is below it.",
+    "ebookTag": "Free E-Book",
+    "ebookTitle": "9 secrets to earning big with luxury rentals",
+    "ebookSub": "Most agents spend a year learning what's in this book. You can read it in 30 minutes.",
+    "group1Label": "Go Deeper",
+    "group2Label": "More From Matty",
+    "social": {
+      "youtube": "",
+      "instagram": "",
+      "tiktok": "",
+      "facebook": "",
+      "linkedin": "",
+      "x": ""
+    }
   }
 }

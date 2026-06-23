@@ -691,6 +691,162 @@ function buildLegal() {
   write('privacy.html', page(`Privacy Policy | ${C.brand.name}`, shell('Privacy Policy', 'Luxury Leasing Academy LLC &middot; Effective February 13, 2026', privacyInner), CSS_SHARED + LEGAL_CSS));
 }
 
+// ---------- HUB (link-in-bio) ----------
+function buildHub() {
+  const hub = C.hub;
+  const S = hub.social || {};
+  const ICONS = {
+    youtube:'<svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg>',
+    instagram:'<svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.2.05 1.8.25 2.2.42.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.17.4.37 1 .42 2.2.07 1.2.07 1.6.07 4.8s0 3.6-.07 4.8c-.05 1.2-.25 1.8-.42 2.2a3.8 3.8 0 0 1-.9 1.4 3.8 3.8 0 0 1-1.4.9c-.4.17-1 .37-2.2.42-1.2.07-1.6.07-4.8.07s-3.6 0-4.8-.07c-1.2-.05-1.8-.25-2.2-.42a3.8 3.8 0 0 1-1.4-.9 3.8 3.8 0 0 1-.9-1.4c-.17-.4-.37-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.8c.05-1.2.25-1.8.42-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.17 1-.37 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 3.05A6.75 6.75 0 1 0 18.75 12 6.75 6.75 0 0 0 12 5.25zm0 11.13A4.38 4.38 0 1 1 16.38 12 4.38 4.38 0 0 1 12 16.38zm6.97-11.4a1.58 1.58 0 1 1-1.57-1.58 1.58 1.58 0 0 1 1.57 1.58z"/></svg>',
+    tiktok:'<svg viewBox="0 0 24 24"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.3v13.2a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V8.5a5.7 5.7 0 0 0-.7 0 5.7 5.7 0 1 0 5.7 5.7V8.6a7.5 7.5 0 0 0 4.4 1.4V6.7a4.3 4.3 0 0 1-3.4-.9z"/></svg>',
+    facebook:'<svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.7.23 2.7.23v2.9h-1.5c-1.5 0-2 .93-2 1.9V12h3.3l-.53 3.5h-2.8v8.4A12 12 0 0 0 24 12z"/></svg>',
+    linkedin:'<svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.53C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.73C24 .78 23.2 0 22.22 0z"/></svg>',
+    x:'<svg viewBox="0 0 24 24"><path d="M18.9 1.5h3.68l-8.04 9.19L24 22.5h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.5h7.6l5.24 6.93zm-1.29 18.8h2.04L6.49 3.6H4.3z"/></svg>'
+  };
+  const socialItems = ['youtube','instagram','tiktok','facebook','linkedin','x']
+    .filter(k => S[k] && S[k].trim())
+    .map(k => `<a href="${S[k]}" target="_blank" rel="noopener" aria-label="${k}">${ICONS[k]}</a>`).join('');
+  const socialHtml = socialItems ? `<div class="hub-social">${socialItems}</div>` : '';
+
+  const HUB_CSS = `
+body{background:var(--ivory)}
+.hub{max-width:480px;margin:0 auto;padding:40px 22px 54px;text-align:center}
+.hub-crest{height:76px;width:auto;margin:0 auto 14px}
+.hub-brand{font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:var(--espresso);letter-spacing:.01em}
+.hub-tagline{font-family:'Fraunces',serif;font-style:italic;color:var(--espresso-soft);font-size:15px;margin:7px auto 0;max-width:330px;line-height:1.4}
+.hub-intro{margin:26px 0 8px}
+.hub-intro .eyebrow{margin-bottom:10px}
+.hub-intro h1{font-size:24px;color:var(--espresso);margin-bottom:8px}
+.hub-intro p{font-size:14.5px;color:var(--espresso-soft);max-width:380px;margin:0 auto;line-height:1.5}
+.hub-hero{background:var(--white);border:1px solid rgba(185,137,47,.22);border-top:3px solid var(--gold);border-radius:20px;padding:22px 22px 20px;margin:20px 0 32px;box-shadow:0 22px 50px rgba(42,32,24,.11);text-align:left}
+.hub-hero-row{display:flex;gap:16px;align-items:center;margin-bottom:14px}
+.hub-hero-cover{width:82px;height:auto;border-radius:8px;box-shadow:0 8px 20px rgba(42,32,24,.2);flex:0 0 auto}
+.hub-tag{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+.hub-hero-title{font-family:'Fraunces',serif;font-size:20px;line-height:1.18;color:var(--espresso)}
+.hub-hero-sub{font-size:14px;color:var(--espresso-soft);margin:0 0 16px;line-height:1.5}
+.hub-form{display:flex;flex-direction:column;gap:10px}
+.hub-form input{width:100%;padding:13px 18px;border-radius:999px;border:1px solid rgba(185,137,47,.35);background:var(--ivory);color:var(--espresso);font-family:inherit;font-size:15px;outline:none;transition:border-color .2s}
+.hub-form input::placeholder{color:var(--haze)}
+.hub-form input:focus{border-color:var(--gold)}
+.hub-form .btn{width:100%;text-align:center;padding:14px;font-size:15.5px}
+.hub-micro{font-size:12.5px;color:var(--haze);margin-top:11px;text-align:center}
+.hub-grouplabel{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--haze);text-align:left;margin:0 4px 12px}
+.hub-stack{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.hub-link{display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--white);border:1px solid rgba(185,137,47,.20);border-radius:15px;padding:16px 18px;text-align:left;transition:transform .2s,box-shadow .2s,border-color .2s}
+.hub-link:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(42,32,24,.12);border-color:rgba(185,137,47,.42)}
+.hub-link-main{display:flex;flex-direction:column;gap:3px;min-width:0}
+.hub-link-title{font-weight:700;font-size:16px;color:var(--espresso)}
+.hub-link-note{font-size:13px;color:var(--haze);line-height:1.35}
+.hub-arrow{color:var(--gold);font-size:18px;font-weight:700;flex:0 0 auto}
+.hub-price{font-family:'Fraunces',serif;font-weight:600;color:var(--gold);font-size:18px;flex:0 0 auto}
+.hub-pill{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);border:1px solid rgba(201,111,35,.4);border-radius:999px;padding:4px 10px;flex:0 0 auto}
+.hub-link.feat{background:linear-gradient(180deg,rgba(212,169,78,.13),var(--white));border-color:rgba(185,137,47,.5)}
+.hub-link.feat .hub-link-title{font-size:16.5px}
+.hub-social{display:flex;justify-content:center;gap:13px;margin:4px 0 30px}
+.hub-social a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(185,137,47,.28);display:flex;align-items:center;justify-content:center;color:var(--espresso-soft);transition:color .2s,border-color .2s,transform .2s}
+.hub-social a:hover{color:var(--gold);border-color:var(--gold);transform:translateY(-2px)}
+.hub-social svg{width:19px;height:19px;fill:currentColor}
+.hub-foot{border-top:1px solid rgba(185,137,47,.18);padding-top:22px}
+.hub-hash{font-family:'Fraunces',serif;font-style:italic;color:var(--gold);font-weight:600;font-size:15px;margin-bottom:10px}
+.hub-foot-links{font-size:13px;color:var(--haze);display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap}
+.hub-foot-links a{color:var(--espresso-soft);transition:color .2s}
+.hub-foot-links a:hover{color:var(--gold)}
+.hub-copy{font-size:12px;color:var(--haze);margin-top:12px}
+@media(max-width:380px){.hub-hero-cover{width:68px}.hub-hero-title{font-size:18px}.hub-intro h1{font-size:22px}}
+`;
+
+  const HUB_JS = `<script>
+document.querySelectorAll('form[data-optin]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('input[type=email]');var body=new URLSearchParams({u:'5',f:'3',s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:''});fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});
+</script>`;
+
+  const body = `<main class="hub">
+  <div class="hub-top">
+    <a href="index.html"><img class="hub-crest" src="${C.images.crest}" alt="${C.brand.name}"></a>
+    <div class="hub-brand">${C.brand.name}</div>
+    <div class="hub-tagline">${C.brand.tagline}</div>
+  </div>
+
+  <div class="hub-intro">
+    <div class="eyebrow">${hub.eyebrow}</div>
+    <h1>${hub.headline}</h1>
+    <p>${hub.sub}</p>
+  </div>
+
+  <div class="hub-hero">
+    <div class="hub-hero-row">
+      <img class="hub-hero-cover" src="${C.images.ebookCover}" alt="Free e-book">
+      <div>
+        <div class="hub-tag">${hub.ebookTag}</div>
+        <div class="hub-hero-title">${hub.ebookTitle}</div>
+      </div>
+    </div>
+    <p class="hub-hero-sub">${hub.ebookSub}</p>
+    <form class="hub-form" data-optin>
+      <input type="email" placeholder="Your best email" required>
+      <button class="btn btn-gold" type="submit">${C.ebook.formButton}</button>
+    </form>
+    <div class="hub-micro">Delivered instantly. No spam, unsubscribe anytime.</div>
+  </div>
+
+  <div class="hub-grouplabel">${hub.group1Label}</div>
+  <div class="hub-stack">
+    <a class="hub-link feat" href="club.html">
+      <span class="hub-link-main"><span class="hub-link-title">The Elite Leasing Club</span><span class="hub-link-note">All 9 courses, weekly coaching, the community</span></span>
+      <span class="hub-arrow">&rarr;</span>
+    </a>
+    <a class="hub-link" href="${C.links.playbookCheckout}">
+      <span class="hub-link-main"><span class="hub-link-title">The Luxury Leasing Playbook</span><span class="hub-link-note">Your first 30 days, mapped day by day</span></span>
+      <span class="hub-price">${C.pricing.playbook}</span>
+    </a>
+    <a class="hub-link" href="courses.html">
+      <span class="hub-link-main"><span class="hub-link-title">Browse the 9 Courses</span><span class="hub-link-note">From your first lease to a scaled business</span></span>
+      <span class="hub-arrow">&rarr;</span>
+    </a>
+  </div>
+
+  <div class="hub-grouplabel">${hub.group2Label}</div>
+  <div class="hub-stack">
+    <a class="hub-link" href="the-lease-up.html">
+      <span class="hub-link-main"><span class="hub-link-title">The Lease Up</span><span class="hub-link-note">Weekly leasing strategy, every Saturday</span></span>
+      <span class="hub-pill">Free</span>
+    </a>
+    <a class="hub-link" href="meet-matty.html">
+      <span class="hub-link-main"><span class="hub-link-title">Meet Matty</span><span class="hub-link-note">The story behind the Academy</span></span>
+      <span class="hub-arrow">&rarr;</span>
+    </a>
+  </div>
+
+  ${socialHtml}
+
+  <div class="hub-foot">
+    <div class="hub-hash">${C.brand.hashtag}</div>
+    <div class="hub-foot-links"><a href="index.html">Full site</a><span>&middot;</span><a href="${C.links.termsUrl}">Terms</a><span>&middot;</span><a href="${C.links.privacyUrl}">Privacy</a><span>&middot;</span><a href="mailto:${C.brand.contactEmail}">Contact</a></div>
+    <div class="hub-copy">&copy; 2026 ${C.brand.name}, LLC</div>
+  </div>
+</main>`;
+
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<title>Start Here | ${C.brand.name}</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+${FONTS}
+<style>${CSS_SHARED}${HUB_CSS}</style>
+</head>
+<body>
+${body}
+${HUB_JS}
+</body>
+</html>`;
+  write('start.html', html);
+}
+
 // ---------- RUN ----------
 function copyDir(src, dest) {
   fs.mkdirSync(dest, { recursive: true });
@@ -713,5 +869,6 @@ buildLeaseUp();
 buildThanks();
 buildPurchaseThanks();
 buildMatty();
+buildHub();
 buildLegal();
 console.log('Done. Site is in /public');
