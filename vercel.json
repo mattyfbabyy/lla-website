@@ -1,5 +1,37 @@
 {
   "buildCommand": "node build.js",
   "outputDirectory": "public",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/instagram",
+      "destination": "/hub?utm_source=instagram&utm_medium=bio&utm_campaign=prelaunch-blitz&utm_content=bio-link",
+      "permanent": false
+    },
+    {
+      "source": "/tiktok",
+      "destination": "/hub?utm_source=tiktok&utm_medium=bio&utm_campaign=prelaunch-blitz&utm_content=bio-link",
+      "permanent": false
+    },
+    {
+      "source": "/youtube",
+      "destination": "/hub?utm_source=youtube&utm_medium=bio&utm_campaign=prelaunch-blitz&utm_content=bio-link",
+      "permanent": false
+    },
+    {
+      "source": "/facebook",
+      "destination": "/hub?utm_source=facebook&utm_medium=bio&utm_campaign=prelaunch-blitz&utm_content=bio-link",
+      "permanent": false
+    },
+    {
+      "source": "/linkedin",
+      "destination": "/hub?utm_source=linkedin&utm_medium=bio&utm_campaign=prelaunch-blitz&utm_content=bio-link",
+      "permanent": false
+    },
+    {
+      "source": "/x",
+      "destination": "/hub?utm_source=twitter&utm_medium=bio&utm_campaign=prelaunch-blitz&utm_content=bio-link",
+      "permanent": false
+    }
+  ]
 }
