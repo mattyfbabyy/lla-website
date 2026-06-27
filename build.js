@@ -191,7 +191,8 @@ function buildHome() {
         <a href="club.html" class="btn btn-gold">Join the Elite Leasing Club</a>
         <a href="ebook.html" class="btn btn-ghost">Get the Free E-Book</a>
       </div>
-      <div class="stats">
+      <style>@media (max-width:600px){.hero-stats{display:none}}</style>
+      <div class="stats hero-stats">
         <div class="stat"><div class="num">${h.stat1Num}</div><div class="lbl">${h.stat1Label}</div></div>
         <div class="stat"><div class="num">${h.stat2Num}</div><div class="lbl">${h.stat2Label}</div></div>
         <div class="stat"><div class="num">${h.stat3Num}</div><div class="lbl">${h.stat3Label}</div></div>
