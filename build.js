@@ -27,6 +27,30 @@ fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2652339411805018&ev=PageView&noscript=1"/></noscript>`;
 
+// Cookie notice: subtle, brand-matched, remembers the choice in localStorage so it shows once.
+const COOKIE = `<div id="cookie-bar" role="dialog" aria-label="Cookie notice" style="display:none">
+<style>
+#cookie-bar{position:fixed;left:18px;bottom:18px;z-index:80;max-width:330px;background:#FFFDF9;border:1px solid rgba(185,137,47,.28);border-radius:14px;box-shadow:0 16px 40px rgba(42,32,24,.16);padding:15px 17px;font-family:'Figtree',sans-serif}
+#cookie-bar p{font-size:13px;line-height:1.5;color:#4A3D30;margin:0 0 12px}
+#cookie-bar a.cb-link{font-size:12.5px;color:#8C7C68;text-decoration:none}
+#cookie-bar a.cb-link:hover{color:#2A2018;text-decoration:underline}
+#cookie-bar .cb-row{display:flex;align-items:center;gap:16px}
+#cookie-bar .cb-accept{font-family:inherit;font-size:13.5px;font-weight:600;color:#fff;background:linear-gradient(120deg,#B9892F,#D4A94E);border:none;border-radius:999px;padding:9px 24px;cursor:pointer;transition:transform .2s}
+#cookie-bar .cb-accept:hover{transform:translateY(-1px)}
+@media (max-width:520px){#cookie-bar{left:12px;right:12px;bottom:12px;max-width:none}}
+</style>
+<p>We use cookies to measure where our traffic comes from and improve your experience.</p>
+<div class="cb-row">
+<button class="cb-accept" type="button" onclick="window.__llaCookie&&window.__llaCookie()">Accept</button>
+<a class="cb-link" href="privacy.html">Privacy Policy</a>
+</div>
+</div>
+<script>
+(function(){var K='lla_cookie_consent';function el(){return document.getElementById('cookie-bar');}
+window.__llaCookie=function(){try{localStorage.setItem(K,'accepted');}catch(e){}var b=el();if(b)b.style.display='none';};
+try{if(!localStorage.getItem(K)){var b=el();if(b)b.style.display='block';}}catch(e){var b2=el();if(b2)b2.style.display='block';}})();
+</script>`;
+
 function nav() {
   const L = [['courses.html', C.nav.courses], ['club.html', C.nav.club], ['ebook.html', C.nav.ebook], ['meet-matty.html', C.nav.matty]];
   const desk = L.map(([h, t]) => `<a href="${h}">${t}</a>`).join('');
@@ -103,6 +127,7 @@ ${nav()}
 ${body}
 ${FOOTER}
 ${JS}
+${COOKIE}
 </body>
 </html>`;
 }
@@ -738,8 +763,7 @@ function buildLegal() {
 <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make material changes, we will update the "Effective Date" at the top of this page and, where appropriate, notify you via email or a prominent notice on our Site.</p>
 <h2>10. Contact Us</h2>
 <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
-<p><strong>Luxury Leasing Academy LLC</strong><br>Email: <a href="mailto:matty@luxuryleasingacademy.com">matty@luxuryleasingacademy.com</a><br>Website: luxuryleasingacademy.com</p>
-<div class="legal-disclaimer">This Privacy Policy is provided for informational purposes and does not constitute legal advice. We recommend consulting with a qualified attorney to ensure compliance with all applicable privacy laws and regulations.</div>`;
+<p><strong>Luxury Leasing Academy LLC</strong><br>Email: <a href="mailto:matty@luxuryleasingacademy.com">matty@luxuryleasingacademy.com</a><br>Website: luxuryleasingacademy.com</p>`;
   write('privacy.html', page(`Privacy Policy | ${C.brand.name}`, shell('Privacy Policy', 'Luxury Leasing Academy LLC &middot; Effective February 13, 2026', privacyInner), CSS_SHARED + LEGAL_CSS));
 }
 
@@ -872,6 +896,7 @@ ${TRACKING}
 <body>
 ${body}
 ${HUB_JS}
+${COOKIE}
 </body>
 </html>`;
   write('hub.html', html);
