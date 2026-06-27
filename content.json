@@ -10,7 +10,7 @@
   },
   "nav": {
     "courses": "Courses",
-    "club": "The ELC",
+    "club": "The Club",
     "ebook": "Free E-Book",
     "matty": "Meet Matty",
     "login": "Student Login",
@@ -37,9 +37,9 @@
   },
   "home": {
     "eyebrow": "Luxury Leasing Academy",
-    "heroHeadline": "Build a real business renting luxury apartments",
+    "heroHeadline": "You don't have to sell a single home to make it in real estate.",
     "heroHighlight": "luxury apartments",
-    "heroSub": "No cold-calling for sales listings. No waiting months for a closing. Learn the system that turned leasing into $2.5M+ in rental volume, and a career most agents don't know exists.",
+    "heroSub": "No cold calls. No chasing listings. No waiting months for a closing. Luxury leasing is the career most agents overlook, and it can be a real business.",
     "stat1Num": "10+",
     "stat1Label": "Years in Luxury Rentals",
     "stat2Num": "1,000+",
@@ -54,7 +54,7 @@
   },
   "club": {
     "eyebrow": "The Elite Leasing Club",
-    "heroHeadline": "Everything you need to build a real rental business.<br>All in one place.",
+    "heroHeadline": "Every course. Every tool. Weekly coaching.<br>One membership.",
     "heroHighlight": "All in one place.",
     "heroSub": "All 9 courses. Weekly live coaching. A private community of agents who are actually putting in the work. This is the complete system, not another course you finish and forget.",
     "finalHeadline": "Better agents win. Become one."

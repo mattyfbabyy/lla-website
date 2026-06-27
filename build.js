@@ -348,7 +348,8 @@ function buildCourses() {
   const body = `<header class="hero-split" style="padding:84px 0 34px">
   <div class="wrap">
     <div class="eyebrow rv in">The Curriculum</div>
-    <h1 class="rv in" style="font-size:clamp(38px,5vw,58px);margin-bottom:18px">Nine courses. <em style="font-style:italic;color:var(--gold)">One system.</em></h1>
+    <style>@media (max-width:600px){.ch-h1 em{display:block}}</style>
+    <h1 class="rv in ch-h1" style="font-size:clamp(38px,5vw,58px);margin-bottom:18px">Nine courses. <em style="font-style:italic;color:var(--gold)">One system.</em></h1>
     <p class="rv in" style="font-size:19px;color:var(--espresso-soft);max-width:620px">From your first lease to a scaled rental business, in order, step by step. Start where you are.</p>
   </div>
 </header>
