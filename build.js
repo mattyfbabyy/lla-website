@@ -77,6 +77,7 @@ const FOOTER = `<footer>
       <div><h4>About</h4><a href="meet-matty.html">${C.nav.matty}</a><a href="the-lease-up.html">The Lease Up</a><a href="mailto:${C.brand.contactEmail}">Contact</a></div>
       <div><h4>Students</h4><a href="${C.brand.portalUrl}">${C.nav.login}</a><a href="${C.links.termsUrl}">Terms</a><a href="${C.links.privacyUrl}">Privacy</a></div>
     </div>
+    <div class="foot-legal" style="max-width:880px;margin:0 auto 16px;padding-top:18px;border-top:1px solid rgba(255,255,255,.09);font-size:12px;line-height:1.55;color:rgba(255,255,255,.42);text-align:center">Results vary and are not typical. Luxury Leasing Academy LLC does not guarantee any specific income, earnings, or results. Individual outcomes depend on your own effort, skill, and market conditions. See our <a href="${C.links.termsUrl}" style="color:rgba(255,255,255,.62);text-decoration:underline">Terms</a> for full details.</div>
     <div class="foot-bottom"><div>&copy; 2026 ${C.brand.name}, LLC</div><div>${C.brand.city}</div></div>
   </div>
 </footer>`;
@@ -225,9 +226,9 @@ function buildHome() {
 <hr class="horizon">
 <section class="section" style="background:var(--cream)">
   <div class="wrap">
-    <div class="section-head rv"><div class="eyebrow">The Path</div><h2>Your path to $100K+ with luxury rentals</h2></div>
+    <div class="section-head rv"><div class="eyebrow">The Path</div><h2>Your path to a real luxury rental business</h2></div>
     <div class="cards3">
-      <div class="card rv step-card"><div class="step-card-img"><img src="${C.images.ebookCover}" alt="E-book" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 01</div><h3 style="font-size:23px;margin-bottom:10px">Start free</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Download the e-book and learn the 9 secrets top earners use to build six-figure rental businesses.</p><a href="ebook.html" style="color:var(--gold);font-weight:600;font-size:15px">Get the Free E-Book &rarr;</a></div></div>
+      <div class="card rv step-card"><div class="step-card-img"><img src="${C.images.ebookCover}" alt="E-book" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 01</div><h3 style="font-size:23px;margin-bottom:10px">Start free</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Download the e-book and learn the 9 secrets top earners use to build their rental businesses.</p><a href="ebook.html" style="color:var(--gold);font-weight:600;font-size:15px">Get the Free E-Book &rarr;</a></div></div>
       <div class="card rv step-card"><div class="step-card-img"><img src="img/c1-mockup.png" alt="Courses" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 02</div><h3 style="font-size:23px;margin-bottom:10px">Learn the system</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Nine courses covering everything from your first lease to scaling a rental empire. In order, step by step.</p><a href="courses.html" style="color:var(--gold);font-weight:600;font-size:15px">Browse the Courses &rarr;</a></div></div>
       <div class="card rv step-card"><div class="step-card-img"><img src="img/club-image.png" alt="Club" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 03</div><h3 style="font-size:23px;margin-bottom:10px">Go all in</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">The Elite Leasing Club: every course, weekly live coaching, and a community of agents actually closing deals.</p><a href="club.html" style="color:var(--gold);font-weight:600;font-size:15px">Join the Club &rarr;</a></div></div>
     </div>
@@ -242,7 +243,7 @@ function buildHome() {
     <div class="micro rv">Not ready yet? <a href="ebook.html">Start with the free e-book.</a></div>
   </div>
 </section>`;
-  write('index.html', page(`${C.brand.name} | Build a Six-Figure Rental Business`, body, CSS_HOME));
+  write('index.html', page(`${C.brand.name} | Build a Real Rental Business`, body, CSS_HOME));
 }
 
 // ---------- CLUB ----------
@@ -492,7 +493,7 @@ function buildThanks() {
     `<strong>Don't see it?</strong> Check your spam or junk folder, and if you use Gmail, look under the Promotions tab.`,
     `<strong>Never miss the next one.</strong> Drag the email into your main inbox and add ${C.brand.contactEmail} to your contacts.`
   ];
-  const secondary = `<section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">While you're here</h2><p class="rv">See the full system top agents use to build a six-figure rental business.</p><a href="https://luxuryleasingacademy.com/club" class="btn btn-gold rv">Explore the Elite Leasing Club</a></div></section>`;
+  const secondary = `<section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">While you're here</h2><p class="rv">See the full system top agents use to build a real rental business.</p><a href="https://luxuryleasingacademy.com/club" class="btn btn-gold rv">Explore the Elite Leasing Club</a></div></section>`;
   const body = tyShell({
     eyebrow: "You're In",
     h1: "You're on the list. Now check your inbox.",
@@ -581,7 +582,7 @@ function buildMatty() {
   <p class="lede rv">I didn't come from real estate. I came from behind a bar, and before that, from rock bottom.</p>
   <p class="rv">No trust fund. No team. No listings handed to me. What I had was hustle, and a belief most people thought was naive: that leasing could be more than a stepping stone. That it could be a real business.</p>
   <p class="rv">I spent five years as an independent broker learning every hard lesson this industry has, then five more onsite at Chicago's top luxury residential building. Along the way I closed <strong>more than 1,000 leases</strong> and moved <strong>over $2.5 million in rental volume</strong>, not by selling homes, but by treating rentals like the business they really are.</p>
-  <p class="rv">Somewhere in those thousand leases I realized something: it was never talent. It was a <strong>system</strong>. Repeatable, teachable, and nobody was teaching it. Agents were quitting in their first year while a six-figure market sat right in front of them, overlooked.</p>
+  <p class="rv">Somewhere in those thousand leases I realized something: it was never talent. It was a <strong>system</strong>. Repeatable, teachable, and nobody was teaching it. Agents were quitting in their first year while a lucrative market sat right in front of them, overlooked.</p>
   <p class="rv">So I built ${C.brand.name}: the roadmap I wish someone had handed me. Every course, every script, every tracker inside comes from the field, not from theory that sounds nice on a slide.</p>
 </div></section>
 ${follow}
