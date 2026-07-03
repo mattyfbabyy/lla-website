@@ -1,0 +1,19 @@
+ONE-TIME SETUP FOR AUTO-PUBLISHING (about 90 seconds)
+
+The daily rebuild needs a "Deploy Hook" from Vercel. It is just a URL that
+tells Vercel to rebuild the site when something visits it. Not a password;
+worst case someone could trigger extra rebuilds, nothing more.
+
+1. vercel.com > your lla-website project > Settings > Git > Deploy Hooks
+2. Name: daily-publish    Branch: main    > Create Hook
+3. Copy the URL it gives you
+4. In your repo, open .github/workflows/publish-daily.yml
+5. Replace PASTE-YOUR-DEPLOY-HOOK-URL-HERE with that URL (keep the quotes)
+6. Commit
+
+Done. Every morning at 6:00 AM Chicago, GitHub pings Vercel, Vercel rebuilds,
+and any article whose date has arrived goes live. You can also fire it
+manually anytime: repo > Actions tab > Publish scheduled posts > Run workflow.
+
+If you'd rather not touch it, leave the placeholder. Nothing breaks; posts
+just publish whenever you next commit instead of on a daily clock.

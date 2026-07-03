@@ -33,3 +33,16 @@ the site rebuilds with the new post at yoursite.com/blog/your-slug and on the
 - Same rule as content.json: keep every quote mark and comma where it is.
 - Since each newsletter issue and blog post share the same structure, write it
   once as a post and paste the same copy into the AC template for Saturday.
+
+## Scheduling posts (set and forget)
+
+The "date" field IS the schedule. Any post dated in the future stays hidden
+until that date arrives, then publishes automatically on the next morning
+rebuild (6:00 AM Chicago, daily). So you can:
+
+- Drop a month of posts into the articles folder in one sitting
+- Date them 2026-07-11, 2026-07-18, 2026-07-25...
+- Commit once. They roll out one per date, on time, no further pushes.
+
+Backdating works too: a post dated in the past publishes immediately and
+sorts into place on the index.

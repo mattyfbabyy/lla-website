@@ -994,19 +994,28 @@ function renderBlock(b) {
   return '';
 }
 
+// Scheduling: articles dated in the future are skipped until their date arrives
+// (Chicago time). A daily rebuild publishes them automatically on the right day.
+const TODAY = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Chicago' });
+
 function loadArticles() {
   const dir = path.join(ROOT, 'articles');
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir).filter(f => f.endsWith('.json'))
+  if (!fs.existsSync(dir)) return null;
+  const all = fs.readdirSync(dir).filter(f => f.endsWith('.json'))
     .map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')))
     .sort((a, b) => (a.date < b.date ? 1 : -1));
+  const live = all.filter(a => a.date <= TODAY);
+  const scheduled = all.filter(a => a.date > TODAY);
+  scheduled.forEach(a => console.log(`  (scheduled: ${a.slug} publishes ${a.date})`));
+  return { live, scheduled };
 }
 
 const SUB_BOX = `<div class="art-sub rv"><h3>Get the next one in your inbox</h3><p>The Lease Up: one sharp leasing idea every Saturday. No fluff, no spam.</p><form data-optin><input type="email" name="email" placeholder="Your best email" required><button class="btn btn-gold" type="submit">Subscribe Free</button></form></div>`;
 
 function buildBlog() {
-  const arts = loadArticles();
-  if (!arts.length) { console.log('  (no articles found, skipping blog)'); return; }
+  const res = loadArticles();
+  if (!res) { console.log('  (no articles folder, skipping blog)'); return; }
+  const arts = res.live;
   fs.mkdirSync(path.join(OUT, 'blog'), { recursive: true });
 
   for (const a of arts) {
@@ -1023,9 +1032,10 @@ ${SUB_BOX}
     console.log('  built blog/' + a.slug + '.html');
   }
 
-  const cards = arts.map(a => `<a class="blog-card rv in" href="/blog/${a.slug}">
+  const cards = arts.length ? arts.map(a => `<a class="blog-card rv in" href="/blog/${a.slug}">
 <div class="bc-img">${a.heroImage?`<img src="${a.heroImage}" alt="${a.heroAlt||''}">`:''}</div>
-<div class="bc-body"><div class="bc-date">${fmtDate(a.date)}</div><h3>${a.title}</h3><p>${a.dek||''}</p><span class="bc-link">Read the article &rarr;</span></div></a>`).join('\n');
+<div class="bc-body"><div class="bc-date">${fmtDate(a.date)}</div><h3>${a.title}</h3><p>${a.dek||''}</p><span class="bc-link">Read the article &rarr;</span></div></a>`).join('\n')
+  : `<div style="grid-column:1/-1;text-align:center;padding:40px 0;color:var(--haze);font-size:17px">First article drops soon. Join <a href="/the-lease-up.html" style="color:var(--gold);font-weight:600">The Lease Up</a> and get it in your inbox the moment it lands.</div>`;
   const idxBody = `<header class="blog-head rv in"><div class="wrap"><div class="eyebrow">The Lease Up</div><h1>Articles</h1><p>One sharp leasing idea at a time. Strategy, scripts, and systems for agents who treat rentals like a real business.</p></div></header>
 <hr class="horizon">
 <div class="wrap"><div class="blog-grid">${cards}</div></div>`;

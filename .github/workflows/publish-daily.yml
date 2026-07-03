@@ -1,0 +1,13 @@
+# Rebuilds the site every morning so scheduled articles publish on their date.
+# ONE-TIME SETUP: paste your Vercel Deploy Hook URL below (see UPDATE NOTES).
+name: Publish scheduled posts
+on:
+  schedule:
+    - cron: "0 11 * * *"   # 6:00 AM Chicago, every day
+  workflow_dispatch:        # also lets you trigger it manually from the Actions tab
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel rebuild
+        run: curl -s -X POST "PASTE-YOUR-DEPLOY-HOOK-URL-HERE"
