@@ -1,0 +1,65 @@
+{
+  "slug": "zero-dollar-tech-stack-rental-business",
+  "title": "The $0 Tech Stack That Runs a Rental Business",
+  "dek": "New agents assume a real business requires expensive software. Mine ran for years on tools that cost almost nothing. Here's the entire zero-dollar stack, by job.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-10-01",
+  "heroImage": "/img/blog/zero-dollar-tech-stack-rental-business.jpg",
+  "heroAlt": "The $0 Tech Stack That Runs a Rental Business",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "The database: one spreadsheet"
+    },
+    {
+      "type": "p",
+      "html": "Google Sheets, free. It holds the Building Bible (every building, contact, policy, and interaction note) and the client tracker. This single document outperforms CRMs agents pay hundreds for and never open, because you'll actually use it."
+    },
+    {
+      "type": "h2",
+      "text": "The communication layer: what you already have"
+    },
+    {
+      "type": "p",
+      "html": "Email, phone, and a calendar with reminders. The touch rhythm that builds the Power 25, twice-monthly contact with every building, is a recurring calendar event, not a software feature."
+    },
+    {
+      "type": "quote",
+      "text": "The system is a promise you keep to yourself. The tools just hold the calendar."
+    },
+    {
+      "type": "h2",
+      "text": "The marketing engine: free tiers all the way down"
+    },
+    {
+      "type": "p",
+      "html": "A phone camera for content. Canva free tier for quote cards and carousels. Native scheduling inside the platforms, or a free scheduler tier. An AI assistant's free tier for drafts and descriptions. The organic playbook this whole month has demonstrated runs on exactly this."
+    },
+    {
+      "type": "h2",
+      "text": "The paper layer"
+    },
+    {
+      "type": "p",
+      "html": "Most luxury buildings run their own application systems, which means the transaction paperwork is largely handled for you. Your brokerage covers the rest."
+    },
+    {
+      "type": "h2",
+      "text": "What to actually spend on, later"
+    },
+    {
+      "type": "p",
+      "html": "When revenue justifies it: a paid scheduler to batch a month of content, a transcription/clipping tool if you make video, and an email platform once your newsletter list is real. Buy tools to scale a working system, never to substitute for one."
+    },
+    {
+      "type": "p",
+      "html": "The point isn't frugality for its own sake. It's that this business is built from relationships, reps, and consistency, none of which can be purchased. The full playbook is in my free ebook Luxury Leases, Real Profits, and the weekly system drops in The Lease Up. Better agents win."
+    },
+    {
+      "type": "cta",
+      "lead": "The full system, free.",
+      "href": "/ebook",
+      "label": "Get the Free E-Book"
+    }
+  ]
+}

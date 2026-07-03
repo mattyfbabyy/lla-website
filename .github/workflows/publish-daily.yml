@@ -1,13 +1,28 @@
-# Rebuilds the site every morning so scheduled articles publish on their date.
-# ONE-TIME SETUP: paste your Vercel Deploy Hook URL below (see UPDATE NOTES).
+# Publishes scheduled articles automatically. Every morning at 7:30 AM Chicago
+# it checks whether any article in /articles is dated today; if so, it makes a
+# small publish commit, which triggers Vercel to rebuild and the post goes live.
+# NO SETUP NEEDED. Works as soon as this file is in the repo.
 name: Publish scheduled posts
 on:
   schedule:
-    - cron: "30 12 * * *"   # 7:30 AM Chicago (CDT). After Nov 1 clock change this drifts to 6:30 AM; change to "30 13 * * *" then if it matters.
-  workflow_dispatch:        # also lets you trigger it manually from the Actions tab
+    - cron: "30 12 * * *"   # 7:30 AM Chicago (CDT). After the Nov clock change this drifts to 6:30 AM; switch to "30 13 * * *" then if it matters.
+  workflow_dispatch:         # manual trigger from the Actions tab anytime
+permissions:
+  contents: write
 jobs:
-  rebuild:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Vercel rebuild
-        run: curl -s -X POST "PASTE-YOUR-DEPLOY-HOOK-URL-HERE"
+      - uses: actions/checkout@v4
+      - name: Publish today's post if one is scheduled
+        run: |
+          TODAY=$(TZ=America/Chicago date +%F)
+          if grep -rl "\"date\": \"$TODAY\"" articles/ > /dev/null 2>&1; then
+            git config user.name "lla-publish-bot"
+            git config user.email "actions@github.com"
+            git commit --allow-empty -m "publish: $TODAY"
+            git push
+            echo "Published post(s) dated $TODAY"
+          else
+            echo "No post scheduled for $TODAY, nothing to do"
+          fi

@@ -1,58 +1,57 @@
 {
   "slug": "the-building-bible",
-  "title": "The Building Bible: why top agents know 50 buildings cold",
-  "dek": "Clients do not hire the agent with the most listings. They hire the one who knows the buildings better than anyone.",
+  "title": "The Building Bible: The Research System Behind Six-Figure Agents",
+  "dek": "Ask a top rental agent about any luxury building in their market and watch what happens: pet policy, parking cost, which floor plans face west, how fast the office processes applications, the leasing manager's name. That's not memory. That's a system. I call mine the Building Bible.",
   "kicker": "Luxury Leasing Academy",
-  "date": "2026-09-11",
+  "date": "2026-09-18",
   "heroImage": "/img/blog/the-building-bible.jpg",
-  "heroAlt": "The Building Bible: why top agents know 50 buildings cold",
+  "heroAlt": "The Building Bible: The Research System Behind Six-Figure Agents",
   "blocks": [
     {
-      "type": "p",
-      "html": "<strong>Ask a top leasing agent about any building in their market and watch what happens.</strong> Pet policy, concession trends, which line has the best light, how strict the leasing office runs credit. They answer in seconds. That is not memory. That is a system."
+      "type": "h2",
+      "text": "What it is"
     },
     {
       "type": "p",
-      "html": "The system is a Building Bible: one living document that holds everything about every building you work. Commission terms, contact names, floor plans, quirks, the notes from every tour. It turns you from a person who shows apartments into the market's reference desk."
+      "html": "One spreadsheet, one row per building, and it is the single most valuable document in my business. Core columns: building name, neighborhood, management company, leasing contacts, unit mix, price ranges, pet policy, parking, amenities, co-op policy, application requirements, and the column that matters most: a running log of every interaction I've had with that building."
     },
     {
       "type": "quote",
-      "text": "Clients can find listings on their own. They cannot find judgment. The Building Bible is where judgment lives."
+      "text": "The Building Bible beats the CRM you never open."
     },
     {
       "type": "h2",
-      "text": "What goes in it"
-    },
-    {
-      "type": "list",
-      "items": [
-        {
-          "title": "The money.",
-          "html": "Commission structure per building, escort policies, and how fast they pay. Not all buildings deserve your Saturdays."
-        },
-        {
-          "title": "The people.",
-          "html": "Leasing managers by name, their preferences, and your last three interactions. Deals move at the speed of those relationships."
-        },
-        {
-          "title": "The product.",
-          "html": "Best lines, worst views, gym quality, amenity fees, real availability patterns by season."
-        }
-      ]
-    },
-    {
-      "type": "play",
-      "html": "Start a spreadsheet with ten buildings today. Five columns: building, commission, contact, best units, notes. Ten minutes per building. You now know more than most agents in your market bother to learn."
+      "text": "Why it wins deals"
     },
     {
       "type": "p",
-      "html": "Course 2, Finding The Best Rental Properties, builds the whole system with you, including the tour scripts and the relationship playbook for leasing offices."
+      "html": "Speed: when a relocating executive emails \"2 bed, under $5,000, walkable to the Loop, dog friendly,\" I answer with three precise options in minutes, not a day of research. Authority: on tours, knowing the building cold reads as competence, and competence is what luxury clients are actually shopping for. Relationships: interaction notes mean every conversation with a manager picks up where the last one left off, even months later."
+    },
+    {
+      "type": "h2",
+      "text": "How to build yours"
+    },
+    {
+      "type": "p",
+      "html": "One afternoon for the skeleton: fifty buildings, basic data from public sources. Then it grows forever: every tour, every call, every application teaches you something, and it goes in the row. Six months in, you own an asset no competitor can copy, because it's made of your accumulated attention."
+    },
+    {
+      "type": "h2",
+      "text": "The compounding effect"
+    },
+    {
+      "type": "p",
+      "html": "A CRM tracks people, who move and change. The Bible tracks buildings, which stay. Renters churn every year or two; the building on the corner will still be leasing units when you're ten years in. Research that compounds is what separates a business from a hustle."
+    },
+    {
+      "type": "p",
+      "html": "Template and walkthrough are in my free ebook Luxury Leases, Real Profits. Better agents win."
     },
     {
       "type": "cta",
-      "lead": "Course 2 hands you the full building system.",
-      "href": "/courses",
-      "label": "Explore the Courses"
+      "lead": "The full system, free.",
+      "href": "/ebook",
+      "label": "Get the Free E-Book"
     }
   ]
 }

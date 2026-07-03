@@ -1,0 +1,65 @@
+{
+  "slug": "how-to-ask-for-the-lease",
+  "title": "The Power of Asking: How to Ask for the Lease",
+  "dek": "Average agents run beautiful showings and then... wait. They hope the client volunteers. Great agents ask. Simply, directly, at the right moment. Here's how, without an ounce of pressure.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-27",
+  "heroImage": "/img/blog/how-to-ask-for-the-lease.jpg",
+  "heroAlt": "The Power of Asking: How to Ask for the Lease",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Why agents don't ask"
+    },
+    {
+      "type": "p",
+      "html": "Fear of seeming pushy. But there's nothing pushy about clarity. You've toured someone through a home they love; asking whether they want it is a service, the natural last step of a professional process. What actually feels pushy is manipulation. A direct question never is."
+    },
+    {
+      "type": "quote",
+      "text": "The close is a service, not a trick."
+    },
+    {
+      "type": "h2",
+      "text": "The setup makes the ask small"
+    },
+    {
+      "type": "p",
+      "html": "If you've done the week's work, the ask is tiny by the time it arrives: the agenda mentioned the application in the first ninety seconds, concerns were answered before they hardened, the paperwork was previewed, the client is standing in the life they came looking for. The ask isn't a leap. It's the next stair."
+    },
+    {
+      "type": "h2",
+      "text": "The words"
+    },
+    {
+      "type": "p",
+      "html": "\"So, want to make this yours? I can have the application to you before you're home.\""
+    },
+    {
+      "type": "p",
+      "html": "Then silence. Genuinely: stop talking and let them answer. The silence after the ask is not awkward. It's respect. Fill it and you'll talk them out of a yes."
+    },
+    {
+      "type": "h2",
+      "text": "The three answers"
+    },
+    {
+      "type": "p",
+      "html": "Yes: application moving before they hit the lobby. A specific concern: welcome it, that's the real conversation, and now it's out of the fog. A genuine \"need to sleep on it\": stay the professional, promise the morning status check, deliver it. Every branch is better than the deal that dissolved because nobody asked."
+    },
+    {
+      "type": "p",
+      "html": "Ask for the lease. The worst outcome of asking is information. The worst outcome of not asking is silence."
+    },
+    {
+      "type": "p",
+      "html": "This closes Playbook week. The whole system, first 90 seconds to signature, is in The Luxury Leasing Playbook, twenty dollars, link below. Better agents win."
+    },
+    {
+      "type": "cta",
+      "lead": "The field manual, day by day.",
+      "href": "/playbook",
+      "label": "Get the Playbook for $20"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "how-to-choose-a-brokerage-new-agent",
+  "title": "How to Choose a Brokerage as a New Agent",
+  "dek": "Your first brokerage decision quietly determines whether a rental business is even possible. Most new agents choose on vibes and coffee quality. Choose on these five questions instead.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-10-04",
+  "heroImage": "/img/blog/how-to-choose-a-brokerage-new-agent.jpg",
+  "heroAlt": "How to Choose a Brokerage as a New Agent",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Question 1: how do rental commissions work here?"
+    },
+    {
+      "type": "p",
+      "html": "Ask precisely: what's the split on lease transactions, and are there per-deal fees that make small checks pointless? Some shops structure economics so rentals barely pay. If leasing is your engine, this single answer outranks everything else."
+    },
+    {
+      "type": "h2",
+      "text": "Question 2: does anyone here actually do rental volume?"
+    },
+    {
+      "type": "p",
+      "html": "Ask to meet the top leasing agent in the office. If there isn't one, you'll be pioneering without a map. Not fatal, but know it going in, and weigh it against a shop where leasing is normal business."
+    },
+    {
+      "type": "h2",
+      "text": "Question 3: what does the monthly nut look like?"
+    },
+    {
+      "type": "p",
+      "html": "Desk fees, tech fees, marketing minimums. A new agent's enemy is fixed monthly cost before income stabilizes. Lower overhead beats fancier branding in year one, every time."
+    },
+    {
+      "type": "quote",
+      "text": "A license is permission, not a plan. The brokerage should fit the plan."
+    },
+    {
+      "type": "h2",
+      "text": "Question 4: what's the training, really?"
+    },
+    {
+      "type": "p",
+      "html": "\"Great training\" usually means sales training. Ask what they teach about rentals, buildings, and property management relationships. If the answer is nothing, your education will come from elsewhere (that's partly why I built what I built), so at least make sure the shop won't discourage it."
+    },
+    {
+      "type": "h2",
+      "text": "Question 5: will they stay out of your way?"
+    },
+    {
+      "type": "p",
+      "html": "Some offices actively steer agents off rentals. Ask directly: if I build my first year primarily on leasing volume, is that supported here? Watch the face, not just the words."
+    },
+    {
+      "type": "p",
+      "html": "The right answer set: fair lease splits, low fixed costs, at least neutral-to-positive on rentals. The wrong brokerage can't stop you, but the right one removes friction you don't need. Foundation systems are in my free ebook Luxury Leases, Real Profits. Better agents win."
+    },
+    {
+      "type": "cta",
+      "lead": "The full system, free.",
+      "href": "/ebook",
+      "label": "Get the Free E-Book"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "property-manager-relationships-scripts",
+  "title": "How to Build Relationships With Property Managers (Scripts Included)",
+  "dek": "Property managers are the most valuable people in a rental agent's world, and most agents approach them exactly wrong: with a pitch. Here's what works instead, with the words to use.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-15",
+  "heroImage": "/img/blog/property-manager-relationships-scripts.jpg",
+  "heroAlt": "How to Build Relationships With Property Managers (Scripts Included)",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Understand their job first"
+    },
+    {
+      "type": "p",
+      "html": "A property manager's life is occupancy rates, maintenance tickets, and difficult residents. Agents, to them, are either a reliability (qualified renters, smooth showings) or a liability (no-shows, unprepared clients, wasted time). Your entire strategy is to be unmistakably the first kind."
+    },
+    {
+      "type": "quote",
+      "text": "Managers don't need another agent. They need a reliable one."
+    },
+    {
+      "type": "h2",
+      "text": "The first contact"
+    },
+    {
+      "type": "p",
+      "html": "Email or a thirty-second call. The script: \"Hi [name], I'm [you], a leasing agent working [neighborhood]. I regularly work with renters looking in your area. I'd love to know the best way to work with your team when I have a qualified client: how you prefer showings scheduled, and whether you co-op with outside agents. I keep my clients prepared and my showings on time. What's the best way to stay in the loop on availability?\""
+    },
+    {
+      "type": "p",
+      "html": "Notice: no pitch, one small ask, and the question nobody else asks, which is how THEY prefer to work."
+    },
+    {
+      "type": "h2",
+      "text": "The maintenance rhythm"
+    },
+    {
+      "type": "p",
+      "html": "Twice a month, a light touch: \"Any upcoming availability I should know about for my pipeline?\" A thank-you after every showing. Deliver on tiny promises. Show up early every time. Send a holiday note. None of it is clever. All of it compounds."
+    },
+    {
+      "type": "h2",
+      "text": "The moment it flips"
+    },
+    {
+      "type": "p",
+      "html": "You'll know the relationship is real when the flow reverses: they call you. A renter their building couldn't fit. A unit about to hit the market. A resident's friend moving to town. Protect that trust like the asset it is: never oversell their building, never bring an unqualified client, never make them chase you for paperwork."
+    },
+    {
+      "type": "quote",
+      "text": "You can't automate trust."
+    },
+    {
+      "type": "p",
+      "html": "All the scripts, in sequence, are in my free ebook Luxury Leases, Real Profits. Better agents win."
+    },
+    {
+      "type": "cta",
+      "lead": "The full system, free.",
+      "href": "/ebook",
+      "label": "Get the Free E-Book"
+    }
+  ]
+}

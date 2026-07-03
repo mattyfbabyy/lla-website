@@ -1,0 +1,53 @@
+{
+  "slug": "the-first-90-seconds",
+  "title": "The First 90 Seconds: How Showings Are Won Before You Speak",
+  "dek": "After a decade of luxury showings in Chicago, five years of it onsite in one of the city's premier buildings, I can usually tell within two minutes whether an agent will close a deal. Not because of anything they say about the apartment. Because of the first ninety seconds.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-21",
+  "heroImage": "/img/blog/the-first-90-seconds.jpg",
+  "heroAlt": "The First 90 Seconds: How Showings Are Won Before You Speak",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "What the client is actually deciding"
+    },
+    {
+      "type": "p",
+      "html": "In the first ninety seconds, a renter settles three questions about you: are you competent, are you on my side, and is this a good use of my time. Settle all three and everything you say afterward lands twice as hard. Leave them open and the tour is a polite formality."
+    },
+    {
+      "type": "quote",
+      "text": "Showings are won in the first 90 seconds."
+    },
+    {
+      "type": "h2",
+      "text": "The choreography"
+    },
+    {
+      "type": "p",
+      "html": "Arrive early, always. Walk the unit before they arrive: lights on, blinds open, temperature handled where possible. Meet them in the lobby, not at the unit door, because the lobby, the doorman, the elevator ride are all part of what a luxury renter is renting."
+    },
+    {
+      "type": "p",
+      "html": "Then greet with an agenda: \"Here's how I like to do this: we'll walk the building for two minutes so you feel what living here is like, then the apartment, where I'll point out a couple of things you'd never catch on a first visit. Then questions, and I'll walk you through exactly what the application looks like so there are no surprises. Sound good?\""
+    },
+    {
+      "type": "h2",
+      "text": "Why the agenda works"
+    },
+    {
+      "type": "p",
+      "html": "Competence: you have a plan. Advocacy: you're going to show them what they'd miss. Respect for time: the whole path is visible, including the ending. Mentioning the application up front does something subtle and powerful: it makes signing feel like the natural last step of a process rather than a scary decision ambushing them at the end."
+    },
+    {
+      "type": "p",
+      "html": "The complete showing system, greeting to signature, is in The Luxury Leasing Playbook, twenty dollars, and it's the field manual for everything this week's articles cover. Better agents win."
+    },
+    {
+      "type": "cta",
+      "lead": "The field manual, day by day.",
+      "href": "/playbook",
+      "label": "Get the Playbook for $20"
+    }
+  ]
+}

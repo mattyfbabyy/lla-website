@@ -1,0 +1,65 @@
+{
+  "slug": "luxury-buildings-worth-your-time",
+  "title": "How to Identify Luxury Buildings Worth Your Time",
+  "dek": "Not all luxury buildings are equal business opportunities. Some will feed you deals for a decade; others will consume your energy and produce nothing. Here's how to tell the difference before you invest a single month.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-16",
+  "heroImage": "/img/blog/luxury-buildings-worth-your-time.jpg",
+  "heroAlt": "How to Identify Luxury Buildings Worth Your Time",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Signal 1: turnover volume"
+    },
+    {
+      "type": "p",
+      "html": "A 400-unit tower with heavy one-bedroom inventory turns over far more leases per year than a boutique 40-unit building. More turnover means more move-ins, more overflow renters, and more chances for your phone to ring. Unit count and unit mix are the first filter."
+    },
+    {
+      "type": "h2",
+      "text": "Signal 2: agent policy"
+    },
+    {
+      "type": "p",
+      "html": "Call and ask two questions: do you co-op with outside agents, and what's your commission policy? Buildings split roughly into three camps: agent-friendly (welcome, standard co-op), agent-neutral (tolerated), and agent-hostile. Only the first two belong on your list."
+    },
+    {
+      "type": "quote",
+      "text": "Never fight for a locked door when the building next door is holding theirs open."
+    },
+    {
+      "type": "h2",
+      "text": "Signal 3: price point that pays"
+    },
+    {
+      "type": "p",
+      "html": "Your commission is roughly one month's rent, so the building's average rent is effectively your rate card. A building averaging $3,800 pays nearly double one averaging $2,000 for identical work. Work the tier your market supports and your reputation can grow into."
+    },
+    {
+      "type": "h2",
+      "text": "Signal 4: management quality"
+    },
+    {
+      "type": "p",
+      "html": "Slow application processing, chaotic leasing offices, and bad resident reviews kill deals you've already won. Read the reviews, note how fast the office answers, watch how they treat walk-ins. You're evaluating a business partner, because that's what they'll be."
+    },
+    {
+      "type": "h2",
+      "text": "Signal 5: cluster geography"
+    },
+    {
+      "type": "p",
+      "html": "Five great buildings within a fifteen-minute walk beat eight great buildings across three suburbs. Your touch rhythm, showings, and reputation all concentrate when your buildings do."
+    },
+    {
+      "type": "p",
+      "html": "Score every candidate on these five, keep the top twenty-five, and you've built the foundation of the whole business. The full system is in my free ebook Luxury Leases, Real Profits. Better agents win."
+    },
+    {
+      "type": "cta",
+      "lead": "The full system, free.",
+      "href": "/ebook",
+      "label": "Get the Free E-Book"
+    }
+  ]
+}

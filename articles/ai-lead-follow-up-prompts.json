@@ -1,0 +1,59 @@
+{
+  "slug": "ai-lead-follow-up-prompts",
+  "title": "How to Use AI for Lead Follow-Up (Prompts Included)",
+  "dek": "Deals don't die at showings. They die in the silence afterward. AI fixes the silence, if you use it the right way. Here's my exact system, prompts included.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-29",
+  "heroImage": "/img/blog/ai-lead-follow-up-prompts.jpg",
+  "heroAlt": "How to Use AI for Lead Follow-Up (Prompts Included)",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "The one-template method"
+    },
+    {
+      "type": "p",
+      "html": "I keep a single saved prompt and fill three blanks after every showing: who they are, what they saw, what their hesitation was."
+    },
+    {
+      "type": "p",
+      "html": "\"Write a short, warm follow-up text to a [renter type] who toured a [unit] at [building] today, loved [X], hesitated on [Y]. Confirm I'm [specific next action] tomorrow morning. My voice: professional, brief, no exclamation points, no pressure.\""
+    },
+    {
+      "type": "p",
+      "html": "Ten seconds later I have a draft that sounds like me on my best day. I edit one line and send."
+    },
+    {
+      "type": "quote",
+      "text": "Your follow-up should run while you sleep. Your relationships shouldn't."
+    },
+    {
+      "type": "h2",
+      "text": "More prompts to steal"
+    },
+    {
+      "type": "p",
+      "html": "The revival: \"Write a brief check-in to a renter who toured 3 weeks ago and went quiet. New information: [unit's status / new availability]. No guilt, no pressure, lead with the information.\""
+    },
+    {
+      "type": "p",
+      "html": "The prep email: \"Write a friendly pre-tour email confirming [time] at [building], including this document checklist: [list]. Frame the checklist as making things easy, not as homework.\""
+    },
+    {
+      "type": "p",
+      "html": "The anniversary: \"Write a warm one-year check-in to a past client, asking how the apartment's treating them, mentioning I'm always happy to help them or friends with a move. Zero sales pressure.\""
+    },
+    {
+      "type": "h2",
+      "text": "The two rules"
+    },
+    {
+      "type": "p",
+      "html": "Never send the first draft: read it out loud, and if a sentence doesn't sound like your mouth, fix it. And never automate the moments that matter: the machine drafts, you decide. AI handles the 80 percent that's repetitive. You bring the 20 percent that signs."
+    },
+    {
+      "type": "p",
+      "html": "One system like this every Saturday: The Lease Up, free, link below. Better agents win."
+    }
+  ]
+}

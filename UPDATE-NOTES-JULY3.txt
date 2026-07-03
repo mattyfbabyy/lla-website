@@ -1,40 +1,38 @@
-LLA LAUNCH RUNWAY UPDATE - July 3, 2026
+LLA LAUNCH RUNWAY UPDATE v2 - July 3, 2026
+YOUR BLOG BATCH W1-W4 CONTENT, VERBATIM
 
 WHAT TO DO:
 1. Drag build.js into the repo root, replacing the old one
-2. Delete your repo's articles folder, then drag in the articles folder
-   from this package (it contains all 30 launch posts)
-3. Drag the .github folder into the repo root (daily 7:30 AM publish trigger;
-   needs the one-time Deploy Hook setup in SCHEDULING-SETUP.txt)
-4. Commit "30-day launch runway" and push
+2. Delete the repo's articles folder, drag in this package's articles folder
+   (all 30 posts, straight from your Drive Blog Batch W1-W4 docs)
+3. Drag the .github folder into the repo root if you haven't already
+   (daily 7:30 AM publish; one-time Deploy Hook setup in SCHEDULING-SETUP.txt)
+4. Commit "launch runway - blog batches W1-W4" and push
 
-WHAT HAPPENS AFTER YOU PUSH:
-- The blog shows a clean "First article drops soon" page until September 7
-- On Labor Day at 7:30 AM the first post goes live, then one every morning
-  through October 6, automatically
-- Nothing else to do. Write October's posts whenever; drop them in dated.
+THE CONTENT:
+Every word is from your Blog Batch docs. Structure mapping only:
+- Your ## section headings became article headings
+- Your marked pull quotes became the big gold-bar quotes
+- Each article's opening paragraph displays as the subheadline under the title
+- CTA buttons follow your batch notes: W1+W2 ebook, W3 Playbook (Playbook
+  week), W4 closes on The Lease Up so the subscribe box under every post is
+  the CTA, with ebook buttons where your text names the ebook
 
-THE 30 POSTS (Sept 7 - Oct 6):
-Week 1 makes the case: the side hustle lie, why agents quit, the math,
-first 30 days, the Building Bible, where renters come from, the advisor shift.
-Week 2 builds skills: the closing line, follow-up, property managers,
-branding, social systems, ghosting scripts, referral math.
-Week 3 sharpens the operator: qualifying, neighborhood mastery, price
-objections, rejection math, CRM, referral engine, niching.
-Week 4 scales: digital door knocking, lead magnets, the morning hour,
-brokerage choice, video fear, metrics, teams, the luxury standard, and a
-Better Agents Win manifesto to close.
-CTAs rotate: free e-book week one, then Playbook, courses, and Club as the
-sequence warms up. Every post ends with the Lease Up subscribe box.
+THE SCHEDULE (your batch docs said 10am; your newer call of 7:30am wins):
+W1 The Wrong Game        Sept 7-13   (Labor Day launch)
+W2 The Power 25          Sept 14-20
+W3 Remove the No         Sept 21-27
+W4 AI + Systems          Sept 28-Oct 6
 
-IMAGES (all optional, add anytime):
-Each post looks for /img/blog/<post-slug>.jpg (exact filenames are just the
-JSON filenames with .jpg). If the image is not there, the post publishes
-clean with no broken image, and picks the photo up automatically on the next
-rebuild after you add it. Drop them in over the summer at your pace.
-Landscape, around 1600x900, under 400KB each.
+ONE EDIT MADE + TWO NUMBERS TO VERIFY:
+- Article 1 said 22 deals / $47,500. That figure was already flagged as
+  erroneous last session and corrected in Lease Up Issue 1, so it now reads
+  your verified 15 deals / $19,500.
+- Article 8 keeps your "$9,500 in commissions in about a month from one
+  property manager relationship." Article 26 keeps "six referrals once
+  produced $23,000." Both are verbatim from your drafts. Confirm they're
+  real numbers you can stand behind, or say the word and I'll soften them.
 
-TIMING:
-- Blog: daily 7:30 AM Chicago (set in .github/workflows/publish-daily.yml)
-- The Lease Up: Saturdays 9:00 AM is an ActiveCampaign setting; the automation
-  is currently set to 8:00 AM and gets moved to 9:00 next browser session
+IMAGES: each post looks for /img/blog/<slug>.jpg (filenames match the JSON
+filenames). Missing image = post publishes clean, picks the photo up on the
+next rebuild after you add it.

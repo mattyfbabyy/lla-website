@@ -1,0 +1,59 @@
+{
+  "slug": "ai-listing-descriptions-guide",
+  "title": "AI Listing Descriptions: A Realtor's Guide",
+  "dek": "Listing descriptions are the task agents procrastinate on all week, and the first thing AI genuinely perfected. Here's how to get descriptions that sell lifestyle instead of generic real estate soup.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-30",
+  "heroImage": "/img/blog/ai-listing-descriptions-guide.jpg",
+  "heroAlt": "AI Listing Descriptions: A Realtor's Guide",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Why most AI descriptions are terrible"
+    },
+    {
+      "type": "p",
+      "html": "Because the prompt is terrible. \"Write a listing description for a 2 bedroom apartment\" produces the same nestled-boasts-stunning sludge every time. The tool isn't the problem. The instructions are."
+    },
+    {
+      "type": "h2",
+      "text": "The prompt that works"
+    },
+    {
+      "type": "p",
+      "html": "Paste the raw facts (beds, baths, square footage, floor, exposure, features, building amenities), then instruct:"
+    },
+    {
+      "type": "p",
+      "html": "\"Three versions, 90 words each. One for a young professional buying energy and status. One for a relocating executive buying certainty and convenience. One for a lifestyle upgrader buying ease. No clich\u00e9s. Banned words: boasts, nestled, stunning, oasis, must-see.\""
+    },
+    {
+      "type": "quote",
+      "text": "The strategy is yours. The typing is theirs."
+    },
+    {
+      "type": "p",
+      "html": "Thirty seconds, three tailored descriptions, one per renter type. Polish the best lines and go. The intelligence in that prompt is the three renter types framework; AI just executes it at speed."
+    },
+    {
+      "type": "h2",
+      "text": "The polish pass"
+    },
+    {
+      "type": "p",
+      "html": "Read the output against three questions. Does it show a moment of living there (the sunset with dinner, the Saturday on the rooftop) rather than a feature list? Does it sound like a person? Is every claim true? Fix accordingly. Two minutes of taste on top of thirty seconds of generation still beats forty minutes of blank page."
+    },
+    {
+      "type": "h2",
+      "text": "Where else the same trick works"
+    },
+    {
+      "type": "p",
+      "html": "Building blurbs for your website, Instagram captions per platform tone, neighborhood guides, email subject lines. Same pattern every time: your framework plus their speed."
+    },
+    {
+      "type": "p",
+      "html": "Every Saturday I share one working system like this in The Lease Up, free, link below. Better agents win."
+    }
+  ]
+}

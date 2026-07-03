@@ -1,0 +1,57 @@
+{
+  "slug": "the-application-process",
+  "title": "The Application Process: Prep Clients So Deals Don't Die",
+  "dek": "Here's where deals actually die: not at the showing, but in the silent 48 hours after it, when an excited client meets an application they weren't prepared for. Cold feet don't grow at the tour. They grow in silence, next to a missing pay stub.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-26",
+  "heroImage": "/img/blog/the-application-process.jpg",
+  "heroAlt": "The Application Process: Prep Clients So Deals Don't Die",
+  "blocks": [
+    {
+      "type": "quote",
+      "text": "Prepared clients don't get cold feet."
+    },
+    {
+      "type": "h2",
+      "text": "Prep starts before the tour"
+    },
+    {
+      "type": "p",
+      "html": "When you confirm the showing, send the punch list: \"If you love it, here's what the building will want: government ID, last two pay stubs or offer letter, and application fees run about $[X]. Worth having handy so we can move same-day if it's the one.\" Two sentences, and you've transformed the application from a surprise into a plan."
+    },
+    {
+      "type": "h2",
+      "text": "Close the tour with the roadmap"
+    },
+    {
+      "type": "p",
+      "html": "Before they leave the building: \"If this is the one, here's exactly what happens next,\" then walk the steps: application today, processing typically [X] days, deposit and move-in costs, lease signing. Luxury buildings move fast and units disappear; a client who knows the timeline can act at the speed the market requires."
+    },
+    {
+      "type": "h2",
+      "text": "Chase the paperwork like it's your deal, because it is"
+    },
+    {
+      "type": "p",
+      "html": "Same-day application link. A checklist follow-up that evening. Documents reviewed before submission so nothing bounces. A heads-up to the leasing office that a complete application is coming, which, if you've built the relationship, often speeds processing. Every hour of friction you remove is measurable protection on a commission you already earned at the showing."
+    },
+    {
+      "type": "h2",
+      "text": "Handle the wobble"
+    },
+    {
+      "type": "p",
+      "html": "If a client goes quiet mid-process, don't send \"just checking in.\" Send information: \"Quick update: the building confirmed the unit is still yours pending the application. One document to go. Want me to resend the link?\" Momentum plus specifics beats reassurance every time."
+    },
+    {
+      "type": "p",
+      "html": "The complete application playbook, checklists included, is in The Luxury Leasing Playbook, twenty dollars. Better agents win."
+    },
+    {
+      "type": "cta",
+      "lead": "The field manual, day by day.",
+      "href": "/playbook",
+      "label": "Get the Playbook for $20"
+    }
+  ]
+}

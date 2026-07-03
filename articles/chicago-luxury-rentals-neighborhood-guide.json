@@ -1,0 +1,71 @@
+{
+  "slug": "chicago-luxury-rentals-neighborhood-guide",
+  "title": "Chicago Luxury Rentals: Neighborhood-by-Neighborhood Guide",
+  "dek": "Chicago's luxury rental market isn't one market. It's a collection of neighborhoods with distinct personalities, price logics, and renter types. After ten years leasing here, here's the honest map. (Price ranges shift monthly; treat these as relative tiers and check current numbers.)",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-10-06",
+  "heroImage": "/img/blog/chicago-luxury-rentals-neighborhood-guide.jpg",
+  "heroAlt": "Chicago Luxury Rentals: Neighborhood-by-Neighborhood Guide",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "River North"
+    },
+    {
+      "type": "p",
+      "html": "The default landing zone for young professionals and first-time relocators: high-rise density, nightlife, galleries, walk-to-Loop. Buildings compete hard on amenities, which means strong concession seasons for savvy renters. Renter type: the young professional, overwhelmingly."
+    },
+    {
+      "type": "h2",
+      "text": "Streeterville"
+    },
+    {
+      "type": "p",
+      "html": "Lake-adjacent, hospital- and Northwestern-anchored, calmer than River North with equal convenience. Draws relocating medical and corporate professionals who want proximity without the party. Renter type: the relocating executive."
+    },
+    {
+      "type": "h2",
+      "text": "The Loop and South Loop"
+    },
+    {
+      "type": "p",
+      "html": "The Loop delivers commute-zero living and conversions with character; South Loop trades a short distance for space, newer towers, and relative value, plus museum-campus and lakefront access. Renter types: executives in the Loop, value-conscious professionals and couples in South Loop."
+    },
+    {
+      "type": "h2",
+      "text": "West Loop and Fulton Market"
+    },
+    {
+      "type": "p",
+      "html": "The decade's momentum story: restaurant row, tech and corporate offices, new construction everywhere. Premium pricing and renters who want to be where Chicago is going, not where it's been. Renter type: young professionals with real budgets, plus executives at nearby headquarters."
+    },
+    {
+      "type": "h2",
+      "text": "Gold Coast and Old Town"
+    },
+    {
+      "type": "p",
+      "html": "Legacy luxury: tree-lined prestige, boutique buildings, lake proximity, quieter money. Old Town softens the formality with charm and Second City energy. Renter type: the lifestyle upgrader, plus executives who prefer establishment over energy."
+    },
+    {
+      "type": "h2",
+      "text": "Lincoln Park"
+    },
+    {
+      "type": "p",
+      "html": "Neighborhood luxury rather than tower luxury: parks, the zoo, brownstone streets, family-friendly rhythm with serious rental stock mixed in. Renter type: upgraders and settled professionals planting longer roots."
+    },
+    {
+      "type": "h2",
+      "text": "How an agent should read this map"
+    },
+    {
+      "type": "p",
+      "html": "Each neighborhood is a renter-type magnet, which means your Power 25 list should match the clients you want. Build in River North and West Loop for volume and young professionals; add Streeterville and the Gold Coast for executives and upgraders. The neighborhoods are the market. Learn them like inventory."
+    },
+    {
+      "type": "p",
+      "html": "Relocating to Chicago, or an agent building here? My free ebook Luxury Leases, Real Profits covers the system side, and I write about this market every Saturday in The Lease Up. Better agents win."
+    }
+  ]
+}

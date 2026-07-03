@@ -1,0 +1,57 @@
+{
+  "slug": "first-30-days-rental-agent-day-by-day",
+  "title": "Your First 30 Days as a Rental Agent: Day-by-Day Plan",
+  "dek": "Talk is cheap and most \"new agent advice\" is talk. Here's an actual first month, day by day, for an agent starting a rental business from zero.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-10-03",
+  "heroImage": "/img/blog/first-30-days-rental-agent-day-by-day.jpg",
+  "heroAlt": "Your First 30 Days as a Rental Agent: Day-by-Day Plan",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Week 1: build the foundation"
+    },
+    {
+      "type": "p",
+      "html": "Days 1-2: set up the Building Bible spreadsheet and list 50 luxury buildings in your market with basic data. Days 3-4: score them on turnover, agent policy, price point, and clustering; cut to your Power 25. Day 5: write your intro email and 30-second call script (templates are in my ebook). Days 6-7: polish your professional presence: bios, headshot, one link hub."
+    },
+    {
+      "type": "h2",
+      "text": "Week 2: make contact"
+    },
+    {
+      "type": "p",
+      "html": "Days 8-10: contact all 25 buildings, email or call, using the script. Log every response in the Bible. Days 11-12: walk into your five nearest target buildings and introduce yourself in person. Days 13-14: set the recurring calendar rhythm: every building touched twice a month, forever. This is the machine; everything else feeds it."
+    },
+    {
+      "type": "quote",
+      "text": "Month one you're a name in a spreadsheet. Month six they call you first."
+    },
+    {
+      "type": "h2",
+      "text": "Week 3: open the client channels"
+    },
+    {
+      "type": "p",
+      "html": "Days 15-17: announce what you do everywhere you exist online, and start the daily 15-minute engagement habit. Days 18-19: tell your personal network, specifically: \"I help people find luxury rentals in [city], and I'd love to help anyone you know who's moving.\" Days 20-21: post your first content: one building, one lesson, one market observation."
+    },
+    {
+      "type": "h2",
+      "text": "Week 4: run the reps"
+    },
+    {
+      "type": "p",
+      "html": "Days 22-28: chase your first showings from any source: building overflow, network, online engagement. Run each one with the full choreography: early arrival, lobby greeting, agenda, lifestyle tour, application roadmap, and the ask. Days 29-30: review the numbers, thank every contact, and schedule month two."
+    },
+    {
+      "type": "p",
+      "html": "Thirty days, zero dollars, and a real pipeline forming. The expanded version with every script lives in the $20 Luxury Leasing Playbook. Better agents win."
+    },
+    {
+      "type": "cta",
+      "lead": "The field manual, day by day.",
+      "href": "/playbook",
+      "label": "Get the Playbook for $20"
+    }
+  ]
+}

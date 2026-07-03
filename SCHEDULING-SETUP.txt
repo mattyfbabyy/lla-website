@@ -1,19 +1,19 @@
-ONE-TIME SETUP FOR AUTO-PUBLISHING (about 90 seconds)
+AUTO-PUBLISHING: NO SETUP REQUIRED
 
-The daily rebuild needs a "Deploy Hook" from Vercel. It is just a URL that
-tells Vercel to rebuild the site when something visits it. Not a password;
-worst case someone could trigger extra rebuilds, nothing more.
+The old version of this file described a Vercel Deploy Hook step. That is no
+longer needed. The workflow now publishes on its own:
 
-1. vercel.com > your lla-website project > Settings > Git > Deploy Hooks
-2. Name: daily-publish    Branch: main    > Create Hook
-3. Copy the URL it gives you
-4. In your repo, open .github/workflows/publish-daily.yml
-5. Replace PASTE-YOUR-DEPLOY-HOOK-URL-HERE with that URL (keep the quotes)
-6. Commit
+- Every morning at 7:30 AM Chicago, GitHub checks whether any article in the
+  articles folder is dated today
+- If yes, it makes a tiny "publish" commit, Vercel rebuilds automatically,
+  and the post goes live
+- If no, it does nothing
 
-Done. Every morning at 6:00 AM Chicago, GitHub pings Vercel, Vercel rebuilds,
-and any article whose date has arrived goes live. You can also fire it
-manually anytime: repo > Actions tab > Publish scheduled posts > Run workflow.
+It works the moment the .github folder is in your repo. Nothing to configure.
 
-If you'd rather not touch it, leave the placeholder. Nothing breaks; posts
-just publish whenever you next commit instead of on a daily clock.
+To publish manually anytime (for example on launch morning if you want to
+watch it happen): repo > Actions tab > "Publish scheduled posts" > Run workflow.
+
+One check after your first push: repo > Settings > Actions > General >
+Workflow permissions should be set to "Read and write permissions"
+(this is the default on most repos; only change it if the Action fails).

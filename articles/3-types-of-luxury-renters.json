@@ -1,0 +1,61 @@
+{
+  "slug": "3-types-of-luxury-renters",
+  "title": "The 3 Types of Luxury Renters and How to Pitch Each One",
+  "dek": "Ten years of luxury leasing taught me that every client is one of three people. Learn the three, identify which one is in front of you, and half your objections never form, because you were answering their real question from hello.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-25",
+  "heroImage": "/img/blog/3-types-of-luxury-renters.jpg",
+  "heroAlt": "The 3 Types of Luxury Renters and How to Pitch Each One",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Type 1: the young professional"
+    },
+    {
+      "type": "p",
+      "html": "First real career money, graduating from the roommate era. What they're buying: arrival. The building is proof the plan is working. Show them: the energy, the gym, the rooftop, the neighborhood at night. Tone: enthusiastic, aspirational. Their common objection is price stretch, so anchor value in lifestyle per dollar and the cost of NOT loving where you live in your prime years."
+    },
+    {
+      "type": "h2",
+      "text": "Type 2: the relocating executive"
+    },
+    {
+      "type": "p",
+      "html": "New city, compressed timeline, high stakes, often deciding partly from a distance. What they're buying: certainty. Show them: efficiency, safety, commute, and above all a flawless process, because their real fear is a mistake made from 2,000 miles away. Tone: precise, calm, zero fluff. With this client, your process IS the product. Answer before they ask, document everything, move fast."
+    },
+    {
+      "type": "quote",
+      "text": "With the executive, your process is the product."
+    },
+    {
+      "type": "h2",
+      "text": "Type 3: the lifestyle upgrader"
+    },
+    {
+      "type": "p",
+      "html": "They've owned homes, they have means, and they're done with maintenance. What they're buying: freedom. Show them: concierge, lock-and-leave travel, everything they no longer have to think about. Tone: respectful peer, not salesperson. Their objection is usually \"renting feels like a step backward,\" so reframe: this isn't downsizing, it's outsourcing the parts of home ownership that stopped being worth it."
+    },
+    {
+      "type": "h2",
+      "text": "The diagnostic"
+    },
+    {
+      "type": "p",
+      "html": "You can usually identify the type in two qualifying questions: what's prompting the move, and what does a great year in the new place look like? Then run the right tour, not the generic one."
+    },
+    {
+      "type": "p",
+      "html": "When agents lose deals, it's usually because they gave the executive the young professional's tour."
+    },
+    {
+      "type": "p",
+      "html": "Full profiles and pitch scripts for all three are in The Luxury Leasing Playbook, twenty dollars. Better agents win."
+    },
+    {
+      "type": "cta",
+      "lead": "The field manual, day by day.",
+      "href": "/playbook",
+      "label": "Get the Playbook for $20"
+    }
+  ]
+}
