@@ -1,0 +1,43 @@
+LLA SITE UPDATE - July 3, 2026 (Compliance + Measurement + Blog)
+
+WHAT TO DO:
+1. Open your cloned lla-website repo folder
+2. Drag build.js into the repo root, replacing the old one
+3. Drag the "articles" folder into the repo root (new folder, one sample post inside)
+4. Inside your repo's img folder, create a new folder called "blog"
+   Drop a landscape photo in it named: closing-line-hero.jpg
+   (that's the sample post's hero; any Chicago skyline shot works)
+5. GitHub Desktop: commit with "consent gating, GA4 events, blog system" then Push
+6. Wait for Vercel to show Ready
+
+DO NOT touch content.json, build-data.js, the CSS files, or vercel.json. Unchanged.
+
+WHAT'S IN THIS UPDATE:
+
+COMPLIANCE + MEASUREMENT
+- Cookie banner now has Accept AND Decline and actually gates tracking.
+  GA4 and the Meta Pixel stay silent (Google Consent Mode v2) until a visitor
+  accepts. The choice is remembered on return visits.
+- Playbook page: results disclaimer added right under the buy button.
+- GA4 conversion events fire automatically:
+    thanks page (opt-in)   -> generate_lead
+    thank-you-course       -> course_purchase_confirmed
+    thank-you-club         -> club_purchase_confirmed
+    thank-you-playbook     -> playbook_purchase_confirmed
+  One-time step in GA4 admin: Admin > Events > toggle "Mark as key event"
+  on each once they appear after the first real hit.
+
+BLOG (new)
+- Your site now has /blog: an article index plus a full article page design
+  in the site's exact brand language. Big Fraunces headlines, gold-bar pull
+  quotes, The Play callout box, gold-numbered lists, horizon dividers, and
+  every post ends with a Lease Up subscribe box wired to ActiveCampaign.
+- Adding a post = dropping one JSON file into the articles folder and
+  committing. Full instructions in HOW-TO-ADD-A-POST.md.
+- A footer "Articles" link was added under About on every page.
+- One sample post ships live so you can see the design immediately:
+  /blog/the-line-that-closes-more-leases
+
+ALSO IN THIS PACKAGE (not repo files):
+- the-lease-up-v2-template.html: the matching newsletter template for AC.
+- HOW-TO-ADD-A-POST.md: put this in the repo root next to HOW-TO-EDIT.md.

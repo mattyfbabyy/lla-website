@@ -16,38 +16,50 @@ const TRACKING = `<!-- Google tag (gtag.js) - GA4 -->
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+// Consent Mode v2: everything denied until the visitor accepts (or has accepted before)
+var __llaConsented=false;try{__llaConsented=localStorage.getItem('lla_cookie_consent')==='accepted';}catch(e){}
+gtag('consent','default',{ad_storage:__llaConsented?'granted':'denied',ad_user_data:__llaConsented?'granted':'denied',ad_personalization:__llaConsented?'granted':'denied',analytics_storage:__llaConsented?'granted':'denied'});
 gtag('js', new Date());
 gtag('config', 'G-0EJWTZD0T9', { linker: { domains: ['luxuryleasingacademy.com','portal.luxuryleasingacademy.com'] } });
 </script>
 <!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+if(!window.__llaConsented){fbq('consent','revoke');}
 fbq('init', '2652339411805018');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2652339411805018&ev=PageView&noscript=1"/></noscript>`;
 
-// Cookie notice: subtle, brand-matched, remembers the choice in localStorage so it shows once.
+// Cookie consent: brand-matched, Accept/Decline, remembers the choice, and actually
+// gates GA4 + Meta Pixel via Consent Mode. Shows once; returning visitors keep their choice.
 const COOKIE = `<div id="cookie-bar" role="dialog" aria-label="Cookie notice" style="display:none">
 <style>
-#cookie-bar{position:fixed;left:18px;bottom:18px;z-index:80;max-width:330px;background:#FFFDF9;border:1px solid rgba(185,137,47,.28);border-radius:14px;box-shadow:0 16px 40px rgba(42,32,24,.16);padding:15px 17px;font-family:'Figtree',sans-serif}
+#cookie-bar{position:fixed;left:18px;bottom:18px;z-index:80;max-width:340px;background:#FFFDF9;border:1px solid rgba(185,137,47,.28);border-radius:14px;box-shadow:0 16px 40px rgba(42,32,24,.16);padding:15px 17px;font-family:'Figtree',sans-serif}
 #cookie-bar p{font-size:13px;line-height:1.5;color:#4A3D30;margin:0 0 12px}
 #cookie-bar a.cb-link{font-size:12.5px;color:#8C7C68;text-decoration:none}
 #cookie-bar a.cb-link:hover{color:#2A2018;text-decoration:underline}
-#cookie-bar .cb-row{display:flex;align-items:center;gap:16px}
+#cookie-bar .cb-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 #cookie-bar .cb-accept{font-family:inherit;font-size:13.5px;font-weight:600;color:#fff;background:linear-gradient(120deg,#B9892F,#D4A94E);border:none;border-radius:999px;padding:9px 24px;cursor:pointer;transition:transform .2s}
 #cookie-bar .cb-accept:hover{transform:translateY(-1px)}
+#cookie-bar .cb-decline{font-family:inherit;font-size:13px;font-weight:500;color:#8C7C68;background:none;border:none;cursor:pointer;padding:9px 4px}
+#cookie-bar .cb-decline:hover{color:#2A2018;text-decoration:underline}
 @media (max-width:520px){#cookie-bar{left:12px;right:12px;bottom:12px;max-width:none}}
 </style>
 <p>We use cookies to measure where our traffic comes from and improve your experience.</p>
 <div class="cb-row">
-<button class="cb-accept" type="button" onclick="window.__llaCookie&&window.__llaCookie()">Accept</button>
+<button class="cb-accept" type="button" onclick="window.__llaCookie&&window.__llaCookie(true)">Accept</button>
+<button class="cb-decline" type="button" onclick="window.__llaCookie&&window.__llaCookie(false)">Decline</button>
 <a class="cb-link" href="privacy.html">Privacy Policy</a>
 </div>
 </div>
 <script>
 (function(){var K='lla_cookie_consent';function el(){return document.getElementById('cookie-bar');}
-window.__llaCookie=function(){try{localStorage.setItem(K,'accepted');}catch(e){}var b=el();if(b)b.style.display='none';};
+window.__llaCookie=function(ok){try{localStorage.setItem(K,ok?'accepted':'declined');}catch(e){}
+if(ok){window.__llaConsented=true;
+if(window.gtag)gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
+if(window.fbq){fbq('consent','grant');}}
+var b=el();if(b)b.style.display='none';};
 try{if(!localStorage.getItem(K)){var b=el();if(b)b.style.display='block';}}catch(e){var b2=el();if(b2)b2.style.display='block';}})();
 </script>`;
 
@@ -74,7 +86,7 @@ const FOOTER = `<footer>
     </div>
     <div class="foot-grid foot-grid-3">
       <div><h4>Learn</h4><a href="courses.html">${C.nav.courses}</a><a href="club.html">${C.nav.club}</a><a href="ebook.html">${C.nav.ebook}</a><a href="playbook.html">The Playbook</a></div>
-      <div><h4>About</h4><a href="meet-matty.html">${C.nav.matty}</a><a href="the-lease-up.html">The Lease Up</a><a href="mailto:${C.brand.contactEmail}">Contact</a></div>
+      <div><h4>About</h4><a href="meet-matty.html">${C.nav.matty}</a><a href="the-lease-up.html">The Lease Up</a><a href="/blog">Articles</a><a href="mailto:${C.brand.contactEmail}">Contact</a></div>
       <div><h4>Students</h4><a href="${C.brand.portalUrl}">${C.nav.login}</a><a href="${C.links.termsUrl}">Terms</a><a href="${C.links.privacyUrl}">Privacy</a></div>
     </div>
     <div class="foot-legal" style="max-width:880px;margin:0 auto 16px;padding-top:18px;border-top:1px solid rgba(255,255,255,.09);font-size:12px;line-height:1.55;color:rgba(255,255,255,.42);text-align:center">Results vary and are not typical. Luxury Leasing Academy LLC does not guarantee any specific income, earnings, or results. Individual outcomes depend on your own effort, skill, and market conditions. See our <a href="${C.links.termsUrl}" style="color:rgba(255,255,255,.62);text-decoration:underline">Terms</a> for full details.</div>
@@ -436,6 +448,7 @@ function buildPlaybook() {
       <h1>${highlight(p.heroHeadline, p.heroHighlight)}</h1>
       <p class="sub">${p.heroSub}</p>
       <div class="buy-row"><a href="${C.links.playbookCheckout}" class="btn btn-gold">${p.buyButton}</a><span class="buy-note">Instant access. Yours to keep.</span></div>
+      <div class="buy-note" style="display:block;margin-top:14px;font-size:12.5px;color:var(--haze);max-width:480px">Results vary and are not typical. The Playbook teaches a process, not a promise of income. Your outcome depends on your effort, skill, and market.</div>
     </div>
     <div class="book-shot rv in"><img src="${C.images.playbookCover}" alt="The Luxury Leasing Playbook"></div>
   </div>
@@ -488,6 +501,9 @@ function buildLeaseUp() {
   write('the-lease-up.html', page(`The Lease Up | ${C.brand.name}`, body, CSS_SHARED));
 }
 
+// Fires a GA4 event on load (consent-aware via Consent Mode; safe if gtag is blocked)
+const EVT = (name, params) => `<script>try{window.gtag&&gtag('event','${name}',${JSON.stringify(params||{})});}catch(e){}</script>`;
+
 // ---------- THANKS ----------
 function buildThanks() {
   const steps = [
@@ -505,7 +521,7 @@ function buildThanks() {
     note: `Grabbed the free e-book? Your download link is inside that first email. Joined The Lease Up? Your first issue lands this Saturday. Questions anytime: <a href="mailto:${C.brand.contactEmail}">${C.brand.contactEmail}</a>.`,
     secondary
   });
-  write('thanks.html', page(`You're In | ${C.brand.name}`, body, CSS_SHARED + THANKS_CSS));
+  write('thanks.html', page(`You're In | ${C.brand.name}`, body + EVT('generate_lead',{method:'email_optin'}), CSS_SHARED + THANKS_CSS));
 }
 
 // ---------- PURCHASE THANK YOU PAGES ----------
@@ -522,7 +538,7 @@ function buildPurchaseThanks() {
     ],
     cta: { href: C.brand.portalUrl, label: "Go to Student Login" },
     note: `Still nothing after ten minutes? Email <a href="mailto:${C.brand.contactEmail}">${C.brand.contactEmail}</a> and we'll get you in right away.`
-  }), CSS_SHARED + THANKS_CSS));
+  }) + EVT('course_purchase_confirmed'), CSS_SHARED + THANKS_CSS));
 
   write('thank-you-club.html', page(`Welcome to the Elite Leasing Club | ${C.brand.name}`, tyShell({
     eyebrow: "Welcome to the Club",
@@ -536,7 +552,7 @@ function buildPurchaseThanks() {
     ],
     cta: { href: C.brand.portalUrl, label: "Enter the Club" },
     note: `Need a hand getting in? Email <a href="mailto:${C.brand.contactEmail}">${C.brand.contactEmail}</a> anytime.`
-  }), CSS_SHARED + THANKS_CSS));
+  }) + EVT('club_purchase_confirmed'), CSS_SHARED + THANKS_CSS));
 
   write('thank-you-playbook.html', page(`Your Playbook Is On The Way | ${C.brand.name}`, tyShell({
     eyebrow: "Purchase Confirmed",
@@ -550,7 +566,7 @@ function buildPurchaseThanks() {
     ],
     cta: { href: "https://luxuryleasingacademy.com/club", label: "See the full system in the Club" },
     note: `Trouble with your download? Email <a href="mailto:${C.brand.contactEmail}">${C.brand.contactEmail}</a> and we'll send it straight over.`
-  }), CSS_SHARED + THANKS_CSS));
+  }) + EVT('playbook_purchase_confirmed'), CSS_SHARED + THANKS_CSS));
 }
 
 // ---------- MEET MATTY ----------
@@ -905,11 +921,126 @@ ${COOKIE}
   write('hub.html', html);
 }
 
+// ---------- BLOG / ARTICLES ----------
+// Articles live as one JSON file each in /articles. Drop a file in, commit, done.
+// Schema: { slug, title, dek, date (YYYY-MM-DD), heroImage, heroAlt, heroCaption, blocks:[...] }
+// Block types: p (html), quote (text), play (html), h2 (text), list (items:[{title, html}]), cta ({label, href, lead})
+const ARTICLE_CSS = `
+.art-wrap{max-width:720px;margin:0 auto;padding:0 28px}
+.art-head{padding:72px 0 26px}
+.art-kicker{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.art-head h1{font-size:clamp(32px,4.4vw,48px);margin-bottom:18px}
+.art-dek{font-size:19px;color:var(--haze);line-height:1.55}
+.art-date{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--haze);margin-top:20px;font-weight:600}
+.art-hero{margin:34px 0 8px}
+.art-hero img{width:100%;height:auto;border-radius:16px;box-shadow:0 24px 56px rgba(42,32,24,.16)}
+.art-hero figcaption{font-size:13px;color:var(--haze);font-style:italic;margin-top:10px}
+.art-body{padding:26px 0 10px}
+.art-body p{font-size:17.5px;line-height:1.8;color:var(--espresso-soft);margin-bottom:22px}
+.art-body p strong{color:var(--espresso)}
+.art-body h2{font-size:26px;margin:38px 0 16px}
+.art-quote{border-left:4px solid var(--gold);padding:8px 0 8px 26px;margin:34px 0}
+.art-quote div{font-family:'Fraunces',serif;font-style:italic;font-size:25px;line-height:1.42;color:var(--espresso)}
+.art-play{background:var(--cream);border:1px solid rgba(185,137,47,.3);border-radius:14px;padding:28px 30px;margin:34px 0}
+.art-play .lbl{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.art-play .txt{font-family:'Fraunces',serif;font-size:19px;line-height:1.55;color:var(--espresso)}
+.art-list{margin:8px 0 26px}
+.art-list .row{display:flex;gap:18px;margin-bottom:16px}
+.art-list .n{font-family:'Fraunces',serif;font-size:22px;color:var(--gold);line-height:1.3;min-width:26px}
+.art-list .t{font-size:16.5px;line-height:1.7;color:var(--espresso-soft)}
+.art-list .t strong{color:var(--espresso)}
+.art-cta{text-align:center;margin:44px 0 20px}
+.art-cta .lead{font-family:'Fraunces',serif;font-size:22px;color:var(--espresso);margin-bottom:20px}
+.art-sub{background:var(--espresso);border-radius:18px;padding:44px 40px;margin:56px 0 76px;text-align:center;color:var(--ivory)}
+.art-sub h3{font-size:24px;margin-bottom:10px}
+.art-sub p{color:#CBBFAE;font-size:15.5px;margin-bottom:22px}
+.art-sub form{display:flex;gap:10px;max-width:440px;margin:0 auto}
+.art-sub input{flex:1;padding:13px 20px;border-radius:999px;border:1px solid rgba(212,169,78,.4);background:rgba(255,255,255,.07);color:var(--ivory);font-family:inherit;font-size:15px;outline:none}
+.art-sub input::placeholder{color:#A4937D}
+.blog-head{padding:76px 0 20px;text-align:center}
+.blog-head .eyebrow{margin-bottom:16px}
+.blog-head h1{font-size:clamp(34px,4.6vw,52px);margin-bottom:14px}
+.blog-head p{color:var(--haze);font-size:18px;max-width:560px;margin:0 auto}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;padding:44px 0 90px}
+.blog-card{background:var(--white);border:1px solid rgba(185,137,47,.18);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.blog-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(42,32,24,.12)}
+.blog-card .bc-img{height:190px;background:var(--cream)}
+.blog-card .bc-img img{width:100%;height:100%;object-fit:cover}
+.blog-card .bc-body{padding:26px 26px 30px;display:flex;flex-direction:column;flex:1}
+.blog-card .bc-date{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--haze);font-weight:700;margin-bottom:10px}
+.blog-card h3{font-size:21px;margin-bottom:10px;line-height:1.3}
+.blog-card p{color:var(--espresso-soft);font-size:15px;line-height:1.6;margin-bottom:18px;flex:1}
+.blog-card .bc-link{color:var(--gold);font-weight:600;font-size:14.5px}
+@media (max-width:900px){.blog-grid{grid-template-columns:1fr}}
+@media (max-width:600px){.art-head{padding:48px 0 18px}.art-body p{font-size:16.5px}.art-quote div{font-size:21px}.art-sub{padding:34px 24px}.art-sub form{flex-direction:column}.blog-head{padding:52px 0 12px}}
+`;
+
+const fmtDate = iso => new Date(iso + 'T12:00:00').toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+
+// Blog pages live under /blog/, so internal links must be root-absolute.
+const rootify = html => html
+  .replace(/href="([a-z0-9-]+\.html)(#[^"]*)?"/g, 'href="/$1$2"')
+  .replace(/href="img\//g, 'href="/img/')
+  .replace(/src="img\//g, 'src="/img/')
+  .replace(/window\.location\.href='thanks\.html'/g, "window.location.href='/thanks.html'");
+
+function renderBlock(b) {
+  if (b.type === 'p') return `<p>${b.html}</p>`;
+  if (b.type === 'h2') return `<h2>${b.text}</h2>`;
+  if (b.type === 'quote') return `<div class="art-quote"><div>&ldquo;${b.text}&rdquo;</div></div>`;
+  if (b.type === 'play') return `<div class="art-play"><div class="lbl">The Play</div><div class="txt">${b.html}</div></div>`;
+  if (b.type === 'list') return `<div class="art-list">${(b.items||[]).map((it,i)=>`<div class="row"><div class="n">${i+1}</div><div class="t"><strong>${it.title}</strong> ${it.html}</div></div>`).join('')}</div>`;
+  if (b.type === 'cta') return `<div class="art-cta">${b.lead?`<div class="lead">${b.lead}</div>`:''}<a href="${b.href}" class="btn btn-gold">${b.label}</a></div>`;
+  return '';
+}
+
+function loadArticles() {
+  const dir = path.join(ROOT, 'articles');
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).filter(f => f.endsWith('.json'))
+    .map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')))
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+const SUB_BOX = `<div class="art-sub rv"><h3>Get the next one in your inbox</h3><p>The Lease Up: one sharp leasing idea every Saturday. No fluff, no spam.</p><form data-optin><input type="email" name="email" placeholder="Your best email" required><button class="btn btn-gold" type="submit">Subscribe Free</button></form></div>`;
+
+function buildBlog() {
+  const arts = loadArticles();
+  if (!arts.length) { console.log('  (no articles found, skipping blog)'); return; }
+  fs.mkdirSync(path.join(OUT, 'blog'), { recursive: true });
+
+  for (const a of arts) {
+    const hero = a.heroImage ? `<figure class="art-hero rv in"><img src="${a.heroImage}" alt="${a.heroAlt||''}">${a.heroCaption?`<figcaption>${a.heroCaption}</figcaption>`:''}</figure>` : '';
+    const body = `<article><div class="art-wrap">
+<header class="art-head rv in"><div class="art-kicker">${a.kicker || 'The Lease Up'}</div><h1>${a.title}</h1>${a.dek?`<div class="art-dek">${a.dek}</div>`:''}<div class="art-date">${fmtDate(a.date)}</div></header>
+${hero}
+<div class="art-body rv in">${(a.blocks||[]).map(renderBlock).join('\n')}</div>
+${SUB_BOX}
+<div style="padding-bottom:70px;text-align:center"><a href="/blog" style="color:var(--gold);font-weight:600">&larr; All articles</a></div>
+</div></article>`;
+    const html = rootify(page(`${a.title} | ${C.brand.name}`, body, CSS_SHARED + ARTICLE_CSS));
+    fs.writeFileSync(path.join(OUT, 'blog', `${a.slug}.html`), html);
+    console.log('  built blog/' + a.slug + '.html');
+  }
+
+  const cards = arts.map(a => `<a class="blog-card rv in" href="/blog/${a.slug}">
+<div class="bc-img">${a.heroImage?`<img src="${a.heroImage}" alt="${a.heroAlt||''}">`:''}</div>
+<div class="bc-body"><div class="bc-date">${fmtDate(a.date)}</div><h3>${a.title}</h3><p>${a.dek||''}</p><span class="bc-link">Read the article &rarr;</span></div></a>`).join('\n');
+  const idxBody = `<header class="blog-head rv in"><div class="wrap"><div class="eyebrow">The Lease Up</div><h1>Articles</h1><p>One sharp leasing idea at a time. Strategy, scripts, and systems for agents who treat rentals like a real business.</p></div></header>
+<hr class="horizon">
+<div class="wrap"><div class="blog-grid">${cards}</div></div>`;
+  const idxHtml = rootify(page(`Articles | ${C.brand.name}`, idxBody, CSS_SHARED + ARTICLE_CSS));
+  fs.writeFileSync(path.join(OUT, 'blog', 'index.html'), idxHtml);
+  console.log('  built blog/index.html');
+}
+
 // ---------- RUN ----------
 function copyDir(src, dest) {
   fs.mkdirSync(dest, { recursive: true });
   for (const f of fs.readdirSync(src)) {
-    fs.copyFileSync(path.join(src, f), path.join(dest, f));
+    const s = path.join(src, f), d = path.join(dest, f);
+    if (fs.statSync(s).isDirectory()) copyDir(s, d);
+    else fs.copyFileSync(s, d);
   }
 }
 
@@ -929,4 +1060,5 @@ buildPurchaseThanks();
 buildMatty();
 buildHub();
 buildLegal();
+buildBlog();
 console.log('Done. Site is in /public');
