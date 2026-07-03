@@ -1019,9 +1019,15 @@ function buildBlog() {
   fs.mkdirSync(path.join(OUT, 'blog'), { recursive: true });
 
   for (const a of arts) {
-    const hero = a.heroImage ? `<figure class="art-hero rv in"><img src="${a.heroImage}" alt="${a.heroAlt||''}">${a.heroCaption?`<figcaption>${a.heroCaption}</figcaption>`:''}</figure>` : '';
+    // Hero only renders if the image file actually exists in the repo, so a post
+    // never ships a broken image. Drop the photo in img/blog/ anytime; the next
+    // rebuild picks it up automatically.
+    const heroPath = a.heroImage && a.heroImage.startsWith('/img/') ? path.join(ROOT, a.heroImage.slice(1)) : null;
+    const heroOk = a.heroImage && (!heroPath || fs.existsSync(heroPath));
+    const hero = heroOk ? `<figure class="art-hero rv in"><img src="${a.heroImage}" alt="${a.heroAlt||''}">${a.heroCaption?`<figcaption>${a.heroCaption}</figcaption>`:''}</figure>` : '';
+    a._heroOk = heroOk;
     const body = `<article><div class="art-wrap">
-<header class="art-head rv in"><div class="art-kicker">${a.kicker || 'The Lease Up'}</div><h1>${a.title}</h1>${a.dek?`<div class="art-dek">${a.dek}</div>`:''}<div class="art-date">${fmtDate(a.date)}</div></header>
+<header class="art-head rv in"><div class="art-kicker">${a.kicker || 'Luxury Leasing Academy'}</div><h1>${a.title}</h1>${a.dek?`<div class="art-dek">${a.dek}</div>`:''}<div class="art-date">${fmtDate(a.date)}</div></header>
 ${hero}
 <div class="art-body rv in">${(a.blocks||[]).map(renderBlock).join('\n')}</div>
 ${SUB_BOX}
@@ -1033,10 +1039,10 @@ ${SUB_BOX}
   }
 
   const cards = arts.length ? arts.map(a => `<a class="blog-card rv in" href="/blog/${a.slug}">
-<div class="bc-img">${a.heroImage?`<img src="${a.heroImage}" alt="${a.heroAlt||''}">`:''}</div>
+${a._heroOk?`<div class="bc-img"><img src="${a.heroImage}" alt="${a.heroAlt||''}"></div>`:''}
 <div class="bc-body"><div class="bc-date">${fmtDate(a.date)}</div><h3>${a.title}</h3><p>${a.dek||''}</p><span class="bc-link">Read the article &rarr;</span></div></a>`).join('\n')
   : `<div style="grid-column:1/-1;text-align:center;padding:40px 0;color:var(--haze);font-size:17px">First article drops soon. Join <a href="/the-lease-up.html" style="color:var(--gold);font-weight:600">The Lease Up</a> and get it in your inbox the moment it lands.</div>`;
-  const idxBody = `<header class="blog-head rv in"><div class="wrap"><div class="eyebrow">The Lease Up</div><h1>Articles</h1><p>One sharp leasing idea at a time. Strategy, scripts, and systems for agents who treat rentals like a real business.</p></div></header>
+  const idxBody = `<header class="blog-head rv in"><div class="wrap"><div class="eyebrow">Luxury Leasing Academy</div><h1>The Blog</h1><p>One sharp leasing idea at a time. Strategy, scripts, and systems for agents who treat rentals like a real business.</p></div></header>
 <hr class="horizon">
 <div class="wrap"><div class="blog-grid">${cards}</div></div>`;
   const idxHtml = rootify(page(`Articles | ${C.brand.name}`, idxBody, CSS_SHARED + ARTICLE_CSS));

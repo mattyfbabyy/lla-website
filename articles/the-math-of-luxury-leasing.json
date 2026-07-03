@@ -1,0 +1,41 @@
+{
+  "slug": "the-math-of-luxury-leasing",
+  "title": "The math of luxury leasing nobody shows you",
+  "dek": "Faster cycles, repeat clients, and a market that resets every twelve months. Run the numbers before you dismiss rentals.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-09",
+  "heroImage": "/img/blog/the-math-of-luxury-leasing.jpg",
+  "heroAlt": "The math of luxury leasing nobody shows you",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Sales agents love to talk about check size.</strong> One closing can equal several leases, sure. But check size is only one variable, and it is the one that hides the most important truth in the business: velocity beats size for a new agent."
+    },
+    {
+      "type": "p",
+      "html": "A luxury lease commission is typically around one month's rent. On a $4,000 apartment, that is real money for a deal cycle that can run two weeks start to finish. Now stack the part sales agents never mention: leases expire. Every client you sign today re-enters the market in twelve months. Sales clients disappear for seven years. Renters come back."
+    },
+    {
+      "type": "quote",
+      "text": "A sale is a transaction. A lease is a subscription. Build the book once and it renews."
+    },
+    {
+      "type": "p",
+      "html": "That renewal loop is the quiet engine of a leasing business. Serve fifty clients well this year and next year begins with fifty warm conversations, plus everyone they referred in between. The business compounds while sales agents start every year at zero."
+    },
+    {
+      "type": "play",
+      "html": "Look up the average rent for luxury one-bedrooms in your market. Multiply by twelve. That is roughly what one client relationship is worth per decade if they lease through you three or four times. Now treat every showing like it is worth that number, because it is."
+    },
+    {
+      "type": "p",
+      "html": "None of this is a promise of income. It is structure. And structure is what most agents never get taught: pick the market with fast cycles, recurring clients, and thin competition, then work it like a professional."
+    },
+    {
+      "type": "cta",
+      "lead": "See the full opportunity, mapped out.",
+      "href": "/ebook",
+      "label": "Get the Free E-Book"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "the-side-hustle-lie",
+  "title": "The side hustle lie that keeps agents broke",
+  "dek": "The industry told you rentals are what you do until real deals show up. That lie is why most agents never build anything.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-07",
+  "heroImage": "/img/blog/the-side-hustle-lie.jpg",
+  "heroAlt": "The side hustle lie that keeps agents broke",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Every new agent hears the same speech.</strong> Do rentals for a year. Learn the ropes. Then graduate to sales, where the real money is. It sounds like mentorship. It is actually the worst advice in real estate."
+    },
+    {
+      "type": "p",
+      "html": "Here is what that speech leaves out. While you are treating rentals like a waiting room, thousands of luxury apartments in your city are turning over every single month. High demand. Fast cycles. Clients who need to move in weeks, not someday. And almost no serious competition, because everyone else got the same speech you did."
+    },
+    {
+      "type": "quote",
+      "text": "Leasing is not a beginner job. It is a business. The agents who understand that first win the market."
+    },
+    {
+      "type": "p",
+      "html": "The agents who struggle are not less talented. They picked a market where the odds are stacked against them, then blamed themselves for the results. Sales listings are a knife fight. Luxury rentals are an open lane. Same license. Completely different game."
+    },
+    {
+      "type": "play",
+      "html": "Today, count how many apartment buildings within a mile of you have units over $3,000 a month. That number is your addressable market. Most agents have never counted it."
+    },
+    {
+      "type": "p",
+      "html": "This blog exists to hand you the playbook the industry never wrote: how to treat luxury leasing like the real business it is, from your first showing to your first hire. Start with the free e-book below. It covers the nine things most agents take a year to figure out."
+    },
+    {
+      "type": "cta",
+      "lead": "Nine secrets. Thirty minutes. Zero homes sold.",
+      "href": "/ebook",
+      "label": "Get the Free E-Book"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "choosing-your-brokerage",
+  "title": "Choosing a brokerage when you plan to lease",
+  "dek": "Most brokerage advice is written for sales agents. Leasing agents need different answers.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-10-01",
+  "heroImage": "/img/blog/choosing-your-brokerage.jpg",
+  "heroAlt": "Choosing a brokerage when you plan to lease",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>New agents pick brokerages on brand names and splits.</strong> Reasonable, if you plan to sell houses. If you plan to build a leasing business, the standard checklist misses the questions that will actually shape your first year."
+    },
+    {
+      "type": "p",
+      "html": "A leasing-friendly brokerage is not just one that allows rentals. It is one where rentals are respected: where the paperwork flow is built for lease velocity, where commissions get processed in days not months, and where nobody in leadership treats your fifteen deals a month like a warm-up act."
+    },
+    {
+      "type": "quote",
+      "text": "The wrong brokerage will not stop you. It will just quietly tax every deal you do."
+    },
+    {
+      "type": "h2",
+      "text": "The questions that matter"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "How fast do lease commissions pay out?",
+          "html": "Leasing runs on velocity. A brokerage that takes sixty days to process a rental check breaks your cash flow model."
+        },
+        {
+          "title": "Who here leases at volume?",
+          "html": "If nobody does, you will be inventing every process alone. One producing leasing agent in the office is worth more than any training program."
+        },
+        {
+          "title": "What does the split buy me?",
+          "html": "A higher split with zero support can beat a famous brand, or lose to one. Price the resources, not the logo."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Book conversations with three brokerages this week and ask all three questions at each. Take notes. The differences will be louder than any recruiting pitch."
+    },
+    {
+      "type": "p",
+      "html": "Course 1 walks the full decision with an interview checklist, and the free e-book frames where the brokerage call fits in your first ninety days."
+    },
+    {
+      "type": "cta",
+      "lead": "The e-book covers the full foundation, including this call.",
+      "href": "/ebook",
+      "label": "Get the Free E-Book"
+    }
+  ]
+}

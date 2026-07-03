@@ -1,0 +1,58 @@
+{
+  "slug": "social-media-is-a-system-not-a-hobby",
+  "title": "Social media is a system, not a hobby",
+  "dek": "Posting when you feel inspired is a hobby. Hobbies do not generate leads.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-18",
+  "heroImage": "/img/blog/social-media-is-a-system-not-a-hobby.jpg",
+  "heroAlt": "Social media is a system, not a hobby",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Most agents' content strategy is a mood.</strong> Post a listing when one comes in, a selfie at a closing, then silence for three weeks. The algorithm forgets them, the audience never forms, and they conclude social media does not work for real estate. It works fine. It just does not reward moods."
+    },
+    {
+      "type": "p",
+      "html": "A system looks different. Fixed pillars, a weekly cadence, and content built around the questions renters actually type into search bars. What does $3,500 get me in River North. Which buildings have real gyms. How much do movers cost downtown. Answer those on camera and you are not posting, you are prospecting at scale."
+    },
+    {
+      "type": "quote",
+      "text": "One useful video answers the same question a thousand times while you sleep."
+    },
+    {
+      "type": "h2",
+      "text": "The minimum viable machine"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "One anchor per week.",
+          "html": "A single longer video on one renter question. This is the asset; everything else is distribution."
+        },
+        {
+          "title": "Cut it into clips.",
+          "html": "Every anchor becomes short-form for the feed platforms. One recording session, a week of presence."
+        },
+        {
+          "title": "Engage on schedule.",
+          "html": "Fifteen minutes daily replying and starting conversations. The algorithm rewards participants, not broadcasters."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "List the ten questions clients asked you most in the last month. That is your first ten videos, already validated by demand. Record the first one this week, sixty seconds, phone camera, no editing."
+    },
+    {
+      "type": "p",
+      "html": "Social Media Marketing For Realtors, Course 7, builds the entire operation: strategy, organic, paid, analytics, and the workflow that keeps it running when you get busy."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 7 is the full machine, organic to paid.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

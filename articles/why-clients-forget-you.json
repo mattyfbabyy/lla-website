@@ -1,0 +1,58 @@
+{
+  "slug": "why-clients-forget-you",
+  "title": "Why clients forget you the day after the tour",
+  "dek": "You were professional, knowledgeable, and pleasant. So were the other four agents they met this week.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-17",
+  "heroImage": "/img/blog/why-clients-forget-you.jpg",
+  "heroAlt": "Why clients forget you the day after the tour",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Being good is not memorable.</strong> Every agent a client meets claims the same three adjectives: professional, responsive, knowledgeable. When everyone says the same thing, the client remembers no one, and the next lease goes to whoever happened to text last."
+    },
+    {
+      "type": "p",
+      "html": "A personal brand is not a logo or a color palette. It is the specific answer to one question: when someone in your city thinks luxury apartments, whose name surfaces? If the answer is nobody's, the market is open. If the answer is someone else, you are funding their referrals."
+    },
+    {
+      "type": "quote",
+      "text": "You do not need to be famous. You need to be the first name in one specific conversation."
+    },
+    {
+      "type": "h2",
+      "text": "The brand equation"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Pick one position.",
+          "html": "The high-rise expert. The relocation specialist. The agent who knows every pet-friendly building downtown. Narrow reads as expert. Broad reads as forgettable."
+        },
+        {
+          "title": "Say it everywhere, identically.",
+          "html": "Bio, content, voicemail, email signature. Repetition is what turns a claim into a reputation."
+        },
+        {
+          "title": "Prove it in public.",
+          "html": "Every post, tour recap, and market note is evidence. Brands are built from receipts, not slogans."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Write one sentence: I help [who] find [what] in [where]. If you cannot fill it in without the word anyone, that is the work. Do not post again until the sentence is sharp."
+    },
+    {
+      "type": "p",
+      "html": "Personal Branding For Realtors, Course 6, walks the whole build: identity, positioning, content pillars, and the audit that keeps it honest."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 6 builds the brand that makes you the obvious call.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

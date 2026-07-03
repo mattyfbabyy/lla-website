@@ -1,0 +1,41 @@
+{
+  "slug": "the-advisor-shift",
+  "title": "The advisor shift: stop selling apartments",
+  "dek": "The moment you stop acting like a salesperson, clients stop treating you like one. Then the signatures start.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-13",
+  "heroImage": "/img/blog/the-advisor-shift.jpg",
+  "heroAlt": "The advisor shift: stop selling apartments",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Clients walk into every showing with a shield up.</strong> They expect to be sold. Pressure, urgency, the amenity tour delivered like an infomercial. The shield exists because most agents earn it."
+    },
+    {
+      "type": "p",
+      "html": "The top of this business plays a different game. Advisors do not push units. They diagnose. What is driving the move, what is the real budget behind the stated budget, what would make this apartment a mistake. Then they tell the truth about it, including the parts that cost them the deal."
+    },
+    {
+      "type": "quote",
+      "text": "Salespeople talk about the apartment. Advisors talk about the decision."
+    },
+    {
+      "type": "p",
+      "html": "Here is the paradox that changes careers: honesty about the wrong unit is what closes the right one. The client who hears this line does not fit what you told me you need, let us skip it, has just watched you put their interests above your commission. From that second, your recommendations carry weight no pitch could ever buy."
+    },
+    {
+      "type": "play",
+      "html": "On your next tour, before showing anything, ask: what would make this move a win for you six months from now? Then build the entire showing around their answer instead of the amenity list."
+    },
+    {
+      "type": "p",
+      "html": "Coffee Is For Closers, Course 4, covers the full advisor toolkit: rapport, diagnosis, objections, and the ask, without a single line of pressure."
+    },
+    {
+      "type": "cta",
+      "lead": "Closing is a skill. Course 4 teaches it.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

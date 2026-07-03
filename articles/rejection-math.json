@@ -1,0 +1,58 @@
+{
+  "slug": "rejection-math",
+  "title": "Rejection math: the numbers behind a thick skin",
+  "dek": "Top agents do not feel rejection less. They count it differently.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-24",
+  "heroImage": "/img/blog/rejection-math.jpg",
+  "heroAlt": "Rejection math: the numbers behind a thick skin",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>The no is not the problem.</strong> The story you attach to it is. New agents hear a no and log it as evidence: about their skill, their future, whether this career was a mistake. Twenty of those stories stacked up and they quit, blaming the market on the way out."
+    },
+    {
+      "type": "p",
+      "html": "Experienced agents run different accounting. They know roughly how many conversations produce a client and how many showings produce a lease. Once those ratios exist, a no stops being a verdict and becomes a tick on a counter. You cannot be devastated by a number you were expecting."
+    },
+    {
+      "type": "quote",
+      "text": "Amateurs count the nos. Professionals count the ratio."
+    },
+    {
+      "type": "h2",
+      "text": "Installing the math"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Track everything for thirty days.",
+          "html": "Conversations, appointments, tours, signatures. No judgment, just tallies. You are building your personal denominator."
+        },
+        {
+          "title": "Find your ratio.",
+          "html": "Maybe it is fifteen conversations per client right now. Fine. That number is your baseline, and baselines improve with reps."
+        },
+        {
+          "title": "Reprice the no.",
+          "html": "If fifteen conversations produce one lease, every no is a completed step toward the yes. Walk toward them on purpose."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Set a rejection quota this week: collect ten nos on purpose. The goal flips the fear. You cannot dread the thing you are hunting."
+    },
+    {
+      "type": "p",
+      "html": "Mindset holds up better in company. The Elite Leasing Club runs weekly live coaching with agents doing the same reps, keeping the same score."
+    },
+    {
+      "type": "cta",
+      "lead": "The Club is where agents build this together, weekly.",
+      "href": "/club",
+      "label": "Join the Elite Leasing Club"
+    }
+  ]
+}

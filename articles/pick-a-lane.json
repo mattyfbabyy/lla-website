@@ -1,0 +1,58 @@
+{
+  "slug": "pick-a-lane",
+  "title": "Pick a lane: why niching down speeds you up",
+  "dek": "Serving everyone is the slowest possible route to being known for anything.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-27",
+  "heroImage": "/img/blog/pick-a-lane.jpg",
+  "heroAlt": "Pick a lane: why niching down speeds you up",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>The fear is always the same.</strong> If I focus on one client type, I lose everyone else. So agents stay general, their message stays generic, and nobody in any group thinks of them first. The fear of missing deals guarantees it."
+    },
+    {
+      "type": "p",
+      "html": "A niche is not a fence. It is a flag. Plant it for corporate relocations, or downtown professionals with large dogs, or first-time luxury renters, and something counterintuitive happens: the specific reputation attracts general business. People hire the specialist and then hand them everything else too."
+    },
+    {
+      "type": "quote",
+      "text": "Nobody refers a generalist. People refer the person for exactly this."
+    },
+    {
+      "type": "h2",
+      "text": "Choosing yours"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Follow your unfair advantage.",
+          "html": "A past career, a language, a building you know cold, a network you already have. The best niche is the one where you start ahead."
+        },
+        {
+          "title": "Check the volume.",
+          "html": "The group needs to move often and exist at scale in your market. Passion without turnover is a hobby."
+        },
+        {
+          "title": "Name it publicly.",
+          "html": "Put it in every bio this week. The niche does not exist until strangers can repeat it."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Finish this sentence and post it: I specialize in helping ___ find luxury apartments in ___. Discomfort with the narrowness is usually the sign it is finally specific enough."
+    },
+    {
+      "type": "p",
+      "html": "Lead Gen Mastery, Course 3, covers niche targeting as the multiplier on every other lead channel you run."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 3 shows how a niche multiplies lead flow.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

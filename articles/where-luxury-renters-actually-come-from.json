@@ -1,0 +1,58 @@
+{
+  "slug": "where-luxury-renters-actually-come-from",
+  "title": "Where luxury renters actually come from",
+  "dek": "Not from bought leads. The highest-quality clients arrive through channels most agents ignore completely.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-12",
+  "heroImage": "/img/blog/where-luxury-renters-actually-come-from.jpg",
+  "heroAlt": "Where luxury renters actually come from",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>New agents assume leads are something you buy.</strong> So they burn money on portals, split bad leads with thirty other agents, and conclude the business does not work. The business works fine. The channel was wrong."
+    },
+    {
+      "type": "p",
+      "html": "Luxury renters are relocating professionals, corporate transfers, couples upgrading, people leaving a building they have outgrown. They ask their network first, search on their own second, and settle for a portal agent last. Your job is to be present in the first two steps, not to pay for scraps in the third."
+    },
+    {
+      "type": "quote",
+      "text": "The best lead is a conversation you started before they needed you."
+    },
+    {
+      "type": "h2",
+      "text": "The channels that actually produce"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Your sphere, worked properly.",
+          "html": "Every person you know either rents, knows a renter, or works with people who relocate. Most agents announce themselves once and go silent. The ones who win check in monthly with something useful."
+        },
+        {
+          "title": "Content that answers real questions.",
+          "html": "What does $4,000 get you in this neighborhood? Which buildings allow big dogs? Answer publicly, once, and the answer prospects for you around the clock."
+        },
+        {
+          "title": "Digital door knocking.",
+          "html": "Direct, personal, useful messages to people who just posted about moving, a new job in your city, or apartment hunting. Not pitches. Openings."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Search your city's name plus the word moving on any social platform right now. Message three people something genuinely helpful with no pitch attached. That is lead generation. Everything else is spend."
+    },
+    {
+      "type": "p",
+      "html": "Lead Gen Mastery, Course 3, systematizes all of it: sphere, online, offline, and the follow-up engines that turn names into appointments."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 3 turns this into a daily system.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "the-building-bible",
+  "title": "The Building Bible: why top agents know 50 buildings cold",
+  "dek": "Clients do not hire the agent with the most listings. They hire the one who knows the buildings better than anyone.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-11",
+  "heroImage": "/img/blog/the-building-bible.jpg",
+  "heroAlt": "The Building Bible: why top agents know 50 buildings cold",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Ask a top leasing agent about any building in their market and watch what happens.</strong> Pet policy, concession trends, which line has the best light, how strict the leasing office runs credit. They answer in seconds. That is not memory. That is a system."
+    },
+    {
+      "type": "p",
+      "html": "The system is a Building Bible: one living document that holds everything about every building you work. Commission terms, contact names, floor plans, quirks, the notes from every tour. It turns you from a person who shows apartments into the market's reference desk."
+    },
+    {
+      "type": "quote",
+      "text": "Clients can find listings on their own. They cannot find judgment. The Building Bible is where judgment lives."
+    },
+    {
+      "type": "h2",
+      "text": "What goes in it"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "The money.",
+          "html": "Commission structure per building, escort policies, and how fast they pay. Not all buildings deserve your Saturdays."
+        },
+        {
+          "title": "The people.",
+          "html": "Leasing managers by name, their preferences, and your last three interactions. Deals move at the speed of those relationships."
+        },
+        {
+          "title": "The product.",
+          "html": "Best lines, worst views, gym quality, amenity fees, real availability patterns by season."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Start a spreadsheet with ten buildings today. Five columns: building, commission, contact, best units, notes. Ten minutes per building. You now know more than most agents in your market bother to learn."
+    },
+    {
+      "type": "p",
+      "html": "Course 2, Finding The Best Rental Properties, builds the whole system with you, including the tour scripts and the relationship playbook for leasing offices."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 2 hands you the full building system.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "win-the-morning",
+  "title": "Win the morning, win the pipeline",
+  "dek": "Agents do not have a lead problem. They have a first-hour problem.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-30",
+  "heroImage": "/img/blog/win-the-morning.jpg",
+  "heroAlt": "Win the morning, win the pipeline",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Watch a struggling agent's morning.</strong> Email first, then a scroll, then an errand, and suddenly it is 1 p.m. and the day's prospecting is a thing that will happen tomorrow. The calendar was empty not because leads are scarce but because the first hour got spent on everyone else's priorities."
+    },
+    {
+      "type": "p",
+      "html": "Producers run the morning in reverse. The first hour belongs to outbound: new conversations, follow-ups, digital door knocks. Before showings, before email, before anything reactive. Because pipeline is the one task that is never urgent today and always fatal to skip for a month."
+    },
+    {
+      "type": "quote",
+      "text": "Your income in ninety days is decided by what you do before 10 a.m. this week."
+    },
+    {
+      "type": "h2",
+      "text": "The power hour, structured"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Twenty minutes: new outreach.",
+          "html": "Fresh conversations from your sphere, signals, and content replies. New names in the top of the funnel, daily."
+        },
+        {
+          "title": "Twenty minutes: follow-ups.",
+          "html": "Every active client and warm ghost gets their scheduled touch. This is where the signed leases actually come from."
+        },
+        {
+          "title": "Twenty minutes: relationships.",
+          "html": "One leasing manager, one past client, one referral partner. The long game, played daily."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Block 9 to 10 a.m. tomorrow, phone on do not disturb, and run the three twenties. Then protect that block like it is a closing appointment, because it is all of them."
+    },
+    {
+      "type": "p",
+      "html": "The Playbook turns the power hour into a thirty-day installed habit, with a scorecard that keeps it honest."
+    },
+    {
+      "type": "cta",
+      "lead": "The Playbook builds this into a 30-day habit.",
+      "href": "/playbook",
+      "label": "Get the Playbook for $20"
+    }
+  ]
+}

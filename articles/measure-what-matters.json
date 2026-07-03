@@ -1,0 +1,62 @@
+{
+  "slug": "measure-what-matters",
+  "title": "Measure what matters: the four numbers of a leasing business",
+  "dek": "You cannot fix a business you refuse to look at. Four numbers, tracked weekly, tell you everything.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-10-03",
+  "heroImage": "/img/blog/measure-what-matters.jpg",
+  "heroAlt": "Measure what matters: the four numbers of a leasing business",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Most agents track one number: the commission that just hit.</strong> It is the most emotionally satisfying metric and the least useful, because it describes decisions made two months ago. By the time revenue dips, the actual problem is ancient history."
+    },
+    {
+      "type": "p",
+      "html": "A business runs on leading indicators, the numbers upstream of the money. In leasing there are four, and they take five minutes a week to record: new conversations, tours booked, applications submitted, leases signed. That is the entire funnel, and every income problem you will ever have lives at exactly one of those stages."
+    },
+    {
+      "type": "quote",
+      "text": "Revenue is a lagging rumor. The funnel is the live feed."
+    },
+    {
+      "type": "h2",
+      "text": "Reading your four numbers"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Conversations low?",
+          "html": "A prospecting problem. Nothing downstream can compensate. Fix the morning hour first, always."
+        },
+        {
+          "title": "Tours low, conversations fine?",
+          "html": "A qualifying or offer problem. You are talking to the wrong people or giving them no reason to meet."
+        },
+        {
+          "title": "Applications low, tours fine?",
+          "html": "A closing problem. Advisor skills, objection handling, the ask. This is a skills gap, and skills are trainable."
+        },
+        {
+          "title": "Signatures low, applications fine?",
+          "html": "A process problem. Paperwork speed, building relationships, follow-through. Usually the fastest fix on the board."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Open a note and log last week's four numbers from memory. If you cannot, that is the finding. Start the tally Monday; the patterns show up by week three."
+    },
+    {
+      "type": "p",
+      "html": "Building A Rental Business, Course 8, turns the four numbers into a full financial and operations dashboard you review in minutes."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 8 builds the full operating dashboard.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

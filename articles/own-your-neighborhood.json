@@ -1,0 +1,58 @@
+{
+  "slug": "own-your-neighborhood",
+  "title": "Own your neighborhood before you chase the whole city",
+  "dek": "Market mastery is not knowing everything everywhere. It is knowing one square mile better than anyone alive.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-22",
+  "heroImage": "/img/blog/own-your-neighborhood.jpg",
+  "heroAlt": "Own your neighborhood before you chase the whole city",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>New agents try to serve the entire city.</strong> It feels ambitious. It is actually camouflage. Serving everywhere means being an expert nowhere, and clients can hear the difference in one question about a specific block."
+    },
+    {
+      "type": "p",
+      "html": "The alternative is depth. Pick one neighborhood with real luxury inventory and learn it like a local historian. Every building, every price band, which corners are loud at 2 a.m., where the good coffee is, what the new tower will do to rents next year. That knowledge cannot be googled, and clients pay attention when they meet someone who has it."
+    },
+    {
+      "type": "quote",
+      "text": "In a city of generalists, the agent who owns one square mile owns the conversation."
+    },
+    {
+      "type": "h2",
+      "text": "The thirty-day deep dive"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Walk it weekly.",
+          "html": "On foot, not in the car. Note construction, new retail, for-lease signs. The street tells you the market before the data does."
+        },
+        {
+          "title": "Tour everything.",
+          "html": "Every luxury building in the zone, including the ones with no current availability. You are building the mental map clients will rent from."
+        },
+        {
+          "title": "Publish what you learn.",
+          "html": "A weekly note on the neighborhood: prices, movement, one insider observation. Six weeks in, you are the source."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Choose your square mile tonight. Criteria: real luxury inventory, turnover volume, and a place you genuinely like being. Then book your first three building tours for this week."
+    },
+    {
+      "type": "p",
+      "html": "The free e-book covers how positioning like this becomes the foundation of an actual business, not just a busier calendar."
+    },
+    {
+      "type": "cta",
+      "lead": "The e-book covers positioning from day one.",
+      "href": "/ebook",
+      "label": "Get the Free E-Book"
+    }
+  ]
+}

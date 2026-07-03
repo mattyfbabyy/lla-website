@@ -1,0 +1,58 @@
+{
+  "slug": "memory-is-not-a-system",
+  "title": "Your memory is not a system",
+  "dek": "The agent juggling clients in their head is one busy week away from dropping the most important one.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-25",
+  "heroImage": "/img/blog/memory-is-not-a-system.jpg",
+  "heroAlt": "Your memory is not a system",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Early on, memory feels like enough.</strong> Five clients, a dozen buildings, you can hold it all. Then a good month happens. Fifteen active conversations, forty showings, and somewhere in the noise you forget that Mia needed an answer on parking by Friday. Mia signs with someone else, and she was your best referral source in the making."
+    },
+    {
+      "type": "p",
+      "html": "The brutal part: the busier you get, the more the drops cost, because busy months are when your best clients are in motion. Growth without a system does not scale your income. It scales your error rate."
+    },
+    {
+      "type": "quote",
+      "text": "A CRM is not software. It is the promise that nothing important depends on you having a good day."
+    },
+    {
+      "type": "h2",
+      "text": "The minimum system"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "One home for every contact.",
+          "html": "Every client, prospect, and leasing manager in one tool with one next action attached. If it is not written down with a date, it does not exist."
+        },
+        {
+          "title": "Pipeline stages you actually use.",
+          "html": "New, qualified, touring, applied, signed, nurture. Six buckets. Review them every morning in five minutes."
+        },
+        {
+          "title": "Automated follow-up floors.",
+          "html": "Reminders that fire when a contact goes quiet too long. The system remembers so your Tuesday does not have to."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Tonight, get every active client out of your head and into one list with a next action and a date for each. Thirty minutes. That list is the difference between a practice and a business."
+    },
+    {
+      "type": "p",
+      "html": "Client Management, Course 5, builds the full setup, including where AI tools genuinely help and where they get in the way."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 5 sets up the whole client operation.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

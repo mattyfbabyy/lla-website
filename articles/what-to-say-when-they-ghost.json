@@ -1,0 +1,58 @@
+{
+  "slug": "what-to-say-when-they-ghost",
+  "title": "What to say when a client ghosts you",
+  "dek": "Silence after a great tour is not rejection. Treat it like rejection and it becomes one.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-19",
+  "heroImage": "/img/blog/what-to-say-when-they-ghost.jpg",
+  "heroAlt": "What to say when a client ghosts you",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>The tour went well. You know it did.</strong> They lingered in the kitchen, asked about move-in dates, said they would be in touch. That was nine days ago. Your last two texts sit on read, and the story in your head is getting darker by the hour."
+    },
+    {
+      "type": "p",
+      "html": "Here is the boring truth about ghosting: it is almost never about you. Approvals stall, jobs wobble, partners disagree, timelines slide. The client is not avoiding you. They are avoiding an unresolved decision, and your message is a reminder of it. Which means the fix is not persistence. It is lowering the cost of replying."
+    },
+    {
+      "type": "quote",
+      "text": "Ghosts do not need pressure. They need an easy way back into the conversation."
+    },
+    {
+      "type": "h2",
+      "text": "Three messages that reopen doors"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "The no-guilt check-in.",
+          "html": "Hey, totally understand if the timeline moved. Want me to keep an eye out for you or pause for now? Two easy outs, both of which restart the dialogue."
+        },
+        {
+          "title": "The new-information drop.",
+          "html": "That unit you liked just dropped $150. No response needed, just keeping you posted. Value with zero ask."
+        },
+        {
+          "title": "The clean close.",
+          "html": "Going to assume the search is on hold. If anything changes I am one text away. Certainty beats limbo, and this message gets more replies than any pitch."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Send the no-guilt check-in to every ghost from the last thirty days, today. Expect a third of them to answer. Ghosts are usually just people who did not know how to come back."
+    },
+    {
+      "type": "p",
+      "html": "The Playbook carries the full script vault for every stage of the client lifecycle, including the awkward ones nobody teaches."
+    },
+    {
+      "type": "cta",
+      "lead": "Every re-engagement script, ready to send.",
+      "href": "/playbook",
+      "label": "Get the Playbook for $20"
+    }
+  ]
+}

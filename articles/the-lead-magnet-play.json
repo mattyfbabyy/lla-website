@@ -1,0 +1,58 @@
+{
+  "slug": "the-lead-magnet-play",
+  "title": "The lead magnet play for leasing agents",
+  "dek": "Stop asking strangers to contact me. Start giving them a reason to.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-29",
+  "heroImage": "/img/blog/the-lead-magnet-play.jpg",
+  "heroAlt": "The lead magnet play for leasing agents",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Contact me for availability is not an offer.</strong> It asks a stranger to start a sales conversation with nothing in return. Almost everyone declines, silently, and the agent concludes their following is worthless. The following was fine. The exchange rate was broken."
+    },
+    {
+      "type": "p",
+      "html": "A lead magnet fixes the rate: something genuinely useful, delivered instantly, in exchange for an email. A neighborhood price guide. A first-time luxury renter checklist. The ten buildings that allow large dogs. Small, specific, and valuable enough that handing over an email feels like the obvious move."
+    },
+    {
+      "type": "quote",
+      "text": "An email list is the only audience the algorithm cannot take away from you."
+    },
+    {
+      "type": "h2",
+      "text": "Building one that converts"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Solve one narrow problem.",
+          "html": "The complete guide to renting converts worse than what $4,000 gets you in three specific neighborhoods. Narrow signals expertise."
+        },
+        {
+          "title": "Deliver instantly, then follow up.",
+          "html": "The download arrives in seconds, then a short email sequence introduces who you are and how you work. The magnet opens the door; the follow-up walks through it."
+        },
+        {
+          "title": "Mention it everywhere.",
+          "html": "Every post, every bio, every conversation ends with the same pointer. One consistent offer beats five rotating ones."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Draft the title of your first lead magnet today using this formula: [specific outcome] for [specific person] in [your market]. If it would make you click, build it this week."
+    },
+    {
+      "type": "p",
+      "html": "The free e-book on this site is exactly this play running live. Grab it to see the mechanics from the reader's side."
+    },
+    {
+      "type": "cta",
+      "lead": "This site's free e-book is the play in action.",
+      "href": "/ebook",
+      "label": "See the Example"
+    }
+  ]
+}

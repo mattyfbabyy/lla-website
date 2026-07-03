@@ -1,0 +1,58 @@
+{
+  "slug": "the-fortune-in-the-follow-up",
+  "title": "The fortune is in the follow-up",
+  "dek": "Eighty percent of leases are lost between the showing and the second contact that never happens.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-15",
+  "heroImage": "/img/blog/the-fortune-in-the-follow-up.jpg",
+  "heroAlt": "The fortune is in the follow-up",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Here is a painful audit.</strong> Pull up everyone you toured with in the last sixty days who did not sign. How many have heard from you since? For most agents the honest answer is almost none. That list is not dead leads. It is unclaimed commission."
+    },
+    {
+      "type": "p",
+      "html": "Renters rarely ghost because they chose someone else. They ghost because life got loud. The job got busy, the timeline slipped, the roommate flaked. The agent who resurfaces at the right moment with the right message does not feel like a pest. They feel like a lifeline."
+    },
+    {
+      "type": "quote",
+      "text": "The lease usually goes to the last agent still paying attention."
+    },
+    {
+      "type": "h2",
+      "text": "The cadence that works"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Same day.",
+          "html": "A short recap with the one unit they reacted to most. Not a pitch, a memory anchor."
+        },
+        {
+          "title": "Day three.",
+          "html": "Something new: a fresh listing, a price drop, a concession. Give them a reason to reply that is about them, not you."
+        },
+        {
+          "title": "Weekly after that.",
+          "html": "Light touches with real value until they sign, with you or anyone. The relationship outlives the transaction."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Message three cold tour clients right now with this: still thinking about your move? A couple of new units just hit in that building you liked. One of them will answer."
+    },
+    {
+      "type": "p",
+      "html": "Follow-up is not a personality trait. It is a system with scripts and a calendar. The Playbook ships both."
+    },
+    {
+      "type": "cta",
+      "lead": "The Playbook includes the exact follow-up scripts.",
+      "href": "/playbook",
+      "label": "Get the Playbook for $20"
+    }
+  ]
+}

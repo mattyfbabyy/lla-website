@@ -1,0 +1,58 @@
+{
+  "slug": "make-every-client-worth-three",
+  "title": "How to make every client worth three",
+  "dek": "The first lease is the smallest thing a client will ever give you, if you handle what comes after.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-20",
+  "heroImage": "/img/blog/make-every-client-worth-three.jpg",
+  "heroAlt": "How to make every client worth three",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Most agents end the relationship at the signature.</strong> Keys handed over, commission processed, on to the next lead. Then they spend money and energy hunting strangers while their happiest clients, the warmest referral sources they will ever have, sit ignored in a spreadsheet."
+    },
+    {
+      "type": "p",
+      "html": "Run the math on one well-served client. They renew or move again inside two years. They know coworkers relocating, friends upgrading, a sibling moving to the city. Handled deliberately, one client becomes three, and three become a book of business that no ad budget can replicate."
+    },
+    {
+      "type": "quote",
+      "text": "Referrals are not luck. They are the compound interest on service, collected on purpose."
+    },
+    {
+      "type": "h2",
+      "text": "The system after the signature"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "The move-in touch.",
+          "html": "Check in during week one, when problems surface and nobody official is answering. Solving one small headache locks in loyalty."
+        },
+        {
+          "title": "The calendar.",
+          "html": "Lease anniversaries, renewal windows ninety days out, birthdays if you have them. A CRM reminder is all it takes to be the agent who remembered."
+        },
+        {
+          "title": "The ask, done right.",
+          "html": "Not do you know anyone. Instead: who is the next person in your circle making a move? Specific questions get specific names."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Text your last five signed clients: how is the apartment treating you? Anything you need? No pitch. The referrals follow the service, not the ask."
+    },
+    {
+      "type": "p",
+      "html": "Client Management, Course 5, systematizes it end to end: journey mapping, CRM setup, the VIP experience, and the referral engine that turns one lease into a pipeline."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 5 builds the whole referral engine.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

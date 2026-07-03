@@ -1,0 +1,58 @@
+{
+  "slug": "digital-door-knocking",
+  "title": "Digital door knocking: prospecting that respects the decade",
+  "dek": "The old-school agents knocked on doors. The volume is now on LinkedIn and Instagram, and almost nobody is knocking.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-28",
+  "heroImage": "/img/blog/digital-door-knocking.jpg",
+  "heroAlt": "Digital door knocking: prospecting that respects the decade",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Somebody in your city just posted about their new job.</strong> Someone else asked for neighborhood recommendations in a comment section. A third person announced they are moving in ninety days. Three warm prospects, in public, today, and the odds are no agent will contact any of them."
+    },
+    {
+      "type": "p",
+      "html": "Digital door knocking is the discipline of finding those signals daily and opening conversations, one human message at a time. Not automation blasts, not copy-paste pitches. A genuine, useful note to a person who just told the internet they are about to need you."
+    },
+    {
+      "type": "quote",
+      "text": "The lead is lying in public. The agent who says something useful first usually wins."
+    },
+    {
+      "type": "h2",
+      "text": "The daily practice"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Search the signals.",
+          "html": "Your city plus moving, relocating, apartment hunting, new job. Ten minutes of searching surfaces the day's list."
+        },
+        {
+          "title": "Lead with help, not hunger.",
+          "html": "Congrats on the new role. If you end up looking near the office, happy to send over which buildings are actually worth touring. Value first, zero pressure."
+        },
+        {
+          "title": "Track and follow up.",
+          "html": "Every conversation into the CRM with a next touch. Digital knocks compound exactly like physical ones did."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Do one ten-minute signal search right now and send three helpful messages. Do it daily for two weeks before judging the channel. The results lag the effort by exactly that long."
+    },
+    {
+      "type": "p",
+      "html": "Course 3 ships the full library: LinkedIn sequences, Instagram openers, and the follow-up tracks that turn replies into tours."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 3 includes every DM script and sequence.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

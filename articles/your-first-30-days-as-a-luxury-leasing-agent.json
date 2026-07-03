@@ -1,0 +1,58 @@
+{
+  "slug": "your-first-30-days-as-a-luxury-leasing-agent",
+  "title": "Your first 30 days as a luxury leasing agent",
+  "dek": "Most agents spend month one guessing. Here is what the ones who make it actually do.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-10",
+  "heroImage": "/img/blog/your-first-30-days-as-a-luxury-leasing-agent.jpg",
+  "heroAlt": "Your first 30 days as a luxury leasing agent",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>The first thirty days decide the first year.</strong> Not because of the deals you close, but because of the habits you install. Most new agents spend that month setting up business cards and waiting for the phone to ring. The phone does not ring for people who wait."
+    },
+    {
+      "type": "h2",
+      "text": "The four-week structure"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Week one is foundation.",
+          "html": "License logistics, CRM set up, a professional email, and your first pass at a client avatar. Boring, and completely non-negotiable."
+        },
+        {
+          "title": "Week two is market intel.",
+          "html": "Tour buildings. Meet leasing offices. Start your Building Bible. You cannot advise clients on a market you have only seen on a screen."
+        },
+        {
+          "title": "Week three is outreach.",
+          "html": "Announce yourself to every person you know. Not with a pitch, with a position: I help people find luxury apartments in this city. Then start the daily conversations."
+        },
+        {
+          "title": "Week four is reps.",
+          "html": "Book showings. Any showings. Every tour teaches you a building, an objection, and a piece of your own script."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "You do not need confidence to start. You need a calendar that tells you what to do at 9 a.m."
+    },
+    {
+      "type": "play",
+      "html": "Tonight, block the first hour of every weekday next week for outreach. One hour, phone in hand, before anything else. That single block outperforms any amount of planning."
+    },
+    {
+      "type": "p",
+      "html": "The Luxury Leasing Playbook maps all thirty days, morning by morning, including the scripts and the tracking scorecard. It costs less than lunch and replaces a month of guessing."
+    },
+    {
+      "type": "cta",
+      "lead": "The full day-by-day plan is twenty dollars.",
+      "href": "/playbook",
+      "label": "Get the Playbook for $20"
+    }
+  ]
+}

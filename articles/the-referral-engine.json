@@ -1,0 +1,58 @@
+{
+  "slug": "the-referral-engine",
+  "title": "Building a referral engine that runs without you",
+  "dek": "Hoping for referrals is not a strategy. Engineering them is.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-26",
+  "heroImage": "/img/blog/the-referral-engine.jpg",
+  "heroAlt": "Building a referral engine that runs without you",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Ask agents where business comes from and they say referrals.</strong> Ask what their referral process is and the room goes quiet. For most, referral strategy means doing decent work and hoping someone mentions it. Hope is not an engine."
+    },
+    {
+      "type": "p",
+      "html": "An engine has parts: a moment where you earn the mention, a moment where you make asking easy, and a loop that rewards the behavior so it repeats. Remove the hoping, install the parts, and referrals shift from pleasant surprise to predictable channel."
+    },
+    {
+      "type": "quote",
+      "text": "Great service earns the referral. A system collects it."
+    },
+    {
+      "type": "h2",
+      "text": "The three parts"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "The peak moment.",
+          "html": "Move-in day, not signing day, is when goodwill spikes. A small thoughtful gesture that day is what gets described to friends verbatim."
+        },
+        {
+          "title": "The frictionless ask.",
+          "html": "Thirty days in: who is the next person in your world making a move? I will take care of them the way I took care of you. Specific, warm, effortless to answer."
+        },
+        {
+          "title": "The closed loop.",
+          "html": "When a referral lands, report back and say thank you like you mean it. People repeat what gets acknowledged."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Design your move-in touch this week. It does not need to be expensive. It needs to be specific enough that the client tells someone about it. That retelling is the engine turning over."
+    },
+    {
+      "type": "p",
+      "html": "Course 5 maps the entire client journey, with the referral machinery built into every stage instead of bolted on at the end."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 5 includes the complete referral framework.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

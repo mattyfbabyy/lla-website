@@ -1,0 +1,58 @@
+{
+  "slug": "the-price-objection-reframe",
+  "title": "The price objection is never about price",
+  "dek": "When a client says it is too expensive, they are telling you the value story is incomplete. Finish it.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-23",
+  "heroImage": "/img/blog/the-price-objection-reframe.jpg",
+  "heroAlt": "The price objection is never about price",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>It is over budget.</strong> Every agent hears it weekly, and most respond by retreating: showing cheaper units, hinting the price might move, quietly agreeing. All three responses accept a premise that is usually false, because the client toured a unit they knew the price of before they got in the car."
+    },
+    {
+      "type": "p",
+      "html": "People do not tour apartments they cannot afford. They tour apartments they cannot yet justify. Too expensive is rarely a statement about the bank account. It is a statement about the story: the value picture is incomplete, so the number stands alone and looks large."
+    },
+    {
+      "type": "quote",
+      "text": "Clients do not need a lower price. They need a better answer to what the price buys."
+    },
+    {
+      "type": "h2",
+      "text": "Completing the picture"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Total the real alternative.",
+          "html": "The cheaper unit plus a gym membership, plus parking, plus a longer commute priced in hours. Comparisons change when they are honest."
+        },
+        {
+          "title": "Anchor to the daily number.",
+          "html": "A $300 monthly gap is ten dollars a day. Ask what the extra bedroom, the light, or the walk to work is worth per day. Different question, different answer."
+        },
+        {
+          "title": "Return to their words.",
+          "html": "You said the win was never dreading coming home. Which of these two units clears that bar? Let their own criteria close it."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Next price objection, respond with one question before any solution: expensive compared to what? The answer tells you exactly which story is missing."
+    },
+    {
+      "type": "p",
+      "html": "Coffee Is For Closers, Course 4, drills every major objection with reframes and practice reps, so the answers are ready before the moment arrives."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 4 carries the full objection playbook.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

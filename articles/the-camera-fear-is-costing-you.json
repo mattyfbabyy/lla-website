@@ -1,0 +1,58 @@
+{
+  "slug": "the-camera-fear-is-costing-you",
+  "title": "The camera fear is costing you clients",
+  "dek": "You are not avoiding video. You are avoiding being seen learning. Those are different prices.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-10-02",
+  "heroImage": "/img/blog/the-camera-fear-is-costing-you.jpg",
+  "heroAlt": "The camera fear is costing you clients",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Every agent knows video works.</strong> The data is not the debate. The debate happens at 7 a.m. in front of a phone on a tripod, where the voice says you look awkward, you sound strange, people will judge the early stuff. So the phone goes back in the pocket, for the fortieth consecutive week."
+    },
+    {
+      "type": "p",
+      "html": "Here is the reframe that unlocks it: nobody is grading your production. Renters watching a video about which buildings have real gyms are grading exactly one thing, whether you know what you are talking about. Useful beats polished, every single time, and useful is already in your head."
+    },
+    {
+      "type": "quote",
+      "text": "The market does not need you to be a creator. It needs you to answer questions on camera."
+    },
+    {
+      "type": "h2",
+      "text": "Shrinking the fear to size"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Start with what you already say.",
+          "html": "The answer you gave a client yesterday is a script you have already rehearsed. Say it again, to the lens, sixty seconds."
+        },
+        {
+          "title": "Publish before you are ready.",
+          "html": "Video ten will embarrass you next to video fifty. That is the tuition, and everyone good paid it in public."
+        },
+        {
+          "title": "Judge on reps, not views.",
+          "html": "For the first month the only metric is videos shipped. Skill follows volume; the audience follows skill."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Record one sixty-second answer to the question clients ask you most, in one take, and post it today. Perfection is procrastination wearing a nicer outfit."
+    },
+    {
+      "type": "p",
+      "html": "Social Media Marketing For Realtors, Course 7, hands you the formats, hooks, and scripts so the camera becomes a tool instead of a test."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 7 includes scripts for every video type.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

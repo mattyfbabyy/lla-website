@@ -1,0 +1,62 @@
+{
+  "slug": "stop-wasting-your-saturdays",
+  "title": "Stop wasting your Saturdays on tire kickers",
+  "dek": "Your calendar is your inventory. Qualifying is how you stop giving it away for free.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-21",
+  "heroImage": "/img/blog/stop-wasting-your-saturdays.jpg",
+  "heroAlt": "Stop wasting your Saturdays on tire kickers",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Every agent has lived this Saturday.</strong> Four showings, three neighborhoods, one client who cannot state their budget, and by 5 p.m. you realize the day produced nothing but mileage. The problem was not the market. The problem was scheduled before the first tour."
+    },
+    {
+      "type": "p",
+      "html": "Qualifying is not gatekeeping and it is not rude. It is the professional act of confirming a decision can actually happen before you invest a day in it. Timeline, budget, decision makers, requirements. Four answers, five minutes, and your calendar transforms."
+    },
+    {
+      "type": "quote",
+      "text": "Amateurs chase everyone. Professionals choose. That choice is the whole difference in income per hour."
+    },
+    {
+      "type": "h2",
+      "text": "The five-minute filter"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "When do you need to move?",
+          "html": "Anything past ninety days is a nurture contact, not a Saturday showing. Stay in touch, do not tour yet."
+        },
+        {
+          "title": "What is the comfortable monthly number?",
+          "html": "Not the max. The comfortable number. Vague answers here predict vague decisions later."
+        },
+        {
+          "title": "Who else is part of the decision?",
+          "html": "Every absent decision maker is a guaranteed second tour. Get everyone to the first one."
+        },
+        {
+          "title": "What are the true non-negotiables?",
+          "html": "In-unit laundry, parking, a dog over fifty pounds. Deal breakers surfaced early save entire wasted weekends."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Write your four qualifying questions as one friendly message you can send every new inquiry. Serious clients answer within the hour. That speed is itself the signal."
+    },
+    {
+      "type": "p",
+      "html": "Lead Gen Mastery, Course 3, pairs the filter with follow-up tracks for the not-yet-ready, so nobody gets discarded, just scheduled correctly."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 3 covers qualifying frameworks in full.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

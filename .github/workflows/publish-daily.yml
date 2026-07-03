@@ -3,7 +3,7 @@
 name: Publish scheduled posts
 on:
   schedule:
-    - cron: "0 11 * * *"   # 6:00 AM Chicago, every day
+    - cron: "30 12 * * *"   # 7:30 AM Chicago (CDT). After Nov 1 clock change this drifts to 6:30 AM; change to "30 13 * * *" then if it matters.
   workflow_dispatch:        # also lets you trigger it manually from the Actions tab
 jobs:
   rebuild:

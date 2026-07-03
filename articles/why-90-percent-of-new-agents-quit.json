@@ -1,0 +1,58 @@
+{
+  "slug": "why-90-percent-of-new-agents-quit",
+  "title": "Why 90 percent of new agents quit in year one",
+  "dek": "It is not talent, work ethic, or the market. It is a math problem nobody warned them about.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-08",
+  "heroImage": "/img/blog/why-90-percent-of-new-agents-quit.jpg",
+  "heroAlt": "Why 90 percent of new agents quit in year one",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>The failure rate in this industry is not a secret.</strong> Around 90 percent of new agents are gone within their first year. The industry shrugs and calls it natural selection. It is not. It is predictable math."
+    },
+    {
+      "type": "p",
+      "html": "A new agent chasing sales needs months to close a first deal, if it comes at all. Meanwhile the bills do not pause. Desk fees, MLS dues, gas, marketing. Most agents do not fail because they cannot sell. They fail because they run out of runway before the engine starts."
+    },
+    {
+      "type": "quote",
+      "text": "Agents do not quit because they are bad. They quit because they are broke before they get good."
+    },
+    {
+      "type": "h2",
+      "text": "The runway problem, solved"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Rental cycles are measured in days.",
+          "html": "A serious renter tours this week and signs this month. You can be in production in your first thirty days instead of your first year."
+        },
+        {
+          "title": "Volume builds skill.",
+          "html": "Twenty showings a month teaches you more about clients, objections, and closing than two sales showings ever will. Reps are the real education."
+        },
+        {
+          "title": "Income starts while you learn.",
+          "html": "Every signed lease is a commission and a future referral. You are building a book of business from week one, not waiting for one."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Write down your monthly personal break-even number. Then work out how many average leases in your market cover it. For most agents the answer is smaller than they think, and suddenly the path is visible."
+    },
+    {
+      "type": "p",
+      "html": "The agents who survive are not luckier. They picked a lane with faster cycles and lower stakes per deal, got good in public, and let the volume carry them. That lane is luxury leasing."
+    },
+    {
+      "type": "cta",
+      "lead": "Skip the year of guessing.",
+      "href": "/ebook",
+      "label": "Get the Free E-Book"
+    }
+  ]
+}

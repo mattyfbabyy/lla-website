@@ -1,0 +1,62 @@
+{
+  "slug": "better-agents-win",
+  "title": "Better agents win: the whole philosophy in one post",
+  "dek": "Not luckier. Not louder. Better. Here is what the hashtag actually means in practice.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-10-06",
+  "heroImage": "/img/blog/better-agents-win.jpg",
+  "heroAlt": "Better agents win: the whole philosophy in one post",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Better agents win is not a slogan about talent.</strong> It is a claim about mechanics. In a market where most agents guess, the one running a system wins by default. In an industry where most quit at the first hard quarter, the one with structure survives to compound. The bar is not high. It is just real."
+    },
+    {
+      "type": "p",
+      "html": "Everything this academy teaches reduces to four disciplines, and none of them require gifts. Know your market cold. Generate conversations daily. Close like an advisor. Treat every client like the beginning of a decade-long relationship. That is the entire game, executed at a professional standard, repeated."
+    },
+    {
+      "type": "quote",
+      "text": "The market does not reward potential. It rewards the agent who showed up with a system, again."
+    },
+    {
+      "type": "h2",
+      "text": "What better looks like on a Tuesday"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "The morning hour happens.",
+          "html": "Outreach before email, pipeline before reaction. Non-negotiable, especially on the days it feels optional."
+        },
+        {
+          "title": "The Building Bible grows.",
+          "html": "One more tour logged, one more leasing manager known by name. Market mastery is an accumulation, not an event."
+        },
+        {
+          "title": "The numbers get looked at.",
+          "html": "Four funnel metrics, five minutes, no flinching. Businesses face their data; hobbies avoid it."
+        },
+        {
+          "title": "Someone gets served past the signature.",
+          "html": "A move-in check, an anniversary note, a referral thank-you. The compounding entry, made daily."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Pick the one discipline of the four you have been skipping and run it for seven straight days. Better is not a transformation. It is a streak."
+    },
+    {
+      "type": "p",
+      "html": "If you want the whole system in one place, with weekly live coaching and a community running the same plays, that is exactly what the Elite Leasing Club is for. Better agents win. Become one."
+    },
+    {
+      "type": "cta",
+      "lead": "Every course. Weekly coaching. One membership.",
+      "href": "/club",
+      "label": "Join the Elite Leasing Club"
+    }
+  ]
+}

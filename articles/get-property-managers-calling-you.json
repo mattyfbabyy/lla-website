@@ -1,0 +1,58 @@
+{
+  "slug": "get-property-managers-calling-you",
+  "title": "How to get property managers calling you",
+  "dek": "The strongest pipeline in leasing is not a lead source. It is a leasing office that trusts you.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-16",
+  "heroImage": "/img/blog/get-property-managers-calling-you.jpg",
+  "heroAlt": "How to get property managers calling you",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Every luxury building has a short list.</strong> The agents the leasing office actually likes. The ones who get the heads-up on upcoming vacancies, the flexible showings, the benefit of the doubt when an application is borderline. Getting on that list is worth more than any ad budget."
+    },
+    {
+      "type": "p",
+      "html": "Most agents treat leasing staff like an obstacle between them and a commission. They show up late, let clients wander, and vanish after the deal. Then they wonder why the office never calls them back. Flip every one of those behaviors and you become memorable by default, because the bar is on the floor."
+    },
+    {
+      "type": "quote",
+      "text": "Property managers do not need more agents. They need one they never have to worry about."
+    },
+    {
+      "type": "h2",
+      "text": "How the short list is built"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Be surgically professional.",
+          "html": "Confirm appointments, arrive early, prep your client on the building before the tour. Make their job easier every single time."
+        },
+        {
+          "title": "Bring qualified people.",
+          "html": "One pre-qualified client beats five tourists. Offices remember whose applications sail through."
+        },
+        {
+          "title": "Add value between deals.",
+          "html": "Share market intel, refer good tenants even when there is nothing in it for you, say thank you after closings. Deposits before withdrawals."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Pick the three buildings you want to own as an agent. This week, visit each with no client, introduce yourself to the leasing manager, and ask one question: what do agents do that makes your life harder? Then never do those things."
+    },
+    {
+      "type": "p",
+      "html": "Relationships are the moat in this business. Course 2 shows you how to build them building by building until the deals start finding you."
+    },
+    {
+      "type": "cta",
+      "lead": "Course 2 includes the full relationship playbook.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "luxury-is-a-standard-not-a-zip-code",
+  "title": "Luxury is a standard, not a zip code",
+  "dek": "The word luxury in your title is a promise about how you operate, not about the buildings you tour.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-10-05",
+  "heroImage": "/img/blog/luxury-is-a-standard-not-a-zip-code.jpg",
+  "heroAlt": "Luxury is a standard, not a zip code",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Plenty of agents show expensive apartments.</strong> Far fewer are luxury agents. The difference has nothing to do with the rent roll and everything to do with the experience surrounding it: the preparation, the communication, the sense the client gets that someone competent is holding the entire process."
+    },
+    {
+      "type": "p",
+      "html": "High-end clients are pattern readers. They notice whether you confirmed the appointment, whether you knew the answer or performed knowing it, whether the follow-up arrived when you said it would. Each detail is small. Together they are the product, because the apartments themselves the client could find alone."
+    },
+    {
+      "type": "quote",
+      "text": "In luxury, the service is the product. The apartment is just the venue."
+    },
+    {
+      "type": "h2",
+      "text": "The standard, operationalized"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Preparation is visible.",
+          "html": "Route planned, units pre-walked when possible, a one-page brief on each building. Clients can tell prepared from winging it in ninety seconds."
+        },
+        {
+          "title": "Communication has a rhythm.",
+          "html": "Responses inside agreed windows, updates before they are requested. Silence is the only true luxury killer."
+        },
+        {
+          "title": "The truth is the brand.",
+          "html": "Steering a client away from a wrong unit, on record, is the most expensive-feeling thing you can do, and it costs nothing."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Write your personal service standard as five short promises. Print it, keep it visible, and audit yourself against it after every closing for a month."
+    },
+    {
+      "type": "p",
+      "html": "Standards hold better with witnesses. The Elite Leasing Club is weekly coaching and a room of agents holding the same bar."
+    },
+    {
+      "type": "cta",
+      "lead": "The Club holds the standard, week after week.",
+      "href": "/club",
+      "label": "Join the Elite Leasing Club"
+    }
+  ]
+}

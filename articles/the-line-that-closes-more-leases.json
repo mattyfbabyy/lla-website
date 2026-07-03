@@ -2,23 +2,57 @@
   "slug": "the-line-that-closes-more-leases",
   "title": "The line that closes more leases than any pitch",
   "dek": "Most agents talk their way out of a signed lease. Here is the four-second alternative.",
-  "kicker": "The Lease Up",
-  "date": "2026-07-03",
-  "heroImage": "/img/blog/closing-line-hero.jpg",
-  "heroAlt": "Chicago skyline at golden hour",
-  "heroCaption": "River North, where this week's story happened.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-09-14",
+  "heroImage": "/img/blog/the-line-that-closes-more-leases.jpg",
+  "heroAlt": "The line that closes more leases than any pitch",
   "blocks": [
-    { "type": "p", "html": "<strong>A lease dies in the silence after the tour.</strong> The client loved the unit, loved the building, loved the view. Then they said the five words every agent hears: we want to think about it." },
-    { "type": "p", "html": "Most agents respond by talking. More amenities, more urgency, more pitch. And every extra sentence tells the client the same thing: this person needs the deal more than I need the apartment." },
-    { "type": "quote", "text": "The agent who is comfortable in the silence is the agent who gets the signature." },
-    { "type": "p", "html": "Here is what to say instead, and it takes four seconds: name the hesitation, then stop. That is the whole move. You are not pressuring. You are proving you can be trusted with the truth." },
-    { "type": "play", "html": "On your next tour, when you hear &ldquo;we want to think about it,&rdquo; say: &ldquo;Totally fair. What is the one thing you would change about this unit?&rdquo; Then say nothing until they answer." },
-    { "type": "h2", "text": "Why it works" },
-    { "type": "list", "items": [
-      { "title": "It surfaces the real objection.", "html": "&ldquo;Think about it&rdquo; is never the actual reason. The question forces the truth into the open where you can handle it." },
-      { "title": "Silence transfers the pressure.", "html": "Whoever speaks first after the question owns the objection. Let it be them." },
-      { "title": "It positions you as the advisor.", "html": "Advisors ask questions. Salespeople pitch. Clients sign with advisors." }
-    ]},
-    { "type": "cta", "lead": "Want the full objection playbook, word for word?", "href": "/courses", "label": "Explore the Courses" }
+    {
+      "type": "p",
+      "html": "<strong>A lease dies in the silence after the tour.</strong> The client loved the unit, loved the building, loved the view. Then they said the five words every agent hears: we want to think about it."
+    },
+    {
+      "type": "p",
+      "html": "Most agents respond by talking. More amenities, more urgency, more pitch. And every extra sentence tells the client the same thing: this person needs the deal more than I need the apartment."
+    },
+    {
+      "type": "quote",
+      "text": "The agent who is comfortable in the silence is the agent who gets the signature."
+    },
+    {
+      "type": "p",
+      "html": "Here is what to say instead, and it takes four seconds: name the hesitation, then stop. That is the whole move. You are not pressuring. You are proving you can be trusted with the truth."
+    },
+    {
+      "type": "play",
+      "html": "On your next tour, when you hear we want to think about it, say: totally fair. What is the one thing you would change about this unit? Then say nothing until they answer."
+    },
+    {
+      "type": "h2",
+      "text": "Why it works"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "It surfaces the real objection.",
+          "html": "Think about it is never the actual reason. The question forces the truth into the open where you can handle it."
+        },
+        {
+          "title": "Silence transfers the pressure.",
+          "html": "Whoever speaks first after the question owns the objection. Let it be them."
+        },
+        {
+          "title": "It positions you as the advisor.",
+          "html": "Advisors ask questions. Salespeople pitch. Clients sign with advisors."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "lead": "Want the full objection playbook, word for word?",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
   ]
 }

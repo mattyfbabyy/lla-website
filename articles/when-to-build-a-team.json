@@ -1,0 +1,58 @@
+{
+  "slug": "when-to-build-a-team",
+  "title": "When to build a team, and when you absolutely should not",
+  "dek": "Hiring too early buries you. Hiring too late caps you. The signal is not revenue, it is your calendar.",
+  "kicker": "Luxury Leasing Academy",
+  "date": "2026-10-04",
+  "heroImage": "/img/blog/when-to-build-a-team.jpg",
+  "heroAlt": "When to build a team, and when you absolutely should not",
+  "blocks": [
+    {
+      "type": "p",
+      "html": "<strong>Somewhere after the first strong quarter, the thought arrives: I should hire someone.</strong> Sometimes it is right. Often it is a solo agent trying to hire their way out of missing systems, which just means paying someone else to be confused alongside you."
+    },
+    {
+      "type": "p",
+      "html": "The honest signal is not an income number. It is a calendar audit. When the hours spent on work that does not require your license, scheduling, paperwork, coordination, crowd out the work only you can do, showing and closing, you are ready. Before that point, the answer is systems, not staff."
+    },
+    {
+      "type": "quote",
+      "text": "Do not hire help for a business that does not have instructions yet."
+    },
+    {
+      "type": "h2",
+      "text": "The readiness checklist"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Your processes are written down.",
+          "html": "If the tour prep, follow-up cadence, and application flow live only in your head, a hire inherits chaos. Document first, delegate second."
+        },
+        {
+          "title": "The math holds.",
+          "html": "The hours a hire frees, redeployed into showings and closings, should clearly out-earn their cost. Run it on paper before you run it on payroll."
+        },
+        {
+          "title": "The pipeline is the constraint.",
+          "html": "Hire when demand exceeds your hours, not when you hope a hire will create demand. Assistants amplify volume; they do not generate it."
+        }
+      ]
+    },
+    {
+      "type": "play",
+      "html": "Track your time in three buckets for one week: license-required, delegatable, waste. The delegatable total, in hours, is the honest size of your first hire."
+    },
+    {
+      "type": "p",
+      "html": "Course 8 covers the foundation and first hires; Course 9 handles the empire math after that. In that order, on purpose."
+    },
+    {
+      "type": "cta",
+      "lead": "Courses 8 and 9 map the entire scaling path.",
+      "href": "/courses",
+      "label": "Explore the Courses"
+    }
+  ]
+}
