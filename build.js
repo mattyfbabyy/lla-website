@@ -119,7 +119,28 @@ function socialIconLinks(obj){
     .map(k => `<a href="${obj[k]}" target="_blank" rel="noopener" aria-label="${k}">${SOCIAL_ICONS[k]}</a>`).join('');
 }
 
-function page(title, body, css) {
+const SITE_URL = 'https://luxuryleasingacademy.com';
+const attr = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+function shareMeta(title, meta) {
+  meta = meta || {};
+  const img  = meta.image || `${SITE_URL}/img/og-card.png`;
+  const desc = meta.desc || C.brand.tagline;
+  return `<meta name="description" content="${attr(desc)}">
+<meta property="og:type" content="${meta.type || 'website'}">
+<meta property="og:site_name" content="${attr(C.brand.name)}">
+<meta property="og:title" content="${attr(title)}">
+<meta property="og:description" content="${attr(desc)}">
+${meta.url ? `<meta property="og:url" content="${meta.url}">` : ''}
+<meta property="og:image" content="${img}">
+<meta property="og:image:width" content="${meta.image ? '1280' : '1200'}">
+<meta property="og:image:height" content="${meta.image ? '720' : '630'}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${attr(title)}">
+<meta name="twitter:description" content="${attr(desc)}">
+<meta name="twitter:image" content="${img}">`;
+}
+
+function page(title, body, css, meta) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,6 +149,7 @@ function page(title, body, css) {
 <meta name="color-scheme" content="light only">
 <meta name="supported-color-schemes" content="light">
 <title>${title}</title>
+${shareMeta(title, meta)}
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -1033,7 +1055,11 @@ ${hero}
 ${SUB_BOX}
 <div style="padding-bottom:70px;text-align:center"><a href="/blog" style="color:var(--gold);font-weight:600">&larr; All articles</a></div>
 </div></article>`;
-    const html = rootify(page(`${a.title} | ${C.brand.name}`, body, CSS_SHARED + ARTICLE_CSS));
+    const html = rootify(page(`${a.title} | ${C.brand.name}`, body, CSS_SHARED + ARTICLE_CSS, {
+      desc: a.dek || '', type: 'article',
+      url: `${SITE_URL}/blog/${a.slug}`,
+      image: heroOk && a.heroImage ? `${SITE_URL}${a.heroImage}` : null
+    }));
     fs.writeFileSync(path.join(OUT, 'blog', `${a.slug}.html`), html);
     console.log('  built blog/' + a.slug + '.html');
   }
@@ -1045,7 +1071,10 @@ ${a._heroOk?`<div class="bc-img"><img src="${a.heroImage}" alt="${a.heroAlt||''}
   const idxBody = `<header class="blog-head rv in"><div class="wrap"><div class="eyebrow">Luxury Leasing Academy</div><h1>The Blog</h1><p>One sharp leasing idea at a time. Strategy, scripts, and systems for agents who treat rentals like a real business.</p></div></header>
 <hr class="horizon">
 <div class="wrap"><div class="blog-grid">${cards}</div></div>`;
-  const idxHtml = rootify(page(`Articles | ${C.brand.name}`, idxBody, CSS_SHARED + ARTICLE_CSS));
+  const idxHtml = rootify(page(`Articles | ${C.brand.name}`, idxBody, CSS_SHARED + ARTICLE_CSS, {
+    desc: 'One sharp leasing idea at a time. Strategy, scripts, and systems for agents who treat rentals like a real business.',
+    url: `${SITE_URL}/blog`
+  }));
   fs.writeFileSync(path.join(OUT, 'blog', 'index.html'), idxHtml);
   console.log('  built blog/index.html');
 }

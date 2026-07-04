@@ -1,0 +1,39 @@
+LLA SHARE-CARD UPDATE - July 4, 2026
+HERO IMAGES + LINK PREVIEW CARDS FOR EVERY PAGE
+
+WHAT TO DO:
+1. Drag build.js from this package into the repo root, replacing the old one
+2. Drag the 30 JPGs from lla-hero-images-deploy.zip (sent earlier) into the
+   repo's img/blog folder, if you haven't already
+3. Commit "share cards + blog heroes" and push
+4. Wait for Vercel to show Ready
+
+WHAT THIS DOES:
+- Every blog article now advertises its hero image to Instagram, Facebook,
+  LinkedIn, X, and iMessage. Paste a post link anywhere and the thumbnail
+  shows as a big clickable card with the title and dek under it.
+- Every OTHER page on the site (home, courses, club, ebook, playbook) now
+  shows the gold badge card (img/og-card.png) when shared. Replace that file
+  anytime with your own 1200x630 image and recommit.
+- Articles with no hero image fall back to the gold badge card. Nothing
+  ever shows a broken preview.
+- Bonus: every page now has a proper meta description for search engines.
+
+NOTHING ELSE CHANGED. content.json, articles, templates: untouched.
+
+BEFORE LAUNCH, VERIFY TWO NUMBERS (2 minutes):
+Your articles folder may predate the final number lock. Open these two files
+in the repo and check:
+- articles/how-much-do-rental-agents-make.json
+  Search for "15" -- if it says "15 deals / $19,500" it is the RETIRED
+  figure. Canonical: strongest month topped 20 closed deals, and one 6-deal
+  month stacked $19,500.
+- articles/the-referral-engine-one-client-becomes-ten.json
+  Search for "23,000" -- retired. Canonical: 6 referrals from one client
+  over 2 years = $17,500.
+If either is wrong, send me the file and I return it fixed in one pass.
+
+TESTING AFTER DEPLOY:
+Posts publish Sept 7 onward, so preview cards become testable then. To test
+sooner: temporarily date one article in the past, push, paste its link into
+a DM to yourself, confirm the card, then restore the date.
