@@ -33,5 +33,16 @@
       "destination": "/hub?utm_source=twitter&utm_medium=bio&utm_campaign=prelaunch-blitz&utm_content=bio-link",
       "permanent": false
     }
+  ],
+  "headers": [
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
   ]
 }
