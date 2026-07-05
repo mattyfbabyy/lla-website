@@ -621,7 +621,7 @@ function buildMatty() {
 <section class="section"><div class="wrap story">
   <p class="lede rv">I didn't come from real estate. I came from behind a bar, and before that, from rock bottom.</p>
   <p class="rv">No trust fund. No team. No listings handed to me. What I had was hustle, and a belief most people thought was naive: that leasing could be more than a stepping stone. That it could be a real business.</p>
-  <p class="rv">I spent five years as an independent broker learning every hard lesson this industry has, then five more onsite at Chicago's top luxury residential building. Along the way I closed <strong>more than 1,000 leases</strong> and moved <strong>over $2.5 million in rental volume</strong>, not by selling homes, but by treating rentals like the business they really are.</p>
+  <p class="rv">I spent five years as an independent broker learning every hard lesson this industry has, then five more onsite at Chicago's top luxury residential building. Along the way I closed <strong>more than 1,000 leases</strong> and earned <strong>over $2.5 million in rental commissions</strong>, not by selling homes, but by treating rentals like the business they really are.</p>
   <p class="rv">Somewhere in those thousand leases I realized something: it was never talent. It was a <strong>system</strong>. Repeatable, teachable, and nobody was teaching it. Agents were quitting in their first year while a lucrative market sat right in front of them, overlooked.</p>
   <p class="rv">So I built ${C.brand.name}: the roadmap I wish someone had handed me. Every course, every script, every tracker inside comes from the field, not from theory that sounds nice on a slide.</p>
 </div></section>
