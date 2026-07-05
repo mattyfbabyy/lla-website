@@ -374,7 +374,7 @@ function buildClub() {
 
 // ---------- COURSES CATALOG ----------
 function buildCourses() {
-  const ccard = c => `<div class="ccard rv"><div class="ccard-img"><img src="img/c${c.n}-mockup.png" alt="${c.title}" loading="lazy"></div><div class="ccard-body"><div class="ccard-meta"><b>Course ${c.n}</b> &middot; ${c.level} &middot; ${c.lessons} lessons</div><h3>${c.title}</h3><p>${c.promise}</p><div class="ccard-foot">${PRICE(c.price)}<a href="${c.slug}.html">Learn More &rarr;</a></div></div></div>`;
+  const ccard = c => `<a class="ccard rv" href="${c.slug}.html"><div class="ccard-img"><img src="img/c${c.n}-mockup.png" alt="${c.title}" loading="lazy"></div><div class="ccard-body"><div class="ccard-meta"><b>Course ${c.n}</b> &middot; ${c.level} &middot; ${c.lessons} lessons</div><h3>${c.title}</h3><p>${c.promise}</p><div class="ccard-foot">${PRICE(c.price)}<span class="ccard-cta">Learn More &rarr;</span></div></div></a>`;
   let tiers = '';
   for (const [label, level, idxs] of TIERS) {
     const cards = idxs.map(i => ccard(COURSES[i])).join('');
@@ -385,7 +385,7 @@ function buildCourses() {
     <div class="eyebrow rv in">The Curriculum</div>
     <style>@media (max-width:600px){.ch-h1 em{display:block}}</style>
     <h1 class="rv in ch-h1" style="font-size:clamp(38px,5vw,58px);margin-bottom:18px">Nine courses. <em style="font-style:italic;color:var(--gold)">One system.</em></h1>
-    <p class="rv in" style="font-size:19px;color:var(--espresso-soft);max-width:620px">From your first lease to a scaled rental business, in order, step by step. Start where you are.</p>
+    <p class="rv in" style="font-size:19px;color:var(--espresso-soft);max-width:620px">From your first lease to a scaled rental business, in order, step by step.</p>
   </div>
 </header>
 <section class="section" style="padding-top:30px">
@@ -821,7 +821,7 @@ body{background:var(--ivory)}
 .hub-brand{font-family:'Fraunces',serif;font-weight:600;font-size:25px;color:var(--espresso);letter-spacing:.01em}
 .hub-hero{background:var(--white);border:1px solid rgba(185,137,47,.22);border-top:3px solid var(--gold);border-radius:20px;padding:22px 22px 20px;margin:28px 0 32px;box-shadow:0 22px 50px rgba(42,32,24,.11);text-align:left}
 .hub-hero-row{display:flex;gap:16px;align-items:center;margin-bottom:14px}
-.hub-hero-cover{width:82px;height:auto;border-radius:8px;box-shadow:0 8px 20px rgba(42,32,24,.2);flex:0 0 auto}
+.hub-hero-cover{width:82px;height:auto;background:transparent;filter:drop-shadow(0 10px 16px rgba(42,32,24,.32));flex:0 0 auto}
 .hub-tag{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
 .hub-hero-title{font-family:'Fraunces',serif;font-size:20px;line-height:1.18;color:var(--espresso)}
 .hub-hero-sub{font-size:14px;color:var(--espresso-soft);margin:0 0 16px;line-height:1.5}
