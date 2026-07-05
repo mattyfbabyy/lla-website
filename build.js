@@ -264,7 +264,7 @@ function buildHome() {
     <div class="section-head rv"><div class="eyebrow">The Path</div><h2>Your path to a real luxury rental business</h2></div>
     <div class="cards3">
       <div class="card rv step-card"><div class="step-card-img"><img src="${C.images.ebookCover}" alt="E-book" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 01</div><h3 style="font-size:23px;margin-bottom:10px">Start free</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Download the e-book and learn the 9 secrets top earners use to build their rental businesses.</p><a href="ebook.html" style="color:var(--gold);font-weight:600;font-size:15px">Get the Free E-Book &rarr;</a></div></div>
-      <div class="card rv step-card"><div class="step-card-img"><img src="img/c1-mockup.png" alt="Courses" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 02</div><h3 style="font-size:23px;margin-bottom:10px">Learn the system</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Nine courses covering everything from your first lease to scaling a rental empire. In order, step by step.</p><a href="courses.html" style="color:var(--gold);font-weight:600;font-size:15px">Browse the Courses &rarr;</a></div></div>
+      <div class="card rv step-card"><div class="step-card-img"><img src="img/courses-lineup.png" alt="All nine courses" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 02</div><h3 style="font-size:23px;margin-bottom:10px">Learn the system</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Nine courses covering everything from your first lease to scaling a rental empire. In order, step by step.</p><a href="courses.html" style="color:var(--gold);font-weight:600;font-size:15px">Browse the Courses &rarr;</a></div></div>
       <div class="card rv step-card"><div class="step-card-img"><img src="img/club-image.png" alt="Club" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 03</div><h3 style="font-size:23px;margin-bottom:10px">Go all in</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">The Elite Leasing Club: every course, weekly live coaching, and a community of agents actually closing deals.</p><a href="club.html" style="color:var(--gold);font-weight:600;font-size:15px">Join the Club &rarr;</a></div></div>
     </div>
   </div>
@@ -390,7 +390,7 @@ function buildCourses() {
 </header>
 <section class="section" style="padding-top:30px">
   <div class="wrap">
-    <div class="club-banner rv"><div><strong>Want all nine?</strong><p>Club members get every course, weekly coaching, and the full deliverables vault for ${PRICE(C.pricing.clubMonthly)}/month.</p></div><a href="club.html" class="btn btn-gold">See the Club &rarr;</a></div>
+    <div class="club-banner rv"><img src="img/club-image.png" alt="The Elite Leasing Club" class="club-banner-img"><div class="club-banner-text"><strong>Want all nine?</strong><p>Club members get every course, weekly coaching, and the full deliverables vault for ${PRICE(C.pricing.clubMonthly)}/month.</p></div><a href="club.html" class="btn btn-gold">See the Club &rarr;</a></div>
     ${tiers}
   </div>
 </section>
