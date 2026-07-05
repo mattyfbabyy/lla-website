@@ -217,7 +217,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 .home-band-big{font-family:'Fraunces',serif;font-size:clamp(90px,12vw,160px);color:var(--gold-bright);line-height:.95;font-weight:600}
 .step-card{padding:0;overflow:hidden}
 .step-card-img{height:240px;background:var(--cream);display:flex;align-items:center;justify-content:center;padding:12px}
-.step-card-img img{max-height:100%;width:auto}
+.step-card-img img{max-height:100%;width:auto;border-radius:12px}
 .step-card-body{padding:28px 30px 32px}
 .step-no-label{font-family:'Fraunces',serif;color:var(--gold);font-size:15px;letter-spacing:.18em;font-weight:600;margin-bottom:10px}
 @media (max-width:900px){

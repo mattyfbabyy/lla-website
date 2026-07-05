@@ -76,9 +76,6 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 @keyframes clubBannerPulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(212,169,78,0)}50%{transform:scale(1.015);box-shadow:0 0 32px 2px rgba(212,169,78,.30)}}
 .club-banner{background:var(--espresso);color:var(--ivory);border-radius:18px;padding:26px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:64px;animation:clubBannerPulse 2.6s ease-in-out infinite;will-change:transform}
 @media (prefers-reduced-motion:reduce){.club-banner{animation:none}}
-.club-banner-img{width:230px;max-width:40%;height:auto;border-radius:12px;border:1px solid rgba(185,137,47,.35);flex:0 0 auto}
-.club-banner-text{flex:1 1 260px}
-@media (max-width:640px){.club-banner{justify-content:center;text-align:center}.club-banner-img{max-width:78%;width:auto}.club-banner-text{flex:1 1 100%}}
 .club-banner strong{color:var(--gold-bright);font-family:'Fraunces',serif;font-size:20px;font-weight:600}
 .club-banner p{color:#CBBFAE;font-size:15.5px;margin-top:4px}
 .tier{margin-bottom:64px}
@@ -205,7 +202,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 .home-band-big{font-family:'Fraunces',serif;font-size:clamp(90px,12vw,160px);color:var(--gold-bright);line-height:.95;font-weight:600}
 .step-card{padding:0;overflow:hidden}
 .step-card-img{height:240px;background:var(--cream);display:flex;align-items:center;justify-content:center;padding:12px}
-.step-card-img img{max-height:100%;width:auto}
+.step-card-img img{max-height:100%;width:auto;border-radius:12px}
 .step-card-body{padding:28px 30px 32px}
 .step-no-label{font-family:'Fraunces',serif;color:var(--gold);font-size:15px;letter-spacing:.18em;font-weight:600;margin-bottom:10px}
 @media (max-width:900px){

@@ -390,7 +390,7 @@ function buildCourses() {
 </header>
 <section class="section" style="padding-top:30px">
   <div class="wrap">
-    <div class="club-banner rv"><img src="img/club-image.png" alt="The Elite Leasing Club" class="club-banner-img"><div class="club-banner-text"><strong>Want all nine?</strong><p>Club members get every course, weekly coaching, and the full deliverables vault for ${PRICE(C.pricing.clubMonthly)}/month.</p></div><a href="club.html" class="btn btn-gold">See the Club &rarr;</a></div>
+    <div class="club-banner rv"><div><strong>Want all nine?</strong><p>Club members get every course, weekly coaching, and the full deliverables vault for ${PRICE(C.pricing.clubMonthly)}/month.</p></div><a href="club.html" class="btn btn-gold">See the Club &rarr;</a></div>
     ${tiers}
   </div>
 </section>
