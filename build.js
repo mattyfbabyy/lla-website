@@ -215,7 +215,7 @@ ${o.secondary || ''}`;
 // ---------- HOME ----------
 function buildHome() {
   const h = C.home;
-  const body = `<header class="hero" style="padding:88px 0 70px;position:relative;overflow:hidden">
+  const body = `<header class="hero" style="position:relative;overflow:hidden">
   <div class="wrap home-hero-grid" id="herogrid">
     <div class="rv in">
       <div class="eyebrow">${h.eyebrow}</div>
@@ -272,7 +272,7 @@ function buildHome() {
 <section class="final">
   <div class="glow"></div>
   <div class="wrap">
-    <h2 class="rv">${h.finalHeadline}</h2>
+    <h2 class="rv">${h.finalHeadline.replace('something real', '<br class="final-mbr"><span class="final-accent">something real</span>')}</h2>
     <p class="rv">${h.finalSub}</p>
     <a href="club.html" class="btn btn-gold rv" style="font-size:17px;padding:16px 38px">Join the Elite Leasing Club</a>
     <div class="micro rv">Not ready yet? <a href="ebook.html">Start with the free e-book.</a></div>
