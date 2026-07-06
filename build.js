@@ -217,7 +217,10 @@ function buildHome() {
   const h = C.home;
   const body = `<header class="hero" style="padding:88px 0 70px;position:relative;overflow:hidden">
   <div class="wrap home-hero-grid" id="herogrid">
-    <div class="rv in">
+    <div class="rv in hero-media" style="position:relative">
+      <div class="arch"><img src="${C.images.heroPhoto}" alt="${C.brand.name}"></div>
+    </div>
+    <div class="rv in hero-copy">
       <div class="eyebrow">${h.eyebrow}</div>
       <h1 style="font-size:clamp(40px,5.2vw,64px);margin-bottom:24px">${highlight(h.heroHeadline, h.heroHighlight)}</h1>
       <p style="font-size:19px;color:var(--espresso-soft);max-width:560px;margin-bottom:34px">${h.heroSub}</p>
@@ -231,9 +234,6 @@ function buildHome() {
         <div class="stat"><div class="num">${h.stat2Num}</div><div class="lbl">${h.stat2Label}</div></div>
         <div class="stat"><div class="num">${h.stat3Num}</div><div class="lbl">${h.stat3Label}</div></div>
       </div>
-    </div>
-    <div class="rv in" style="position:relative">
-      <div class="arch"><img src="${C.images.heroPhoto}" alt="${C.brand.name}"></div>
     </div>
   </div>
 </header>
@@ -287,6 +287,7 @@ function buildClub() {
   const pills = COURSES.map(c => `<span class="pill"><b>C${c.n}</b>${c.title}</span>`).join('');
   const body = `<header class="hero" style="padding:84px 0 72px;text-align:center">
   <div class="wrap">
+    <div class="arch-hero rv in"><img src="img/club-image.png" alt="Everything included in the Elite Leasing Club"></div>
     <div class="eyebrow rv in">${cl.eyebrow}</div>
     <h1 class="rv in" style="font-size:clamp(36px,4.8vw,58px);max-width:860px;margin:0 auto 24px">${highlight(cl.heroHeadline, cl.heroHighlight)}</h1>
     <p class="rv in" style="font-size:19px;color:var(--espresso-soft);max-width:640px;margin:0 auto 36px">${cl.heroSub}</p>
@@ -305,7 +306,10 @@ function buildClub() {
       <div class="stack-item rv"><div class="stack-no">4</div><div><h3>The complete deliverables vault <span>$1,500 value</span></h3><p>Done-for-you tools that replace years of trial and error: the 30-Day Action Plan, the Building Bible, the Objection Handling Playbook, the Follow-Up Script Vault, the Content Repurposing Flowchart, the Income Tracker &amp; Commission Forecast, and dozens more.</p></div></div>
       <div class="stack-item rv"><div class="stack-no">5</div><div><h3>The Lease Up, every Saturday</h3><p>Weekly strategies and market insights in your inbox. Stay sharp between sessions.</p></div></div>
     </div>
-    <div class="stack-total rv">Total value if bought separately: <span class="strike-val">over ${C.pricing.totalValue}</span>.<br>Yours inside the Club for <strong>${PRICE(C.pricing.clubMonthly)}/month</strong>.</div>
+    <div class="stack-total rv">
+      <div class="st-old">Total value if bought separately: <span class="strike-val">over ${C.pricing.totalValue}</span></div>
+      <div class="st-deal">Yours inside the Club for <span class="deal-price">${PRICE(C.pricing.clubMonthly)}<span class="deal-per">/month</span></span></div>
+    </div>
   </div>
 </section>
 <section class="section who">
@@ -380,12 +384,13 @@ function buildCourses() {
     const cards = idxs.map(i => ccard(COURSES[i])).join('');
     tiers += `<div class="tier"><div class="tier-label rv"><span>${label}</span><h3>${level}</h3></div><div class="course-grid ${idxs.length===2?'two':''}">${cards}</div></div>`;
   }
-  const body = `<header class="hero-split" style="padding:84px 0 34px">
+  const body = `<header class="hero-split" style="padding:84px 0 34px;text-align:center">
   <div class="wrap">
+    <div class="arch-hero rv in"><img src="img/courses-lineup.png" alt="All nine Luxury Leasing Academy courses"></div>
     <div class="eyebrow rv in">The Curriculum</div>
     <style>@media (max-width:600px){.ch-h1 em{display:block}}</style>
     <h1 class="rv in ch-h1" style="font-size:clamp(38px,5vw,58px);margin-bottom:18px">Nine courses. <em style="font-style:italic;color:var(--gold)">One system.</em></h1>
-    <p class="rv in" style="font-size:19px;color:var(--espresso-soft);max-width:620px">From your first lease to a scaled rental business, in order, step by step.</p>
+    <p class="rv in" style="font-size:19px;color:var(--espresso-soft);max-width:620px;margin:0 auto">From your first lease to a scaled rental business, in order, step by step.</p>
   </div>
 </header>
 <section class="section" style="padding-top:30px">

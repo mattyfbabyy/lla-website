@@ -213,6 +213,8 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 @media (max-width:600px){.foot-brandname{font-size:18px}}
 
 .home-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+/* Image comes first in the DOM (so it sits on top on mobile); on desktop keep copy left, image right */
+@media (min-width:901px){.home-hero-grid .hero-copy{order:1}.home-hero-grid .hero-media{order:2}}
 .home-band-grid{display:grid;grid-template-columns:auto 1fr;gap:64px;align-items:center;position:relative}
 .home-band-big{font-family:'Fraunces',serif;font-size:clamp(90px,12vw,160px);color:var(--gold-bright);line-height:.95;font-weight:600}
 .step-card{padding:0;overflow:hidden}

@@ -146,6 +146,11 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 .arch{border-radius:300px 300px 24px 24px;overflow:hidden;box-shadow:0 30px 70px rgba(42,32,24,.22);position:relative}
 .arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(212,169,78,0) 55%,rgba(201,111,35,.22));pointer-events:none}
 .arch img{width:100%;height:520px;object-fit:cover}
+/* Centered arch hero image (club + courses) - same arch silhouette as the home hero, square so nothing crops */
+.arch-hero{max-width:440px;margin:0 auto 44px;border-radius:300px 300px 24px 24px;overflow:hidden;box-shadow:0 30px 70px rgba(42,32,24,.22);position:relative}
+.arch-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(212,169,78,0) 55%,rgba(201,111,35,.22));pointer-events:none}
+.arch-hero img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+@media (max-width:600px){.arch-hero{max-width:300px;margin-bottom:32px;border-radius:200px 200px 18px 18px}}
 .stats{display:flex;gap:48px;flex-wrap:wrap}
 .stat .num{font-family:'Fraunces',serif;font-size:42px;color:var(--gold);font-weight:600;line-height:1}
 .stat .lbl{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--haze);margin-top:8px;font-weight:600}
@@ -272,8 +277,13 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq details p{padding:0 26px 24px;color:var(--espresso-soft);font-size:16px}
 
-.stack-total{text-align:center;margin-top:34px;font-size:18px;font-family:'Fraunces',serif;color:var(--espresso)}
-.stack-total .strike-val{color:var(--gold);font-weight:600}
+.stack-total{text-align:center;margin-top:34px;font-family:'Fraunces',serif;color:var(--espresso)}
+.stack-total .st-old{font-size:16.5px;color:var(--haze);margin-bottom:12px}
+.stack-total .strike-val{color:var(--haze);font-weight:500;text-decoration:line-through;text-decoration-color:rgba(140,124,104,.65);text-decoration-thickness:1.5px}
+.stack-total .st-deal{font-size:20px;color:var(--espresso);display:flex;align-items:baseline;justify-content:center;gap:12px;flex-wrap:wrap}
+.stack-total .deal-price{color:var(--gold);font-weight:700;font-size:44px;line-height:1;letter-spacing:-.01em;white-space:nowrap}
+.stack-total .deal-per{font-size:20px;font-weight:600;color:var(--gold)}
+@media (max-width:600px){.stack-total .deal-price{font-size:38px}.stack-total .st-deal{font-size:18px;gap:8px}}
 
 /* --- Math section (clean redesign) --- */
 .math-inner{max-width:860px;text-align:center;margin:0 auto}
