@@ -215,7 +215,7 @@ ${o.secondary || ''}`;
 // ---------- HOME ----------
 function buildHome() {
   const h = C.home;
-  const body = `<header class="hero" style="padding:88px 0 70px;position:relative;overflow:hidden">
+  const body = `<header class="hero" style="position:relative;overflow:hidden">
   <div class="wrap home-hero-grid" id="herogrid">
     <div class="rv in hero-media" style="position:relative">
       <div class="arch"><img src="${C.images.heroPhoto}" alt="${C.brand.name}"></div>
@@ -287,7 +287,6 @@ function buildClub() {
   const pills = COURSES.map(c => `<span class="pill"><b>C${c.n}</b>${c.title}</span>`).join('');
   const body = `<header class="hero" style="padding:84px 0 72px;text-align:center">
   <div class="wrap">
-    <div class="arch-hero rv in"><img src="img/club-image.png" alt="Everything included in the Elite Leasing Club"></div>
     <div class="eyebrow rv in">${cl.eyebrow}</div>
     <h1 class="rv in" style="font-size:clamp(36px,4.8vw,58px);max-width:860px;margin:0 auto 24px">${highlight(cl.heroHeadline, cl.heroHighlight)}</h1>
     <p class="rv in" style="font-size:19px;color:var(--espresso-soft);max-width:640px;margin:0 auto 36px">${cl.heroSub}</p>
@@ -384,13 +383,12 @@ function buildCourses() {
     const cards = idxs.map(i => ccard(COURSES[i])).join('');
     tiers += `<div class="tier"><div class="tier-label rv"><span>${label}</span><h3>${level}</h3></div><div class="course-grid ${idxs.length===2?'two':''}">${cards}</div></div>`;
   }
-  const body = `<header class="hero-split" style="padding:84px 0 34px;text-align:center">
+  const body = `<header class="hero-split" style="padding:84px 0 34px">
   <div class="wrap">
-    <div class="arch-hero rv in"><img src="img/courses-lineup.png" alt="All nine Luxury Leasing Academy courses"></div>
     <div class="eyebrow rv in">The Curriculum</div>
     <style>@media (max-width:600px){.ch-h1 em{display:block}}</style>
     <h1 class="rv in ch-h1" style="font-size:clamp(38px,5vw,58px);margin-bottom:18px">Nine courses. <em style="font-style:italic;color:var(--gold)">One system.</em></h1>
-    <p class="rv in" style="font-size:19px;color:var(--espresso-soft);max-width:620px;margin:0 auto">From your first lease to a scaled rental business, in order, step by step.</p>
+    <p class="rv in" style="font-size:19px;color:var(--espresso-soft);max-width:620px">From your first lease to a scaled rental business, in order, step by step.</p>
   </div>
 </header>
 <section class="section" style="padding-top:30px">
