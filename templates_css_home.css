@@ -195,7 +195,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
   .matty-photo img{height:360px}
   .final{padding:76px 0}
   .final-mbr{display:block}
-  .final-accent{color:var(--gold-bright);font-style:italic}
+  .final-accent{color:var(--gold-bright);font-style:italic;font-size:1.2em}
   .foot-grid{grid-template-columns:1fr;gap:28px}
   .foot-bottom{flex-direction:column;gap:6px}
   .optin-inner{flex-direction:column;align-items:stretch;gap:10px;text-align:center}
