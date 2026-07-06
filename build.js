@@ -215,12 +215,9 @@ ${o.secondary || ''}`;
 // ---------- HOME ----------
 function buildHome() {
   const h = C.home;
-  const body = `<header class="hero" style="position:relative;overflow:hidden">
+  const body = `<header class="hero" style="padding:88px 0 70px;position:relative;overflow:hidden">
   <div class="wrap home-hero-grid" id="herogrid">
-    <div class="rv in hero-media" style="position:relative">
-      <div class="arch"><img src="${C.images.heroPhoto}" alt="${C.brand.name}"></div>
-    </div>
-    <div class="rv in hero-copy">
+    <div class="rv in">
       <div class="eyebrow">${h.eyebrow}</div>
       <h1 style="font-size:clamp(40px,5.2vw,64px);margin-bottom:24px">${highlight(h.heroHeadline, h.heroHighlight)}</h1>
       <p style="font-size:19px;color:var(--espresso-soft);max-width:560px;margin-bottom:34px">${h.heroSub}</p>
@@ -234,6 +231,9 @@ function buildHome() {
         <div class="stat"><div class="num">${h.stat2Num}</div><div class="lbl">${h.stat2Label}</div></div>
         <div class="stat"><div class="num">${h.stat3Num}</div><div class="lbl">${h.stat3Label}</div></div>
       </div>
+    </div>
+    <div class="rv in" style="position:relative">
+      <div class="arch"><img src="${C.images.heroPhoto}" alt="${C.brand.name}"></div>
     </div>
   </div>
 </header>
@@ -263,7 +263,7 @@ function buildHome() {
   <div class="wrap">
     <div class="section-head rv"><div class="eyebrow">The Path</div><h2>Your path to a real luxury rental business</h2></div>
     <div class="cards3">
-      <div class="card rv step-card"><div class="step-card-img"><img src="${C.images.ebookCover}" alt="E-book" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 01</div><h3 style="font-size:23px;margin-bottom:10px">Start free</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Download the e-book and learn the 9 secrets top earners use to build their rental businesses.</p><a href="ebook.html" style="color:var(--gold);font-weight:600;font-size:15px">Get the Free E-Book &rarr;</a></div></div>
+      <div class="card rv step-card"><div class="step-card-img"><img src="img/ebook-image.png" alt="E-book" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 01</div><h3 style="font-size:23px;margin-bottom:10px">Start free</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Download the e-book and learn the 9 secrets top earners use to build their rental businesses.</p><a href="ebook.html" style="color:var(--gold);font-weight:600;font-size:15px">Get the Free E-Book &rarr;</a></div></div>
       <div class="card rv step-card"><div class="step-card-img"><img src="img/courses-lineup.png" alt="All nine courses" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 02</div><h3 style="font-size:23px;margin-bottom:10px">Learn the system</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Nine courses covering everything from your first lease to scaling a rental empire. In order, step by step.</p><a href="courses.html" style="color:var(--gold);font-weight:600;font-size:15px">Browse the Courses &rarr;</a></div></div>
       <div class="card rv step-card"><div class="step-card-img"><img src="img/club-image.png" alt="Club" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 03</div><h3 style="font-size:23px;margin-bottom:10px">Go all in</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">The Elite Leasing Club: every course, weekly live coaching, and a community of agents actually closing deals.</p><a href="club.html" style="color:var(--gold);font-weight:600;font-size:15px">Join the Club &rarr;</a></div></div>
     </div>
@@ -305,10 +305,7 @@ function buildClub() {
       <div class="stack-item rv"><div class="stack-no">4</div><div><h3>The complete deliverables vault <span>$1,500 value</span></h3><p>Done-for-you tools that replace years of trial and error: the 30-Day Action Plan, the Building Bible, the Objection Handling Playbook, the Follow-Up Script Vault, the Content Repurposing Flowchart, the Income Tracker &amp; Commission Forecast, and dozens more.</p></div></div>
       <div class="stack-item rv"><div class="stack-no">5</div><div><h3>The Lease Up, every Saturday</h3><p>Weekly strategies and market insights in your inbox. Stay sharp between sessions.</p></div></div>
     </div>
-    <div class="stack-total rv">
-      <div class="st-old">Total value if bought separately: <span class="strike-val">over ${C.pricing.totalValue}</span></div>
-      <div class="st-deal">Yours inside the Club for <span class="deal-price">${PRICE(C.pricing.clubMonthly)}<span class="deal-per">/month</span></span></div>
-    </div>
+    <div class="stack-total rv">Total value if bought separately: <span class="strike-val">over ${C.pricing.totalValue}</span>.<br>Yours inside the Club for <strong>${PRICE(C.pricing.clubMonthly)}/month</strong>.</div>
   </div>
 </section>
 <section class="section who">
