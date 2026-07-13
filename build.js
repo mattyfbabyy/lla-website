@@ -100,7 +100,7 @@ if(burger){burger.addEventListener('click',()=>{const o=mm.classList.toggle('ope
 mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mm.classList.remove('open');burger.classList.remove('open')}));}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-document.querySelectorAll('form[data-optin],.optin form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('input[type=email]');var body=new URLSearchParams({u:'5',f:'3',s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:''});fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});
+document.querySelectorAll('form[data-optin],.optin form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('input[type=email]');var fn=f.querySelector('input[name=firstname]');var body=new URLSearchParams({u:'5',f:'3',s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:'',firstname:fn?fn.value.trim():''});fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});
 const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,end=parseFloat(el.dataset.count||0);}),{threshold:.6});
 </script>`;
 
@@ -446,7 +446,7 @@ function buildEbook() {
       <div class="eyebrow">Free E-Book</div>
       <h1>${highlight(e.heroHeadline, e.heroHighlight)}</h1>
       <p class="sub">${e.heroSub}</p>
-      <form class="optform" data-optin><input type="email" placeholder="Your best email" required><button class="btn btn-gold" type="submit">${e.formButton}</button></form>
+      <form class="optform" data-optin><input type="text" name="firstname" placeholder="First name" autocomplete="given-name" required><input type="email" name="email" placeholder="Your best email" autocomplete="email" required><button class="btn btn-gold" type="submit">${e.formButton}</button></form>
       <div class="form-micro">Delivered instantly. No spam, unsubscribe anytime.</div>
     </div>
     <div class="book-shot rv in"><img src="${C.images.ebookCover}" alt="E-book"></div>
@@ -455,7 +455,7 @@ function buildEbook() {
 <hr class="horizon">
 <section class="section"><div class="wrap"><div class="section-head rv"><div class="eyebrow">Inside The Book</div><h2>What you'll learn</h2></div><ul class="bullets rv" style="max-width:740px"><li>Why luxury rentals can outpace sales commissions, especially in your first 1 to 3 years</li><li>The <strong>Power 25</strong> framework for building a network that sends you deals</li><li>The showing strategy that closes leases in the first 90 seconds</li><li>How to build a personal brand that attracts clients without chasing them</li><li>The system and referral engine behind a scalable rental business</li></ul></div></section>
 <section class="band"><div class="glow"></div><div class="wrap" style="position:relative;max-width:760px"><h2 class="rv">99 out of 100 agents enter real estate chasing sales and wondering why nothing is working.</h2><p class="rv">This guide is the playbook for the one who doesn't.</p></div></section>
-<section class="section center"><div class="wrap"><div class="section-head rv"><h2>Get your free copy</h2></div><form class="optform rv" data-optin><input type="email" placeholder="Your best email" required><button class="btn btn-gold" type="submit">${e.formButton}</button></form><div class="form-micro rv">Delivered instantly. No spam, unsubscribe anytime.</div></div></section>`;
+<section class="section center"><div class="wrap"><div class="section-head rv"><h2>Get your free copy</h2></div><form class="optform rv" data-optin><input type="text" name="firstname" placeholder="First name" autocomplete="given-name" required><input type="email" name="email" placeholder="Your best email" autocomplete="email" required><button class="btn btn-gold" type="submit">${e.formButton}</button></form><div class="form-micro rv">Delivered instantly. No spam, unsubscribe anytime.</div></div></section>`;
   write('ebook.html', page(`Free E-Book | ${C.brand.name}`, body, CSS_SHARED));
 }
 
@@ -857,7 +857,7 @@ body{background:var(--ivory)}
 `;
 
   const HUB_JS = `<script>
-document.querySelectorAll('form[data-optin]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('input[type=email]');var body=new URLSearchParams({u:'5',f:'3',s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:''});fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});
+document.querySelectorAll('form[data-optin]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('input[type=email]');var fn=f.querySelector('input[name=firstname]');var body=new URLSearchParams({u:'5',f:'3',s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:'',firstname:fn?fn.value.trim():''});fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});
 </script>`;
 
   const body = `<main class="hub">
@@ -876,7 +876,8 @@ document.querySelectorAll('form[data-optin]').forEach(function(f){f.addEventList
     </div>
     <p class="hub-hero-sub">${hub.ebookSub}</p>
     <form class="hub-form" data-optin>
-      <input type="email" placeholder="Your best email" required>
+      <input type="text" name="firstname" placeholder="First name" autocomplete="given-name" required>
+      <input type="email" name="email" placeholder="Your best email" autocomplete="email" required>
       <button class="btn btn-gold" type="submit">${C.ebook.formButton}</button>
     </form>
     <div class="hub-micro">Delivered instantly. No spam, unsubscribe anytime.</div>
@@ -1032,7 +1033,7 @@ function loadArticles() {
   return { live, scheduled };
 }
 
-const SUB_BOX = `<div class="art-sub rv"><h3>Get the next one in your inbox</h3><p>The Lease Up: one sharp leasing idea every Saturday. No fluff, no spam.</p><form data-optin><input type="email" name="email" placeholder="Your best email" required><button class="btn btn-gold" type="submit">Subscribe Free</button></form></div>`;
+const SUB_BOX = `<div class="art-sub rv"><h3>Get the next one in your inbox</h3><p>The Lease Up: one sharp leasing idea every Saturday. No fluff, no spam.</p><form data-optin><input type="text" name="firstname" placeholder="First name" autocomplete="given-name" required><input type="email" name="email" placeholder="Your best email" autocomplete="email" required><button class="btn btn-gold" type="submit">Subscribe Free</button></form></div>`;
 
 function buildBlog() {
   const res = loadArticles();

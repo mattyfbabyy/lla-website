@@ -129,6 +129,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 .optform{display:flex;gap:12px;max-width:520px;flex-wrap:wrap}
 .optform input{flex:1;min-width:220px;padding:15px 22px;border-radius:999px;border:1.5px solid rgba(185,137,47,.4);background:var(--white);font-family:inherit;font-size:16px;outline:none;color:var(--espresso)}
 .optform input:focus{border-color:var(--gold)}
+.optform input[name=firstname]{flex:0 1 170px;min-width:150px}
 .optform .btn{padding:15px 30px}
 .form-micro{font-size:13.5px;color:var(--haze);margin-top:12px}
 .center{text-align:center}
