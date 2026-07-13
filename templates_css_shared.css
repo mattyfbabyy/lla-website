@@ -179,6 +179,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
   .final{padding:76px 0}
   .hero-split,.chero,.mhero{padding:48px 0 54px}
   .optform .btn,.cprice .btn{width:100%;text-align:center}
+  .optform input,.optform input[name=firstname]{flex:1 1 100%;min-width:100%}
   .arch img{height:360px}
   .stats{gap:24px}
   .stat .num{font-size:32px}
