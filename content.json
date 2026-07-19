@@ -28,7 +28,7 @@
     "clubMonthly": "$297",
     "courseDefault": "$697",
     "totalValue": "$7,000",
-    "commissionLow": "$3,000+",
+    "commissionLow": "$2,500+",
     "commissionHigh": "$6,000",
     "playbook": "$20",
     "clubAnnual": "$2,970",
@@ -123,16 +123,16 @@
     "buyButton": "Get the Playbook for $20",
     "bandLine1": "Most agents spend their first month guessing.",
     "bandLine2": "You'll spend yours executing a plan that works.",
-    "finalHeadline": "30 days. One clear plan. Twenty dollars."
+    "finalHeadline": "30 days. <strong>One clear plan.</strong><br>Twenty dollars."
   },
   "leaseup": {
     "eyebrow": "The Lease Up",
     "heroHeadline": "Weekly leasing strategy, straight to your inbox",
     "heroHighlight": "straight to your inbox",
-    "heroSub": "Every Saturday: one sharp idea to help you close more leases, build your brand, and run rentals like a real business. No fluff, no spam.",
+    "heroSub": "Every Sunday: one sharp idea to help you close more leases, build your brand, and run rentals like a real business.",
     "formButton": "Subscribe Free",
     "bandLine1": "The agents who win read between the deals.",
-    "bandLine2": "The Lease Up is where that edge gets built, one Saturday at a time."
+    "bandLine2": "The Lease Up is where that edge gets built, one Sunday at a time."
   },
   "hub": {
     "ebookTag": "Free E-Book",

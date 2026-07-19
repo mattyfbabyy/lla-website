@@ -100,7 +100,7 @@ if(burger){burger.addEventListener('click',()=>{const o=mm.classList.toggle('ope
 mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mm.classList.remove('open');burger.classList.remove('open')}));}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-document.querySelectorAll('form[data-optin],.optin form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('input[type=email]');var fn=f.querySelector('input[name=firstname]');var body=new URLSearchParams({u:'5',f:'3',s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:'',firstname:fn?fn.value.trim():''});fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});
+document.querySelectorAll('form[data-optin],.optin form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('input[type=email]');var body=new URLSearchParams({u:'5',f:'3',s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:''});fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});
 const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,end=parseFloat(el.dataset.count||0);}),{threshold:.6});
 </script>`;
 
@@ -217,7 +217,10 @@ function buildHome() {
   const h = C.home;
   const body = `<header class="hero" style="position:relative;overflow:hidden">
   <div class="wrap home-hero-grid" id="herogrid">
-    <div class="rv in">
+    <div class="rv in hero-media" style="position:relative">
+      <div class="arch"><img src="${C.images.heroPhoto}" alt="${C.brand.name}"></div>
+    </div>
+    <div class="rv in hero-copy">
       <div class="eyebrow">${h.eyebrow}</div>
       <h1 style="font-size:clamp(40px,5.2vw,64px);margin-bottom:24px">${highlight(h.heroHeadline, h.heroHighlight)}</h1>
       <p style="font-size:19px;color:var(--espresso-soft);max-width:560px;margin-bottom:34px">${h.heroSub}</p>
@@ -231,9 +234,6 @@ function buildHome() {
         <div class="stat"><div class="num">${h.stat2Num}</div><div class="lbl">${h.stat2Label}</div></div>
         <div class="stat"><div class="num">${h.stat3Num}</div><div class="lbl">${h.stat3Label}</div></div>
       </div>
-    </div>
-    <div class="rv in" style="position:relative">
-      <div class="arch"><img src="${C.images.heroPhoto}" alt="${C.brand.name}"></div>
     </div>
   </div>
 </header>
@@ -263,7 +263,7 @@ function buildHome() {
   <div class="wrap">
     <div class="section-head rv"><div class="eyebrow">The Path</div><h2>Your path to a real luxury rental business</h2></div>
     <div class="cards3">
-      <div class="card rv step-card"><div class="step-card-img"><img src="img/ebook-image.png" alt="E-book" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 01</div><h3 style="font-size:23px;margin-bottom:10px">Start free</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Download the e-book and learn the 9 secrets top earners use to build their rental businesses.</p><a href="ebook.html" style="color:var(--gold);font-weight:600;font-size:15px">Get the Free E-Book &rarr;</a></div></div>
+      <div class="card rv step-card"><div class="step-card-img"><img src="${C.images.ebookCover}" alt="E-book" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 01</div><h3 style="font-size:23px;margin-bottom:10px">Start free</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Download the e-book and learn the 9 secrets top earners use to build their rental businesses.</p><a href="ebook.html" style="color:var(--gold);font-weight:600;font-size:15px">Get the Free E-Book &rarr;</a></div></div>
       <div class="card rv step-card"><div class="step-card-img"><img src="img/courses-lineup.png" alt="All nine courses" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 02</div><h3 style="font-size:23px;margin-bottom:10px">Learn the system</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">Nine courses covering everything from your first lease to scaling a rental empire. In order, step by step.</p><a href="courses.html" style="color:var(--gold);font-weight:600;font-size:15px">Browse the Courses &rarr;</a></div></div>
       <div class="card rv step-card"><div class="step-card-img"><img src="img/club-image.png" alt="Club" style="max-height:100%"></div><div class="step-card-body"><div class="step-no-label">STEP 03</div><h3 style="font-size:23px;margin-bottom:10px">Go all in</h3><p style="color:var(--espresso-soft);font-size:15.5px;margin-bottom:18px">The Elite Leasing Club: every course, weekly live coaching, and a community of agents actually closing deals.</p><a href="club.html" style="color:var(--gold);font-weight:600;font-size:15px">Join the Club &rarr;</a></div></div>
     </div>
@@ -272,7 +272,7 @@ function buildHome() {
 <section class="final">
   <div class="glow"></div>
   <div class="wrap">
-    <h2 class="rv">${h.finalHeadline.replace('something real?', '<br class="final-mbr"><span class="final-accent">something real?</span>')}</h2>
+    <h2 class="rv">${h.finalHeadline}</h2>
     <p class="rv">${h.finalSub}</p>
     <a href="club.html" class="btn btn-gold rv" style="font-size:17px;padding:16px 38px">Join the Elite Leasing Club</a>
     <div class="micro rv">Not ready yet? <a href="ebook.html">Start with the free e-book.</a></div>
@@ -303,9 +303,12 @@ function buildClub() {
       <div class="stack-item rv"><div class="stack-no">2</div><div><h3>Weekly live strategy sessions</h3><p>Real coaching on what's working right now. Bring your deals, your objections, your stuck points. Leave with answers.</p></div></div>
       <div class="stack-item rv"><div class="stack-no">3</div><div><h3>The private community</h3><p>Agents who close, sharing scripts, wins, and market intel. No spectators.</p></div></div>
       <div class="stack-item rv"><div class="stack-no">4</div><div><h3>The complete deliverables vault <span>$1,500 value</span></h3><p>Done-for-you tools that replace years of trial and error: the 30-Day Action Plan, the Building Bible, the Objection Handling Playbook, the Follow-Up Script Vault, the Content Repurposing Flowchart, the Income Tracker &amp; Commission Forecast, and dozens more.</p></div></div>
-      <div class="stack-item rv"><div class="stack-no">5</div><div><h3>The Lease Up, every Saturday</h3><p>Weekly strategies and market insights in your inbox. Stay sharp between sessions.</p></div></div>
+      <div class="stack-item rv"><div class="stack-no">5</div><div><h3>The Lease Up, every Sunday</h3><p>Weekly strategies and market insights in your inbox. Stay sharp between sessions.</p></div></div>
     </div>
-    <div class="stack-total rv">Total value if bought separately: <span class="strike-val">over ${C.pricing.totalValue}</span>.<br>Yours inside the Club for <strong>${PRICE(C.pricing.clubMonthly)}/month</strong>.</div>
+    <div class="stack-total rv">
+      <div class="st-old">Total value if bought separately: <span class="strike-val">over ${C.pricing.totalValue}</span></div>
+      <div class="st-deal">Yours inside the Club for <span class="deal-price">${PRICE(C.pricing.clubMonthly)}<span class="deal-per">/month</span></span></div>
+    </div>
   </div>
 </section>
 <section class="section who">
@@ -406,9 +409,26 @@ function buildCourses() {
 }
 
 // ---------- COURSE DETAIL ----------
+// Short description shown when a module card is expanded (course detail page).
+const MODULE_DESC = {
+ 1:["Get oriented before anything else: how the program works, what to expect, and how to set yourself up for a strong start. You'll leave with a clear picture of the path ahead.","What the luxury rental market actually is, who the clients are, and why this niche pays. You'll see how high-end leasing differs from standard rentals and from sales.","The licensing steps, what they involve, and how to move through them without wasting time. A clear route from where you are now to legally working with clients.","How to evaluate brokerages so you land somewhere that supports luxury leasing. Covers the questions to ask, the splits to understand, and the red flags to avoid.","How to study your city block by block and building by building. You'll learn your inventory well enough to speak with authority to any client.","The systems, tools, and habits that make you look and operate like a professional from day one. The basics clients quietly judge you on.","The mental habits that carry agents through a slow first few months. How to stay consistent while your results are still building.","A step-by-step plan for agents starting from scratch. Your first moves, in order, so you always know what to do next.","A step-by-step plan for agents who already have a license or some experience. Where to focus so you build momentum faster."],
+ 2:["What this course covers and how to use it. A quick map of how you'll build your list of go-to buildings.","What separates a property worth your time from one that drains it. The features, price points, and building types that lead to real commissions.","How to find and vet buildings before you ever set foot inside. The sources and signals that tell you where the deals are.","A framework for scoring buildings on commission, ease, and client fit. How to start the Building Bible you'll rely on for years.","How to get property managers and leasing offices to know you, trust you, and send you deals. The outreach that turns a cold building warm.","The common obstacles at this stage and how to work through them. What to do when buildings are slow to respond or inventory is tight.","Your step-by-step plan to build a working list of buildings and relationships. Clear next moves you can start this week."],
+ 3:["What lead generation really is and why consistency beats luck. How to think about your pipeline as a system you control.","How to turn the people you already know into your first and best source of leads. Outreach that feels natural, not pushy.","Where online leads come from and how to capture them. The platforms, profiles, and follow-up that actually convert.","The in-person and local strategies most agents ignore. How to generate leads through networking, events, and your neighborhood.","How to tell a real lead from a time-waster, and how to follow up so leads don't go cold. The cadence that turns names into appointments.","What to do when your pipeline runs dry or your outreach stalls. Fixes for the common lead gen slumps.","A daily and weekly prospecting plan you can run on repeat. Your lead gen routine, mapped out."],
+ 4:["What closing really means and what this course will teach you. A quick look at the mindset shift ahead.","The internal game behind confident closing. How top agents lead the conversation instead of chasing it.","How to connect with clients quickly so they trust your guidance. The early moves that set up an easy close later.","How and when to ask for the commitment without being pushy. Timing and language that make the ask feel natural.","The objections you'll hear again and again, and how to answer each one. How to keep a maybe from becoming a no.","Walking a client smoothly from yes to signed. The steps that keep deals from falling apart at the finish line.","What to do when clients stall, ghost, or hesitate. How to recover a deal that looks stuck.","Your plan to practice and sharpen your closing until it's second nature. Clear reps to run on your next showings."],
+ 5:["Why the way you manage clients decides whether they come back and refer you. A preview of the systems you'll build.","The basics of staying organized and responsive so nothing slips. How small touches build long-term trust.","How to make every client feel looked after, whatever their budget. The service details that get you remembered and recommended.","How to stay in front of past clients and contacts without feeling like a nuisance. The follow-up rhythm that keeps you top of mind.","The tools that let you manage more clients without dropping the ball. How to set up a simple system that runs itself.","How to ask for and earn referrals on purpose, not by chance. Turning one happy client into several.","Handling difficult clients, quiet stretches, and dropped follow-ups. How to keep relationships healthy over time.","Your plan to set up a client system and referral engine. The steps to put this into practice."],
+ 6:["Why your brand is working for or against you whether you build it or not. What this course will help you shape.","What a personal brand actually does for an agent and why it matters more than most realize. How a strong brand brings clients to you.","Defining your voice, your look, and what you stand for. The core pieces that make your brand recognizable.","How to look honestly at your current presence and find the gaps. A clear read on where you stand today.","How to make content that sounds like you and speaks to your clients. The formats that build recognition over time.","How to grow an audience that actually cares, not just a follower count. Turning attention into relationships.","How to grow faster by working with the right people. Finding and approaching partners who share your audience.","How to tell what's working and do more of it. The simple metrics worth watching.","How to keep your brand consistent once the initial push is over. Staying visible without burning out.","Your plan to build and launch your brand step by step. Where to start and what comes next."],
+ 7:["How social media fits into a real leasing business. A preview of the system you'll build instead of posting at random.","Why social media is one of the highest-leverage tools an agent has. What it can do when you run it with intent.","How to set goals and pick the right platforms for your market. A plan before you post.","How to create posts, videos, and stories that grow your reach without ad spend. The content types that earn attention.","The basics of running ads that bring in leads. How to start small and spend without wasting money.","How to build a following that responds and reaches out. The engagement habits that compound over time.","How to team up with others to reach new audiences. Collaborations that put you in front of the right people.","How to read your numbers and improve what you post. Focusing on the metrics that matter.","How to keep growing without letting content take over your week. Systems to produce more with less effort.","Your plan to run social media like a system. Clear next steps to put it in motion."],
+ 8:["The shift from being a busy agent to running a real business. What this course will help you put in place.","The vision, structure, and legal basics a business needs underneath it. Setting the groundwork before you scale.","How to grow lead flow beyond what you can generate by hand. Turning lead gen into a repeatable engine.","How to track your numbers, plan, and run your business by the math. The financial habits that keep you in control.","When and how to hire, and who to bring on first. How to delegate without losing quality.","The tools that let you do more without adding hours. How to automate the repetitive parts of your business.","How to grow steadily without breaking what already works. Keeping quality high as volume rises.","Your plan to put business systems in place. The steps to move from agent to owner."],
+ 9:["What real scale looks like once the business already works. A preview of how to multiply, not just maintain.","How to know you're ready to scale and why timing matters. The signs that it's time to push.","How to grow lead flow at a larger scale. Systems that keep the pipeline full as you expand.","Using data and modern tools to run a bigger operation. How to make decisions from numbers, not guesses.","How to tighten your systems so growth doesn't create chaos. Doing more with less friction.","How to grow and lead a larger team. Hiring, onboarding, and building a culture that holds.","How to improve margins and manage money at scale. Getting more out of every dollar the business earns.","How to keep growing and when to move into a second market. Expanding without losing your footing.","Your plan to scale with structure. The steps to multiply what you've built."],
+};
+
 function buildCourseDetail(c) {
   const dels = c.deliverables.length ? c.deliverables.map(d => `<span class="dpill">${d}</span>`).join('') : '<p class="soon">Deliverables for this course are being finalized and will be included at launch.</p>';
-  const mods = c.modules.map(m => `<li>${m}</li>`).join('');
+  const mdesc = MODULE_DESC[c.n] || [];
+  const mods = c.modules.map((m, i) => {
+    const d = mdesc[i] ? `<div class="modcard-body">${mdesc[i]}</div>` : '';
+    return `<details class="modcard"><summary class="modcard-head"><span class="modcard-name">${m}</span><span class="modcard-chev" aria-hidden="true">+</span></summary>${d}</details>`;
+  }).join('');
   const whos = c.who.map(w => `<li>${w}</li>`).join('');
   const dcount = c.deliverables.length ? `${c.deliverables.length} done-for-you tools included` : "Toolkit in production";
   const body = `<header class="chero">
@@ -424,7 +444,7 @@ function buildCourseDetail(c) {
 </header>
 <hr class="horizon">
 <section class="section" style="padding-bottom:50px"><div class="wrap"><div class="section-head rv"><div class="eyebrow">Who This Is For</div><h2>This course is built for you if</h2></div><ul class="bullets rv" style="max-width:700px">${whos}</ul></div></section>
-<section class="section" style="padding:50px 0"><div class="wrap"><div class="section-head rv"><div class="eyebrow">The Curriculum</div><h2>What you'll learn</h2><p>${c.modules.length} modules, ${c.lessons} lessons. Slide-based video lessons you can take at your own pace.</p></div><ol class="modlist rv">${mods}</ol></div></section>
+<section class="section" style="padding:50px 0"><div class="wrap"><div class="section-head rv"><div class="eyebrow">The Curriculum</div><h2>What you'll learn</h2><p>${c.modules.length} modules, ${c.lessons} lessons. Slide-based video lessons you can take at your own pace. Tap any module to see what it covers.</p></div><div class="modlist rv">${mods}</div></div></section>
 <section class="section" style="padding-top:50px"><div class="wrap"><div class="section-head rv"><div class="eyebrow">The Toolkit</div><h2>Your deliverables</h2><p>${dcount}. These aren't worksheets for the sake of worksheets; they're the actual systems used in the field.</p></div><div class="dgrid rv">${dels}</div></div></section>
 <section class="final">
   <div class="glow"></div>
@@ -446,7 +466,7 @@ function buildEbook() {
       <div class="eyebrow">Free E-Book</div>
       <h1>${highlight(e.heroHeadline, e.heroHighlight)}</h1>
       <p class="sub">${e.heroSub}</p>
-      <form class="optform" data-optin><input type="text" name="firstname" placeholder="First name" autocomplete="given-name" required><input type="email" name="email" placeholder="Your best email" autocomplete="email" required><button class="btn btn-gold" type="submit">${e.formButton}</button></form>
+      <form class="optform" data-optin><input type="email" placeholder="Your best email" required><button class="btn btn-gold" type="submit">${e.formButton}</button></form>
       <div class="form-micro">Delivered instantly. No spam, unsubscribe anytime.</div>
     </div>
     <div class="book-shot rv in"><img src="${C.images.ebookCover}" alt="E-book"></div>
@@ -455,7 +475,7 @@ function buildEbook() {
 <hr class="horizon">
 <section class="section"><div class="wrap"><div class="section-head rv"><div class="eyebrow">Inside The Book</div><h2>What you'll learn</h2></div><ul class="bullets rv" style="max-width:740px"><li>Why luxury rentals can outpace sales commissions, especially in your first 1 to 3 years</li><li>The <strong>Power 25</strong> framework for building a network that sends you deals</li><li>The showing strategy that closes leases in the first 90 seconds</li><li>How to build a personal brand that attracts clients without chasing them</li><li>The system and referral engine behind a scalable rental business</li></ul></div></section>
 <section class="band"><div class="glow"></div><div class="wrap" style="position:relative;max-width:760px"><h2 class="rv">99 out of 100 agents enter real estate chasing sales and wondering why nothing is working.</h2><p class="rv">This guide is the playbook for the one who doesn't.</p></div></section>
-<section class="section center"><div class="wrap"><div class="section-head rv"><h2>Get your free copy</h2></div><form class="optform rv" data-optin><input type="text" name="firstname" placeholder="First name" autocomplete="given-name" required><input type="email" name="email" placeholder="Your best email" autocomplete="email" required><button class="btn btn-gold" type="submit">${e.formButton}</button></form><div class="form-micro rv">Delivered instantly. No spam, unsubscribe anytime.</div></div></section>`;
+<section class="section center"><div class="wrap"><div class="section-head rv"><h2>Get your free copy</h2></div><form class="optform optform-stack rv" data-optin><input type="email" placeholder="Your best email" required><button class="btn btn-gold" type="submit">${e.formButton}</button></form><div class="form-micro rv">Delivered instantly. No spam, unsubscribe anytime.</div></div></section>`;
   write('ebook.html', page(`Free E-Book | ${C.brand.name}`, body, CSS_SHARED));
 }
 
@@ -489,11 +509,11 @@ function buildLeaseUp() {
   const ac = C.links;
   const body = `<header class="hero-split">
   <div class="wrap hs-grid">
-    <div class="rv in">
+    <div class="rv in leaseup-hero-col">
       <div class="eyebrow">${l.eyebrow}</div>
       <h1>${highlight(l.heroHeadline, l.heroHighlight)}</h1>
       <p class="sub">${l.heroSub}</p>
-      <form class="optform" method="POST" action="${ac.activeCampaignAction}">
+      <form class="optform optform-stack" method="POST" action="${ac.activeCampaignAction}">
         <input type="hidden" name="u" value="${ac.acUserId}" />
         <input type="hidden" name="f" value="${ac.acFormId}" />
         <input type="hidden" name="s" />
@@ -501,14 +521,15 @@ function buildLeaseUp() {
         <input type="hidden" name="m" value="0" />
         <input type="hidden" name="act" value="sub" />
         <input type="hidden" name="v" value="2" />
+        <input type="text" name="firstname" placeholder="First name" required>
         <input type="email" name="email" placeholder="Your best email" required>
         <button class="btn btn-gold" type="submit">${l.formButton}</button>
       </form>
-      <div class="form-micro">Every Saturday. No spam, unsubscribe anytime.</div>
+      <div class="form-micro">Every Sunday. Unsubscribe anytime.</div>
     </div>
     <div class="leaseup-art rv in">
       <div class="leaseup-card">
-        <div class="leaseup-card-tag">SATURDAYS</div>
+        <div class="leaseup-card-tag">SUNDAYS</div>
         <div class="leaseup-card-title">The Lease Up</div>
         <div class="leaseup-card-line"></div>
         <p class="leaseup-card-sub">One idea. Five minutes. Real leasing strategy from the field.</p>
@@ -519,7 +540,7 @@ function buildLeaseUp() {
 <hr class="horizon">
 <section class="section"><div class="wrap"><div class="section-head rv"><div class="eyebrow">What You'll Get</div><h2>Every issue, something you can use Monday</h2></div><ul class="bullets rv" style="max-width:740px"><li>The lead gen move that's working <strong>right now</strong>, not last year</li><li>Scripts and templates you can copy straight into your next conversation</li><li>How top agents are positioning their brand to attract clients</li><li>Market shifts and what they mean for your commissions</li></ul></div></section>
 <section class="band"><div class="glow"></div><div class="wrap" style="position:relative;max-width:760px"><h2 class="rv">${l.bandLine1}</h2><p class="rv">${l.bandLine2}</p></div></section>
-<section class="section center"><div class="wrap"><div class="section-head rv"><div class="eyebrow">Join Free</div><h2>Get The Lease Up this Saturday</h2></div><form class="optform rv" method="POST" action="${ac.activeCampaignAction}"><input type="hidden" name="u" value="${ac.acUserId}" /><input type="hidden" name="f" value="${ac.acFormId}" /><input type="hidden" name="s" /><input type="hidden" name="c" value="0" /><input type="hidden" name="m" value="0" /><input type="hidden" name="act" value="sub" /><input type="hidden" name="v" value="2" /><input type="email" name="email" placeholder="Your best email" required><button class="btn btn-gold" type="submit">${l.formButton}</button></form><div class="form-micro rv">Every Saturday. No spam, unsubscribe anytime.</div></div></section>`;
+<section class="section center"><div class="wrap"><div class="section-head rv"><div class="eyebrow">Join Free</div><h2>Get The Lease Up this Sunday</h2></div><form class="optform optform-stack rv" method="POST" action="${ac.activeCampaignAction}"><input type="hidden" name="u" value="${ac.acUserId}" /><input type="hidden" name="f" value="${ac.acFormId}" /><input type="hidden" name="s" /><input type="hidden" name="c" value="0" /><input type="hidden" name="m" value="0" /><input type="hidden" name="act" value="sub" /><input type="hidden" name="v" value="2" /><input type="text" name="firstname" placeholder="First name" required><input type="email" name="email" placeholder="Your best email" required><button class="btn btn-gold" type="submit">${l.formButton}</button></form><div class="form-micro rv">Every Sunday. Unsubscribe anytime.</div></div></section>`;
   write('the-lease-up.html', page(`The Lease Up | ${C.brand.name}`, body, CSS_SHARED));
 }
 
@@ -540,7 +561,7 @@ function buildThanks() {
     intro: "Thanks for signing up. Your first email from Luxury Leasing Academy is on its way right now.",
     inboxTitle: "One quick step so it reaches you",
     steps,
-    note: `Grabbed the free e-book? Your download link is inside that first email. Joined The Lease Up? Your first issue lands this Saturday. Questions anytime: <a href="mailto:${C.brand.contactEmail}">${C.brand.contactEmail}</a>.`,
+    note: `Grabbed the free e-book? Your download link is inside that first email. Joined The Lease Up? Your first issue lands this Sunday. Questions anytime: <a href="mailto:${C.brand.contactEmail}">${C.brand.contactEmail}</a>.`,
     secondary
   });
   write('thanks.html', page(`You're In | ${C.brand.name}`, body + EVT('generate_lead',{method:'email_optin'}), CSS_SHARED + THANKS_CSS));
@@ -853,11 +874,12 @@ body{background:var(--ivory)}
 .hub-foot-links a{color:var(--espresso-soft);transition:color .2s}
 .hub-foot-links a:hover{color:var(--gold)}
 .hub-copy{font-size:12px;color:var(--haze);margin-top:12px}
+@media(max-width:600px){.hub-brand{display:none}}
 @media(max-width:380px){.hub-hero-cover{width:68px}.hub-hero-title{font-size:18px}.hub-brand{font-size:23px}}
 `;
 
   const HUB_JS = `<script>
-document.querySelectorAll('form[data-optin]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('input[type=email]');var fn=f.querySelector('input[name=firstname]');var body=new URLSearchParams({u:'5',f:'3',s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:'',firstname:fn?fn.value.trim():''});fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});
+document.querySelectorAll('form[data-optin]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('input[type=email]');var body=new URLSearchParams({u:'5',f:'3',s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:''});fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});
 </script>`;
 
   const body = `<main class="hub">
@@ -876,8 +898,7 @@ document.querySelectorAll('form[data-optin]').forEach(function(f){f.addEventList
     </div>
     <p class="hub-hero-sub">${hub.ebookSub}</p>
     <form class="hub-form" data-optin>
-      <input type="text" name="firstname" placeholder="First name" autocomplete="given-name" required>
-      <input type="email" name="email" placeholder="Your best email" autocomplete="email" required>
+      <input type="email" placeholder="Your best email" required>
       <button class="btn btn-gold" type="submit">${C.ebook.formButton}</button>
     </form>
     <div class="hub-micro">Delivered instantly. No spam, unsubscribe anytime.</div>
@@ -902,7 +923,7 @@ document.querySelectorAll('form[data-optin]').forEach(function(f){f.addEventList
   <div class="hub-grouplabel">${hub.group2Label}</div>
   <div class="hub-stack">
     <a class="hub-link" href="the-lease-up.html">
-      <span class="hub-link-main"><span class="hub-link-title">The Lease Up</span><span class="hub-link-note">Weekly leasing strategy, every Saturday</span></span>
+      <span class="hub-link-main"><span class="hub-link-title">The Lease Up</span><span class="hub-link-note">Weekly leasing strategy, every Sunday</span></span>
       <span class="hub-pill">Free</span>
     </a>
     <a class="hub-link" href="meet-matty.html">
@@ -1033,7 +1054,7 @@ function loadArticles() {
   return { live, scheduled };
 }
 
-const SUB_BOX = `<div class="art-sub rv"><h3>Get the next one in your inbox</h3><p>The Lease Up: one sharp leasing idea every Saturday. No fluff, no spam.</p><form data-optin><input type="text" name="firstname" placeholder="First name" autocomplete="given-name" required><input type="email" name="email" placeholder="Your best email" autocomplete="email" required><button class="btn btn-gold" type="submit">Subscribe Free</button></form></div>`;
+const SUB_BOX = `<div class="art-sub rv"><h3>Get the next one in your inbox</h3><p>The Lease Up: one sharp leasing idea every Sunday.</p><form data-optin><input type="email" name="email" placeholder="Your best email" required><button class="btn btn-gold" type="submit">Subscribe Free</button></form></div>`;
 
 function buildBlog() {
   const res = loadArticles();

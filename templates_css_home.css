@@ -35,6 +35,8 @@ nav{position:sticky;top:0;z-index:50;background:rgba(250,246,238,.92);backdrop-f
 .nav-links{display:flex;gap:30px;align-items:center;font-weight:500;font-size:15px}
 .nav-links a{color:var(--espresso-soft);transition:color .2s}
 .nav-links a:hover{color:var(--gold)}
+.nav-links a.btn-gold{color:#fff}
+.nav-links a.btn-gold:hover{color:var(--espresso)}
 .nav-login{font-size:14px;color:var(--haze)!important}
 .btn{display:inline-block;padding:13px 28px;border-radius:999px;font-weight:600;font-size:15.5px;transition:transform .25s,box-shadow .25s;cursor:pointer;border:none}
 .btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold-bright));color:#fff;box-shadow:0 6px 18px rgba(185,137,47,.32)}
@@ -122,8 +124,6 @@ nav{position:sticky;top:0;z-index:50;background:rgba(250,246,238,.92);backdrop-f
 .final p{color:#CBBFAE;font-size:19px;margin-bottom:38px;position:relative}
 .final .micro{font-size:14.5px;margin-top:22px;color:#A4937D;position:relative}
 .final .micro a{color:var(--gold-bright);text-decoration:underline}
-.final-mbr{display:none}
-.final-accent{color:inherit;font-style:inherit}
 
 /* footer */
 footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
@@ -178,7 +178,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
   .wrap{padding:0 20px}
   .nav-inner{padding:12px 20px}
   .nav-logo img{height:60px}
-  .hero{padding:28px 0 56px}
+  .hero{padding:24px 0 56px}
   .hero h1{font-size:38px}
   .hero p{font-size:17px}
   .hero-ctas{flex-direction:column}
@@ -194,8 +194,6 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
   .band .big{font-size:84px}
   .matty-photo img{height:360px}
   .final{padding:76px 0}
-  .final-mbr{display:block}
-  .final-accent{color:var(--gold-bright);font-style:italic;font-size:1.2em}
   .foot-grid{grid-template-columns:1fr;gap:28px}
   .foot-bottom{flex-direction:column;gap:6px}
   .optin-inner{flex-direction:column;align-items:stretch;gap:10px;text-align:center}
@@ -217,6 +215,8 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 @media (max-width:600px){.foot-brandname{font-size:18px}}
 
 .home-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+/* Image comes first in the DOM (so it sits on top on mobile); on desktop keep copy left, image right */
+@media (min-width:901px){.home-hero-grid .hero-copy{order:1}.home-hero-grid .hero-media{order:2}}
 .home-band-grid{display:grid;grid-template-columns:auto 1fr;gap:64px;align-items:center;position:relative}
 .home-band-big{font-family:'Fraunces',serif;font-size:clamp(90px,12vw,160px);color:var(--gold-bright);line-height:.95;font-weight:600}
 .step-card{padding:0;overflow:hidden}
@@ -226,7 +226,6 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 .step-no-label{font-family:'Fraunces',serif;color:var(--gold);font-size:15px;letter-spacing:.18em;font-weight:600;margin-bottom:10px}
 @media (max-width:900px){
   .home-hero-grid{grid-template-columns:1fr;gap:40px}
-  .home-hero-grid > div:last-child{order:-1}
   .home-band-grid{grid-template-columns:1fr;gap:28px}
 }
 @media (max-width:600px){
