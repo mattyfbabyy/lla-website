@@ -147,6 +147,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 /* Stacked form: full-width fields, button matches input width, centered block */
 .optform-stack{flex-direction:column;flex-wrap:nowrap;max-width:420px;margin:0 auto}
 .optform-stack input,.optform-stack .btn{width:100%;flex:none;text-align:center}
+.optform-stack.optform-left{margin-left:0;margin-right:auto}
 /* Lease Up hero column centered on desktop */
 .leaseup-hero-col{text-align:center}
 .leaseup-hero-col .optform{margin:0 auto}
