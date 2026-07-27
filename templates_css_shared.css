@@ -183,7 +183,12 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 @media (max-width:900px){
   .cards3,.course-grid,.course-grid.two{grid-template-columns:1fr}
   .chero-grid,.hs-grid,.mhero-grid,.tw-grid{grid-template-columns:1fr;gap:44px}
-  .hs-grid.img-left{grid-template-columns:1fr}
+  .hs-grid.img-left{grid-template-columns:1fr;gap:26px}
+  .club-hero-left{display:contents}
+  .club-shot{order:1}
+  .club-hero-right{order:2}
+  .club-hero-left>.btn{order:3;justify-self:center}
+  .club-hero-left>.micro{order:4;margin-top:-14px;text-align:center}
   .foot-grid{grid-template-columns:1fr 1fr}
   .nav-links{display:none}
   .nav-burger{display:flex}

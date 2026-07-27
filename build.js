@@ -292,7 +292,7 @@ function buildClub() {
       <a href="${C.links.clubCheckout}" class="btn btn-gold" style="font-size:17px;padding:16px 38px">Join the Club &middot;&nbsp;${PRICE(C.pricing.clubMonthly)}/month</a>
       <div class="micro" style="font-size:14px;color:var(--haze)">Cancel anytime. No contracts.</div>
     </div>
-    <div class="rv in">
+    <div class="club-hero-right rv in">
       <div class="eyebrow">${cl.eyebrow}</div>
       <h1>${highlight(cl.heroHeadline, cl.heroHighlight)}</h1>
       <p class="sub">${cl.heroSub}</p>
