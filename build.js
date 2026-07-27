@@ -287,13 +287,15 @@ function buildClub() {
   const pills = COURSES.map(c => `<span class="pill"><b>C${c.n}</b>${c.title}</span>`).join('');
   const body = `<header class="hero-split">
   <div class="wrap hs-grid img-left">
-    <div class="club-shot rv in"><img src="img/club-image.png" alt="Inside the Elite Leasing Club"></div>
+    <div class="club-hero-left rv in">
+      <div class="club-shot"><img src="img/club-image.png" alt="Inside the Elite Leasing Club"></div>
+      <a href="${C.links.clubCheckout}" class="btn btn-gold" style="font-size:17px;padding:16px 38px">Join the Club &middot;&nbsp;${PRICE(C.pricing.clubMonthly)}/month</a>
+      <div class="micro" style="font-size:14px;color:var(--haze)">Cancel anytime. No contracts.</div>
+    </div>
     <div class="rv in">
       <div class="eyebrow">${cl.eyebrow}</div>
       <h1>${highlight(cl.heroHeadline, cl.heroHighlight)}</h1>
       <p class="sub">${cl.heroSub}</p>
-      <a href="${C.links.clubCheckout}" class="btn btn-gold" style="font-size:17px;padding:16px 38px">Join the Club &middot;&nbsp;${PRICE(C.pricing.clubMonthly)}/month</a>
-      <div class="micro" style="font-size:14px;color:var(--haze);margin-top:16px">Cancel anytime. No contracts.</div>
     </div>
   </div>
 </header>
