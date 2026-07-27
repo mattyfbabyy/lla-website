@@ -285,13 +285,16 @@ function buildHome() {
 function buildClub() {
   const cl = C.club;
   const pills = COURSES.map(c => `<span class="pill"><b>C${c.n}</b>${c.title}</span>`).join('');
-  const body = `<header class="hero" style="padding:84px 0 72px;text-align:center">
-  <div class="wrap">
-    <div class="eyebrow rv in">${cl.eyebrow}</div>
-    <h1 class="rv in" style="font-size:clamp(36px,4.8vw,58px);max-width:860px;margin:0 auto 24px">${highlight(cl.heroHeadline, cl.heroHighlight)}</h1>
-    <p class="rv in" style="font-size:19px;color:var(--espresso-soft);max-width:640px;margin:0 auto 36px">${cl.heroSub}</p>
-    <a href="${C.links.clubCheckout}" class="btn btn-gold rv in" style="font-size:17px;padding:16px 38px">Join the Club &middot;&nbsp;${PRICE(C.pricing.clubMonthly)}/month</a>
-    <div class="micro rv in" style="font-size:14px;color:var(--haze);margin-top:16px">Cancel anytime. No contracts.</div>
+  const body = `<header class="hero-split">
+  <div class="wrap hs-grid img-left">
+    <div class="club-shot rv in"><img src="img/club-image.png" alt="Inside the Elite Leasing Club"></div>
+    <div class="rv in">
+      <div class="eyebrow">${cl.eyebrow}</div>
+      <h1>${highlight(cl.heroHeadline, cl.heroHighlight)}</h1>
+      <p class="sub">${cl.heroSub}</p>
+      <a href="${C.links.clubCheckout}" class="btn btn-gold" style="font-size:17px;padding:16px 38px">Join the Club &middot;&nbsp;${PRICE(C.pricing.clubMonthly)}/month</a>
+      <div class="micro" style="font-size:14px;color:var(--haze);margin-top:16px">Cancel anytime. No contracts.</div>
+    </div>
   </div>
 </header>
 <hr class="horizon">

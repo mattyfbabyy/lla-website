@@ -134,6 +134,9 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 .hs-grid h1{font-size:clamp(36px,4.6vw,56px);margin-bottom:22px}
 .hs-grid h1 em{font-style:italic;color:var(--gold)}
 .hs-grid .sub{font-size:19px;color:var(--espresso-soft);margin-bottom:32px}
+.hs-grid.img-left{grid-template-columns:.95fr 1.05fr}
+.club-shot{display:flex;justify-content:center}
+.club-shot img{width:100%;max-width:620px;height:auto;border-radius:18px;box-shadow:0 26px 60px rgba(42,32,24,.22);outline:1.5px solid rgba(185,137,47,.35);outline-offset:0}
 .book-shot{display:flex;justify-content:center}
 .book-shot img{max-height:480px;width:auto;filter:drop-shadow(0 30px 50px rgba(42,32,24,.25))}
 .optform{display:flex;gap:12px;max-width:520px;flex-wrap:wrap}
@@ -179,6 +182,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
 @media (max-width:900px){
   .cards3,.course-grid,.course-grid.two{grid-template-columns:1fr}
   .chero-grid,.hs-grid,.mhero-grid,.tw-grid{grid-template-columns:1fr;gap:44px}
+  .hs-grid.img-left{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
   .nav-links{display:none}
   .nav-burger{display:flex}
@@ -194,6 +198,7 @@ footer{background:#211911;color:#B5A893;padding:64px 0 40px;font-size:14.5px}
   .band{padding:62px 0}
   .final{padding:76px 0}
   .hero-split,.chero,.mhero{padding:48px 0 54px}
+  .club-shot img{border-radius:14px;box-shadow:0 16px 36px rgba(42,32,24,.18)}
   .optform .btn,.cprice .btn{width:100%;text-align:center}
   .arch img{height:360px}
   .stats{gap:24px}
