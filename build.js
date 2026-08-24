@@ -90,7 +90,7 @@ const FOOTER = `<footer>
       <div><h4>Students</h4><a href="${C.brand.portalUrl}">${C.nav.login}</a><a href="${C.links.termsUrl}">Terms</a><a href="${C.links.privacyUrl}">Privacy</a></div>
     </div>
     <div class="foot-legal" style="max-width:880px;margin:0 auto 16px;padding-top:18px;border-top:1px solid rgba(255,255,255,.09);font-size:12px;line-height:1.55;color:rgba(255,255,255,.42);text-align:center">Results vary and are not typical. Luxury Leasing Academy LLC does not guarantee any specific income, earnings, or results. Individual outcomes depend on your own effort, skill, and market conditions. See our <a href="${C.links.termsUrl}" style="color:rgba(255,255,255,.62);text-decoration:underline">Terms</a> for full details.</div>
-    <div class="foot-bottom"><div>&copy; 2026 ${C.brand.name}, LLC</div><div>${C.brand.city}</div></div>
+    <div class="foot-bottom"><div>&copy; 2026 ${C.brand.name}, LLC &middot; Founded by <a href="https://mattyv3rse.com" style="color:rgba(255,255,255,.62);text-decoration:underline">Matt Friedman</a></div><div>${C.brand.city}</div></div>
   </div>
 </footer>`;
 
@@ -119,7 +119,7 @@ function socialIconLinks(obj){
     .map(k => `<a href="${obj[k]}" target="_blank" rel="noopener" aria-label="${k}">${SOCIAL_ICONS[k]}</a>`).join('');
 }
 
-const SITE_URL = 'https://luxuryleasingacademy.com';
+const SITE_URL = 'https://www.luxuryleasingacademy.com';
 const attr = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
 function shareMeta(title, meta) {
   meta = meta || {};
@@ -149,6 +149,7 @@ function page(title, body, css, meta) {
 <meta name="color-scheme" content="light only">
 <meta name="supported-color-schemes" content="light">
 <title>${title}</title>
+${meta && meta.url ? `<link rel="canonical" href="${meta.url}">` : ''}
 ${shareMeta(title, meta)}
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="shortcut icon" type="image/png" href="img/favicon.png">
@@ -173,7 +174,23 @@ function highlight(text, phrase, cls='em-gold'){
   return text.replace(phrase, `<em style="font-style:italic;color:var(--gold)">${phrase}</em>`);
 }
 
-const write = (name, html) => { fs.writeFileSync(path.join(OUT, name), html); console.log('  built', name); };
+// ---- SEO: canonicals, sitemap collection, structured data ----
+const SITEMAP_URLS = [];
+const urlForFile = name => name === 'index.html' ? `${SITE_URL}/` : `${SITE_URL}/${name.replace(/\.html$/, '')}`;
+const NOINDEX = /^(thanks\.html|thank-you-)/;          // conversion pages: keep out of Google
+const SITEMAP_SKIP = /^(thanks\.html|thank-you-|hub\.html)/; // and out of the sitemap (hub is the bio-link page)
+const ldjson = obj => `<script type="application/ld+json">${JSON.stringify(obj)}</script>`;
+
+const write = (name, html) => {
+  const url = urlForFile(name);
+  let head = '';
+  if (!html.includes('rel="canonical"')) head += `\n<link rel="canonical" href="${url}">`;
+  if (NOINDEX.test(name)) head += `\n<meta name="robots" content="noindex">`;
+  if (head) html = html.replace('</title>', `</title>${head}`);
+  if (!SITEMAP_SKIP.test(name)) SITEMAP_URLS.push({ url });
+  fs.writeFileSync(path.join(OUT, name), html);
+  console.log('  built', name);
+};
 
 const THANKS_CSS = `
 .ty-wrap{max-width:660px;margin:0 auto;padding:0 28px}
@@ -278,7 +295,16 @@ function buildHome() {
     <div class="micro rv">Not ready yet? <a href="ebook.html">Start with the free e-book.</a></div>
   </div>
 </section>`;
-  write('index.html', page(`${C.brand.name} | Build a Real Rental Business`, body, CSS_HOME));
+  write('index.html', page(`${C.brand.name} | Build a Real Rental Business`, body + ldjson({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": C.brand.name,
+    "url": `${SITE_URL}/`,
+    "logo": `${SITE_URL}/img/crest.png`,
+    "email": C.brand.contactEmail,
+    "founder": { "@type": "Person", "name": "Matt Friedman", "url": "https://mattyv3rse.com" },
+    "address": { "@type": "PostalAddress", "streetAddress": "1 E Erie St", "addressLocality": "Chicago", "addressRegion": "IL", "addressCountry": "US" }
+  }), CSS_HOME));
 }
 
 // ---------- CLUB ----------
@@ -640,12 +666,12 @@ function buildMatty() {
   const body = `<header class="mhero">
   <div class="wrap mhero-grid">
     <div class="rv in"><div class="eyebrow">Meet Matty</div><h1>${m.heroHeadline}</h1><p class="sub">${m.heroSub}</p></div>
-    <div class="rv in"><div class="matty-photo"><img src="${C.images.mattyPhoto}" alt="Matty"></div></div>
+    <div class="rv in"><div class="matty-photo"><img src="${C.images.mattyPhoto}" alt="Matt Friedman, founder of ${C.brand.name}"></div></div>
   </div>
 </header>
 <hr class="horizon">
 <section class="section"><div class="wrap story">
-  <p class="lede rv">I didn't come from real estate. I came from behind a bar, and before that, from rock bottom.</p>
+  <p class="lede rv">I'm Matt Friedman, but everyone calls me Matty. I didn't come from real estate. I came from behind a bar, and before that, from rock bottom.</p>
   <p class="rv">No trust fund. No team. No listings handed to me. What I had was hustle, and a belief most people thought was naive: that leasing could be more than a stepping stone. That it could be a real business.</p>
   <p class="rv">I spent five years as an independent broker learning every hard lesson this industry has, then five more onsite at Chicago's top luxury residential building. Along the way I closed <strong>more than 1,000 leases</strong> and earned <strong>over $2.5 million in rental commissions</strong>, not by selling homes, but by treating rentals like the business they really are.</p>
   <p class="rv">Somewhere in those thousand leases I realized something: it was never talent. It was a <strong>system</strong>. Repeatable, teachable, and nobody was teaching it. Agents were quitting in their first year while a lucrative market sat right in front of them, overlooked.</p>
@@ -663,7 +689,19 @@ ${follow}
   <div class="card rv"><div class="tick">3</div><h3 style="font-size:22px;margin-bottom:12px">Ownership mindset</h3><p style="color:var(--espresso-soft);font-size:16px">We train agents to think like entrepreneurs, not employees.</p></div>
 </div></div></section>
 <section class="final"><div class="glow"></div><div class="wrap"><h2 class="rv">${m.finalHeadline}</h2><p class="rv">${C.brand.hashtag}</p><div class="final-btns rv"><a href="club.html" class="btn btn-gold">Join the Elite Leasing Club</a><a href="ebook.html" class="btn btn-ghost" style="border-color:var(--gold-bright);color:var(--gold-bright)">Start with the Free E-Book</a></div></div></section>`;
-  write('meet-matty.html', page(`Meet Matty | ${C.brand.name}`, body, CSS_SHARED + MATTY_CSS));
+  write('meet-matty.html', page(`Meet Matt Friedman | Founder of ${C.brand.name}`, body + ldjson({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Matt Friedman",
+    "alternateName": "Matty",
+    "url": "https://mattyv3rse.com",
+    "jobTitle": "Founder",
+    "worksFor": { "@type": "Organization", "name": C.brand.name, "url": `${SITE_URL}/` },
+    "address": { "@type": "PostalAddress", "addressLocality": "Chicago", "addressRegion": "IL", "addressCountry": "US" },
+    "sameAs": ["https://mattyv3rse.com", "https://www.threads.com/@mattyfbabyy"].concat(Object.values(m.social || {}))
+  }), CSS_SHARED + MATTY_CSS, {
+    desc: "Matt Friedman is a Chicago luxury leasing expert with over $2.5M in rental commissions across 1,000+ leases. He founded Luxury Leasing Academy to teach agents how to build real rental businesses."
+  }));
 }
 
 // ---------- LEGAL (Terms + Privacy) ----------
@@ -1047,15 +1085,28 @@ function renderBlock(b) {
 // (Chicago time). A daily rebuild publishes them automatically on the right day.
 const TODAY = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Chicago' });
 
+// ============================================================
+//  MASTER SWITCH: article publishing pause
+//  true  = NO articles publish, no matter their date. The blog
+//          page stays in its "first article drops soon" state.
+//  false = normal scheduling resumes (articles publish on their
+//          date via the daily rebuild).
+//  NOTE: before flipping this back to false, re-date the
+//  articles in /articles so they roll out from your new launch
+//  date instead of all publishing at once as past-dated posts.
+// ============================================================
+const PUBLISHING_PAUSED = true;
+
 function loadArticles() {
   const dir = path.join(ROOT, 'articles');
   if (!fs.existsSync(dir)) return null;
   const all = fs.readdirSync(dir).filter(f => f.endsWith('.json'))
     .map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')))
     .sort((a, b) => (a.date < b.date ? 1 : -1));
-  const live = all.filter(a => a.date <= TODAY);
-  const scheduled = all.filter(a => a.date > TODAY);
-  scheduled.forEach(a => console.log(`  (scheduled: ${a.slug} publishes ${a.date})`));
+  const live = PUBLISHING_PAUSED ? [] : all.filter(a => a.date <= TODAY);
+  const scheduled = PUBLISHING_PAUSED ? all : all.filter(a => a.date > TODAY);
+  if (PUBLISHING_PAUSED) console.log(`  (PUBLISHING PAUSED: ${all.length} articles held back)`);
+  else scheduled.forEach(a => console.log(`  (scheduled: ${a.slug} publishes ${a.date})`));
   return { live, scheduled };
 }
 
@@ -1088,6 +1139,7 @@ ${SUB_BOX}
       image: heroOk && a.heroImage ? `${SITE_URL}${a.heroImage}` : null
     }));
     fs.writeFileSync(path.join(OUT, 'blog', `${a.slug}.html`), html);
+    SITEMAP_URLS.push({ url: `${SITE_URL}/blog/${a.slug}`, lastmod: a.date });
     console.log('  built blog/' + a.slug + '.html');
   }
 
@@ -1103,6 +1155,7 @@ ${a._heroOk?`<div class="bc-img"><img src="${a.heroImage}" alt="${a.heroAlt||''}
     url: `${SITE_URL}/blog`
   }));
   fs.writeFileSync(path.join(OUT, 'blog', 'index.html'), idxHtml);
+  SITEMAP_URLS.push({ url: `${SITE_URL}/blog` });
   console.log('  built blog/index.html');
 }
 
@@ -1133,4 +1186,11 @@ buildMatty();
 buildHub();
 buildLegal();
 buildBlog();
+// ---- sitemap.xml + robots.txt ----
+{
+  const rows = SITEMAP_URLS.map(u => `  <url>\n    <loc>${u.url}</loc>${u.lastmod ? `\n    <lastmod>${u.lastmod}</lastmod>` : ''}\n  </url>`).join('\n');
+  fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows}\n</urlset>\n`);
+  fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+  console.log(`  built sitemap.xml (${SITEMAP_URLS.length} URLs) + robots.txt`);
+}
 console.log('Done. Site is in /public');
