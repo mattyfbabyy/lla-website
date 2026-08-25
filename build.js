@@ -295,7 +295,7 @@ function buildHome() {
     <div class="micro rv">Not ready yet? <a href="ebook.html">Start with the free e-book.</a></div>
   </div>
 </section>`;
-  write('index.html', page(`${C.brand.name} | Build a Real Rental Business`, body + ldjson({
+  write('index.html', page(`${C.brand.name} | Build a Luxury Rental Business`, body + ldjson({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": C.brand.name,
