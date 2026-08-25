@@ -181,12 +181,30 @@ const NOINDEX = /^(thanks\.html|thank-you-)/;          // conversion pages: keep
 const SITEMAP_SKIP = /^(thanks\.html|thank-you-|hub\.html)/; // and out of the sitemap (hub is the bio-link page)
 const ldjson = obj => `<script type="application/ld+json">${JSON.stringify(obj)}</script>`;
 
+// ---- per-page share cards (img/og/, 1200x628) ----
+// filename -> card image; pages not listed keep the default og-card.png
+const OG_CARDS = {};
+['home','courses','club','ebook','playbook','meet-matty','the-lease-up',
+ 'course-1','course-2','course-3','course-4','course-5','course-6','course-7','course-8','course-9']
+  .forEach(k => { OG_CARDS[k === 'home' ? 'index.html' : `${k}.html`] = `${SITE_URL}/img/og/og-${k}.jpg`; });
+
+const applyOgCard = (name, html) => {
+  const card = OG_CARDS[name];
+  if (!card) return html;
+  return html
+    .replace(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${card}">`)
+    .replace(/<meta property="og:image:width" content="[^"]*">/, `<meta property="og:image:width" content="1200">`)
+    .replace(/<meta property="og:image:height" content="[^"]*">/, `<meta property="og:image:height" content="628">`)
+    .replace(/<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${card}">`);
+};
+
 const write = (name, html) => {
   const url = urlForFile(name);
   let head = '';
   if (!html.includes('rel="canonical"')) head += `\n<link rel="canonical" href="${url}">`;
   if (NOINDEX.test(name)) head += `\n<meta name="robots" content="noindex">`;
   if (head) html = html.replace('</title>', `</title>${head}`);
+  html = applyOgCard(name, html);
   if (!SITEMAP_SKIP.test(name)) SITEMAP_URLS.push({ url });
   fs.writeFileSync(path.join(OUT, name), html);
   console.log('  built', name);
