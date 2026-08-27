@@ -100,7 +100,14 @@ if(burger){burger.addEventListener('click',()=>{const o=mm.classList.toggle('ope
 mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mm.classList.remove('open');burger.classList.remove('open')}));}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-document.querySelectorAll('form[data-optin],.optin form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('input[type=email]');var fn=f.querySelector('input[name=firstname]');var body=new URLSearchParams({u:'5',f:'3',s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:'',firstname:fn?fn.value:''});fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});
+(function(){var t0=Date.now();
+function trapFor(f){var h=document.createElement('input');h.type='text';h.name='company_website';h.tabIndex=-1;h.autocomplete='off';h.setAttribute('aria-hidden','true');h.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;opacity:0;pointer-events:none';f.appendChild(h);return h;}
+document.querySelectorAll('form[data-optin],.optin form,form[data-newsletter]').forEach(function(f){var trap=trapFor(f);f.addEventListener('submit',function(e){e.preventDefault();
+if(trap.value!==''||(Date.now()-t0)<3000){window.location.href='thanks.html';return;}
+var em=f.querySelector('input[type=email]');var fn=f.querySelector('input[name=firstname]');
+var fid=f.hasAttribute('data-newsletter')?'5':'3';
+var body=new URLSearchParams({u:'5',f:fid,s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:'',firstname:fn?fn.value:''});
+fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});})();
 const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,end=parseFloat(el.dataset.count||0);}),{threshold:.6});
 </script>`;
 
@@ -562,14 +569,7 @@ function buildLeaseUp() {
       <div class="eyebrow">${l.eyebrow}</div>
       <h1>${highlight(l.heroHeadline, l.heroHighlight)}</h1>
       <p class="sub">${l.heroSub}</p>
-      <form class="optform optform-stack" method="POST" action="${ac.activeCampaignAction}">
-        <input type="hidden" name="u" value="${ac.acUserId}" />
-        <input type="hidden" name="f" value="${ac.acFormId}" />
-        <input type="hidden" name="s" />
-        <input type="hidden" name="c" value="0" />
-        <input type="hidden" name="m" value="0" />
-        <input type="hidden" name="act" value="sub" />
-        <input type="hidden" name="v" value="2" />
+      <form class="optform optform-stack" data-newsletter>
         <input type="text" name="firstname" placeholder="First name" required>
         <input type="email" name="email" placeholder="Your best email" required>
         <button class="btn btn-gold" type="submit">${l.formButton}</button>
@@ -589,7 +589,7 @@ function buildLeaseUp() {
 <hr class="horizon">
 <section class="section"><div class="wrap"><div class="section-head rv"><div class="eyebrow">What You'll Get</div><h2>Every issue, something you can use Monday</h2></div><ul class="bullets rv" style="max-width:740px"><li>The lead gen move that's working <strong>right now</strong>, not last year</li><li>Scripts and templates you can copy straight into your next conversation</li><li>How top agents are positioning their brand to attract clients</li><li>Market shifts and what they mean for your commissions</li></ul></div></section>
 <section class="band"><div class="glow"></div><div class="wrap" style="position:relative;max-width:760px"><h2 class="rv">${l.bandLine1}</h2><p class="rv">${l.bandLine2}</p></div></section>
-<section class="section center"><div class="wrap"><div class="section-head rv"><div class="eyebrow">Join Free</div><h2>Get The Lease Up this Sunday</h2></div><form class="optform optform-stack rv" method="POST" action="${ac.activeCampaignAction}"><input type="hidden" name="u" value="${ac.acUserId}" /><input type="hidden" name="f" value="${ac.acFormId}" /><input type="hidden" name="s" /><input type="hidden" name="c" value="0" /><input type="hidden" name="m" value="0" /><input type="hidden" name="act" value="sub" /><input type="hidden" name="v" value="2" /><input type="text" name="firstname" placeholder="First name" required><input type="email" name="email" placeholder="Your best email" required><button class="btn btn-gold" type="submit">${l.formButton}</button></form><div class="form-micro rv">Every Sunday. Unsubscribe anytime.</div></div></section>`;
+<section class="section center"><div class="wrap"><div class="section-head rv"><div class="eyebrow">Join Free</div><h2>Get The Lease Up this Sunday</h2></div><form class="optform optform-stack rv" data-newsletter><input type="text" name="firstname" placeholder="First name" required><input type="email" name="email" placeholder="Your best email" required><button class="btn btn-gold" type="submit">${l.formButton}</button></form><div class="form-micro rv">Every Sunday. Unsubscribe anytime.</div></div></section>`;
   write('the-lease-up.html', page(`The Lease Up | ${C.brand.name}`, body, CSS_SHARED));
 }
 
@@ -940,7 +940,11 @@ body{background:var(--ivory)}
 `;
 
   const HUB_JS = `<script>
-document.querySelectorAll('form[data-optin]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('input[type=email]');var body=new URLSearchParams({u:'5',f:'3',s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:''});fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});
+(function(){var t0=Date.now();
+document.querySelectorAll('form[data-optin]').forEach(function(f){var h=document.createElement('input');h.type='text';h.name='company_website';h.tabIndex=-1;h.autocomplete='off';h.setAttribute('aria-hidden','true');h.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;opacity:0;pointer-events:none';f.appendChild(h);
+f.addEventListener('submit',function(e){e.preventDefault();
+if(h.value!==''||(Date.now()-t0)<3000){window.location.href='thanks.html';return;}
+var em=f.querySelector('input[type=email]');var body=new URLSearchParams({u:'5',f:'3',s:'',c:'0',m:'0',act:'sub',v:'2',email:em?em.value:''});fetch('https://luxuryleasingacademy.activehosted.com/proc.php',{method:'POST',mode:'no-cors',body:body}).finally(function(){window.location.href='thanks.html';});});});})();
 </script>`;
 
   const body = `<main class="hub">
